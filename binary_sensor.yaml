@@ -36,6 +36,8 @@
   - platform: ping
     host: 192.168.74.1
     name: PiHole
+  - platform: template
+    sensors:  
       garagedoor:
         friendly_name: Garage Door Open
         device_class: opening
