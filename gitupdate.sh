@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RSYNC="/usr/bin/rsync -avrz --progress --delete"
-MOUNTDIR=/Volumes/config
+MOUNTDIR=/Volumes/config/
 git add .
 git status
 echo -n "Enter the Description for the Change: " [Minor Update]
@@ -12,11 +12,11 @@ git push origin master
 if [ ! -d $MOUNTDIR ];
     then
         open 'smb://Guest:password@hassio/config'
-        $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ /Volumes/config/
-        diskutil unmount /Volumes/config
+        $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ $MOUNTDIR
+        diskutil unmount $MOUNTDIR
     else
-        $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ /Volumes/config/
-        diskutil unmount /Volumes/config
+        $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ $MOUNTDIR
+        diskutil unmount $MOUNTDIR
 fi
     
 exit
