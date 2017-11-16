@@ -177,12 +177,6 @@ device_tracker:
   #   username: !secret asus_username
   #   password: !secret asus_password
 
-telegram_bot:
-  platform: polling
-  api_key: !secret telegram_key
-  allowed_chat_ids:
-    - !secret telegram_chatID_grady
-
 notify:
   - platform: ios
   - platform: pushbullet
