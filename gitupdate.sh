@@ -12,6 +12,7 @@ git push origin master
 if [ ! -d $MOUNTDIR ];
     then
         open 'smb://Guest:password@hassio/config'
+        sleep 5
         $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ $MOUNTDIR
         diskutil unmount $MOUNTDIR
     else
