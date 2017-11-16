@@ -38,19 +38,19 @@ zone:
   radius: 200
   icon: mdi:home
 
-zone 2:
-  name: Buckhead
-  latitude: !secret latitude_buckhead
-  longitude: !secret longitude_buckhead
-  radius: 200
-  icon: mdi:school
-
-zone 3:
-  name: Downtown
-  latitude: !secret latitude_downtown
-  longitude: !secret longitude_downtown
-  radius: 200
-  icon: mdi:school
+#zone 2:
+#  name: Buckhead
+#  latitude: !secret latitude_buckhead
+#  longitude: !secret longitude_buckhead
+#  radius: 200
+#  icon: mdi:school
+#
+#zone 3:
+#  name: Downtown
+#  latitude: !secret latitude_downtown
+#  longitude: !secret longitude_downtown
+#  radius: 200
+#  icon: mdi:school
 # insteon_plm supported configuration variables
 insteon_plm:
   port: /dev/ttyUSB0

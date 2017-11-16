@@ -55,23 +55,23 @@
     display_options:
       - 'time_date'
 #Morning Commute Google Travel Time Sensor
-  - platform: google_travel_time
-    name: Morning Commute
-    api_key: !secret google_key
-    origin: !secret add_home
-    destination: !secret add_buckhead
+#  - platform: google_travel_time
+#    name: Morning Commute
+#    api_key: !secret google_key
+#    origin: !secret add_home
+#    destination: !secret add_buckhead
 #Evening Commute Google Travel Time Sensor
-  - platform: google_travel_time
-    name: Evening Commute
-    api_key: !secret google_key
-    origin: !secret add_buckhead
-    destination: !secret add_home
-  - platform: google_travel_time
-    name: Grady to Home
-    friendly_name: "Commute to Home"
-    api_key: !secret google_key
-    origin: device_tracker.grady_grady
-    destination: !secret add_home
+#  - platform: google_travel_time
+#    name: Evening Commute
+#    api_key: !secret google_key
+#    origin: !secret add_buckhead
+#    destination: !secret add_home
+#  - platform: google_travel_time
+#    name: Grady to Home
+#    friendly_name: "Commute to Home"
+#    api_key: !secret google_key
+#    origin: device_tracker.grady_grady
+#    destination: !secret add_home
   - platform: wunderground
     api_key: !secret wunderground_key
     pws_id: !secret wunderground_pws
