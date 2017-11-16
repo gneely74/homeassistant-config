@@ -926,7 +926,7 @@
     - platform: time
       minutes: '/5'
   action:
-    - service: close_cover
+    - service: cover.close_cover
       entity_id: cover.garage_door_opener
 
 - id: sensors_changed_when_nobody_home

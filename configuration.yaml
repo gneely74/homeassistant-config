@@ -248,7 +248,7 @@ switch: !include switches.yaml
 binary_sensor: !include binary_sensor.yaml
 input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml
-input_number: !include input_number.yaml
+#input_number: !include input_number.yaml
 frontend: !include frontend.yaml
 recorder: !include recorder.yaml
 logbook: !include logbook.yaml
