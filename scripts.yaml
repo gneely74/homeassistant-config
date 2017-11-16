@@ -92,19 +92,19 @@
           spread: 359
           change: 35
 
-  lifx_stop_effects:
-    alias: 'Stop LIFX effects'
+  arm_security:
+    alias: 'Arm Security'
     sequence:
-      - service: light.lifx_effect_stop
-        data:
-          entity_id: group.all_lights
-      - service: light.turn_on
-        entity_id: group.living_room_lights
-        data:
-          rgb_color: [255, 255, 255]
-          brightness: 250
-          color_temp: 285
+      - delay: 00:05:00
+      - service: homeassistant.turn_on
+        entity_id: script.abodeaway
 
+  disarm_security:
+    alias: 'Disarm Security'
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: script.abodestandby
+        
   updatetracker:
     alias: 'Update tracker'
     sequence:

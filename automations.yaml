@@ -1128,7 +1128,7 @@
     entity_id: input_boolean.abodeupdate
     state: 'off'
   action:
-    - service: notify.ios_gradyiosiphone
+    - service: notify.ios_gradys_iphone
       data:
         message: 'Enable Abode updates?'
         data:

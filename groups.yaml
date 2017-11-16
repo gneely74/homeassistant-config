@@ -63,7 +63,17 @@
       - sensor.dark_sky_cloud_coverage
       - sensor.dark_sky_hourly_summary
       - sensor.dark_sky_daily_summary
-
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_wind_bearing
+      - sensor.dark_sky_humidity    
+      - sensor.dark_sky_daily_cloud_coverage        
+      - sensor.dark_sky_uv_index
+      - sensor.dark_sky_ozone
+      
   Room Sensors:
     entities:
       - sensor.illumination_158d00016612af
@@ -161,12 +171,6 @@
       - switch.outside_den_light
       - switch.side_of_garage_light
 
-  light_operations:
-    entities:  
-      - input_boolean.partymode
-      - script.colorloop_start
-      - script.disco_party
-      - script.lifx_stop_effects
   household:
     entities:  
       - device_tracker.meta_kate
@@ -184,4 +188,4 @@
 #      - #device_tracker.katesiphone4
 #      - device_tracker.pokemonsipad
       - binary_sensor.kate_home
-      - binary_sensor.grady_home
+      - binary_sensor.grady_home      
