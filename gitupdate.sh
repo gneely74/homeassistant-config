@@ -10,12 +10,13 @@ git commit -m "${CHANGE_MSG}"
 git push origin master
 
 if [ ! -d $MOUNTDIR ];
-    mount -t smbfs "//hassio/config"
-    $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ /Volumes/config/
-    diskutil unmount /Volumes/config
-else
-    $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ /Volumes/config/
-    diskutil unmount /Volumes/config
+    then
+        open 'smb://Guest:password@hassio/config'
+        $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ /Volumes/config/
+        diskutil unmount /Volumes/config
+    else
+        $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ /Volumes/config/
+        diskutil unmount /Volumes/config
 fi
     
 exit
