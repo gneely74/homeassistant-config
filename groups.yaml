@@ -67,62 +67,16 @@
       - group.network_details
 
 
-  camera_ring_doorbell:
-    entities:
-      - camera.front_door
-  camera_abode_living_room:
-    entities:
-      - camera.living_room
-  camera_usps:
-    entities:
-      - camera.usps_mail
-  camera_meteogram:
-    entities:
-      - camera.meteogram
-  camera_arsbloom:
-    name: BloomSky Camera
-    entities:
-      - camera.ars_bloom
   camera_driveway:
     name: Driveway Camera
     entities:
-      - camera.driveway
-  camera_porch:
-    name: Porch Camera
+      - camera.entryway
+  camera_abode_living_room:
     entities:
-      - camera.porch
-  camera_backyard:
-    name: Backyard Camera
+      - camera.living_room_camera
+  camera_master:
     entities:
-      - camera.backyard
-  camera_patio:
-    name: Patio Camera
-    entities:
-      - camera.patio
-  camera_foscam1:
-    name: Foscam Camera 1
-    entities:
-      - camera.door_camera
-  camera_foscam2:
-    name: Foscam Camera 2
-    entities:
-      - camera.door_camera_2
-  camera_foscam3:
-    name: Foscam Camera 3
-    entities:
-      - camera.door_camera_3
-  camera_motoe:
-    name: MotoE Camera
-    entities:
-      - camera.motoe
-  camera_opencv_porch:
-    name: OpenCV Porch
-    entities:
-      - camera.opencv_porch
-  camera_wundergroundradar:
-    name: Wunderground Radar Camera
-    entities:
-      - camera.wundergroundradar
+      - camera.master_bedroom
 
   HASS Details:
     - sensor.time__date
@@ -131,14 +85,7 @@
     - input_select.current_theme
 
   Weather:
-    - sensor.pws_weather
-    - sensor.pws_temp_f
-    - sensor.pws_relative_humidity
-    - binary_sensor.ars_bloom_rain
-    - sensor.pws_wind_dir
-    - sensor.pws_wind_string
     - sensor.dark_sky_cloud_coverage
-    - sensor.pollen_level
     - sensor.dark_sky_hourly_summary
     - sensor.dark_sky_daily_summary
 
@@ -171,8 +118,7 @@
 
   Information:
     - sensor.morning_commute
-    - sensor.alok_to_home
-    - sensor.plexspy
+    - sensor.grady_to_home
     - sensor.usd_inr
 
   Network Details:
@@ -184,45 +130,34 @@
     - sensor.pihole_dns_unique_domains
 
   Media Player:
-    - media_player.livingroomsonos
-    - media_player.kodi_nstv
-    - media_player.living_room_home
-    - media_player.panasonic_viera_tv
-    - media_player.shield
-    - media_player.shield_android_tv
-    - media_player.spotify
-    - media_player.apple_tv
+    - media_player.boys_room_apple_tv
+    - media_player.living_room_apple_tv
+    - media_player.fionas_apple_tv
+    - media_player.bedroom_apple_tv
 
   Home Security:
     control: hidden
     entities:
       - alarm_control_panel.abode_alarm
       - input_select.abodestatus
-      - cover.garagedoor
+      - cover.garage_door_opener
       - input_boolean.abodeupdate
       - binary_sensor.back_door
       - binary_sensor.front_door
-      - binary_sensor.garage_entry_door
-      - input_boolean.startrecording
-      - binary_sensor.motion_sensor_158d00016daecc
-      - binary_sensor.motion_sensor_158d00016612af
+      - binary_sensor.garage_door
+      - binary_sensor.den_door
+      - binary_sensor.office_door
 
   Camera Sensors:
     control: hidden
     entities:
-      - binary_sensor.backyard_motion
-      - binary_sensor.backyard_field_detection
-      - binary_sensor.backyard_line_crossing
-      - binary_sensor.driveway_motion
-      - binary_sensor.driveway_field_detection
-      - binary_sensor.driveway_line_crossing
-      - binary_sensor.patio_motion
-      - binary_sensor.patio_field_detection
-      - binary_sensor.patio_line_crossing
-      - binary_sensor.porch_field_detection
-      - binary_sensor.porch_line_crossing
-      - binary_sensor.porch_motion
-
+      - binary_sensor.entryway_camera_motion_detected
+      - binary_sensor.entryway_camera__zone_1_activity
+      - binary_sensor.entryway_camera_person_detected
+      - binary_sensor.entryway_camera_sound_detected 
+      - binary_sensor.master_bedroom_camera_motion_detected
+      - binary_sensor.master_bedroom_camera_person_detected
+      - binary_sensor.master_bedroom_camera_sound_detected
   Camera Switches:
     - switch.backyardmotion
     - switch.drivewaymotion
@@ -230,30 +165,15 @@
     - switch.porchmotion
 
   living_room_lights:
-    - light.lifx3
-    - light.lifxnrguest
-    - light.lifxnrkitchen
-
-  Entertainment:
-    control: hidden
-    entities:
-      - sensor.living_room
-      - input_select.livingroomharmony
-      - input_select.hdmiswitcher
-      - input_select.hdmiinput
-      - input_number.harmonyvolume
-      - input_boolean.tv
-      - input_boolean.tvtime
-      - sensor.total_tv_time
-      - script.tv_off
+    - light.fireplace_light
 
   Switches:
-    - switch.wemoswitch
-    - switch.garage_relay_switch
-    - switch.driveway
-    - switch.wemoporch
-    - switch.wemoinsight
-    - switch.aeon_switch
+    - switch.freezer_plug
+    - switch.front_garage_light
+    - switch.front_porch_light
+    - switch.garage_light
+    - switch.outside_den_light
+    - switch.side_of_garage_light
 
   Light Operations:
     - input_boolean.partymode
@@ -261,30 +181,18 @@
     - script.disco_party
     - script.lifx_stop_effects
   Household:
-    - device_tracker.meta_rashmi
-    - device_tracker.meta_alok
+    - device_tracker.meta_kate
+    - device_tracker.meta_grady
 
   Devices:
-    - device_tracker.pi_rashmiphone
-    - device_tracker.rashmiappiphone
-    - device_tracker.rashmisiphone
-    - device_tracker.sonu_sonu
-    - device_tracker.3a196aa7e85e4ab5bee4e3d3af667a09
-    - device_tracker.pi_alokphone
-    - device_tracker.alokiosiphone
-    - device_tracker.myiphone
-    - device_tracker.alok_alok
-    - device_tracker.6b00226793104872afb9248f8a45f957
-    - binary_sensor.rashmi_home
-    - binary_sensor.alok_home
-
-  Ring Doorbell:
-    - binary_sensor.ring_front_door_ding
-    - binary_sensor.ring_front_door_motion
-    - sensor.ring_front_door_last_activity
-    - sensor.ring_front_door_last_ding
-    - sensor.ring_front_door_last_motion
-
-  Prices:
-    - sensor.xiaomi_aqara_human_body_sensor
-    - sensor.xiaomi_aqara_temperature_humidity_sensor
+    - device_tracker.gradys_iphone
+    - device_tracker.kates_iphone
+    - device_tracker.conorsiphone3
+    - device_tracker.huntersone6plus
+    - device_tracker.fisiphone
+    - device_tracker.finnegansipad
+    - device_tracker.kateneelysipad
+    - #device_tracker.katesiphone4
+    - device_tracker.pokemonsipad
+    - binary_sensor.kate_home
+    - binary_sensor.grady_home

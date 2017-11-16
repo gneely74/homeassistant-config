@@ -8,31 +8,24 @@
     # Delayed action for router-based and Owntracks trackers that are not 100% reliable
     - platform: state
       entity_id:
-        - device_tracker.myiphone
-        - device_tracker.rashmisiphone
-        - device_tracker.pi_alokphone
-        - device_tracker.pi_rashmiphone
+        - device_tracker.gradys_iphone
+        - device_tracker.kates_iphone
       to: 'not_home'
       for: '00:07:00'
     - platform: state
       entity_id:
-        - device_tracker.pi_alokphone
-        - device_tracker.pi_rashmiphone
+        - device_tracker.gradys_iphone
+        - device_tracker.kates_iphone
       to: 'home'
       for: '00:00:30'
     - platform: state
       entity_id:
-        - device_tracker.alokiosiphone
-        - device_tracker.alok_alok
-        - device_tracker.6b00226793104872afb9248f8a45f957
-        - device_tracker.rashmiappiphone
-        - device_tracker.sonu_sonu
-        - device_tracker.3a196aa7e85e4ab5bee4e3d3af667a09
+        - device_tracker.gradys_iphone
+        - device_tracker.kates_iphone
     - platform: state
       entity_id:
-        - device_tracker.myiphone
-        - device_tracker.elantrase
-        - device_tracker.rashmisiphone
+        - device_tracker.gradys_iphone
+        - device_tracker.kates_iphone
       to: 'home'
   action:
     - service: script.updatetracker
@@ -94,7 +87,7 @@
   initial_state: 'on'
   condition:
     condition: state
-    entity_id: cover.garagedoor
+    entity_id: cover.garage_door_opener
     state: 'open'
   trigger:
     - platform: state
@@ -124,8 +117,8 @@
   trigger:
    - platform: state
      entity_id:
-       - device_tracker.meta_rashmi
-       - device_tracker.meta_alok
+       - device_tracker.gradys_iphone
+       - device_tracker.kates_iphone
      from: 'not_home'
      to: 'home'
   action:
@@ -263,7 +256,7 @@
        state: 'on'
   trigger:
     platform: time
-    at: '07:20:00'
+    at: '07:00:00'
   action:
      service: homeassistant.turn_on
      entity_id: script.abodestandby
@@ -534,7 +527,7 @@
          - thu
          - fri
      - condition: state
-       entity_id: device_tracker.meta_alok
+       entity_id: device_tracker.meta_grady
        state: 'home'
   trigger:
     platform: numeric_state
@@ -567,23 +560,23 @@
          - fri
      - condition: template
        value_template: >
-         {%- if states.device_tracker.meta_alok -%}
-           {{ states.device_tracker.meta_alok.state != 'home' }}
+         {%- if states.device_tracker.meta_grady -%}
+           {{ states.device_tracker.meta_grady.state != 'home' }}
          {%- else -%}
            false
          {%- endif -%}
   trigger:
     platform: template
     value_template: >
-      {%- if states.sensor.alok_to_home.attributes.duration_in_traffic -%}
-        {{(states.sensor.alok_to_home.attributes.duration_in_traffic.split(' ')[0]|int) / (states.sensor.alok_to_home.attributes.duration.split(' ')[0]|int) < 1.25}}
+      {%- if states.sensor.grady_to_home.attributes.duration_in_traffic -%}
+        {{(states.sensor.grady_to_home.attributes.duration_in_traffic.split(' ')[0]|int) / (states.sensor.grady_to_home.attributes.duration.split(' ')[0]|int) < 1.25}}
       {%- else -%}
         false
       {%- endif -%}
   action:
     service: notify.pushbullet
     data_template:
-      message: Commute time is {{states.sensor.alok_to_home.attributes.duration_in_traffic.split(' ')[0]|int}} minutes
+      message: Commute time is {{states.sensor.grady_to_home.attributes.duration_in_traffic.split(' ')[0]|int}} minutes
       title: Leave for Home
       target: device/myiPhone
 
@@ -1040,8 +1033,8 @@
   trigger:
     - platform: state
       entity_id:
-        - device_tracker.meta_rashmi
-        - device_tracker.meta_alok
+        - device_tracker.meta_kate
+        - device_tracker.meta_grady
       from: 'not_home'
       to: 'home'
   action:
@@ -1053,7 +1046,7 @@
   initial_state: 'on'
   condition:
     - condition: state
-      entity_id: binary_sensor.garagedoor
+      entity_id: binary_sensor.garage_door
       state: 'on'
     - condition: template
       value_template: >
@@ -1135,7 +1128,7 @@
 #     entity_id: input_boolean.abodeupdate
 #     state: 'off'
 #   action:
-#     - service: notify.ios_alokiosiphone
+#     - service: notify.ios_gradyiosiphone
 #       data:
 #         message: 'Enable Abode updates?'
 #         data:
@@ -1189,246 +1182,3 @@
     - service: light.turn_off
       data:
         entity_id: group.living_room_lights
-
-## Humidifier
-- id: turn_on_humidifier
-  alias: Turn on humidifier
-  initial_state: 'on'
-  condition:
-     - condition: time
-       after: '08:15:00'
-       before: '21:45:00'
-     - condition: template
-       value_template: '{{ states.sensor.leeohumid.state | int < 30 }}'
-     - condition: state
-       entity_id: switch.wemoswitch
-       state: 'off'
-  trigger:
-   - platform: time
-     minutes: '/10'
-     seconds: 00
-  action:
-    service: homeassistant.turn_on
-    entity_id: switch.wemoswitch
-
-- id: turn_off_humidifier
-  alias: Turn off humidifier
-  initial_state: 'on'
-  condition:
-    - condition: state
-      entity_id: switch.wemoswitch
-      state: 'on'
-  trigger:
-    platform: template
-    value_template: '{{ states.sensor.leeohumid.state | int >= 30 }}'
-  action:
-    service: homeassistant.turn_off
-    entity_id: switch.wemoswitch
-
-- id: get_iphone_steps
-  alias: Get steps from iPhone
-  initial_state: 'on'
-  trigger:
-    - platform: time
-      minutes: 30
-      seconds: 00
-  action:
-    - service: mqtt.publish
-      data:
-        topic: "owntracks/pi/alokphone/cmd"
-        payload_template: '{"_type" : "cmd", "action": "reportSteps"}'
-        qos: 2
-    - service: mqtt.publish
-      data:
-        topic: "owntracks/pi/rashmiphone/cmd"
-        payload_template: '{"_type" : "cmd", "action": "reportSteps"}'
-        qos: 2
-#################################################################
-## Harmony Remote
-#################################################################
-- id: set_initial_values_on_harmony_start
-  alias: "Set initial values on Harmony Start"
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: remote.livingroom
-    to: 'on'
-  action:
-    - service: homeassistant.turn_on
-      entity_id: input_boolean.tv
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.livingroomharmony
-        option: >
-          {{ states.remote.livingroom.attributes.current_activity }}
-    - service: input_number.set_value
-      data_template:
-        entity_id: input_number.harmonyvolume
-        value: >
-            {{ (states.media_player.livingroomsonos.attributes.volume_level * 100) | int }}
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.hdmiswitcher
-        option: >
-          {%- if states.remote.livingroom.attributes.current_activity == "Watch Apple TV" -%}
-            AppleTV
-          {%- elif states.remote.livingroom.attributes.current_activity == "Watch Fire TV" -%}
-            FireTV
-          {%- elif states.remote.livingroom.attributes.current_activity == "SATV" -%}
-            Shield
-          {%- endif -%}
-
-- id: update_tv_status_in_ha
-  alias: Update TV status in HA
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: media_player.panasonic_viera_tv
-  action:
-    - service_template: "homeassistant.turn_{{ 'on' if trigger.to_state.state == 'on' else 'off' }}"
-      data:
-        entity_id: input_boolean.tv
-- id: no_tv_time
-  alias: No TV time
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: media_player.panasonic_viera_tv
-    from: 'off'
-    to: 'on'
-  condition:
-    - condition: state
-      entity_id: input_boolean.tvtime
-      state: 'off'
-  action:
-    - service: remote.send_command
-      data_template:
-        command: PowerOff
-        device: 31747892
-        entity_id: remote.livingroom
-    - service: media_player.turn_off
-      entity_id:
-        - media_player.panasonic_viera_tv
-
-- id: turn_tv_on_off
-  alias: Turn TV on/off
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: input_boolean.tv
-  action:
-    service: remote.send_command
-    data_template:
-      command: "{{ 'PowerOff' if trigger.to_state.state == 'off' else 'PowerOn' }}"
-      device: 31747892
-      entity_id: remote.livingroom
-- id: set_volume
-  alias: "Set Volume"
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: input_number.harmonyvolume
-  action:
-    - service: media_player.volume_set
-      data_template:
-        entity_id: media_player.livingroomsonos
-        volume_level: >
-          {{states.input_number.harmonyvolume.state | int / 100}}
-
-- id: start_harmony_activity_from_input_select
-  alias: "Start Harmony activity from input_select"
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: input_select.livingroomharmony
-  action:
-  - service: remote.turn_on
-    data_template:
-      entity_id: remote.livingroom
-      activity: "{{trigger.to_state.state}}"
-
-- id: update_ha_if_harmony_activity_changes
-  alias: "Update HA if Harmony activity changes"
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: sensor.living_room
-  action:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.livingroomharmony
-        option: "{{trigger.to_state.state}}"
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.hdmiswitcher
-        option: >
-          {%- if trigger.to_state.state == "Watch Apple TV" -%}
-            AppleTV
-          {%- elif trigger.to_state.state == "Watch Fire TV" -%}
-            FireTV
-          {%- else -%}
-            Shield
-          {%- endif -%}
-
-- id: update_ha_after_startup
-  alias: Update HA after startup
-  initial_state: 'on'
-  trigger:
-    platform: homeassistant
-    event: start
-  action:
-    - delay: '00:00:01'
-    - service: homeassistant.turn_on
-      entity_id: script.initialize_hass
-
-- id: change_hdmi_switcher
-  alias: "Change HDMI Switcher"
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: input_select.hdmiswitcher
-  action:
-  - service: remote.send_command
-    data_template:
-      command: >-
-        {%- if trigger.to_state.state == "AppleTV" -%}
-          Input1
-        {%- elif trigger.to_state.state == "FireTV" -%}
-          Input2
-        {%- elif trigger.to_state.state == "Shield" -%}
-          Input3
-        {%- endif -%}
-      device: 31766668
-      entity_id: remote.livingroom
-- id: change_hdmi_input
-  alias: "Change HDMI Input"
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: input_select.hdmiinput
-  action:
-  - service: remote.send_command
-    data_template:
-      command: >-
-        {%- if trigger.to_state.state == "InputHdmi1" -%}
-          InputHdmi1
-        {%- elif trigger.to_state.state == "InputHdmi2" -%}
-          InputHdmi2
-        {%- elif trigger.to_state.state == "InputHDMI3" -%}
-          InputHDMI3
-        {%- elif trigger.to_state.state == "InputHdmi4" -%}
-          InputHdmi4
-        {%- endif -%}
-      device: 31747892
-      entity_id: remote.livingroom
-- id: update_volume_slider
-  alias: "Update Volume Slider"
-  initial_state: 'on'
-  trigger:
-    - platform: state
-      entity_id: sensor.sonos_volume
-  action:
-    - service: input_number.set_value
-      data_template:
-        entity_id: input_number.harmonyvolume
-        value: '{{ trigger.to_state.state }}'

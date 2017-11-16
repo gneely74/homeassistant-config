@@ -1,65 +1,41 @@
   - platform: 'bayesian'
     prior: 0.75
-    name: 'Rashmi Home'
+    name: 'Kate Home'
     probability_threshold: 0.95
     observations:
-      - entity_id: 'device_tracker.pi_rashmiphone'
+      - entity_id: 'device_tracker.pi_katephone'
         prob_given_true: 0.8
         prob_given_false: 0.2
         platform: 'state'
         to_state: 'home'
-      - entity_id: 'device_tracker.rashmiappiphone'
+      - entity_id: 'device_tracker.kateappiphone'
         prob_given_true: 0.99
         prob_given_false: 0.10
         platform: 'state'
         to_state: 'home'
-      - entity_id: 'device_tracker.rashmisiphone'
+      - entity_id: 'device_tracker.katesiphone'
         prob_given_true: 0.99
         prob_given_false: 0.4
-        platform: 'state'
-        to_state: 'home'
-      - entity_id: 'device_tracker.sonu_sonu'
-        prob_given_true: 1
-        platform: 'state'
-        to_state: 'home'
-      - entity_id: 'device_tracker.3a196aa7e85e4ab5bee4e3d3af667a09'
-        prob_given_true: 0.99
-        prob_given_false: 0.1
         platform: 'state'
         to_state: 'home'
   - platform: 'bayesian'
     prior: 0.25
-    name: 'Alok Home'
+    name: 'Grady Home'
     probability_threshold: 0.95
     observations:
-      - entity_id: 'device_tracker.pi_alokphone'
+      - entity_id: 'device_tracker.pi_gradyphone'
         prob_given_true: 0.8
         prob_given_false: 0.2
         platform: 'state'
         to_state: 'home'
-      - entity_id: 'device_tracker.alokiosiphone'
+      - entity_id: 'device_tracker.gradyiosiphone'
         prob_given_true: 0.99
         prob_given_false: 0.10
         platform: 'state'
         to_state: 'home'
-      - entity_id: 'device_tracker.myiphone'
-        prob_given_true: 0.99
-        prob_given_false: 0.4
-        platform: 'state'
-        to_state: 'home'
-      - entity_id: 'device_tracker.alok_alok'
-        prob_given_true: 0.99
-        prob_given_false: 0.1
-        platform: 'state'
-        to_state: 'home'
-      - entity_id: 'device_tracker.6b00226793104872afb9248f8a45f957'
-        prob_given_true: 0.99
-        prob_given_false: 0.1
-        platform: 'state'
-        to_state: 'home'
 
   - platform: ping
-    host: 192.168.2.3
+    host: 192.168.74.1
     name: PiHole
   - platform: template
     sensors:
@@ -74,35 +50,3 @@
            {% endif %}
         entity_id:
           - sensor.garage_door_tilt_sensor_alarm_level
-  - platform: hikvision
-    host: 192.168.2.91
-    name: Porch
-    username: !secret hikvision_username
-    password: !secret hikvision_password
-  - platform: hikvision
-    host: 192.168.2.92
-    name: Backyard
-    username: !secret hikvision_username
-    password: !secret hikvision_password
-  - platform: hikvision
-    host: 192.168.2.93
-    name: Patio
-    username: !secret hikvision_username
-    password: !secret hikvision_password
-  - platform: hikvision
-    host: 192.168.2.94
-    name: Driveway
-    username: !secret hikvision_username
-    password: !secret hikvision_password
-  # - platform: mqtt
-  #   name: aloklife360
-  #   friendly_name: Alok Life360
-  #   state_topic: "smartthings/Alok Life360/presence"
-  #   payload_on: 'present'
-  #   payload_off: 'not present'
-  # - platform: mqtt
-  #   name: rashmilife360
-  #   friendly_name: Rashmi Life360
-  #   state_topic: "smartthings/Rashmi_Life360/presence"
-  #   payload_on: 'present'
-  #   payload_off: 'not present'

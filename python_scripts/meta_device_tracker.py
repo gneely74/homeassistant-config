@@ -6,24 +6,20 @@
 
 # OPTIONS
 # List the trackers for each individual
-RashmiTrackers = ['device_tracker.rashmisiphone', 'device_tracker.pi_rashmiphone',
-                  'device_tracker.rashmiappiphone', 'device_tracker.sonu_sonu',
-                  'device_tracker.3a196aa7e85e4ab5bee4e3d3af667a09']
-AlokTrackers = ['device_tracker.myiphone', 'device_tracker.pi_alokphone',
-                'device_tracker.alokiosiphone', 'device_tracker.alok_alok',
-                'device_tracker.elantrase', 'device_tracker.6b00226793104872afb9248f8a45f957']
+KateTrackers = ['device_tracker.katesiphone4', 'device_tracker.kates_iphone']
+GradyTrackers = ['device_tracker.pi_gradys_iphone','device_tracker.gradysiphone']
 # Get the entity that triggered the automation
 triggeredEntity = data.get('entity_id')
 
 # Set friendly name and the metatracker name based on the entity that triggered
-if triggeredEntity in AlokTrackers:
-    newFriendlyName = 'Alok Tracker'
-    newEntityPicture = '/local/Alok.png'
-    metatrackerName = 'device_tracker.meta_alok'
-elif triggeredEntity in RashmiTrackers:
-    newFriendlyName = 'Rashmi Tracker'
-    newEntityPicture = '/local/Rashmi.png'
-    metatrackerName = 'device_tracker.meta_rashmi'
+if triggeredEntity in GradyTrackers:
+    newFriendlyName = 'Grady Tracker'
+    newEntityPicture = '/local/grady.png'
+    metatrackerName = 'device_tracker.meta_grady'
+elif triggeredEntity in KateTrackers:
+    newFriendlyName = 'Kate Tracker'
+    newEntityPicture = '/local/kate.png'
+    metatrackerName = 'device_tracker.meta_kate'
 else:
     newFriendlyName = None
     metatrackerName = None

@@ -4,14 +4,16 @@ homeassistant:
   # Location required to calculate the time the sun rises and sets
   latitude: !secret latitude_home
   longitude: !secret longitude_home
-  elevation: 322
+  elevation: 210
   # Name of the location where Home Assistant is running
   name: Home
   # C for Celcius, F for Fahrenheit
   temperature_unit: F
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/New_York
+  # metric for Metric, imperial for Imperial
   unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Chicago
+  # Customization file
   customize: !include customize.yaml
   #customize_glob: !include customize_glob.yaml
   packages: !include_dir_named packages
@@ -49,9 +51,12 @@ zone 3:
   longitude: !secret longitude_downtown
   radius: 200
   icon: mdi:school
+# insteon_plm supported configuration variables
+insteon_plm:
+  port: /dev/ttyUSB0
+  
 zwave:
   usb_path: /dev/ttyACM0
-  network_key: !secret zwave_network_key
 light:
   - platform: lifx
   # z-wave dimmer switch (http://amzn.to/2j1UEli)
@@ -69,75 +74,29 @@ light:
     optimistic: false
     qos: 0
 
-wemo:
-  static:
-    - 192.168.2.104
-    - 192.168.2.130
-    - 192.168.2.206
-    - 192.168.2.237
-
 updater:
   include_used_components: true
 
-xiaomi_aqara:
-  gateways:
-    - mac:
-      key: !secret xiaomikey
 abode:
   username: !secret abode_username
   password: !secret abode_password
 # usps:
 #   username: !secret usps_username
 #   password: !secret usps_password
-ring:
-  username: !secret ring_username
-  password: !secret ring_password
-bloomsky:
-  api_key: !secret bloomsky_key
-ecobee:
-  api_key: !secret ecobee_key
-  hold_temp: True
-lyric:
-  client_id: !secret lyric_client_id
-  client_secret: !secret lyric_client_secret
 #Adds Alexa and Google Home support
-emulated_hue:
-  host_ip: 192.168.2.212
-  expose_by_default: false
-#  listen_port: 80
-google_assistant:
-  project_id: !secret google_project_id
-  client_id: !secret google_client_id
-  access_token: !secret google_access_token
-  expose_by_default: false
 
-
-media_extractor:
-  customize:
-    media_player.livingroomsonos:
-      music: bestaudio[ext=mp3]
 # Enables configuration UI
 config:
-
-cloud:
-  mode: development
-  cognito_client_id: !secret cloud_client_id
-  user_pool_id: !secret cloud_user_pool
-  region: 'us-east-1'
-  relayer: !secret cloud_relayer
 
 map:
 downloader:
   download_dir: downloads
 http:
   api_password: !secret http_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
-  base_url: !secret base_url
   ip_ban_enabled: True
   login_attempts_threshold: 3
   trusted_networks:
-    - 192.168.2.0/24
+    - 192.168.74.0/24
 
 # Discover some devices automatically
 discovery:
@@ -154,21 +113,6 @@ camera:
   - platform: generic
     still_image_url: 'https://icons.wxug.com/data/weather-maps/radar/united-states/columbus-georgia-region-current-radar-animation.gif'
     name: WundergroundRadar
-  - platform: synology
-    url: http://192.168.2.113:5000/
-    username: !secret synology_username
-    password: !secret synology_password
-    verify_ssl: False
-    # obtain your URL from yr.no. Search for your location and view hour-by-hour results
-  - platform: generic
-    still_image_url: !secret meteogram_url
-    content_type: 'image/svg+xml'
-    name: Meteogram
-  - platform: ring
-  - platform: opencv
-    camera: camera.porch
-    processor: image_processing.opencv_porch
-    name: OpenCV Porch
   - platform: generic
     name: worldtime
     still_image_url: https://imgs.xkcd.com/comics/now.png    
@@ -201,64 +145,31 @@ camera:
   #   still_image_url: 'http://images.intellicast.com/WxImages/RadarLoop/prc_None_anim.gif'
   #   name: IntellicastRadar
 
-ifttt:
-  key: !secret ifttt_key
-
-# android_ip_webcam:
-#   - host: 192.168.2.176
-#     name: motoe
-#     scan_interval: 1
-image_processing:
-  - platform: opencv
-    name: OpenCV
-    source:
-      - entity_id: camera.porch
-    classifier:
-      body:
-        file: /home/homeassistant/.homeassistant/classifier/haarcascade_fullbody.xml
-        neighbors: 4
-  # - platform: dlib_face_detect
-  #   source:
-  #     - entity_id: camera.porch
-  #       name: "Face Detected porch"
-  #     - entity_id: camera.backyard
-  #       name: "Face Detected backyard"
-  #     - entity_id: camera.driveway
-  #       name: "Face Detected driveway"
-  #     - entity_id: camera.patio
-  #       name: "Face Detected patio"
+#ifttt:
+#  key: !secret ifttt_key
 
 sun:
 media_player:
-  - platform: sonos
-    hosts: 192.168.2.150
-  - platform: kodi
-    host: http://192.168.2.28
-    port: 8080
-    name: Kodi NSTV
-    username: !secret kodi_username
-    password: !secret kodi_password
-  - platform: panasonic_viera
-    host: 192.168.2.128
-    port: 55000
-    name: Panasonic Viera TV
-  # - platform: spotify
-  #   client_id: !secret spotify_client_id
-  #   client_secret: !secret spotify_client_secret
-  # - platform: plex
-  #   host: 192.168.2.212
   # - platform: apple_tv
   #   host: 192.168.2.90
   #   login_id: !secret apple_hsgid
 
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_secret
+
 device_tracker:
   - platform: owntracks
     max_gps_accuracy: 200
-  - platform: unifi
-    host: 192.168.2.163
-    username: !secret unifi_username
-    password: !secret unifi_password
+#  - platform: unifi
+#    host: 192.168.2.163
+#    username: !secret unifi_username
+#    password: !secret unifi_password
     verify_ssl: False
+  - platform: mikrotik
+    host: 192.168.74.1
+    username: !secret mikrotik_user
+    password: !secret mikrotik_pass
   - platform: geofency
   # - platform: asuswrt
   #   host: 192.168.2.1
@@ -270,41 +181,34 @@ telegram_bot:
   platform: polling
   api_key: !secret telegram_key
   allowed_chat_ids:
-    - !secret telegram_chatID_Alok
+    - !secret telegram_chatID_grady
 
 notify:
   - platform: ios
   - platform: pushbullet
     api_key: !secret pushbullet_key
     name: pushbullet
-  - name: telegram
-    platform: telegram
-    api_key: !secret telegram_key
-    chat_id: !secret telegram_chatID_Alok
-  - platform: ecobee
-    name: ecobee
   - platform: group
     name: iOS
     services:
-      - service: ios_alokiosiphone
-      - service: ios_rashmiappiphone
+      - service: ios_gradyiosiphone
+      - service: ios_kateappiphone
   - platform: group
     name: ios_abode_updates
     services:
-      - service: ios_alokiosiphone
+      - service: ios_gradyiosiphone
         data:
           title: 'Enable Abode updates?'
           data:
             push:
               badge: 0
               category: "abode_updates"
-  - platform: nfandroidtv
-    name: Shield
-    host: 192.168.2.28
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 logger:
   default: error
   logs:
+    homeassistant.components.insteon_plm: warn
+    insteonplm.protocol: warn  
     homeassistant.components.image_processing: critical
     homeassistant.components.python_script: warning
     homeassistant.components.camera.synology: critical
@@ -319,32 +223,16 @@ logger:
     aiohttp.access: critical
     aiohttp.server: critical
     haffmpeg.core: critical
-    pywemo.ouimeaux_device: critical
-    pywemo.ssdp: critical
     homeassistant.helpers.entity: critical
     custom_components.sensor.life360: critical
     homeassistant.components.http.ban: warning
 # Text to speech
 tts:
   - platform: google
-    cache: true
-    cache_dir: /home/homeassistant/.homeassistant/tts
+#    cache: true
+#    cache_dir: /home/homeassistant/.homeassistant/tts
     time_memory: 300
-  - platform: voicerss
-    api_key: !secret voicerss_key
-  - platform: amazon_polly
-    aws_access_key_id: !secret aws_access_key_id
-    aws_secret_access_key: !secret aws_secret_access_key
-    text_type: ssml
-    cache: True
-remote:
-  - platform: harmony
-    name: livingroom
-    host: 192.168.2.152
 
-scene:
-  platform: lifx_cloud
-  token: !secret lifx_key
 mqtt:
   broker: 127.0.0.1
   port: 1883
@@ -354,6 +242,8 @@ mqtt:
 
 alexa:
 dialogflow:
+
+# Includes 
 intent_script: !include intent_script.yaml
 ios: !include ios.yaml
 alert: !include alert.yaml

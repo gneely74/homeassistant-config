@@ -14,81 +14,27 @@
        icon: mdi:air-conditioner
 #devices
 
-     device_tracker.myiphone:
+     device_tracker.gradys_iphone:
        icon: mdi:cellphone-iphone
-       friendly_name: Alok's iPhone
-     device_tracker.pi_alokphone:
+       friendly_name: Grady's iPhone
+     device_tracker.gradysiphone:
        icon: mdi:cellphone-iphone
-       friendly_name: Alok's iPhone MQTT
-     device_tracker.rashmisiphone:
+       friendly_name: Grady's iPhone Mikrotik
+     device_tracker.kates_iphone:
        icon: mdi:cellphone-iphone
-       friendly_name: Rashmi's iPhone
-     device_tracker.pi_rashmiphone:
+       friendly_name: kate's iPhone
+     device_tracker.katesiphone4:
        icon: mdi:cellphone-iphone
-       friendly_name: Rashmi's iPhone MQTT
-     device_tracker.alokdelllatitude:
-       icon: mdi:laptop-windows
-       friendly_name: Dell Laptop
-     device_tracker.gameroom:
-       icon: mdi:access-point-network
-       friendly_name: Ubiquiti Unifi
-     device_tracker.harmonyhub:
-       icon: mdi:remote
-       friendly_name: Logitech Harmony
-     device_tracker.hpaio:
-       icon: mdi:desktop-mac
-       friendly_name: HP AIO
-     device_tracker.toshibaaio:
-       icon: mdi:desktop-mac
-       friendly_name: Toshiba AIO
-     device_tracker.44650d8ae465:
-       friendly_name: Echo Dot
-       icon: mdi:amazon
-     device_tracker.94a1a273348b:
-       friendly_name: BloomSky
-       icon: mdi:compass-outline
-     device_tracker.alok_alok:
-       entity_picture: /local/life360.png
-       friendly_name: Alok Life360
-     device_tracker.sonu_sonu:
-       entity_picture: /local/life360.png
-       friendly_name: Rashmi Life360
+       friendly_name: kate's iPhone Mikrotik
+#     device_tracker.gradydelllatitude:
+#       icon: mdi:laptop-windows
+#       friendly_name: Dell Laptop
+#     device_tracker.gameroom:
+#       icon: mdi:access-point-network
+#       friendly_name: Ubiquiti Unifi
+
 
  #weather
-     sensor.ars_bloom_voltage:
-       friendly_name: 'BloomSky Voltage'
-       icon: mdi:battery
-     binary_sensor.ars_bloom_rain:
-       friendly_name: 'BloomSky Rain'
-     sensor.ars_bloom_humidity:
-       friendly_name: 'BloomSky Humidity'
-       icon: mdi:water-percent
-     sensor.pws_wind_dir:
-       friendly_name: 'Wind Direction'
-       icon: mdi:compass-outline
-     sensor.pws_wind_string:
-       friendly_name: 'Wind Summary'
-       icon: mdi:weather-windy
-     sensor.leeotemp:
-       icon: mdi:thermometer-lines
-     sensor.leeohumid:
-       icon: mdi:water-percent
-     sensor.leeouptemp:
-       icon: mdi:thermometer-lines
-     sensor.leeouphumid:
-       icon: mdi:water-percent
-     sensor.leeoalarmstatus:
-       icon: mdi:fire
-     sensor.ars_bloom_temperature:
-       friendly_name: 'BloomSky Temperature'
-     sensor.pws_temp_f:
-       friendly_name: 'Outdoor Temperature'
-       icon: mdi:thermometer
-     sensor.pws_weather:
-       friendly_name: 'Weather Summary'
-     sensor.pws_relative_humidity:
-       icon: mdi:water-percent
-       friendly_name: 'Outdoor Humidity'
      sensor.dark_sky_cloud_coverage:
        friendly_name: 'Cloud Coverage'
      sensor.dark_sky_daily_summary:
@@ -111,12 +57,6 @@
      group.all_switches:
        hidden: false
        friendly_name: 'Switches'
-     remote.livingroom:
-       friendly_name: 'Livingroom Remote'
-       icon: mdi:remote
-     sensor.living_room:
-       friendly_name: 'Harmony Activity'
-       entity_picture: /local/Harmony.png
      sensor.usd_inr:
        friendly_name: USD/INR
        icon: mdi:currency-inr
@@ -125,7 +65,7 @@
        icon: mdi:clock
      sensor.hoursslept:
        icon: mdi:sleep
-     sensor.alok_to_home:
+     sensor.grady_to_home:
        friendly_name: 'Commute to Home'
        icon: mdi:car
      sensor.morning_commute:
@@ -136,174 +76,5 @@
        icon: mdi:car
      sensor.garagedoor:
        icon: mdi:glassdoor
-     media_player.shieldtv:
-       friendly_name: ShieldTV Cast
-     media_player.my_shield_android_tv:
-       friendly_name: Shield TV
-     thermostat.main_floor:
-       icon: mdi:thermometer-lines
-     thermostat.upstairs:
-       icon: mdi:thermometer-lines
-     sensor.downstairs_humidity:
-       icon: mdi:water-percent
-     sensor.downstairsthermmode:
-       icon: mdi:home
-     sensor.upstairs_humidity:
-       icon: mdi:water-percent
-     sensor.upstairshermostatmode:
-       icon: mdi:home
      alarm_control_panel.abode_alarm:
        entity_picture: /local/Abode.jpg
-
- #Emulated_Hue Devices
-     input_boolean.abodeupdate:
-       emulated_hue_hidden: false
-     input_boolean.startrecording:
-       emulated_hue_hidden: false
-     switch.driveway:
-       emulated_hue_hidden: false
-       emulated_hue_name: "Driveway Light"
-       friendly_name: "Driveway Light"
-       homebridge_hidden: false
-       google_assistant: true
-     switch.wemoporch:
-       emulated_hue_hidden: false
-       emulated_hue_name: "Porch Lights"
-       friendly_name: "Porch Lights"
-       homebridge_hidden: false
-       google_assistant: true
-     switch.garage_relay_switch:
-       emulated_hue_hidden: false
-       emulated_hue_name: "Garage Door"
-       friendly_name: Garage Door Switch
-     group.living_room_lights:
-       emulated_hue_hidden: false
-       emulated_hue_name: "Living room lights"
-       homebridge_hidden: false
-       friendly_name: Living room lights
-       google_assistant: true
-     input_boolean.tv:
-       homebridge_hidden: false
-     cover.garagedoor:
-       homebridge_cover_type: garage_door
-
-     light.kitchen_lights:
-       emulated_hue_hidden: false
-       emulated_hue_name: "Kitchen lights"
-       homebridge_hidden: false
-       google_assistant: true
-       friendly_name: Kitchen lights
-       custom_ui_state_card: state-card-custom-ui
-       state_card_mode: single-line
-       stretch_slider: true
-       slider_theme:
-         min: 0
-         max: 255
-         pin: true
-         off_when_min: true
-     light.lifx5:
-       emulated_hue_hidden: false
-       emulated_hue_name: "Garage Lights"
-       homebridge_hidden: false
-       friendly_name: Garage lights
-       google_assistant: true
-       custom_ui_state_card: state-card-custom-ui
-       state_card_mode: single-line
-       stretch_slider: true
-       slider_theme:
-         min: 0
-         max: 255
-         pin: true
-         off_when_min: true
-     light.lifx3:
-       custom_ui_state_card: state-card-custom-ui
-       state_card_mode: single-line
-       stretch_slider: true
-       slider_theme:
-         min: 0
-         max: 255
-         pin: true
-         off_when_min: true
-     light.lifxnrkitchen:
-       custom_ui_state_card: state-card-custom-ui
-       state_card_mode: single-line
-       stretch_slider: true
-       slider_theme:
-         min: 0
-         max: 255
-         pin: true
-         off_when_min: true
-     light.lifxnrguest:
-       custom_ui_state_card: state-card-custom-ui
-       state_card_mode: single-line
-       stretch_slider: true
-       slider_theme:
-         min: 0
-         max: 255
-         pin: true
-         off_when_min: true
-     switch.wemoinsight:
-       custom_ui_state_card: state-card-custom-ui
-       extra_badge:
-         entity_id: sensor.wemopowerused  # Will take precedence over attribute and unit below.
-         attribute: power_consumption
-         unit: W
-         blacklist_states: 0
-     climate.ecobee:
-       max_temp: 90
-       min_temp: 55
-     script.colorloop_start:
-       icon: mdi:palette
-     script.lifx_stop_effects:
-       icon: mdi:palette
-     script.disco_party:
-       icon: mdi:palette
-       homebridge_hidden: false
-
-# Xiaomi Aqara Devices
-     light.gateway_light_34ce00813670:
-       emulated_hue_hidden: false
-       google_assistant: true
-       friendly_name: Gateway lights
-       custom_ui_state_card: state-card-custom-ui
-       state_card_mode: single-line
-       stretch_slider: true
-       slider_theme:
-         min: 0
-         max: 255
-         pin: true
-         off_when_min: true
-     sensor.illumination_34ce00813670:
-       friendly_name: Living Room Brightness
-       icon: mdi:brightness-7
-     binary_sensor.cube_158d0001035aa7:
-       friendly_name: MiCube
-     binary_sensor.motion_sensor_158d00016daecc:
-       friendly_name: Living Room Occupancy
-       homebridge_hidden: false
-     sensor.illumination_158d00016daecc:
-       friendly_name: Living Room Occupancy Sensor Brightness
-       icon: mdi:brightness-7
-     sensor.illumination_158d00016612af:
-       friendly_name: Upstairs Brightness
-       icon: mdi:brightness-7
-     binary_sensor.motion_sensor_158d00016612af:
-       friendly_name: Upstairs Occupancy
-       homebridge_hidden: false
-     binary_sensor.water_leak_sensor_158d0001d77800:
-       friendly_name: Laundry Water Leak
-       homebridge_hidden: false
-     sensor.humidity_158d0001ab7d20:
-       friendly_name:  Attic Humidity
-       icon: mdi:water-percent
-     sensor.pressure_158d0001ab7d20:
-       friendly_name:  Attic Pressure
-     sensor.temperature_158d0001ab7d20:
-       friendly_name:  Attic Temperature
-     sensor.humidity_158d0001ab3b2b:
-       friendly_name:  Study Humidity
-       icon: mdi:water-percent
-     sensor.pressure_158d0001ab3b2b:
-       friendly_name:  Study Pressure
-     sensor.temperature_158d0001ab3b2b:
-       friendly_name:  Study Temperature

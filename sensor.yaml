@@ -26,19 +26,34 @@
     api_key: !secret darksky_key
     monitored_conditions:
       - wind_speed
+      - summary
+      - icon
+      - nearest_storm_distance
+      - nearest_storm_bearing
+      - precip_type
+      - precip_intensity
+      - precip_probability
+      - temperature
+      - apparent_temperature
+      - dew_point
+      - wind_speed
+      - wind_bearing
       - cloud_cover
+      - humidity
+      - pressure
+      - visibility
+      - ozone
+      - minutely_summary
       - hourly_summary
       - daily_summary
-#Time and Date Sensor
+      - temperature_max
+      - temperature_min
+      - apparent_temperature_max
+      - apparent_temperature_min
+      - precip_intensity_max#Time and Date Sensor
   - platform: time_date
     display_options:
       - 'time_date'
-  - platform: plex
-    name: PlexSpy
-    host: 192.168.2.212
-    port: 32400
-    username: !secret plex_user
-    password: !secret plex_password
 #Morning Commute Google Travel Time Sensor
   - platform: google_travel_time
     name: Morning Commute
@@ -52,10 +67,10 @@
     origin: !secret add_buckhead
     destination: !secret add_home
   - platform: google_travel_time
-    name: Alok to Home
+    name: Grady to Home
     friendly_name: "Commute to Home"
     api_key: !secret google_key
-    origin: device_tracker.alok_alok
+    origin: device_tracker.grady_grady
     destination: !secret add_home
   - platform: wunderground
     api_key: !secret wunderground_key
@@ -89,18 +104,22 @@
     headers:
        Referer: "https://www.pollen.com"
   - platform: mqtt
-    state_topic: "owntracks/pi/rashmiphone/step"
-    name: "Steps Rashmi"
+    state_topic: "owntracks/pi/katephone/step"
+    name: "Steps Kate"
     value_template: '{{ value_json.steps }}'
   - platform: mqtt
-    state_topic: "owntracks/pi/alokphone/step"
-    name: "Steps Alok"
+    state_topic: "owntracks/pi/gradyphone/step"
+    name: "Steps Grady"
     value_template: '{{ value_json.steps }}'
   - platform: command_line
     name: "PyPi HASS Version"
     command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
   - platform: template
     sensors:
+      overflow_pantry_door:
+        friendly_name: "Overflow Pantry Door"
+        value_template: '{% if is_state("sensor.overflow_pantry_door_access_control", "22") %}open{% else %}closed{% endif %}'
+        icon_template: '{% if is_state("sensor.overflow_pantry_door_access_control", "22") %}mdi:door-open{% else %}mdi:door{% endif %}'
       battery_status:
         friendly_name: "Battery Status"
         value_template: >-
@@ -127,15 +146,6 @@
             {{ ', ' }}
           {%- endif -%}
           {{ '%02d' % hours }}:{{ '%02d' % minutes }} hrs
-      wemopowerused:
-        friendly_name: "Wemo Current Power"
-        unit_of_measurement: "w"
-        value_template: >-
-           {%- if states.switch.wemoinsight.attributes.current_power_w != None -%}
-             {{(states.switch.wemoinsight.attributes|default({})).current_power_w|default(0)|round(2)}}
-           {%- else -%}
-             0
-           {%- endif -%}
       hvacmode:
         friendly_name: "HVAC Mode"
         value_template: >-
