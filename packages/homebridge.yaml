@@ -33,7 +33,7 @@ homeassistant:
       homebridge_hidden: true
 
     light:
-      homebridge_hidden: true
+      homebridge_hidden: false
 
     lock:
       homebridge_hidden: false
@@ -51,4 +51,4 @@ homeassistant:
       homebridge_hidden: true
 
     switch:
-      homebridge_hidden: true
+      homebridge_hidden: false
