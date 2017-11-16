@@ -10,8 +10,6 @@
       - group.all_lights
       - group.home_security
       - group.switches
-      - group.ring_doorbell
-      - group.prices
 
   temperature:
     name: Temperature Sensors
@@ -19,10 +17,8 @@
     icon: mdi:weather-cloudy
     entities:
       - group.weather
-      - group.room_sensors
-      - group.thermostats
-      - group.camera_meteogram
-      - group.camera_wundergroundradar
+#      - group.room_sensors
+#     - group.thermostats
       - weather.weather
 
   cameras:
@@ -30,19 +26,10 @@
     view: yes
     icon: mdi:cctv
     entities:
-      - group.camera_driveway
-      - group.camera_backyard
-      - group.camera_porch
-      - group.camera_patio
-      - group.camera_ring_doorbell
-      - group.camera_arsbloom
-      - group.camera_usps
-      - group.camera_abode_living_room
-      - group.camera_foscam1
-      - group.camera_foscam2
-      - group.camera_foscam3
-      - group.camera_motoe
-      - group.camera_opencv_porch
+      - camera.entryway
+      - camera.living_room_camera
+      - camera.master_bedroom
+      - camera.living_room_camera
       - camera.worldtime
 
   media:
@@ -51,7 +38,7 @@
     icon: mdi:play-circle-outline
     entities:
       - group.entertainment
-      - group.light_operations
+#      - group.light_operations
       - group.media_player
 
   settings:
@@ -66,74 +53,69 @@
       - group.camera_switches
       - group.network_details
 
-
-  camera_driveway:
-    name: Driveway Camera
-    entities:
-      - camera.entryway
-  camera_abode_living_room:
-    entities:
-      - camera.living_room_camera
-  camera_master:
-    entities:
-      - camera.master_bedroom
-
   HASS Details:
-    - sensor.time__date
-    - sensor.hassuptime
-    - sensor.ssl_certificate_expiry
-    - input_select.current_theme
+    entities:  
+      - sensor.time__date
+      - sensor.hassuptime
+      - sensor.ssl_certificate_expiry
+      - input_select.current_theme
 
   Weather:
-    - sensor.dark_sky_cloud_coverage
-    - sensor.dark_sky_hourly_summary
-    - sensor.dark_sky_daily_summary
+    entities:  
+      - sensor.dark_sky_cloud_coverage
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_daily_summary
 
   Room Sensors:
-    - sensor.illumination_158d00016612af
-    - sensor.humidity_158d0001ab7d20
-    - sensor.pressure_158d0001ab7d20
-    - sensor.temperature_158d0001ab7d20
-    - sensor.humidity_158d0001ab3b2b
-    - sensor.pressure_158d0001ab3b2b
-    - sensor.temperature_158d0001ab3b2b
-    - sensor.illumination_34ce00813670
-    - binary_sensor.water_leak_sensor_158d0001d77800
-    - sensor.leeoalarmstatus
+    entities:
+      - sensor.illumination_158d00016612af
+      - sensor.humidity_158d0001ab7d20
+      - sensor.pressure_158d0001ab7d20
+      - sensor.temperature_158d0001ab7d20
+      - sensor.humidity_158d0001ab3b2b
+      - sensor.pressure_158d0001ab3b2b
+      - sensor.temperature_158d0001ab3b2b
+      - sensor.illumination_34ce00813670
+      - binary_sensor.water_leak_sensor_158d0001d77800
+      - sensor.leeoalarmstatus
 
   Thermostats:
-    - climate.downstairs
-    - sensor.downstairsthermoper
-    - sensor.downstairs_humidity
-    - sensor.living_room_temperature
-    - switch.downstairs_away
-    - climate.upstairs
-    - sensor.upstairsthermoper
-    - sensor.upstairs_humidity
-    - sensor.upstairs_temperature
-    - switch.upstairs_away
-    - climate.lyric_t5_thermostat
-    - switch.lyric_hold
-    - input_select.hvacmode
+    entities:  
+      - climate.downstairs
+      - sensor.downstairsthermoper
+      - sensor.downstairs_humidity
+      - sensor.living_room_temperature
+      - switch.downstairs_away
+      - climate.upstairs
+      - sensor.upstairsthermoper
+      - sensor.upstairs_humidity
+      - sensor.upstairs_temperature
+      - switch.upstairs_away
+      - climate.lyric_t5_thermostat
+      - switch.lyric_hold
+      - input_select.hvacmode
 
   Information:
-    - sensor.morning_commute
-    - sensor.grady_to_home
-    - sensor.usd_inr
+    entities:
+      - sensor.morning_commute
+      - sensor.grady_to_home
+      - sensor.usd_inr
 
   Network Details:
-    - binary_sensor.pihole
-    - sensor.speedtest_download
-    - sensor.pihole_dns_queries_today
-    - sensor.pihole_domains_blocked
-    - sensor.pihole_ads_percentage_blocked_today
-    - sensor.pihole_dns_unique_domains
+    entities:  
+      - binary_sensor.pihole
+      - sensor.speedtest_download
+      - sensor.pihole_dns_queries_today
+      - sensor.pihole_domains_blocked
+      - sensor.pihole_ads_percentage_blocked_today
+      - sensor.pihole_dns_unique_domains
 
-  Media Player:
-    - media_player.boys_room_apple_tv
-    - media_player.living_room_apple_tv
-    - media_player.fionas_apple_tv
-    - media_player.bedroom_apple_tv
+  Media Players:
+    entities:  
+      - media_player.boys_room_apple_tv
+      - media_player.living_room_apple_tv
+      - media_player.fionas_apple_tv
+      - media_player.bedroom_apple_tv
 
   Home Security:
     control: hidden
@@ -147,52 +129,59 @@
       - binary_sensor.garage_door
       - binary_sensor.den_door
       - binary_sensor.office_door
+      - sensor.overflow_pantry_door
 
   Camera Sensors:
     control: hidden
     entities:
       - binary_sensor.entryway_camera_motion_detected
-      - binary_sensor.entryway_camera__zone_1_activity
+      - binary_sensor.entryway_camera_zone_1_activity
       - binary_sensor.entryway_camera_person_detected
       - binary_sensor.entryway_camera_sound_detected 
       - binary_sensor.master_bedroom_camera_motion_detected
       - binary_sensor.master_bedroom_camera_person_detected
       - binary_sensor.master_bedroom_camera_sound_detected
   Camera Switches:
-    - switch.backyardmotion
-    - switch.drivewaymotion
-    - switch.patiomotion
-    - switch.porchmotion
+    entities:
+      - switch.backyardmotion
+      - switch.drivewaymotion
+      - switch.patiomotion
+      - switch.porchmotion
 
   living_room_lights:
-    - light.fireplace_light
+    entities:
+      - light.fireplace_light
 
   Switches:
-    - switch.freezer_plug
-    - switch.front_garage_light
-    - switch.front_porch_light
-    - switch.garage_light
-    - switch.outside_den_light
-    - switch.side_of_garage_light
+    entities:    
+      - switch.freezer_plug
+      - switch.front_garage_light
+      - switch.front_porch_light
+      - switch.garage_light
+      - switch.outside_den_light
+      - switch.side_of_garage_light
 
-  Light Operations:
-    - input_boolean.partymode
-    - script.colorloop_start
-    - script.disco_party
-    - script.lifx_stop_effects
-  Household:
-    - device_tracker.meta_kate
-    - device_tracker.meta_grady
+  light_operations:
+    entities:  
+      - input_boolean.partymode
+      - script.colorloop_start
+      - script.disco_party
+      - script.lifx_stop_effects
+  household:
+    entities:  
+      - device_tracker.meta_kate
+      - device_tracker.meta_grady
 
   Devices:
-    - device_tracker.gradys_iphone
-    - device_tracker.kates_iphone
-    - device_tracker.conorsiphone3
-    - device_tracker.huntersone6plus
-    - device_tracker.fisiphone
-    - device_tracker.finnegansipad
-    - device_tracker.kateneelysipad
-    - #device_tracker.katesiphone4
-    - device_tracker.pokemonsipad
-    - binary_sensor.kate_home
-    - binary_sensor.grady_home
+    entities:
+#      - device_tracker.gradys_iphone
+#      - device_tracker.kates_iphone
+#      - device_tracker.conorsiphone3
+#      - device_tracker.huntersone6plus
+#      - device_tracker.fisiphone
+#      - device_tracker.finnegansipad
+#      - device_tracker.kateneelysipad
+#      - #device_tracker.katesiphone4
+#      - device_tracker.pokemonsipad
+      - binary_sensor.kate_home
+      - binary_sensor.grady_home

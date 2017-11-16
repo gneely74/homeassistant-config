@@ -7,13 +7,6 @@
       - 12
     monitored_conditions:
       - download
-  - platform: history_stats
-    name: Total TV Time
-    entity_id: media_player.panasonic_viera_tv
-    state: 'on'
-    type: time
-    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
-    end: '{{ now() }}'
 #  - platform: currencylayer
 #    api_key: !secret currencylayer_key
 #    base: USD
@@ -48,7 +41,8 @@
       - temperature_min
       - apparent_temperature_max
       - apparent_temperature_min
-      - precip_intensity_max#Time and Date Sensor
+      - precip_intensity_max
+#Time and Date Sensor
   - platform: time_date
     display_options:
       - 'time_date'

@@ -17,8 +17,8 @@ homeassistant:
   customize: !include customize.yaml
   #customize_glob: !include customize_glob.yaml
   packages: !include_dir_named packages
-  whitelist_external_dirs:
-    - '/home/homeassistant/.homeassistant/downloads'
+#  whitelist_external_dirs:
+#    - '/home/homeassistant/.homeassistant/downloads'
 
 python_script:
 weather:
@@ -108,8 +108,6 @@ discovery:
 conversation:
 ffmpeg:
 camera:
-  - platform: bloomsky
-    # Generate your link - https://www.wunderground.com/weather-radar/united-states/
   - platform: generic
     still_image_url: 'https://icons.wxug.com/data/weather-maps/radar/united-states/columbus-georgia-region-current-radar-animation.gif'
     name: WundergroundRadar
@@ -199,7 +197,7 @@ notify:
               category: "abode_updates"
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 logger:
-  default: error
+  default: info
   logs:
     homeassistant.components.insteon_plm: warn
     insteonplm.protocol: warn  
@@ -253,4 +251,4 @@ input_number: !include input_number.yaml
 frontend: !include frontend.yaml
 recorder: !include recorder.yaml
 logbook: !include logbook.yaml
-history: !include history.yaml
+#history: !include history.yaml

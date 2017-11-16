@@ -42,6 +42,8 @@
      sensor.dark_sky_hourly_summary:
        friendly_name: 'Hourly Summary'
 
+     light.1b56c3:
+       friendly_name: Master Bedroom 
      group.all_automations:
        hidden: false
        friendly_name: 'Automations'
