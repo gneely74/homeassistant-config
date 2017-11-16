@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RSYNC="/usr/bin/rsync -avrz --progress --delete"
+RSYNC="/usr/bin/rsync -avrz --progress"
 MOUNTDIR=/Volumes/config/
 git add .
 git status
