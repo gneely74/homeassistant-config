@@ -92,19 +92,6 @@
           spread: 359
           change: 35
 
-  arm_security:
-    alias: 'Arm Security'
-    sequence:
-      - delay: 00:05:00
-      - service: homeassistant.turn_on
-        entity_id: script.abodeaway
-
-  disarm_security:
-    alias: 'Disarm Security'
-    sequence:
-      - service: homeassistant.turn_on
-        entity_id: script.abodestandby
-        
   updatetracker:
     alias: 'Update tracker'
     sequence:
