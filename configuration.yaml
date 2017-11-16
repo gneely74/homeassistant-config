@@ -199,25 +199,26 @@ notify:
 logger:
   default: info
   logs:
-    homeassistant.components.insteon_plm: warn
-    insteonplm.protocol: warn  
     homeassistant.components.image_processing: critical
-    homeassistant.components.python_script: warning
+    homeassistant.components.python_script: warn
     homeassistant.components.camera.synology: critical
     homeassistant.components.camera.generic: critical
     homeassistant.components.sensor.wunderground: critical
     homeassistant.components.sensor.pi_hole: critical
     homeassistant.components.media_player.plex: critical
     homeassistant.components.telegram_bot: critical
-    homeassistant.components.scene.lifx_cloud: critical
     homeassistant.components.sensor.darksky: critical
     pychromecast.socket_client: critical
     aiohttp.access: critical
     aiohttp.server: critical
     haffmpeg.core: critical
     homeassistant.helpers.entity: critical
-    custom_components.sensor.life360: critical
-    homeassistant.components.http.ban: warning
+    homeassistant.components.insteon_plm: warn
+    insteonplm.protocol: warn
+    homeassistant.components.zwave: warn
+    homeassistant.components.http.ban: warn
+    homeassistant.components.ios: debug
+    homeassistant.components.notify: debug
 # Text to speech
 tts:
   - platform: google

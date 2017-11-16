@@ -37,8 +37,6 @@
     view: yes
     icon: mdi:play-circle-outline
     entities:
-      - group.entertainment
-#      - group.light_operations
       - group.media_player
 
   settings:
@@ -110,7 +108,8 @@
       - sensor.pihole_ads_percentage_blocked_today
       - sensor.pihole_dns_unique_domains
 
-  Media Players:
+  media_player:
+    name: Media Players
     entities:  
       - media_player.boys_room_apple_tv
       - media_player.living_room_apple_tv
@@ -125,6 +124,7 @@
       - cover.garage_door_opener
       - input_boolean.abodeupdate
       - binary_sensor.back_door
+      - binary_sensor.back_door_template
       - binary_sensor.front_door
       - binary_sensor.garage_door
       - binary_sensor.den_door
