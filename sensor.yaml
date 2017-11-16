@@ -2,8 +2,6 @@
   - platform: uptime
     unit_of_measurement: minutes
   - platform: season
-  - platform: cert_expiry
-    host: !secret ha_url
   - platform: speedtest
     hour:
       - 12
