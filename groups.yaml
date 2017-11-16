@@ -85,8 +85,7 @@
       - sensor.temperature_158d0001ab3b2b
       - sensor.illumination_34ce00813670
       - binary_sensor.water_leak_sensor_158d0001d77800
-      - sensor.leeoalarmstatus
-
+ 
   Thermostats:
     entities:  
       - climate.downstairs
@@ -141,6 +140,15 @@
       - binary_sensor.office_door
       - sensor.overflow_pantry_door
 
+  outside_lights:
+    name: Outside Lights
+    control: hidden
+    entities:
+      - switch.outside_den_light
+      - switch.front_porch_light
+      - switch.front_garage_light
+      - switch.side_of_garage_light
+      
   Camera Sensors:
     control: hidden
     entities:

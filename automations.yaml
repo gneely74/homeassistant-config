@@ -101,6 +101,10 @@
       data:
         message: "Garage Door Open"
         title: "Garage Door Open"
+    - service: notify.pushbullet
+      data:
+        message: "Garage Door Open"
+        title: "Garage Door Open"
     - service: homeassistant.turn_on
       entity_id: script.notificationgaragedoor
 
@@ -734,16 +738,16 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: binary_sensor.garage_entry_door
+      entity_id: binary_sensor.garage_door
       to: 'off'
       for: '00:00:30'
   condition:
     - condition: state
-      entity_id: light.lifx5
+      entity_id: switch.garage_light
       state: 'on'
   action:
      service: light.turn_off
-     entity_id: light.lifx5
+     entity_id: switch.garage_light
 
 - id: kitchen_light_brightness
   alias: 'Kitchen light brightness'
@@ -762,78 +766,6 @@
        entity_id: light.kitchen_lights
        brightness: 200
 
-- id: turn_off_xiaomi
-  alias: 'Turn off Xiaomi Gateway light'
-  initial_state: 'on'
-  trigger:
-   - platform: numeric_state
-     entity_id: sensor.illumination_34ce00813670
-     above: 600
-  condition:
-    - condition: state
-      entity_id: light.gateway_light_34ce00813670
-      state: 'on'
-  action:
-    - service: light.turn_off
-      entity_id: light.gateway_light_34ce00813670
-
-- id: change_xiaomi_color
-  alias: 'Change Xiaomi color'
-  initial_state: 'on'
-  condition:
-    - condition: time
-      after: '19:15:00'
-      before: '07:45:00'
-    - condition: state
-      entity_id: binary_sensor.living_room_occupancy
-      state: 'on'
-  trigger:
-   - platform: time
-     minutes: '/15'
-     seconds: 00
-  action:
-     service: light.turn_on
-     entity_id: light.gateway_light_34ce00813670
-     data_template:
-       brightness: 255
-       rgb_color: ['{{ (range(0, 255)|random) }}','{{ (range(0, 255)|random) }}','{{ (range(0, 255)|random) }}']
-
-- id: change_leeo_color
-  alias: 'Change Leeo color'
-  initial_state: 'on'
-  condition:
-    - condition: state
-      entity_id: device_tracker.leeoalert
-      state: 'home'
-    - condition: time
-      after: '19:15:00'
-      before: '07:45:00'
-    - condition: state
-      entity_id: binary_sensor.living_room_occupancy
-      state: 'on'
-  trigger:
-   - platform: time
-     minutes: '/15'
-     seconds: 00
-  action:
-     service: ifttt.trigger
-     data_template: {"event":"leeocolor", "value1":"{{ '{:02x}{:02x}{:02x}'.format(range(0, 255) | random, range(0, 255) | random, range(0, 255) | random) }}"}
-
-- id: change_leeoup_color
-  alias: 'Change Leeo upstairs color'
-  initial_state: 'on'
-  condition:
-    - condition: time
-      after: '19:15:00'
-      before: '07:45:00'
-  trigger:
-   - platform: time
-     minutes: '/15'
-     seconds: 00
-  action:
-     service: ifttt.trigger
-     data_template: {"event":"leeocolorup", "value1":"{{ '{:02x}{:02x}{:02x}'.format(range(0, 255) | random, range(0, 255) | random, range(0, 255) | random) }}"}
-
 - id: frontyard_lights
   alias: 'Turn on frontyard lights'
   initial_state: 'on'
@@ -847,86 +779,43 @@
   trigger:
    - platform: state
      entity_id:
-       - binary_sensor.ring_front_door_motion
+       - binary_sensor.entryway_camera_motion_detected
      from: 'off'
      to: 'on'
   action:
     - service: switch.turn_on
       entity_id:
-        - switch.driveway
-        - switch.wemoporch
+        - switch.front_garage_light
+        - switch.front_porch_light
 
-- id: frontyard_lights_off_after_ring
-  alias: 'Turn off frontyard lights after Ring'
-  initial_state: 'on'
-  condition:
-    - condition: template
-      value_template: >
-        {%- if states.binary_sensor.ring_front_door_motion.last_changed -%}
-          {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.ring_front_door_motion.last_changed)) > 200}}
-        {%- else -%}
-          false
-        {%- endif -%}
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: switch.driveway
-          state: 'on'
-        - condition: state
-          entity_id: switch.wemoporch
-          state: 'on'
-  trigger:
-   - platform: time
-     minutes: '/5'
-  action:
-    - service: switch.turn_off
-      entity_id:
-        - switch.driveway
-        - switch.wemoporch
+#- id: frontyard_lights_off_after_ring
+#  alias: 'Turn off frontyard lights after Ring'
+#  initial_state: 'on'
+#  condition:
+#    - condition: template
+#      value_template: >
+#        {%- if states.binary_sensor.ring_front_door_motion.last_changed -%}
+#          {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.ring_front_door_motion.last_changed)) > 200}}
+#        {%- else -%}
+#          false
+#        {%- endif -%}
+#    - condition: or
+#      conditions:
+#        - condition: state
+#          entity_id: switch.driveway
+#          state: 'on'
+#        - condition: state
+#          entity_id: switch.wemoporch
+#          state: 'on'
+#  trigger:
+#   - platform: time
+#     minutes: '/5'
+#  action:
+#    - service: switch.turn_off
+#      entity_id:
+#        - switch.front_garage_light
+#        - switch.front_porch_light
 
-- id: lifx_party_mode
-  alias: "Turn Lifx Party Mode On"
-  initial_state: 'on'
-  trigger:
-    - platform: time
-      seconds: '/3'
-  condition:
-    - condition: state
-      entity_id: input_boolean.partymode
-      state: 'on'
-  action:
-    - service: light.turn_on
-      entity_id: light.lifxnrkitchen
-      data_template:
-        rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
-        brightness: 200
-        transition: '{{ (range(1, 2)|random) }}'
-    - service: light.turn_on
-      entity_id: light.lifxnrguest
-      data_template:
-        rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
-        brightness: 200
-        transition: '{{ (range(1, 2)|random) }}'
-    - service: light.turn_on
-      entity_id: light.lifx3
-      data_template:
-        rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
-        brightness: 200
-        transition: '{{ (range(1, 2)|random) }}'
-- id: lifx_party_mode_off
-  alias: "Turn Lifx Party Mode Off"
-  initial_state: 'on'
-  trigger:
-    - platform: state
-      entity_id: input_boolean.partymode
-      to: 'off'
-  action:
-    - service: light.turn_on
-      entity_id: group.living_room_lights
-      data:
-        rgb_color: [255, 255, 255]
-        brightness: 250
-        color_temp: 285
 
 - id: outdoor_light_at_night
   alias: Outdoor lights at night
@@ -934,26 +823,26 @@
   trigger:
     platform: sun
     event: sunset
-    offset: "00:45:00"
+    offset: "00:05:00"
   action:
     - service: switch.turn_on
       entity_id:
-        - switch.driveway
-
+        - group.outside_lights
+        
 - id: outdoor_light_off
   alias: Outdoor light Off
   initial_state: 'on'
   trigger:
     platform: sun
     event: sunset
-    offset: "01:30:00"
+    offset: "03:30:00"
   action:
     - service: switch.turn_off
       entity_id:
-        - switch.driveway
+        - group.outside_lights
 
-- id: driveway_light_off_during_the_day
-  alias: Driveway light Off during the day
+- id: outsides_light_off_during_the_day
+  alias: Outside lights Off during the day
   initial_state: 'on'
   trigger:
     platform: state
@@ -966,37 +855,7 @@
   action:
     - service: switch.turn_off
       entity_id:
-        - switch.driveway
-        - switch.wemoporch
-
-- id: set_hvac_mode
-  alias: 'Set HVAC Mode'
-  initial_state: 'on'
-  trigger:
-    - platform: state
-      entity_id: sensor.hvacmode
-      to: 'heat'
-    - platform: state
-      entity_id: sensor.hvacmode
-      to: 'cool'
-  action:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.hvacmode
-        option: '{{ trigger.to_state.state }}'
-- id: reset_garage_relay
-  alias: 'Reset Garage Relay'
-  initial_state: 'on'
-  trigger:
-    - platform: time
-      seconds: '/5'
-  condition:
-    - condition: state
-      entity_id: switch.garage_relay_switch
-      state: "on"
-  action:
-    - service: switch.turn_off
-      entity_id: switch.garage_relay_switch
+        - group.outside_lights
 
 - id: open_garage_door_when_someone_home
   alias: 'Open Garage door when someone home'
@@ -1067,8 +926,8 @@
     - platform: time
       minutes: '/5'
   action:
-    - service: switch.turn_on
-      entity_id: switch.garage_relay_switch
+    - service: close_cover
+      entity_id: cover.garage_door_opener
 
 - id: sensors_changed_when_nobody_home
   alias: 'Sensors changed when nobody is home'

@@ -22,10 +22,6 @@
     name: TV Time
     initial: on
     icon: mdi:television-guide
-  leeoalarm:
-    name: Leeo Alarm
-    initial: off
-    icon: mdi:fire
   partymode:
     name: Party Mode
     initial: off
