@@ -68,9 +68,6 @@ homeassistant:
     switch.flash_lights_when_alarmin:
       homebridge_hidden: true
 
-    switch.flash_lights_when_alarmin:
-      homebridge_hidden: true
-
     switch.good_morning:
       homebridge_hidden: true
 
