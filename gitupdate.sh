@@ -1,7 +1,6 @@
 #!/bin/bash
 
 RSYNC="/usr/bin/rsync -avrz --progress --exclude='.git/' -e 'ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'"
-MOUNTDIR=/Volumes/config/
 git add .
 git status
 if [[ `git status --porcelain` ]]; then
