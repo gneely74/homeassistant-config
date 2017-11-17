@@ -1,6 +1,7 @@
   exclude:
     domains:
       - device_tracker
+      - zwave
     entities:
       - automation.update_volume_slider
 #      - automation.heal_zwave_network
