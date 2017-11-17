@@ -11,6 +11,9 @@ homeassistant:
     alarm_control_panel:
       homebridge_hidden: false
 
+    automation:
+      homebridge_hidden: true
+
     binary_sensor:
       homebridge_hidden: true
 
@@ -39,6 +42,9 @@ homeassistant:
       homebridge_hidden: false
 
     media_player:
+      homebridge_hidden: true
+
+    script:
       homebridge_hidden: true
 
     scene:
