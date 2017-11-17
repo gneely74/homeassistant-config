@@ -56,8 +56,8 @@ homeassistant:
     sensor:
       homebridge_hidden: true
 
-    switch:
-      homebridge_hidden: false
+#    switch:
+#      homebridge_hidden: false
 
     switch.auto_away:
       homebridge_hidden: true

@@ -12,11 +12,6 @@
         data:
           entity_id: input_select.abodestatus
           option: armed_away
-      - service: switch.turn_on
-        entity_id:
-          - switch.downstairs_away
-          - switch.upstairs_away
-          - switch.lyric_hold
       # - service: homeassistant.turn_on
       #   entity_id: input_boolean.startrecording
       # - service: ifttt.trigger
@@ -45,11 +40,6 @@
         data:
           entity_id: input_select.abodestatus
           option: disarmed
-      - service: switch.turn_off
-        entity_id:
-          - switch.downstairs_away
-          - switch.upstairs_away
-          - switch.lyric_hold
       - service: light.turn_off
         entity_id: group.living_room_lights
       # - service: ifttt.trigger
