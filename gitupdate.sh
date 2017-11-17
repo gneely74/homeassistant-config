@@ -19,5 +19,7 @@ if [ ! -d $MOUNTDIR ];
         $RSYNC /Users/gneely/Documents/hassio/homeassistant-config/ $MOUNTDIR
         diskutil unmount $MOUNTDIR
 fi
+
+curl -X GET -H "x-ha-access: Gr8eandK8" -H "Content-Type: application/json" http://hassio.local:8123/homeassistant/restart
     
 exit
