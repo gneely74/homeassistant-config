@@ -20,6 +20,6 @@ if [ ! -d $MOUNTDIR ];
         diskutil unmount $MOUNTDIR
 fi
 
-curl -X GET -H "x-ha-access: Gr8eandK8" -H "Content-Type: application/json" http://hassio.local:8123/homeassistant/restart
-    
+curl -X GET -H "x-ha-access: Gr8eandK8" -H "Content-Type: application/json" http://hassio.local:8123/api/homeassistant/restart
+ssh root@hassio.local hassio homeassistant restart    
 exit
