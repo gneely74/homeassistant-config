@@ -22,7 +22,7 @@ if [[ `git status --porcelain` ]]; then
     fi
     ssh -o StrictHostKeyChecking=no root@hassio.local hassio homeassistant restart   
 else
-  echo "No changes"
+  echo ""
 fi
  
 exit
