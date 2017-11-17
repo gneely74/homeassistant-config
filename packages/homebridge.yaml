@@ -65,6 +65,9 @@ homeassistant:
     switch.auto_home:
       homebridge_hidden: true
 
+    switch.close_garage_door:
+      homebridge_hidden: true
+
     switch.flash_lights_when_alarmin:
       homebridge_hidden: true
 
