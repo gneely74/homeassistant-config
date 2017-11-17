@@ -92,8 +92,6 @@
       - sensor.downstairsthermoper
       - sensor.downstairs_humidity
       - sensor.living_room_temperature
-      - climate.lyric_t5_thermostat
-      - switch.lyric_hold
       - input_select.hvacmode
 
   Information:

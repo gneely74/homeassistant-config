@@ -1,17 +1,6 @@
 #################################################################
 ## Switches
 #################################################################
-  - platform: template
-    switches:
-      lyric_hold:
-        friendly_name: Lyric Hold
-        value_template: "{{(states.climate.lyric_t5_thermostat.attributes|default({})).hold_mode|default('NoHold') == 'PermanentHold'}}"
-        turn_on:
-          - service: homeassistant.turn_on
-            entity_id: script.lyric_hold_on
-        turn_off:
-          - service: homeassistant.turn_on
-            entity_id: script.lyric_hold_off
 #  platform: command_line
 #  switches:
 #    #Switch for Foscam Motion Detection
