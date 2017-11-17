@@ -161,7 +161,7 @@ device_tracker:
   #   password: !secret asus_password
 
 notify:
-  - platform: ios
+#  - platform: ios
   - platform: pushbullet
     api_key: !secret pushbullet_key
     name: pushbullet
