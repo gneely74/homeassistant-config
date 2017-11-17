@@ -107,6 +107,11 @@
       - sensor.morning_commute
       - sensor.grady_to_home
       - sensor.usd_inr
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_apparent_temperature_min
+      - sensor.dark_sky_apparent_temperature_max      
 
   Network Details:
     entities:  
