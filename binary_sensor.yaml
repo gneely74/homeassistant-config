@@ -3,19 +3,14 @@
     name: 'Kate Home'
     probability_threshold: 0.95
     observations:
-      - entity_id: 'device_tracker.pi_katephone'
+      - entity_id: 'device_tracker.katesiphone4'
         prob_given_true: 0.8
         prob_given_false: 0.2
         platform: 'state'
         to_state: 'home'
-      - entity_id: 'device_tracker.kateappiphone'
+      - entity_id: 'device_tracker.kates_iphone'
         prob_given_true: 0.99
         prob_given_false: 0.10
-        platform: 'state'
-        to_state: 'home'
-      - entity_id: 'device_tracker.katesiphone'
-        prob_given_true: 0.99
-        prob_given_false: 0.4
         platform: 'state'
         to_state: 'home'
   - platform: 'bayesian'
@@ -23,12 +18,12 @@
     name: 'Grady Home'
     probability_threshold: 0.95
     observations:
-      - entity_id: 'device_tracker.pi_gradyphone'
+      - entity_id: 'device_tracker.gradysiphone'
         prob_given_true: 0.8
         prob_given_false: 0.2
         platform: 'state'
         to_state: 'home'
-      - entity_id: 'device_tracker.gradyiosiphone'
+      - entity_id: 'device_tracker.gradys_iphone'
         prob_given_true: 0.99
         prob_given_false: 0.10
         platform: 'state'

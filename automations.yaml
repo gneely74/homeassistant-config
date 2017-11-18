@@ -8,14 +8,14 @@
     # Delayed action for router-based and Owntracks trackers that are not 100% reliable
     - platform: state
       entity_id:
-        - device_tracker.gradys_iphone
-        - device_tracker.kates_iphone
+        - device_tracker.gradysiphone
+        - device_tracker.katesiphone4
       to: 'not_home'
       for: '00:07:00'
     - platform: state
       entity_id:
-        - device_tracker.gradys_iphone
-        - device_tracker.kates_iphone
+        - device_tracker.gradysiphone
+        - device_tracker.katesiphone4
       to: 'home'
       for: '00:00:30'
     - platform: state
