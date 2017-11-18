@@ -98,7 +98,8 @@
     entities:
       - sensor.morning_commute
       - sensor.grady_to_home
-      - sensor.usd_inr
+      - sensor.cold_flu_risk
+      - sensor.pollen_level
       - sensor.dark_sky_daily_high_temperature
       - sensor.dark_sky_temperature
       - sensor.dark_sky_daily_low_temperature
