@@ -2,27 +2,7 @@
 ## Input_boolean
 #################################################################
 
-  dashbounty:
-    name: Dash Bounty
-    initial: off
-    icon: mdi:security
   abodeupdate:
     name: Abode Updates
     initial: on
     icon: mdi:security
-  startrecording:
-    name: Camera Recording
-    initial: off
-    icon: mdi:record-rec
-  tv:
-    name: TV
-    initial: off
-    icon: mdi:television
-  tvtime:
-    name: TV Time
-    initial: on
-    icon: mdi:television-guide
-  partymode:
-    name: Party Mode
-    initial: off
-    icon: mdi:theme-light-dark

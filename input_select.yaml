@@ -1,8 +1,3 @@
-  hvacmode:
-    name: HVAC Mode
-    options:
-      - heat
-      - cool
   abodestatus:
     name: Abode status
     options:
@@ -11,34 +6,6 @@
       - armed_away
     initial: disarmed
     icon: mdi:security
-  livingroomharmony:
-    name: Harmony Activity
-    options:
-      - PowerOff
-      - Watch Fire TV
-      - Youtube
-      - SATV
-      - Watch Apple TV
-    initial: PowerOff
-    icon: mdi:remote
-  hdmiswitcher:
-    name: HDMI Switcher
-    options:
-      - AppleTV
-      - FireTV
-      - Shield
-    initial: Shield
-    icon: mdi:remote
-  hdmiinput:
-    name: HDMI Input
-    options:
-      - InputHdmi1
-      - InputHdmi2
-      - InputHDMI3
-      - InputHdmi4
-    initial: InputHdmi4
-    icon: mdi:remote
-
   current_theme:
     name: 'Current Theme'
     options:
