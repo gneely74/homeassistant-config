@@ -27,6 +27,11 @@
         - device_tracker.gradys_iphone
         - device_tracker.kates_iphone
       to: 'home'
+    - platform: state
+      entity_id:
+        - device_tracker.gradys_iphone
+        - device_tracker.kates_iphone
+      to: 'not_home'
   action:
     - service: script.updatetracker
       data_template:
