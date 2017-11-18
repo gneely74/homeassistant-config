@@ -14,7 +14,7 @@
         platform: 'state'
         to_state: 'home'
   - platform: 'bayesian'
-    prior: 0.25
+    prior: 0.75
     name: 'Grady Home'
     probability_threshold: 0.92
     observations:

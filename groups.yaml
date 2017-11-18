@@ -180,7 +180,7 @@
   household:
     entities:  
       - device_tracker.meta_kate
-#      - device_tracker.meta_grady
+     - device_tracker.meta_grady
 
   Devices:
     entities:
