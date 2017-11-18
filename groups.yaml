@@ -193,5 +193,5 @@
 #      - device_tracker.kateneelysipad
 #      - #device_tracker.katesiphone4
 #      - device_tracker.pokemonsipad
-      - binary_sensor.meta_kate
-      - binary_sensor.meta_grady      
+      - binary_sensor.kate_home
+      - binary_sensor.grady_home      

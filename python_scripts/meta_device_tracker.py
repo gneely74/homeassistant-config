@@ -1,82 +1,66 @@
+#
+# meta_device_tracker.py
+#
+# https://github.com/oakbrad/brad-homeassistant-config/blob/master/python_scripts/meta_device_tracker.py
+#
 # Combine multiple device trackers into one entity
-# You can call the script using the following:
-# - service: python_script.meta_device_tracker
-#   data_template:
-#     entity_id: '{{trigger.entity_id}}'
-
-# OPTIONS
-# List the trackers for each individual
-KateTrackers = ['device_tracker.katesiphone4','device_tracker.kates_iphone']
-GradyTrackers = ['device_tracker.gradys_iphone','device_tracker.gradysiphone']
-# Get the entity that triggered the automation
+#
+# Logic:  Only GPS is reliable for 'not_home'
+#         Block others from marking 'not_home' but keep for 'home'
+# 
+#
+   
+# Get Data from Automation Trigger
 triggeredEntity = data.get('entity_id')
-
-# Set friendly name and the metatracker name based on the entity that triggered
-if triggeredEntity in GradyTrackers:
-    newFriendlyName = 'Grady Tracker'
-    newEntityPicture = '/local/grady.png'
-    metatrackerName = 'device_tracker.meta_grady'
-elif triggeredEntity in KateTrackers:
-    newFriendlyName = 'Kate Tracker'
-    newEntityPicture = '/local/kate.png'
-    metatrackerName = 'device_tracker.meta_kate'
-else:
-    newFriendlyName = None
-    metatrackerName = None
+metatrackerName = "device_tracker." + data.get('meta_entity')
 
 # Get current & new state
 newState = hass.states.get(triggeredEntity)
 currentState = hass.states.get(metatrackerName)
 # Get New data
 newSource = newState.attributes.get('source_type')
-newFriendlyName_temp = newState.attributes.get('friendly_name')
 
 # If GPS source, set new coordinates
 if newSource == 'gps':
-    newLatitude = newState.attributes.get('latitude')
-    newLongitude = newState.attributes.get('longitude')
-    newgpsAccuracy = newState.attributes.get('gps_accuracy')
+  newLatitude = newState.attributes.get('latitude')
+  newLongitude = newState.attributes.get('longitude')
+  newgpsAccuracy = newState.attributes.get('gps_accuracy')
 # If not, keep last known coordinates
-elif currentState.attributes.get('latitude') is not None:
+else:
+  if newSource is not None:
     newLatitude = currentState.attributes.get('latitude')
     newLongitude = currentState.attributes.get('longitude')
     newgpsAccuracy = currentState.attributes.get('gps_accuracy')
-# Otherwise return null
-else:
-    newLatitude = None
-    newLongitude = None
-    newgpsAccuracy = None
 
 # Get Battery
 if newState.attributes.get('battery') is not None:
-    newBattery = newState.attributes.get('battery')
+  newBattery = newState.attributes.get('battery')
 elif currentState.attributes.get('battery') is not None:
-    newBattery = currentState.attributes.get('battery')
+  newBattery = currentState.attributes.get('battery')
 else:
-    newBattery = None
+  newBattery = None
 
-# Get velocity
-if newState.attributes.get('velocity') is not None:
-    newVelocity = newState.attributes.get('velocity')
-elif currentState.attributes.get('velocity') is not None:
-    newVelocity = currentState.attributes.get('velocity')
-else:
-    newVelocity = None
-
-if newState.state is not None:
-    newStatus = newState.state
-else:
+# Set new state and icon
+# Everything updates 'home'
+if newState.state == 'home':
+  newStatus = 'home'
+  newIcon = 'mdi:home-map-marker'
+# only GPS platforms update 'not_home'
+elif newState.state == 'not_home' and newSource == 'gps':
+    newStatus = 'not_home'
+    newIcon = 'mdi:home'
+# Otherwise keep old status
+else: 
     newStatus = currentState.state
 
 # Create device_tracker.meta entity
 hass.states.set(metatrackerName, newStatus, {
-    'friendly_name': newFriendlyName,
-    'entity_picture': newEntityPicture,
+    'icon': newIcon,
+    'name': metatrackerName,
     'source_type': newSource,
     'battery': newBattery,
     'gps_accuracy': newgpsAccuracy,
     'latitude': newLatitude,
     'longitude': newLongitude,
-    'velocity': newVelocity,
-    'update_source': triggeredEntity
+    'last_update_source': newState.name 
 })

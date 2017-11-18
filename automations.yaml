@@ -36,8 +36,6 @@
     - service: script.updatetracker
       data_template:
         entityid: '{{trigger.entity_id}}'
-        fromstate: '{{trigger.from_state.state}}'
-        tostate: '{{trigger.to_state.state}}'    
 
 #################################################################
 ## Security System
