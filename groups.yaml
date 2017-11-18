@@ -180,7 +180,7 @@
   household:
     entities:  
       - device_tracker.meta_kate
-      - device_tracker.meta_grady
+#      - device_tracker.meta_grady
 
   Devices:
     entities:
@@ -193,5 +193,5 @@
 #      - device_tracker.kateneelysipad
 #      - #device_tracker.katesiphone4
 #      - device_tracker.pokemonsipad
-      - binary_sensor.kate_home
-      - binary_sensor.grady_home      
+      - binary_sensor.meta_kate
+      - binary_sensor.meta_grady      

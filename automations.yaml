@@ -37,7 +37,7 @@
       data_template:
         entityid: '{{trigger.entity_id}}'
         fromstate: '{{trigger.from_state.state}}'
-        tostate: '{{trigger.to_state.state}}'
+        tostate: '{{trigger.to_state.state}}'    
 
 #################################################################
 ## Security System
@@ -299,29 +299,6 @@
   action:
      service: homeassistant.turn_on
      entity_id: script.abodehome
-
-- id: enable_recording
-  alias: Enable Recording
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: input_boolean.startrecording
-    to: 'on'
-  action:
-    service: switch.turn_on
-    entity_id: switch.foscam_record
-
-- id: disable_recording
-  alias: Disable Recording
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: input_boolean.startrecording
-    to: 'off'
-  action:
-    service: switch.turn_off
-    entity_id: switch.foscam_record
-
 
 - id: notify_camera_pictures
   alias: 'Notify camera pictures'
