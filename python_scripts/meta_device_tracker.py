@@ -7,7 +7,7 @@
 # OPTIONS
 # List the trackers for each individual
 KateTrackers = ['device_tracker.katesiphone4','device_tracker.kates_iphone']
-GradyTrackers = ['device_tracker.pi_gradys_iphone','device_tracker.gradysiphone']
+GradyTrackers = ['device_tracker.gradys_iphone','device_tracker.gradysiphone']
 # Get the entity that triggered the automation
 triggeredEntity = data.get('entity_id')
 
