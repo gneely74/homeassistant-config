@@ -78,9 +78,6 @@
       event_type: ios.notification_action_fired
       event_data:
         actionName: DISARM_ABODE
-    - platform: state
-      entity_id: alarm_control_panel.abode_alarm
-      to: "disarmed"
   action:
      service: homeassistant.turn_on
      entity_id: script.abodestandby
@@ -96,9 +93,6 @@
     - platform: state
       entity_id: input_select.abodestatus
       to: 'armed_home'
-    - platform: state
-      entity_id: input_select.abodestatus
-      to: 'armed_away'
   action:
     - service: notify.pushbullet
       data:
@@ -226,9 +220,6 @@
       from: 'home'
       to: 'not_home'
       for: '00:10:00'
-    - platform: state
-      entity_id: alarm_control_panel.abode_alarm
-      to: "armed_away"      
   action:
      service: homeassistant.turn_on
      entity_id: script.abodeaway
@@ -246,8 +237,8 @@
        entity_id: group.household
        state: 'home'
   trigger:
-    platform: time
-    at: '22:00:00'
+    - platform: time
+      at: '22:00:00'
   action:
      service: homeassistant.turn_on
      entity_id: script.abodehome
@@ -265,11 +256,44 @@
        entity_id: input_boolean.abodeupdate
        state: 'on'
   trigger:
-    platform: time
-    at: '07:00:00'
+    - platform: time
+      at: '07:00:00'
   action:
      service: homeassistant.turn_on
      entity_id: script.abodestandby
+
+- id: abode_was_disarmed
+  alias: 'Trigger when Abode was disarmed'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.abode_alarm
+      to: "disarmed"           
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodestandby
+
+- id: abode_was_armed_away
+  alias: 'Trigger when Abode was Armed Away'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.abode_alarm
+      to: "armed_away"           
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodeaway
+
+- id: abode_was_armed_home
+  alias: 'Trigger when Abode was Armed Home'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.abode_alarm
+      to: "armed_home"           
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodehome
 
 - id: enable_recording
   alias: Enable Recording

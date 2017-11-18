@@ -8,12 +8,12 @@
     can_acknowledge: True
     skip_first: True
     notifiers:
-      - ios_abode_updates
+      - notify.ios
   
   garage_door:
     name: Garage is open
     entity_id: cover.garage_door_opener
-    state: 'on'   # Optional, 'on' is the default value
+    state: 'open'   # Optional, 'on' is the default value
     repeat:
       - 15
       - 30
