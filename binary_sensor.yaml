@@ -1,7 +1,7 @@
   - platform: 'bayesian'
     prior: 0.75
     name: 'Kate Home'
-    probability_threshold: 0.93
+    probability_threshold: 0.92
     observations:
       - entity_id: 'device_tracker.katesiphone4'
         prob_given_true: 0.8
@@ -16,7 +16,7 @@
   - platform: 'bayesian'
     prior: 0.25
     name: 'Grady Home'
-    probability_threshold: 0.93
+    probability_threshold: 0.92
     observations:
       - entity_id: 'device_tracker.gradysiphone'
         prob_given_true: 0.8
