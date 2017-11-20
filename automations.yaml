@@ -571,6 +571,9 @@
     - condition: state
       entity_id: group.household
       state: 'on' 
+    - condition: state
+      entity_id: sensor.overflow_pantry_door
+      state: 'open'   
   action:
     - service: notify.ios
       data:
