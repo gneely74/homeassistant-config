@@ -188,14 +188,12 @@
 
   Devices:
     entities:
-#      - device_tracker.gradys_iphone
-#      - device_tracker.kates_iphone
-#      - device_tracker.conorsiphone3
-#      - device_tracker.huntersone6plus
-#      - device_tracker.fisiphone
-#      - device_tracker.finnegansipad
-#      - device_tracker.kateneelysipad
-#      - #device_tracker.katesiphone4
-#      - device_tracker.pokemonsipad
-      - binary_sensor.kate_home
-      - binary_sensor.grady_home      
+     - device_tracker.gradys_iphone
+     - device_tracker.kates_iphone
+     - device_tracker.conorsiphone3
+     - device_tracker.huntersone6plus
+     - device_tracker.fisiphone
+     - device_tracker.finnegansipad
+     - device_tracker.kateneelysipad
+     - #device_tracker.katesiphone4
+     - device_tracker.pokemonsipad     
