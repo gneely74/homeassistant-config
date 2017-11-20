@@ -76,8 +76,8 @@
   trigger:
     - platform: state
       entity_id: group.household
-      from: 'not_home'
-      to: 'home'
+      from: 'off'
+      to: 'on'
     - platform: event
       event_type: ios.notification_action_fired
       event_data:
@@ -167,7 +167,7 @@
     conditions:
      - condition: state
        entity_id: group.household
-       state: 'home'
+       state: 'on'
      - condition: time
        after: '07:15:00'
        before: '22:45:00'
@@ -216,12 +216,12 @@
   trigger:
     - platform: state
       entity_id: group.household
-      from: 'home'
-      to: 'not_home'
+      from: 'on'
+      to: 'off'
     - platform: state
       entity_id: group.household
-      from: 'home'
-      to: 'not_home'
+      from: 'on'
+      to: 'off'
       for: '00:10:00'
   action:
      service: homeassistant.turn_on
@@ -238,7 +238,7 @@
        state: 'on'
      - condition: state
        entity_id: group.household
-       state: 'home'
+       state: 'on'
   trigger:
     - platform: time
       at: '22:00:00'
@@ -254,7 +254,7 @@
     conditions:
      - condition: state
        entity_id: group.household
-       state: 'home'
+       state: 'on'
      - condition: state
        entity_id: input_boolean.abodeupdate
        state: 'on'
@@ -565,7 +565,7 @@
   condition:
     - condition: state
       entity_id: group.household
-      state: 'home' 
+      state: 'on' 
   action:
     - service: notify.ios
       data:
