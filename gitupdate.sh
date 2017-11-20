@@ -7,8 +7,8 @@ if [[ `git status --porcelain` ]]; then
     read CHANGE_MSG
     git commit -m "${CHANGE_MSG}"
     git push origin master
-    /usr/bin/rsync -avrz --progress --exclude='.git/' -e 'ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null' /Users/gneely/Documents/hassio/homeassistant-config/ root@hassio.local:/config/
-    ssh -o StrictHostKeyChecking=no root@192.168.74.14 hassio homeassistant restart  
+    /usr/bin/rsync -avrz --progress --exclude='.git/' -e 'ssh -p 9922 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null' /Users/gneely/Documents/hassio/homeassistant-config/ root@home.theneelyfamily.net:/config/
+    ssh -p 9922 -o StrictHostKeyChecking=no root@home.theneelyfamily.net hassio homeassistant restart  
 else
   echo ""
 fi
