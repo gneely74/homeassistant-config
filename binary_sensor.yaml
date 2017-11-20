@@ -10,7 +10,7 @@
         to_state: 'home'
       - entity_id: 'device_tracker.kates_iphone'
         prob_given_true: 0.99
-        prob_given_false: 0.10
+        prob_given_false: 0.01
         platform: 'state'
         to_state: 'home'
   - platform: 'bayesian'
@@ -25,22 +25,39 @@
         to_state: 'home'
       - entity_id: 'device_tracker.gradys_iphone'
         prob_given_true: 0.99
-        prob_given_false: 0.10
+        prob_given_false: 0.01
+        platform: 'state'
+        to_state: 'home'
+  - platform: 'bayesian'
+    prior: 0.75
+    name: 'Conor Home'
+    probability_threshold: 0.92
+    observations:
+      - entity_id: 'device_tracker.conorsiphone3'
+        prob_given_true: 0.8
+        prob_given_false: 0.2
+        platform: 'state'
+        to_state: 'home'
+  - platform: 'bayesian'
+    prior: 0.75
+    name: 'Hunter Home'
+    probability_threshold: 0.92
+    observations:
+      - entity_id: 'device_tracker.huntersone6plus'
+        prob_given_true: 0.8
+        prob_given_false: 0.2
+        platform: 'state'
+        to_state: 'home'
+  - platform: 'bayesian'
+    prior: 0.75
+    name: 'Fiona Home'
+    probability_threshold: 0.92
+    observations:
+      - entity_id: 'device_tracker.fisiphone'
+        prob_given_true: 0.8
+        prob_given_false: 0.2
         platform: 'state'
         to_state: 'home'
   - platform: ping
     host: 192.168.74.1
     name: PiHole
-  - platform: template
-    sensors:  
-      garagedoor:
-        friendly_name: Garage Door Open
-        device_class: opening
-        value_template: >-
-           {% if states.sensor.garage_door_tilt_sensor_alarm_level != None %}
-             {{ is_state('sensor.garage_door_tilt_sensor_alarm_level', '255') }}
-           {% else %}
-             unknown
-           {% endif %}
-        entity_id:
-          - sensor.garage_door_tilt_sensor_alarm_level
