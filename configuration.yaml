@@ -52,6 +52,13 @@ zone:
 #  radius: 200
 #  icon: mdi:school
 # insteon_plm supported configuration variables
+
+panel_iframe:
+  nodered_flows:
+    title: 'Node-RED Flows'
+    url: 'http://hassio.local:1880'
+    icon: mdi:nodejs
+    
 insteon_plm:
   port: /dev/ttyUSB0
   
