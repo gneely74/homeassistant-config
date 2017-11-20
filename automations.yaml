@@ -577,6 +577,7 @@
             badge: 0
 
 
+- id: garage_lights_on
   alias: 'Turn on garage lights when door opened'
   initial_state: 'on'
   trigger:
