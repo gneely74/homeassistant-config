@@ -86,28 +86,28 @@
      service: homeassistant.turn_on
      entity_id: script.abodestandby
 
-- id: close_garage_door_notification
-  alias: 'Close Garage Door Notification'
-  initial_state: 'on'
-  condition:
-    condition: state
-    entity_id: cover.garage_door_opener
-    state: 'open'
-  trigger:
-    - platform: state
-      entity_id: input_select.abodestatus
-      to: 'armed_home'
-  action:
-    - service: notify.pushbullet
-      data:
-        message: "Garage Door Open"
-        title: "Garage Door Open"
-    - service: notify.pushbullet
-      data:
-        message: "Garage Door Open"
-        title: "Garage Door Open"
-    - service: homeassistant.turn_on
-      entity_id: script.notificationgaragedoor
+#- id: close_garage_door_notification
+#  alias: 'Close Garage Door Notification'
+#  initial_state: 'on'
+#  condition:
+#    condition: state
+#    entity_id: cover.garage_door_opener
+#    state: 'open'
+#  trigger:
+#    - platform: state
+#      entity_id: input_select.abodestatus
+#      to: 'armed_home'
+#  action:
+#    - service: notify.pushbullet
+#      data:
+#        message: "Garage Door Open"
+#        title: "Garage Door Open"
+#    - service: notify.pushbullet
+#      data:
+#        message: "Garage Door Open"
+#        title: "Garage Door Open"
+#    - service: homeassistant.turn_on
+#      entity_id: script.notificationgaragedoor
 
 - id: disarm_abode_at_night
   alias: 'Disarm Abode at night'
@@ -556,7 +556,27 @@
 ## Home Automation Related
 #################################################################
 
-- id: garage_lights_on
+- id: overflow_pantry_door_open
+  alias: Overflow Pantry Door Left Open Notification
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.overflow_pantry_door_sensor
+      state: off
+  condition:
+    condition: and
+    conditions:
+     - condition: state
+       entity_id: group.household
+       state: 'home' 
+  action:
+    - service: notify.ios
+      data:
+        message: 'Overflow Pantry Door left open'
+        data:
+          push:
+            badge: 0
+
+
   alias: 'Turn on garage lights when door opened'
   initial_state: 'on'
   trigger:

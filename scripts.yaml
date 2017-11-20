@@ -68,17 +68,17 @@
 ## HASS
 #################################################################
 
-reload_automations:
-  alias: Reload Automations
-  sequence:
-    - alias: Reload-Automations
-      service: automation.reload
-
-restart_ha:
-  alias: Restart HomeAssistant
-  sequence:
-    - alias: Restart HA
-      service: homeassistant.restart      
+#reload_automations:
+#  alias: Reload Automations
+#  sequence:
+#    - alias: Reload-Automations
+#      service: automation.reload
+#
+#restart_ha:
+#  alias: Restart HomeAssistant
+#  sequence:
+#    - alias: Restart HA
+#      service: homeassistant.restart      
 
 #  updatetracker:
 #    alias: 'Update tracker'
