@@ -632,7 +632,7 @@
      service: light.turn_on
      entity_id: switch.garage_light
      
-     - id: kitchen_light_brightness
+- id: kitchen_light_brightness
   alias: 'Kitchen light brightness'
   initial_state: 'on'
   trigger:
