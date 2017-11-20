@@ -179,8 +179,8 @@
 
   household:
     entities:  
-      - device_tracker.meta_kate
-      - device_tracker.meta_grady
+      - binary_sensor.grady_home
+      - binary_sensor.kate_home
 
   Devices:
     entities:
