@@ -620,7 +620,7 @@
       entity_id: binary_sensor.garage_door
       to: 'on'
   condition:
-    - condition: and
+    condition: and
       conditions:
        - condition: state
          entity_id: sun.sun
