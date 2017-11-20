@@ -195,5 +195,5 @@
      - device_tracker.fisiphone
      - device_tracker.finnegansipad
      - device_tracker.kateneelysipad
-     - #device_tracker.katesiphone4
+#     - device_tracker.katesiphone4
      - device_tracker.pokemonsipad     
