@@ -621,13 +621,13 @@
       to: 'on'
   condition:
     condition: and
-      conditions:
-       - condition: state
-         entity_id: sun.sun
-         state: 'below_horizon'
-       - condition: state
-         entity_id: switch.garage_light
-         state: 'off'
+    conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+      - condition: state
+        entity_id: switch.garage_light
+        state: 'off'
   action:
      service: light.turn_on
      entity_id: switch.garage_light
