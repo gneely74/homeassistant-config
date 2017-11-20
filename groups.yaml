@@ -50,6 +50,7 @@
       - group.camera_sensors
       - group.camera_switches
       - group.network_details
+      - group.all_automations
 
   HASS Details:
     entities:  
