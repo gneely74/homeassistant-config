@@ -171,7 +171,7 @@
 
   Switches:
     entities:    
-      - switch.freezer_plug
+#      - switch.freezer_plug
       - switch.front_garage_light
       - switch.front_porch_light
       - switch.garage_light

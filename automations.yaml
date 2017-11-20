@@ -560,9 +560,6 @@
   alias: Overflow Pantry Door Left Open Notification
   initial_state: 'on'  
   trigger:
-    - platform: state
-      entity_id: sensor.overflow_pantry_door
-      to: 'open'
     - platform: time
     # You can also match on interval. This will match every 5 minutes
       minutes: '/5'
@@ -591,11 +588,9 @@
       from: 'closed'
       to: 'open'
   condition:
-    - condition: or
-      conditions:
-       - condition: state
-         entity_id: sun.sun
-         state: 'below_horizon'
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
   action:
      service: light.turn_on
      data:
@@ -617,7 +612,27 @@
      service: light.turn_off
      entity_id: switch.garage_light
 
-- id: kitchen_light_brightness
+- id: garage_lights_on
+  alias: 'Turn on garage lights'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.garage_door
+      to: 'on'
+  condition:
+    - condition: and
+      conditions:
+       - condition: state
+         entity_id: sun.sun
+         state: 'below_horizon'
+       - condition: state
+         entity_id: switch.garage_light
+         state: 'off'
+  action:
+     service: light.turn_on
+     entity_id: switch.garage_light
+     
+     - id: kitchen_light_brightness
   alias: 'Kitchen light brightness'
   initial_state: 'on'
   trigger:
