@@ -1,5 +1,5 @@
   - platform: 'bayesian'
-    prior: 0.75
+    prior: 0.8
     name: 'Kate Home'
     probability_threshold: 0.92
     observations:
@@ -29,7 +29,7 @@
         platform: 'state'
         to_state: 'home'
   - platform: 'bayesian'
-    prior: 0.75
+    prior: 0.8
     name: 'Conor Home'
     probability_threshold: 0.92
     observations:
@@ -39,7 +39,7 @@
         platform: 'state'
         to_state: 'home'
   - platform: 'bayesian'
-    prior: 0.75
+    prior: 0.8
     name: 'Hunter Home'
     probability_threshold: 0.92
     observations:
@@ -49,7 +49,7 @@
         platform: 'state'
         to_state: 'home'
   - platform: 'bayesian'
-    prior: 0.75
+    prior: 0.8
     name: 'Fiona Home'
     probability_threshold: 0.92
     observations:
