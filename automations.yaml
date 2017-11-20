@@ -563,6 +563,10 @@
     - platform: state
       entity_id: binary_sensor.overflow_pantry_door_sensor
       to: 'off'
+    - platform: time
+    # You can also match on interval. This will match every 5 minutes
+      minutes: '/5'
+      seconds: 00      
   condition:
     - condition: state
       entity_id: group.household
@@ -707,12 +711,8 @@
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: switch.driveway
-    to: 'on'
-  condition:
-    - condition: state
-      entity_id: sun.sun
-      state: 'above_horizon'
+    entity_id: sun.sun
+    to: 'above_horizon'
   action:
     - service: switch.turn_off
       entity_id:
@@ -802,19 +802,18 @@
   trigger:
     - platform: state
       entity_id:
-        - binary_sensor.garagedoor
+        - binary_sensor.garage_door
         - binary_sensor.back_door
-        - binary_sensor.garage_entry_door
+        - binary_sensor.den_door
         - binary_sensor.front_door
-        - binary_sensor.motion_sensor_158d00016daecc
-        - binary_sensor.motion_sensor_158d00016612af
+        - binary_sensor.office_door
       from: 'off'
       to: 'on'
   action:
     - service: light.turn_on
       data:
         entity_id: group.all_lights
-    - service: notify.pushbullet
+    - service: notify.ios
       data_template:
         title: "Alarm!"
         message: "The {{ trigger.to_state.name }} was changed to {{ trigger.to_state.state }} while no one is home - {{ as_timestamp(now()) | timestamp_custom('%I:%M:%S %p %d-%b-%Y', true) }}"
