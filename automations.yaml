@@ -736,56 +736,56 @@
       entity_id:
         - group.outside_lights
 
-- id: open_garage_door_when_someone_home
-  alias: 'Open Garage door when someone home'
-  initial_state: 'on'
-  condition:
-    - condition: state
-      entity_id: binary_sensor.garagedoor
-      state: 'off'
-      for: '00:02:00'
-    - condition: state
-      entity_id: input_boolean.abodeupdate
-      state: 'on'
-    - condition: template
-      value_template: >
-        {%- if states.automation.open_garage_door_when_someone_home.attributes.last_triggered -%}
-          {{ (as_timestamp(now()) - as_timestamp(states.automation.open_garage_door_when_someone_home.attributes.last_triggered)) > 150 }}
-        {%- else -%}
-          true
-        {%- endif -%}
-    - condition: template
-      value_template: >
-        {%- if states.automation.update_ha_after_startup.attributes.last_triggered -%}
-          {{ (as_timestamp(now()) - as_timestamp(states.automation.update_ha_after_startup.attributes.last_triggered)) > 120 }}
-        {%- else -%}
-          true
-        {%- endif -%}
-    - condition: template
-      value_template: >
-        {%- if states.automation.arm_abode.attributes.last_triggered -%}
-          {{ (as_timestamp(now()) - as_timestamp(states.automation.arm_abode.attributes.last_triggered)) > 240 }}
-        {%- else -%}
-          true
-        {%- endif -%}
-  trigger:
-    - platform: state
-      entity_id:
-        - device_tracker.meta_kate
-        - device_tracker.meta_grady
-      from: 'not_home'
-      to: 'home'
-  action:
-    - service: switch.turn_on
-      entity_id: switch.garage_relay_switch
+#- id: open_garage_door_when_someone_home
+#  alias: 'Open Garage door when someone home'
+#  initial_state: 'on'
+#  condition:
+#    - condition: state
+#      entity_id: binary_sensor.garagedoor
+#      state: 'off'
+#      for: '00:02:00'
+#    - condition: state
+#      entity_id: input_boolean.abodeupdate
+#      state: 'on'
+#    - condition: template
+#      value_template: >
+#        {%- if states.automation.open_garage_door_when_someone_home.attributes.last_triggered -%}
+#          {{ (as_timestamp(now()) - as_timestamp(states.automation.open_garage_door_when_someone_home.attributes.last_triggered)) > 150 }}
+#        {%- else -%}
+#          true
+#        {%- endif -%}
+#    - condition: template
+#      value_template: >
+#        {%- if states.automation.update_ha_after_startup.attributes.last_triggered -%}
+#          {{ (as_timestamp(now()) - as_timestamp(states.automation.update_ha_after_startup.attributes.last_triggered)) > 120 }}
+#        {%- else -%}
+#          true
+#        {%- endif -%}
+#    - condition: template
+#      value_template: >
+#        {%- if states.automation.arm_abode.attributes.last_triggered -%}
+#          {{ (as_timestamp(now()) - as_timestamp(states.automation.arm_abode.attributes.last_triggered)) > 240 }}
+#        {%- else -%}
+#          true
+#        {%- endif -%}
+#  trigger:
+#    - platform: state
+#      entity_id:
+#        - device_tracker.meta_kate
+#        - device_tracker.meta_grady
+#      from: 'not_home'
+#      to: 'home'
+#  action:
+#    - service: switch.turn_on
+#      entity_id: switch.garage_relay_switch
 
 - id: close_garage_door_when_abode_is_home_or_away
   alias: 'Close garage door when Abode is Home or Away'
   initial_state: 'on'
   condition:
     - condition: state
-      entity_id: binary_sensor.garage_door
-      state: 'on'
+      entity_id: cover.garage_door_opener
+      state: 'open'
     - condition: template
       value_template: >
         {%- if states.automation.close_garage_door_when_abode_is_home_or_away.attributes.last_triggered  -%}
