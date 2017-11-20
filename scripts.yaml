@@ -2,6 +2,10 @@
 ## Scripts
 #################################################################
 
+#################################################################
+## Abode
+#################################################################
+
   abodeaway:
     alias: 'Abode Arm'
     sequence:
@@ -60,16 +64,32 @@
       - service: homeassistant.turn_on
         entity_id: script.abodestandby
 
-  updatetracker:
-    alias: 'Update tracker'
-    sequence:
-      - service: python_script.meta_device_tracker
-        data_template:
-          entity_id: '{{entityid}}'
-      - condition: template
-        value_template: '{{fromstate != tostate}}'
-      - service: logbook.log
-        data_template:
-          name: "Tracker updated: "
-          message: >-
-            {{ states[entityid.split('.')[0]][entityid.split('.')[1]].name }} is {{ tostate }} at {{ as_timestamp(now()) | timestamp_custom('%I:%M:%S %p', true) }}.
+#################################################################
+## HASS
+#################################################################
+
+reload_automations:
+  alias: Reload Automations
+  sequence:
+    - alias: Reload-Automations
+      service: automation.reload
+
+restart_ha:
+  alias: Restart HomeAssistant
+  sequence:
+    - alias: Restart HA
+      service: homeassistant.restart      
+
+#  updatetracker:
+#    alias: 'Update tracker'
+#    sequence:
+#      - service: python_script.meta_device_tracker
+#        data_template:
+#          entity_id: '{{entityid}}'
+#      - condition: template
+#        value_template: '{{fromstate != tostate}}'
+#      - service: logbook.log
+#        data_template:
+#          name: "Tracker updated: "
+#          message: >-
+#            {{ states[entityid.split('.')[0]][entityid.split('.')[1]].name }} is {{ tostate }} at {{ as_timestamp(now()) | timestamp_custom('%I:%M:%S %p', true) }}.

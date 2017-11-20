@@ -1,41 +1,42 @@
 ###############################################################
 ## Presence
 ################################################################
-- id: update_meta_tracker
-  alias: "Update Device Meta Tracker"
-  initial_state: 'on'
-  trigger:
-    # Delayed action for router-based and Owntracks trackers that are not 100% reliable 
-    - platform: state
-      entity_id:
-        - device_tracker.gradysiphone
-        - device_tracker.katesiphone4
-      to: 'not_home'
-      for: '00:07:00'
-    - platform: state
-      entity_id:
-        - device_tracker.gradysiphone
-        - device_tracker.katesiphone4
-      to: 'home'
-      for: '00:00:30'
-    - platform: state
-      entity_id:
-        - device_tracker.gradys_iphone
-        - device_tracker.kates_iphone
-    - platform: state
-      entity_id:
-        - device_tracker.gradys_iphone
-        - device_tracker.kates_iphone
-      to: 'home'
-    - platform: state
-      entity_id:
-        - device_tracker.gradys_iphone
-        - device_tracker.kates_iphone
-      to: 'not_home'
-  action:
-    - service: script.updatetracker
-      data_template:
-        entityid: '{{trigger.entity_id}}'
+
+#- id: update_meta_tracker
+#  alias: "Update Device Meta Tracker"
+#  initial_state: 'on'
+#  trigger:
+#    # Delayed action for router-based and Owntracks trackers that are not 100% reliable 
+#    - platform: state
+#      entity_id:
+#        - device_tracker.gradysiphone
+#        - device_tracker.katesiphone4
+#      to: 'not_home'
+#      for: '00:07:00'
+#    - platform: state
+#      entity_id:
+#        - device_tracker.gradysiphone
+#        - device_tracker.katesiphone4
+#      to: 'home'
+#      for: '00:00:30'
+#    - platform: state
+#      entity_id:
+#        - device_tracker.gradys_iphone
+#        - device_tracker.kates_iphone
+#    - platform: state
+#      entity_id:
+#        - device_tracker.gradys_iphone
+#        - device_tracker.kates_iphone
+#      to: 'home'
+#    - platform: state
+#      entity_id:
+#        - device_tracker.gradys_iphone
+#        - device_tracker.kates_iphone
+#      to: 'not_home'
+#  action:
+#    - service: script.updatetracker
+#      data_template:
+#        entityid: '{{trigger.entity_id}}'
 
 #################################################################
 ## Security System
@@ -121,10 +122,9 @@
   trigger:
    - platform: state
      entity_id:
-       - device_tracker.gradys_iphone
-       - device_tracker.kates_iphone
-     from: 'not_home'
-     to: 'home'
+       - group.household
+     from: 'off'
+     to: 'on'
   action:
     service: homeassistant.turn_on
     entity_id: script.abodestandby
@@ -305,37 +305,16 @@
     - condition: state
       entity_id: alarm_control_panel.abode_alarm
       state: 'armed_away'
-    - condition: template
-      value_template: >
-        {%- if states.automation.notify_camera_pictures.attributes.last_triggered -%}
-          {{ (as_timestamp(now()) - as_timestamp(states.automation.notify_camera_pictures.attributes.last_triggered)) > 300 }}
-        {%- else -%}
-          true
-        {%- endif -%}
-    - condition: template
-      value_template: >
-        {%- if trigger.entity_id == "binary_sensor.backyard_field_detection" or trigger.entity_id == "binary_sensor.backyard_line_crossing" -%}
-        {{((as_timestamp(now()) - as_timestamp(states.binary_sensor.backyard_motion.attributes.last_tripped_time)))|round|abs < 30}}
-        {%- elif trigger.entity_id == "binary_sensor.driveway_field_detection" or trigger.entity_id == "binary_sensor.driveway_line_crossing" -%}
-        {{((as_timestamp(now()) - as_timestamp(states.binary_sensor.driveway_motion.attributes.last_tripped_time)))|round|abs < 30}}
-        {%- elif trigger.entity_id == "binary_sensor.patio_field_detection" or trigger.entity_id == "binary_sensor.patio_line_crossing" -%}
-        {{((as_timestamp(now()) - as_timestamp(states.binary_sensor.patio_motion.attributes.last_tripped_time)))|round|abs < 30}}
-        {%- elif trigger.entity_id == "binary_sensor.porch_field_detection" or trigger.entity_id == "binary_sensor.porch_line_crossing" -%}
-        {{((as_timestamp(now()) - as_timestamp(states.binary_sensor.porch_motion.attributes.last_tripped_time)))|round|abs < 30}}
-        {%- else -%}
-          true
-        {%- endif -%}
   trigger:
    - platform: state
      entity_id:
-       - binary_sensor.backyard_field_detection
-       - binary_sensor.driveway_field_detection
-       - binary_sensor.patio_field_detection
-       - binary_sensor.porch_field_detection
-       - binary_sensor.backyard_line_crossing
-       - binary_sensor.driveway_line_crossing
-       - binary_sensor.patio_line_crossing
-       - binary_sensor.porch_line_crossing
+       - binary_sensor.entryway_camera_motion_detected
+       - binary_sensor.entryway_camera__zone_1_activity
+       - binary_sensor.entryway_camera_person_detected
+       - binary_sensor.entryway_camera_sound_detected
+       - binary_sensor.master_bedroom_camera_motion_detected
+       - binary_sensor.master_bedroom_camera_person_detected
+       - binary_sensor.master_bedroom_camera_sound_detected
      from: 'off'
      to: 'on'
   action:
@@ -356,54 +335,54 @@
           {%- for state in states if state.entity_id == trigger.entity_id -%}
             {{ state.attributes.friendly_name }} activated at {{ as_timestamp(now()) | timestamp_custom('%I:%M:%S %p', true) }}.
           {%- endfor -%}
-    - service: logbook.log
-      data_template:
-        name: "Motion detected: "
-        message: >-
-          {%- if trigger.entity_id == "binary_sensor.backyard_field_detection" or trigger.entity_id == "binary_sensor.backyard_line_crossing" -%}
-            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.backyard_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
-          {%- elif trigger.entity_id == "binary_sensor.driveway_field_detection" or trigger.entity_id == "binary_sensor.driveway_line_crossing" -%}
-            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.driveway_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
-          {%- elif trigger.entity_id == "binary_sensor.patio_field_detection" or trigger.entity_id == "binary_sensor.patio_line_crossing" -%}
-            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.patio_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
-          {%- elif trigger.entity_id == "binary_sensor.porch_field_detection" or trigger.entity_id == "binary_sensor.porch_line_crossing" -%}
-            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.porch_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
-          {%- endif -%}
+#    - service: logbook.log
+#      data_template:
+#        name: "Motion detected: "
+#        message: >-
+#          {%- if trigger.entity_id == "binary_sensor.backyard_field_detection" or trigger.entity_id == "binary_sensor.backyard_line_crossing" -%}
+#            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.backyard_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
+#          {%- elif trigger.entity_id == "binary_sensor.driveway_field_detection" or trigger.entity_id == "binary_sensor.driveway_line_crossing" -%}
+#            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.driveway_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
+#          {%- elif trigger.entity_id == "binary_sensor.patio_field_detection" or trigger.entity_id == "binary_sensor.patio_line_crossing" -%}
+#            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.patio_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
+#          {%- elif trigger.entity_id == "binary_sensor.porch_field_detection" or trigger.entity_id == "binary_sensor.porch_line_crossing" -%}
+#            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.porch_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
+#          {%- endif -%}
 
-- id: ring_camera_notification
-  alias: 'Notify Ring camera'
-  initial_state: 'on'
-  condition:
-    - condition: state
-      entity_id: input_select.abodestatus
-      state: 'armed_away'
-  trigger:
-   - platform: state
-     entity_id: sensor.ringvideourl
-  action:
-    - service: notify.ios
-      data_template:
-        message: "Check Ring camera."
-        data:
-          push:
-            category: camera
-          entity_id: camera.front_door
-          attachment:
-            url: "{{ states.camera.front_door.attributes.video_url }}"
-
-- id: ring_download_video
-  alias: 'Ring download video'
-  initial_state: 'on'
-  trigger:
-   - platform: state
-     entity_id: sensor.ringvideourl
-  action:
-    - service: downloader.download_file
-      data_template:
-        url: "{{ states.camera.front_door.attributes.video_url }}"
-        subdir: "{{'ring_' + states.camera.front_door.attributes.friendly_name.lower().replace(' ', '_')}}"
-        overwrite: True
-        filename: "{{states.camera.front_door.attributes.friendly_name.lower().replace(' ', '_')}}"
+#- id: ring_camera_notification
+#  alias: 'Notify Ring camera'
+#  initial_state: 'on'
+#  condition:
+#    - condition: state
+#      entity_id: input_select.abodestatus
+#      state: 'armed_away'
+#  trigger:
+#   - platform: state
+#     entity_id: sensor.ringvideourl
+#  action:
+#    - service: notify.ios
+#      data_template:
+#        message: "Check Ring camera."
+#        data:
+#          push:
+#            category: camera
+#          entity_id: camera.front_door
+#          attachment:
+#            url: "{{ states.camera.front_door.attributes.video_url }}"
+#
+#- id: ring_download_video
+#  alias: 'Ring download video'
+#  initial_state: 'on'
+#  trigger:
+#   - platform: state
+#     entity_id: sensor.ringvideourl
+#  action:
+#    - service: downloader.download_file
+#      data_template:
+#        url: "{{ states.camera.front_door.attributes.video_url }}"
+#        subdir: "{{'ring_' + states.camera.front_door.attributes.friendly_name.lower().replace(' ', '_')}}"
+#        overwrite: True
+#        filename: "{{states.camera.front_door.attributes.friendly_name.lower().replace(' ', '_')}}"
 
 #################################################################
 ## HASS Related
@@ -904,3 +883,30 @@
     - service: light.turn_off
       data:
         entity_id: group.living_room_lights
+        
+#################################################################
+## iOS Actions
+#################################################################
+
+- alias: Open Garage
+  id: open_garage_door
+  trigger:
+    platform: event
+    event_type: ios.notification_action_fired
+    event_data:
+      actionName: OPEN_GARAGE
+  action:
+  - service: cover.open_cover
+    entity_id: cover.garage_door_opener
+
+- alias: Close Garage
+  id: close_garage_door
+  trigger:
+    platform: event
+    event_type: ios.notification_action_fired
+    event_data:
+      actionName: CLOSE_GARAGE
+  action:
+  - service: cover.close_cover
+    entity_id: cover.garage_door_opener
+        
