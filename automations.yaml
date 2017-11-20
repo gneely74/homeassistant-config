@@ -561,7 +561,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.overflow_pantry_door_sensor
-      state: 'off'
+      to: 'off'
   condition:
     - condition: state
       entity_id: group.household
