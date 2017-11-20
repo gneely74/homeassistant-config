@@ -561,13 +561,11 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.overflow_pantry_door_sensor
-      state: off
+      state: 'off'
   condition:
-    condition: and
-    conditions:
-     - condition: state
-       entity_id: group.household
-       state: 'home' 
+    - condition: state
+      entity_id: group.household
+      state: 'home' 
   action:
     - service: notify.ios
       data:

@@ -25,3 +25,18 @@
             authenticationRequired: yes
             destructive: yes
             behavior: 'default'
+      - name: Garage
+        identifier: 'garage_event'
+        actions:
+          - identifier: 'OPEN_GARAGE'
+            title: 'Open Garage'
+            activationMode: 'background'
+            authenticationRequired: yes
+            destructive: yes
+            behavior: 'default'
+          - identifier: 'CLOSE_GARAGE'
+            title: 'Close Garage'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: no
+            behavior: 'default'
