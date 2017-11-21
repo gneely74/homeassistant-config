@@ -22,3 +22,19 @@
     skip_first: false  # Optional, false is the default
     notifiers:
       - notify.ios
+
+  overflow_pantry_door_open_alert:
+    name: Overflow Pantry Door Left Open Notification
+    entity_id: sensor.overflow_pantry_doo
+    state: 'open'  
+    repeat:
+      - 5
+      - 10
+      - 15
+      - 30
+      - 45
+      - 60
+    can_acknowledge: True  # Optional, default is True
+    skip_first: false  # Optional, false is the default
+    notifiers:
+      - notify.ios

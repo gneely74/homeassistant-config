@@ -568,28 +568,28 @@
 ## Home Automation Related
 #################################################################
 
-- id: overflow_pantry_door_open
-  alias: Overflow Pantry Door Left Open Notification
-  initial_state: 'on'  
-  trigger:
-    - platform: time
-    # You can also match on interval. This will match every 5 minutes
-      minutes: '/5'
-      seconds: 00      
-  condition:
-    - condition: state
-      entity_id: group.household
-      state: 'on' 
-    - condition: state
-      entity_id: sensor.overflow_pantry_door
-      state: 'open'   
-  action:
-    - service: notify.ios
-      data:
-        message: 'Overflow Pantry Door left open'
-        data:
-          push:
-            badge: 0
+#- id: overflow_pantry_door_open
+#  alias: Overflow Pantry Door Left Open Notification
+#  initial_state: 'on'  
+#  trigger:
+#    - platform: time
+#    # You can also match on interval. This will match every 5 minutes
+#      minutes: '/5'
+#      seconds: 00      
+#  condition:
+#    - condition: state
+#      entity_id: group.household
+#      state: 'on' 
+#    - condition: state
+#      entity_id: sensor.overflow_pantry_door
+#      state: 'open'   
+#  action:
+#    - service: notify.ios
+#      data:
+#        message: 'Overflow Pantry Door left open'
+#        data:
+#          push:
+#            badge: 0
 
 - id: garage_lights_on
   alias: 'Turn on garage lights when door opened'
