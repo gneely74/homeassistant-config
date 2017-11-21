@@ -8,7 +8,7 @@
     can_acknowledge: True
     skip_first: True
     notifiers:
-      - notify.ios
+      - ios
   
   garage_door:
     name: Garage is open
@@ -21,7 +21,7 @@
     can_acknowledge: True  # Optional, default is True
     skip_first: false  # Optional, false is the default
     notifiers:
-      - notify.ios
+      - ios
 
   overflow_pantry_door_open_alert:
     name: Overflow Pantry Door Left Open Notification
@@ -37,4 +37,4 @@
     can_acknowledge: True  # Optional, default is True
     skip_first: false  # Optional, false is the default
     notifiers:
-      - notify.ios
+      - ios
