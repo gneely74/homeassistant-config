@@ -25,7 +25,7 @@
 
   overflow_pantry_door_open_alert:
     name: Overflow Pantry Door Left Open Notification
-    entity_id: sensor.overflow_pantry_doo
+    entity_id: sensor.overflow_pantry_door
     state: 'open'  
     repeat:
       - 5
