@@ -65,8 +65,6 @@
      sensor.evening_commute:
        friendly_name: 'Evening Commute'
        icon: mdi:car
-     sensor.garagedoor:
-       icon: mdi:glassdoor
      alarm_control_panel.abode_alarm:
        entity_picture: /local/Abode.jpg
 

@@ -613,7 +613,7 @@
      entity_id: switch.garage_light
 
 - id: garage_lights_on_upon_entry
-  alias: 'Turn on garage lights'
+  alias: 'Turn on garage lights when entering garage'
   initial_state: 'on'
   trigger:
     - platform: state

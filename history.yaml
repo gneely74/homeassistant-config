@@ -1,6 +1,6 @@
   include:
     entities:
-      - binary_sensor.garagedoor
+      - binary_sensor.garage_door
       - device_tracker.gradys_iphone
       - device_tracker.kates_iphone
       - device_tracker.conorsiphone3
