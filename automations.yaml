@@ -592,7 +592,7 @@
       entity_id: sun.sun
       state: 'below_horizon'
   action:
-     service: light.turn_on
+     service: switch.turn_on
      data:
        entity_id: switch.garage_light
 
@@ -609,7 +609,7 @@
       entity_id: switch.garage_light
       state: 'on'
   action:
-     service: light.turn_off
+     service: switch.turn_off
      entity_id: switch.garage_light
 
 - id: garage_lights_on_upon_entry
@@ -629,7 +629,7 @@
         entity_id: switch.garage_light
         state: 'off'
   action:
-     service: light.turn_on
+     service: switch.turn_on
      entity_id: switch.garage_light
      
 - id: kitchen_light_brightness
@@ -710,7 +710,10 @@
   action:
     - service: switch.turn_on
       entity_id:
-        - group.outside_lights
+        - switch.front_garage_light
+        - switch.front_porch_light
+        - switch.outside_den_light
+        - switch.side_of_garage_light
         
 - id: outdoor_light_off
   alias: Outdoor light Off
@@ -722,7 +725,10 @@
   action:
     - service: switch.turn_off
       entity_id:
-        - group.outside_lights
+        - switch.front_garage_light
+        - switch.front_porch_light
+        - switch.outside_den_light
+        - switch.side_of_garage_light
 
 - id: outsides_light_off_during_the_day
   alias: Outside lights Off during the day
@@ -734,7 +740,10 @@
   action:
     - service: switch.turn_off
       entity_id:
-        - group.outside_lights
+        - switch.front_garage_light
+        - switch.front_porch_light
+        - switch.outside_den_light
+        - switch.side_of_garage_light
 
 #- id: open_garage_door_when_someone_home
 #  alias: 'Open Garage door when someone home'
