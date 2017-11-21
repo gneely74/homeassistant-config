@@ -16,7 +16,9 @@ else
         checkgit=`git -C $dir status`
         if [[ ! "$checkgit" =~ "Your branch is up-to-date" ]]; then
                 log "-------------- Update ---------------"
+                git stash $dir &>> $msglog
                 git -C $dir pull &>> $msglog
+                git stash clear $dir
                 log "-------------------------------------"
                 /usr/bin/hassio homeassistant restart
         fi
