@@ -155,6 +155,10 @@
    - platform: time
      minutes: '/10'
      seconds: 00
+   - platform: state
+     entity_id:
+       - input_select.abodestatus
+     to: 'armed_home'     
   action:
      service: homeassistant.turn_on
      entity_id: script.abodehome
@@ -193,6 +197,10 @@
    - platform: time
      minutes: '/10'
      seconds: 00
+   - platform: state
+     entity_id:
+       - input_select.abodestatus
+     to: 'disarmed'     
   action:
      service: homeassistant.turn_on
      entity_id: script.abodestandby
@@ -223,6 +231,10 @@
       from: 'on'
       to: 'off'
       for: '00:10:00'
+   - platform: state
+     entity_id:
+       - input_select.abodestatus
+     to: 'armed_away'     
   action:
      service: homeassistant.turn_on
      entity_id: script.abodeaway
