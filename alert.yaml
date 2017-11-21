@@ -24,7 +24,7 @@
       - ios
 
   overflow_pantry_door_open_alert:
-    name: Overflow Pantry Door Left Open Notification
+    name: Overflow Pantry Door Left Open 
     entity_id: sensor.overflow_pantry_door
     state: 'open'  
     repeat:
