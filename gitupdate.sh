@@ -12,5 +12,4 @@ if [[ `git status --porcelain` ]]; then
 else
   echo ""
 fi
- 
 exit
