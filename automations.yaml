@@ -154,14 +154,56 @@
   trigger:
    - platform: time
      minutes: '/10'
-     seconds: 00
+     seconds: 00 
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodehome
+
+- id: abode_home_selected
+  alias: 'Abode Home Selected'
+  initial_state: 'on'
+  condition:
+     - condition: state
+       entity_id: input_boolean.abodeupdate
+       state: 'on'
+  trigger:
    - platform: state
      entity_id: input_select.abodestatus
      to: 'armed_home'     
   action:
      service: homeassistant.turn_on
      entity_id: script.abodehome
+     
+- id: abode_standby_selected
+  alias: 'Abode Standby Selected'
+  initial_state: 'on'
+  condition:
+     - condition: state
+       entity_id: input_boolean.abodeupdate
+       state: 'on'
+  trigger:
+   - platform: state
+     entity_id: input_select.abodestatus
+     to: 'disarmed'     
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodestandby
 
+- id: abode_away_selected
+  alias: 'Abode Away Selected'
+  initial_state: 'on'
+  condition:
+     - condition: state
+       entity_id: input_boolean.abodeupdate
+       state: 'on'
+  trigger:
+   - platform: state
+     entity_id: input_select.abodestatus
+     to: 'armed_away'     
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodeaway     
+     
 - id: abode_standby
   alias: 'Abode Standby'
   initial_state: 'on'
@@ -195,10 +237,7 @@
   trigger:
    - platform: time
      minutes: '/10'
-     seconds: 00
-   - platform: state
-     entity_id: input_select.abodestatus
-     to: 'disarmed'     
+     seconds: 00  
   action:
      service: homeassistant.turn_on
      entity_id: script.abodestandby
@@ -228,10 +267,7 @@
       entity_id: group.household
       from: 'on'
       to: 'off'
-      for: '00:10:00'
-    - platform: state
-      entity_id: input_select.abodestatus
-      to: 'armed_away'     
+      for: '00:10:00'   
   action:
      service: homeassistant.turn_on
      entity_id: script.abodeaway
