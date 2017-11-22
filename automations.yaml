@@ -648,7 +648,7 @@
     - platform: state
       entity_id: binary_sensor.garage_door
       to: 'off'
-      for: '00:00:30'
+      for: '00:05:00'
   condition:
     - condition: state
       entity_id: switch.garage_light
@@ -714,7 +714,30 @@
     - service: switch.turn_on
       entity_id:
         - switch.front_garage_light
-        - switch.front_porch_light
+        - switch.front_porch_light        
+
+- id: turn_off_front_lights_after_10min
+  alias: Turn off kitchen light 10 minutes after last movement
+  initial_state: 'on'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - condition: time
+      after: '19:00:00'
+      before: '06:00:00'
+  trigger:
+    platform: state
+    entity_id: 
+      - binary_sensor.entryway_camera_motion_detected
+    to: 'off'
+    for:
+      minutes: 10
+  action:
+    service: switch.turn_off
+    entity_id: 
+      - switch.front_garage_light
+      - switch.front_porch_light      
 
 #- id: frontyard_lights_off_after_ring
 #  alias: 'Turn off frontyard lights after Ring'
