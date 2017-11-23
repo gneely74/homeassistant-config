@@ -2,14 +2,16 @@
 ## Groups
 #################################################################
 
-#  default_view:
-#    view: yes
-#    icon: mdi:home-assistant
-#    entities:
-#      - group.information
-#      - group.all_lights
-#      - group.home_security
-#      - group.switches
+  default_view:
+    view: yes
+    icon: mdi:home-assistant
+    entities:
+      - device_tracker.gradys_iphone
+      - device_tracker.kates_iphone
+      - group.information
+      - group.all_lights
+      - group.home_security
+      - group.switches
 
   temperature:
     name: Temperature Sensors
@@ -20,6 +22,7 @@
 #      - group.room_sensors
 #     - group.thermostats
       - weather.weather
+      - camera.wundergroundradar
 
   cameras:
     name: Cameras
