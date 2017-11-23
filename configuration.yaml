@@ -233,6 +233,13 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
 
+vacuum:
+  - platform: roomba
+    host: 192.168.74.166
+    username: kate.neely@icloud.com
+    password: YBmFwFrFJ7Qb
+    name: Roomba 890
+    
 alexa:
 dialogflow:
 
