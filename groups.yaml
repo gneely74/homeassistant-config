@@ -7,6 +7,7 @@
     icon: mdi:home-assistant
     entities:
       - device_tracker.gradys_iphone
+      - device_tracker.grady_ot_iphone
       - device_tracker.kates_iphone
       - group.information
       - group.all_lights
