@@ -52,7 +52,7 @@ zone 3:
  radius: 200
  icon: mdi:city
 
-zone 3:
+zone 4:
  name: The Shaws
  latitude: !secret latitude_shaws
  longitude: !secret longitude_shaws
