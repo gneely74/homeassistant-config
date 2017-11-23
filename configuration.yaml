@@ -45,20 +45,28 @@ zone 2:
  radius: 200
  icon: mdi:home-map-marker
 
-#zone 3:
-#  name: Downtown
-#  latitude: !secret latitude_downtown
-#  longitude: !secret longitude_downtown
-#  radius: 200
-#  icon: mdi:school
-# insteon_plm supported configuration variables
+zone 3:
+ name: ADTRAN
+ latitude: !secret latitude_adtran
+ longitude: !secret longitude_adtran
+ radius: 200
+ icon: mdi:city
 
+zone 3:
+ name: The Shaws
+ latitude: !secret latitude_shaws
+ longitude: !secret longitude_shaws
+ radius: 200
+ icon: mdi:home-map-marker
+ 
+ 
 panel_iframe:
   nodered_flows:
     title: 'Node-RED Flows'
     url: 'http://hassio.local:1880'
     icon: mdi:nodejs
-    
+
+# insteon_plm supported configuration variables    
 insteon_plm:
   port: /dev/ttyUSB0
   
