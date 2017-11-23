@@ -38,13 +38,13 @@ zone:
   radius: 200
   icon: mdi:home
 
-#zone 2:
-#  name: Buckhead
-#  latitude: !secret latitude_buckhead
-#  longitude: !secret longitude_buckhead
-#  radius: 200
-#  icon: mdi:school
-#
+zone 2:
+ name: Papaw and Nana
+ latitude: !secret latitude_g_parents
+ longitude: !secret longitude_g_parents
+ radius: 200
+ icon: mdi:home-map-marker
+
 #zone 3:
 #  name: Downtown
 #  latitude: !secret latitude_downtown
