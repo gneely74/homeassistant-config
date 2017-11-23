@@ -157,7 +157,7 @@ nest:
   client_secret: !secret nest_secret
 
 device_tracker:
-  - platform: owntracks_http    
+  - platform: owntracks    
     max_gps_accuracy: 200
 #  - platform: unifi
 #    host: 192.168.2.163
@@ -230,8 +230,8 @@ mqtt:
   broker: 127.0.0.1
   port: 1883
   client_id: home-assistant-1
-#  username: !secret mqtt_username
-#  password: !secret mqtt_password
+  username: !secret mqtt_username
+  password: !secret mqtt_password
 
 alexa:
 dialogflow:
