@@ -42,7 +42,7 @@ zone 2:
  name: Papaw and Nana
  latitude: !secret latitude_g_parents
  longitude: !secret longitude_g_parents
- radius: 200
+ radius: 800
  icon: mdi:home-map-marker
 
 zone 3:

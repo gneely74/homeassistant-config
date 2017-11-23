@@ -11,10 +11,10 @@
        friendly_name: Grady's iPhone Mikrotik
      device_tracker.kates_iphone:
        icon: mdi:cellphone-iphone
-       friendly_name: kate's iPhone
+       friendly_name: Kate's iPhone
      device_tracker.katesiphone4:
        icon: mdi:cellphone-iphone
-       friendly_name: kate's iPhone Mikrotik
+       friendly_name: Kate's iPhone Mikrotik
 #     device_tracker.gradydelllatitude:
 #       icon: mdi:laptop-windows
 #       friendly_name: Dell Laptop
