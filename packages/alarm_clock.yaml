@@ -1,0 +1,155 @@
+#-------------------------------------------
+#  Fire Tablet Alarm Panel -
+#  http://www.vmwareinfo.com/2017/07/visualizing-smart-home-using-home.html
+#-------------------------------------------
+#
+homeassistant:
+  customize_glob:
+    "input_boolean.clock_snooze":
+      emulated_hue_hidden: False
+      hidden: False
+
+media_player:
+  - platform: floorplan_speaker
+    name: Alarm Clock
+
+#---Sensors for Fire Tablet-----------------------------
+
+binary_sensor:
+  - platform: mqtt
+    state_topic: floorplan/clock_motion
+    name: Clock Motion
+    device_class: motion
+    retain: true
+    emulated_hue_hidden: True
+    hidden: False
+
+  - platform: mqtt
+    state_topic: floorplan/clock_plugged
+    name: Clock Plugged
+    retain: true
+    emulated_hue_hidden: True
+    hidden: False
+
+sensor:
+  - platform: mqtt
+    state_topic: "clock/stacey_alarm_time"
+    name: clock_stacey_alarm_time
+    retain: true
+    emulated_hue_hidden: True
+    hidden: true
+
+input_boolean:
+  clock_snooze:
+    name: Clock Snooze
+    initial: off
+
+input_number:
+  alarm_time_hours:
+    name: Alarm Time Hours
+    initial: 08
+    min: 0
+    max: 23
+    step: 1
+
+  alarm_time_minutes:
+    name: Alarm Time Minutes
+    initial: 30
+    min: 0
+    max: 55
+    step: 5
+
+automation:
+  - alias: 'Snooze Button off in 10 minutes'
+    trigger:
+      - platform: state
+        entity_id:
+          - input_boolean.clock_snooze
+        to: 'on'
+        from: 'off'
+    action:
+      - delay:
+          minutes: 10
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.clock_snooze
+
+
+#-----Turn on the Music--------------------------------------
+  - alias: 'Play Radio when Snooze button is turned off.'
+
+    trigger:
+      - platform: state
+        entity_id:
+          - input_boolean.clock_snooze
+        to: 'off'
+        from: 'on'
+      - platform: template
+        value_template: '{{ (states.sensor.time.state.split(":")[0] + ":" + states.sensor.time.state.split(":")[1]) == "{:02.0f}:{:02.0f}".format((states("input_number.alarm_time_hours") | int), states("input_number.alarm_time_minutes") | int) }}'
+    condition:
+      - condition: state
+        entity_id: input_boolean.school_mode
+        state: 'on'
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+    action:
+      - service: media_player.play_media
+        data_template:
+          entity_id:
+            - media_player.alarm_clock
+          #media_content_id: "http://listen.181fm.com/181-kickincountry_128k.mp3"
+          media_content_id: "http://listen.djcmedia.com:80/americascountryhigh"
+          media_content_type: audio/mp4
+
+#-----Turn off the Music--------------------------------------
+  - alias: 'Turn off the Radio when the snooze is turned on.'
+
+    trigger:
+      - platform: state
+        entity_id:
+          - input_boolean.clock_snooze
+        to: 'on'
+        from: 'off'
+
+    action:
+      - service: media_player.media_stop
+        entity_id: media_player.alarm_clock
+
+#----Support for Setting the Alarm--------------------------------------
+
+  - alias: get_alarm_time
+    initial_state: 'on'
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sensor.clock_stacey_alarm_time
+    action:
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.alarm_time_hours
+          value: "{{ states('sensor.clock_stacey_alarm_time').split(':')[0] | float }}"
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.alarm_time_minutes
+          value: "{{ states('sensor.clock_stacey_alarm_time').split(':')[1] | float }}"
+
+  - alias: set_alarm_time
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: automation.set_alarm_time
+        to: 'off'
+    action:
+      - service: mqtt.publish
+        data_template:
+          payload_template: "{{ '{:02.0f}:{:02.0f}'.format((states('input_number.alarm_time_hours') | int), states('input_number.alarm_time_minutes') | int) }}"
+          topic: 'clock/stacey_alarm_time'
+          retain: true

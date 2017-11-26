@@ -1,0 +1,52 @@
+######################################################################
+##  Stuff that needs to happen after 10pm.
+######################################################################
+
+- alias: Automated NIGHT WatchDog!
+  trigger:
+    - platform: state
+      entity_id: switch.living_room_amp
+      to: 'on'
+      for: '00:20:00'
+    - platform: state
+      entity_id: media_player.livingroomCC
+      to: 'off'
+      for: '00:02:00'
+    - platform: state
+      entity_id: media_player.whole_house
+      to: 'off'
+      for: '00:02:00'
+
+  condition:
+    condition: or
+    conditions:
+      - condition: and
+        conditions:
+          - condition: state
+            entity_id: group.family
+            state: 'not_home'
+          - condition: state
+            entity_id: input_boolean.guest_mode
+            state: 'off'
+      - condition: and
+        conditions:
+          - condition: state
+            entity_id: sun.sun
+            state: 'below_horizon'
+          - condition: state
+            entity_id: input_boolean.guest_mode
+            state: 'off'
+          - condition: template
+            value_template: >
+              {% if is_state('media_player.livingroomCC', 'playing') %}
+              false
+              {% elif is_state('media_player.whole_house', 'playing') %}
+              false
+              {% else %}
+              true
+              {% endif %}
+
+  action:
+    - service: switch.turn_off
+      data_template:
+        entity_id: "{{ trigger.entity_id }}"

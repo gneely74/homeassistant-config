@@ -1,28 +1,71 @@
+#-------------------------------------------
+#  PiHole ad Blocking Related Packages
+#-------------------------------------------
 homeassistant:
   customize:
 
-    sensor.pihole_ads_percentage_blocked_today:
+    sensor.pihole_ads_percentage_today:
       friendly_name: Percentage of Ad Traffic Blocked
       unit_of_measurement: '%'
       icon: mdi:ticket-percent
 
-    sensor.pihole_domains_blocked:
-      friendly_name: Total Domains Blocked
+    sensor.pihole_domains_being_blocked:
+      friendly_name: Total Domains Blocking
+      icon: mdi:do-not-disturb
+
+    sensor.pihole_dns_unique_clients:
+      friendly_name: Unique Clients
+      icon: mdi:desktop-classic
+
+    sensor.pihole_ads_blocked_today:
+      friendly_name: Ads Blocked Today
       icon: mdi:do-not-disturb
 
     sensor.pihole_dns_queries_today:
       friendly_name: DNS Queries Today
       icon: mdi:note-text
 
-    sensor.pihole_dns_unique_domains:
-      friendly_name: Unique Domains
-      icon: mdi:approval
+    sensor.carlopihole:
+      friendly_name: Pi Hole Server
+      icon: mdi:filter-variant
 
+    group.pihole:
+      homebridge_hidden: true
+#-------------------------------------------
 sensor:
   - platform: pi_hole
-    host: 192.168.2.3
+    host: 192.168.10.11
     monitored_conditions:
-      - ads_percentage_today
-      - unique_domains
       - dns_queries_today
-      - domains_being_blocked
+      - ads_blocked_today
+      - ads_percentage_today
+      - unique_clients
+
+  - platform: template
+    sensors:
+      carlopihole:
+        friendly_name: 'Carlo-PiHole'
+        value_template: "{{ 'Online' if is_state('device_tracker.carlopihole', 'home') else 'Offline' }}"
+
+# Pi-Hole switch
+switch:
+  - platform: command_line
+    switches:
+      pihole_temp_disable:
+        command_on: "curl -X GET 'http://192.168.10.11/admin/api.php?enable&auth='"
+        command_off: "curl -X GET 'http://192.168.10.11/admin/api.php?disable=3600&auth='"
+#        command_state: "curl -X GET 'http://192.168.10.11/admin/api.php?status'"
+#        value_template: "{{ value_json.status == 'enabled' }}
+
+#-------------------------------------------
+group:
+  pihole:
+    entities:
+      - sensor.carlopihole
+      - sensor.pihole_dns_unique_clients
+      - sensor.pihole_dns_queries_today
+      - sensor.pihole_ads_blocked_today
+      - sensor.pihole_ads_percentage_today
+      - sensor.pihole_ads_percentage_blocked_today
+      - switch.pihole_temp_disable
+#-------------------------------------------

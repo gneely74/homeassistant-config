@@ -1,0 +1,37 @@
+      ###################################
+##  Sunrise and Sunset stuff
+###################################
+
+- alias: 'Sunset Stuff off'
+  trigger:
+    - platform: sun
+      event: sunrise
+      offset: '-02:00:00'
+
+  action:
+    - service: script.interior_off
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.landscaping
+
+    - delay: '00:{{ (range(1, 55)|random|int) }}:00'
+    - service: light.turn_off
+      entity_id:
+        - group.exterior_lights
+        - group.outdoor_front_lights
+        - group.outdoor_pool_lights
+        - group.all_lights
+
+    - wait_template: >-
+       {{ states.sun.sun.state == 'above_horizon' }}
+    - service: homeassistant.turn_off
+      entity_id:
+        - switch.master_bathroom_accents
+        - group.exterior_lights
+        - group.outdoor_front_lights
+
+    - service: input_boolean.turn_off
+      entity_id:
+        - input_boolean.medicine
+        - input_boolean.daylight_override
+        - input_boolean.guest_mode

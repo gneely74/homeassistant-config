@@ -1,263 +1,246 @@
 homeassistant:
-  # Omitted values in this section will be auto detected using freegeoip.io
-
-  # Location required to calculate the time the sun rises and sets
-  latitude: !secret latitude_home
-  longitude: !secret longitude_home
-  elevation: 210
-  # Name of the location where Home Assistant is running
-  name: Home
-  # C for Celcius, F for Fahrenheit
-  temperature_unit: F
-  # metric for Metric, imperial for Imperial
+  name: Bear Stone Run
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
   unit_system: imperial
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Chicago
-  # Customization file
-  customize: !include customize.yaml
-  #customize_glob: !include customize_glob.yaml
+  time_zone: America/New_York
+  customize: !include_dir_merge_named customize
+  customize_domain:
+    automation:
+      initial_state: 'on'
+  customize_glob:
+    "automation.*watchdog*":
+      icon: mdi:timer
+    "sensor.dark_sky_*":
+      homebridge_hidden: true
+    "scene.month_*_colors":
+      hidden: true
+      emulated_hue_hidden: true
+      homebridge_hidden: true
+
   packages: !include_dir_named packages
-#  whitelist_external_dirs:
-#    - '/home/homeassistant/.homeassistant/downloads'
 
-python_script:
-weather:
-  - platform: yweather
-    name: Weather
-    woeid: !secret woeid
-customizer:
-  custom_ui: hosted
-  hide_attributes:
-    - node_id
-    - value_index
+# cloud:
+#   mode: development
+#   cognito_client_id: !secret cloud_client_id
+#   user_pool_id: !secret cloud_user_pool
+#   region: 'us-east-1'
+#   relayer: !secret cloud_relayer
 
-zone:
-  name: Home
-  latitude: !secret latitude_home
-  longitude: !secret longitude_home
-  radius: 200
-  icon: mdi:home
+http:
+  base_url: !secret http_base_url
+  # server_port: !secret http_port
+  api_password: !secret http_api_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  trusted_networks:
+    - 192.168.10.0/24
+    - !secret external_ip
+  ip_ban_enabled: True
+  login_attempts_threshold: 3
 
-zone 2:
- name: Papaw and Nana
- latitude: !secret latitude_g_parents
- longitude: !secret longitude_g_parents
- radius: 1000
- icon: mdi:home-map-marker
+frontend:
+  javascript_version: latest
 
-zone 3:
- name: ADTRAN
- latitude: !secret latitude_adtran
- longitude: !secret longitude_adtran
- radius: 200
- icon: mdi:city
+panel_custom:
+  - name: floorplan
+    sidebar_title: Alarm Panel
+    sidebar_icon: mdi:security-home
+    url_path: floorplan
+    config:
+      hide_app_toolbar:
+      config: /local/custom_ui/floorplan/floorplan.yaml
 
-zone 4:
- name: The Shaws
- latitude: !secret latitude_shaws
- longitude: !secret longitude_shaws
- radius: 200
- icon: mdi:home-map-marker
- 
- 
-panel_iframe:
-  nodered_flows:
-    title: 'Node-RED Flows'
-    url: 'http://hassio.local:1880'
-    icon: mdi:nodejs
+  - name: clock
+    sidebar_title: Alarm Clock
+    sidebar_icon: mdi:alarm
+    url_path: clock
+    config:
+      hide_app_toolbar:
+      config: /local/custom_ui/floorplan/floorclock.yaml
 
-# insteon_plm supported configuration variables    
-insteon_plm:
-  port: /dev/ttyUSB0
-  
-zwave:
-  usb_path: /dev/ttyACM0
-light:
+notify:
+  - platform: ios
+  - name: ios_family
+    platform: group
+    services:
+      - service: ios_staceys_iphone
+      - service: ios_carlo_6s
+  - name: ios_parents
+    platform: group
+    services:
+      - service: ios_staceys_iphone
+      - service: ios_carlo_6s
+
+discovery:
+  ignore:
+   - samsung_tv
+#   - roku
+   - google_cast
 
 updater:
   include_used_components: true
 
-abode:
-  username: !secret abode_username
-  password: !secret abode_password
-# usps:
-#   username: !secret usps_username
-#   password: !secret usps_password
-#Adds Alexa and Google Home support
-
-# Enables configuration UI
-config:
-
-map:
-downloader:
-  download_dir: downloads
-http:
-  api_password: !secret http_password
-  ip_ban_enabled: True
-  login_attempts_threshold: 3
-  trusted_networks:
-    - 192.168.74.0/24
-
-# Discover some devices automatically
-discovery:
-  ignore:
-#    - apple_tv
-
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-ffmpeg:
-camera:
-  - platform: generic
-    still_image_url: 'https://icons.wxug.com/data/weather-maps/radar/united-states/columbus-georgia-region-current-radar-animation.gif'
-    name: WundergroundRadar
-  - platform: generic
-    name: worldtime
-    still_image_url: https://imgs.xkcd.com/comics/now.png    
-  # - platform: usps
-  #   scan_interval: 30
-  # - platform: generic
-  #   still_image_url: !secret porch_camera_image_url
-  #   name: porch2
-  # - platform: opencv
-  #   camera: camera.motoe
-  #   processor: image_processing.opencv_motoe
-  #   name: OpenCV MotoE
-  # - platform: opencv
-  #   camera: camera.porch
-  #   processor: image_processing.opencv_porch
-  #   name: OpenCV Porch
-  # - platform: opencv
-  #   camera: camera.backyard
-  #   processor: image_processing.opencv_backyard
-  #   name: OpenCV Backyard
-  # - platform: opencv
-  #   camera: camera.driveway
-  #   processor: image_processing.opencv_driveway
-  #   name: OpenCV Driveway
-  # - platform: generic
-  #   still_image_url: 'https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=FFC&brand=wui&num=1&delay=100&type=NTP&frame=0&scale=1&noclutter=0&showstorms=5&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0&rand=24427697&lat=0&lon=0&label=you'
-  #   name: RadarGA
-    # Generate link - http://www.intellicast.com/National/Radar/Current.aspx
-  # - platform: generic
-  #   still_image_url: 'http://images.intellicast.com/WxImages/RadarLoop/prc_None_anim.gif'
-  #   name: IntellicastRadar
-
-#ifttt:
-#  key: !secret ifttt_key
-
 sun:
-media_player:
-  # - platform: apple_tv
-  #   host: 192.168.2.90
-  #   login_id: !secret apple_hsgid
 
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_secret
+light:
+  - platform: hue
+    host: 192.168.10.75
+    filename: phue.conf
+    allow_unreachable: true
+    allow_in_emulated_hue: false
+    allow_hue_groups: false
 
-device_tracker:
-  - platform: owntracks    
-    track_new_devices: yes  
-    max_gps_accuracy: 200
-#  - platform: unifi
-#    host: 192.168.2.163
-#    username: !secret unifi_username
-#    password: !secret unifi_password
-#    verify_ssl: False
-  - platform: mikrotik
-    host: 192.168.74.1
-    username: !secret mikrotik_user
-    password: !secret mikrotik_pass
-  - platform: geofency
-  # - platform: asuswrt
-  #   host: 192.168.2.1
-  #   protocol: telnet
-  #   username: !secret asus_username
-  #   password: !secret asus_password
+light 2:
+  - platform: hue
+    host: 192.168.10.76
+    filename: phue2.conf
+    allow_unreachable: true
+    allow_in_emulated_hue: false
+    allow_hue_groups: false
 
-notify:
-#  - platform: ios
-  - platform: pushbullet
-    api_key: !secret pushbullet_key
-    name: pushbullet
-  - platform: group
-    name: iOS
-    services:
-      - service: ios_gradys_iphone
-      - service: ios_kates_iphone
-  - platform: group
-    name: ios_abode_updates
-    services:
-      - service: ios_gradys_iphone
-        data:
-          title: 'Enable Abode updates?'
-          data:
-            push:
-              badge: 0
-              category: "abode_updates"
-# Log Severities: notset, debug, info, warn, warning, error, fatal, critical
-logger:
-  default: info
-  logs:
-    homeassistant.components.image_processing: critical
-    homeassistant.components.python_script: warn
-    homeassistant.components.camera.synology: critical
-    homeassistant.components.camera.generic: critical
-    homeassistant.components.sensor.wunderground: critical
-    homeassistant.components.sensor.pi_hole: critical
-    homeassistant.components.media_player.plex: critical
-    homeassistant.components.telegram_bot: critical
-    homeassistant.components.sensor.darksky: critical
-    pychromecast.socket_client: critical
-    aiohttp.access: critical
-    aiohttp.server: critical
-    haffmpeg.core: critical
-    homeassistant.helpers.entity: critical
-    homeassistant.components.insteon_plm: warn
-    insteonplm.protocol: warn
-    homeassistant.components.zwave: warn
-    homeassistant.components.http.ban: warn
-    homeassistant.components.ios: debug
-    homeassistant.components.notify: debug
-# Text to speech
-tts:
-  - platform: google
-#    cache: true
-#    cache_dir: /home/homeassistant/.homeassistant/tts
-    time_memory: 300
+# Reference : https://www.flexfireleds.com/pages/Comparison-between-3528-LEDs-and-5050-LEDs.html
+  - platform: flux_led
+    automatic_add: True
+    devices:
+      192.168.10.148:
+        name: led_garage_snip
+        mode: "rgb"
+      192.168.10.214:
+        name: led_outdoor_den
+        mode: "rgb"
+      192.168.10.213:
+        name: led_garage_large
+        mode: "rgb"
+      192.168.10.212:
+        name: led_garage_small
+        mode: "rgb"
+
+emulated_hue:
+  host_ip: 192.168.10.10
+  listen_port: 8300
+  expose_by_default: false
+
+ifttt:
+  key: !secret ifttt_key
+
+logbook:
+  exclude:
+    entities:
+      - automation.detect_lights_and_adjust_the_brightness_when_turned_on_based_on_time
+      - automation.cuckoo_clock
+      - binary_sensor.office_motion
+      - group.garage_doors
+      - media_player.LivingRoomCC
+      - py.warnings
+      - sensor.since_last_boot
+      - sensor.since_last_boot_templated
+      - sensor.small_garage_status
+      - sensor.large_garage_status
+      - sensor.small_garage_time_in_state
+      - sensor.large_garage_time_in_state
+      - sensor.large_garage_wifi_signal_strength
+      - sensor.small_garage_wifi_signal_strength
+      - sensor.small_garage_reflection_rate
+      - sensor.large_garage_reflection_rate
+      - sensor.pihole_ads_blocked_today
+      - sensor.pihole_ads_percentage_blocked_today
+      - sensor.pihole_dns_queries_today
+      - sensor.time
+      - sensor.date
+      - sensor.floorplan_date
+      - sensor.floorplan_time
+      - sensor.ha_uptime
+
+history:
+  include:
+    domains:
+      - sensor
+      - switch
+      - media_player
+      - light
+  exclude:
+    entities:
+     - sensor.last_boot
+     - sensor.date
+     - sensor.pihole_ads_blocked_today
+     - sensor.pihole_ads_percentage_blocked_today
+     - sensor.pihole_dns_queries_today
+     - sensor.since_last_boot
+     - sensor.since_last_boot_templated
+     - sensor.floorplan_date
+     - sensor.floorplan_time
+     - sensor.ha_uptime
+     - sensor.time
+
+logger: !include logger.yaml
+recorder: !include recorder.yaml
 
 mqtt:
   broker: 127.0.0.1
   port: 1883
-  client_id: home-assistant-1
-#  username: !secret mqtt_username
-#  password: !secret mqtt_password
+  client_id: home-assistant-Carlo
+  username: !secret MQTT_username
+  password: !secret MQTT_password
 
-vacuum:
-  - platform: roomba
-    host: 192.168.74.166
-    username: kate.neely@icloud.com
-    password: YBmFwFrFJ7Qb
-    name: Roomba 890
-    
-alexa:
-dialogflow:
+# zwave:
+#  usb_path: /dev/ttyACM0
+#  config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
 
-# Includes 
-intent_script: !include intent_script.yaml
-ios: !include ios.yaml
-alert: !include alert.yaml
-automation: !include automations.yaml
-group: !include groups.yaml
-script: !include scripts.yaml
-sensor: !include sensor.yaml
-switch: !include switches.yaml
-binary_sensor: !include binary_sensor.yaml
-input_select: !include input_select.yaml
-input_boolean: !include input_boolean.yaml
-#input_number: !include input_number.yaml
-frontend: !include frontend.yaml
-recorder: !include recorder.yaml
-logbook: !include logbook.yaml
-#history: !include history.yaml
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+# neato:
+#   username: !secret neato_username
+#   password: !secret neato_password
+
+climate:
+  platform: nest
+
+media_player:
+  - platform: cast
+  - platform: roku
+
+  # - platform: samsungtv
+  #   host: 192.168.10.207
+  #   port: 8001
+  #   name: Living Room TV
+  #   scan_interval: 180
+
+tts:
+  - platform: amazon_polly
+    aws_access_key_id: !secret aws_access_key_ID
+    aws_secret_access_key: !secret aws_secret_access_key
+    region_name: 'us-east-1'
+    text_type: ssml
+    cache: True
+    cache_dir: /data/tts
+
+wink:
+  # email: !secret wink_username
+  # password: !secret wink_password
+  # local_control: True
+
+cover:
+  platform: garadget
+  covers:
+      !secret large_garage_id:
+        username: !secret garadget_username
+        password: !secret garadget_password
+        name: Large Garage
+      !secret small_garage_id:
+        username: !secret garadget_username
+        password: !secret garadget_password
+        name: Small Garage
+
+group: !include_dir_merge_named group
+device_tracker: !include_dir_merge_list device_tracker
+sensor: !include_dir_merge_list sensor
+automation: !include_dir_merge_list automation
+scene: !include_dir_merge_list scene
+switch: !include_dir_merge_list switch
+script: !include_dir_merge_named script
+input_boolean: !include_dir_merge_named input_boolean
+shell_command: !include_dir_merge_named shell_command
