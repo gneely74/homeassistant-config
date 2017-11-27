@@ -21,15 +21,22 @@ homeassistant:
 #    - '/home/homeassistant/.homeassistant/downloads'
 
 python_script:
+
 weather:
   - platform: yweather
     name: Weather
     woeid: !secret woeid
+
 customizer:
   custom_ui: hosted
   hide_attributes:
     - node_id
     - value_index
+
+emulated_hue:
+  host_ip: 192.168.74.14
+  listen_port: 8300
+  expose_by_default: false
 
 zone:
   name: Home
@@ -72,6 +79,23 @@ panel_iframe:
     url: 'http://hassio.local:1880'
     icon: mdi:nodejs
 
+panel_custom:
+  - name: floorplan
+    sidebar_title: Alarm Panel
+    sidebar_icon: mdi:security-home
+    url_path: floorplan
+    config:
+      hide_app_toolbar:
+      config: /local/custom_ui/floorplan/floorplan.yaml
+
+  - name: clock
+    sidebar_title: Alarm Clock
+    sidebar_icon: mdi:alarm
+    url_path: clock
+    config:
+      hide_app_toolbar:
+      config: /local/custom_ui/floorplan/floorclock.yaml
+
 # insteon_plm supported configuration variables    
 insteon_plm:
   port: /dev/ttyUSB0
@@ -95,8 +119,10 @@ abode:
 config:
 
 map:
-downloader:
-  download_dir: downloads
+
+#downloader:
+#  download_dir: downloads
+
 http:
   api_password: !secret http_password
   ip_ban_enabled: True
