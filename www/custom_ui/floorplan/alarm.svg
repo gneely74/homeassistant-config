@@ -576,7 +576,7 @@
 </g>
 <g id="Automation">
 	
-		<text id="input_boolean.alert_mode" transform="matrix(1 0 0 1 206.4198 305.1656)" style="fill:#BDF271; font-family:'Helvetica'; font-size:35.2242px;">OFF</text>
+		<text id="alarm_control_panel.abode_alarm" transform="matrix(1 0 0 1 206.4198 305.1656)" style="fill:#BDF271; font-family:'Helvetica'; font-size:35.2242px;">OFF</text>
 	<g id="binary_sensors">
 		<path id="binary_sensor.justins_room_nest_protect_online" inkscape:connector-curvature="0" style="fill:#BDF271;" d="
 			M720.9,359.6h-6.7c-0.8,0-1.5-0.7-1.5-1.5v-7.5c0-0.8,0.7-1.5,1.5-1.5h6.7c0.8,0,1.5,0.7,1.5,1.5v7.5
