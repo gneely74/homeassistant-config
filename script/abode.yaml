@@ -1,0 +1,59 @@
+#################################################################
+## Abode Scripts
+#################################################################
+
+abodeaway:
+  alias: 'Abode Arm'
+  sequence:
+    - service: alarm_control_panel.alarm_arm_away
+      data:
+        entity_id: alarm_control_panel.abode_alarm
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.abodestatus
+        option: armed_away
+    # - service: homeassistant.turn_on
+    #   entity_id: input_boolean.startrecording
+    # - service: ifttt.trigger
+    #   data: {"event":"AbodeAway", "value1":"Arm Abode"}
+
+abodehome:
+  alias: 'Abode Home'
+  sequence:
+    - service: alarm_control_panel.alarm_arm_home
+      data:
+        entity_id: alarm_control_panel.abode_alarm
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.abodestatus
+        option: armed_home
+    # - service: ifttt.trigger
+    #   data: {"event":"AbodeHome", "value1":"Abode Home"}
+
+abodestandby:
+  alias: 'Abode Standby'
+  sequence:
+    - service: alarm_control_panel.alarm_disarm
+      data:
+        entity_id: alarm_control_panel.abode_alarm
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.abodestatus
+        option: disarmed
+    # - service: ifttt.trigger
+    #   data: {"event":"AbodeStandby", "value1":"Abode Standby"}
+    # - service: homeassistant.turn_off
+    #   entity_id: input_boolean.startrecording
+
+arm_security:
+  alias: 'Arm Security'
+  sequence:
+    - delay: 00:05:00
+    - service: homeassistant.turn_on
+      entity_id: script.abodeaway
+
+disarm_security:
+  alias: 'Disarm Security'
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: script.abodestandby
