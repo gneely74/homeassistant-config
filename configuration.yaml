@@ -56,9 +56,15 @@ zone 4:
  name: The Shaws
  latitude: !secret latitude_shaws
  longitude: !secret longitude_shaws
+ radius: 400
+ icon: mdi:home-map-marker
+
+zone 5:
+ name: Mimi and Papaw
+ latitude: !secret latitude_papaw_mimi
+ longitude: !secret longitude_papaw_mimi
  radius: 200
  icon: mdi:home-map-marker
- 
  
 panel_iframe:
   nodered_flows:
@@ -259,7 +265,7 @@ dialogflow:
 intent_script: !include intent_script.yaml
 ios: !include ios.yaml
 alert: !include alert.yaml
-automation: !include automations.yaml
+automation: !include_dir_merge_list automation
 group: !include groups.yaml
 script: !include scripts.yaml
 sensor: !include sensor.yaml
