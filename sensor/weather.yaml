@@ -29,3 +29,7 @@
 #     - 'smoke_status'
 
 - platform: moon
+
+- platform: yweather
+  name: Weather
+  woeid: !secret woeid

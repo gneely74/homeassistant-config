@@ -1,126 +1,50 @@
-###################################
-##  Switches Section
-###################################
-switch.den_outlet:
-  friendly_name: 'Den Outlet'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:power-plug
-  assumed_state: true
+switch.front_porch_light: {}
+switch.garage_light: {}
+switch.outside_den_light: {}
+switch.side_of_garage_light: {}
+switch.freezer_plug: {}
+switch.front_garage_light: {}
 
-
-switch.foyer_outlet:
-  friendly_name: 'Foyer Outlet'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:power-plug
-  assumed_state: true
-
-
-switch.front_door_outlet:
-  friendly_name: 'Front Door Outlet'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:power-plug
-  assumed_state: true
-
-switch.garage_outlet:
-  friendly_name: 'Garage Outlet'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:power-plug
-  assumed_state: true
-
-switch.landscaping:
-  friendly_name: 'Landscaping Lights'
-  emulated_hue_hidden: False
-  hidden: True
-  homebridge_hidden: True
-
-switch.back_landscaping:
-  friendly_name: 'Back Landscaping'
-  emulated_hue_hidden: False
-  hidden: False
-  homebridge_hidden: false
-  icon: mdi:flower
-
-
-switch.front_landscaping:
-  friendly_name: 'Front Landscaping'
-  emulated_hue_hidden: False
-  hidden: False
-  homebridge_hidden: False
-  icon: mdi:flower
-
-switch.pool_deck:
-  friendly_name: 'Pool Deck'
-  emulated_hue_hidden: False
-  hidden: False
-  homebridge_hidden: False
-
-switch.kitchen_accent_2:
-  friendly_name: 'Kitchen Accents 2'
-  emulated_hue_hidden: True
-  hidden: False
-  icon: mdi:lightbulb-outline
-  assumed_state: true
-
-
-switch.kitchen_accents:
-  friendly_name: 'Kitchen Accents'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:lightbulb-outline
-  assumed_state: true
-
-
-switch.living_room_amp:
-  friendly_name: 'Living Room Amp'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:music-circle
-  assumed_state: true
-
-
-switch.living_room_outlet:
-  friendly_name: 'Living Room Outlet'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:power-plug
-  assumed_state: true
-
-
-switch.master_bathroom_accents:
-  friendly_name: 'Master Bathroom Accents'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:lightbulb-outline
-  assumed_state: true
-
-
-switch.outlet_304_2:
-  friendly_name: 'Outlet 304 2'
-  emulated_hue_hidden: True
-  hidden: False
-  icon: mdi:power-plug
-  assumed_state: true
-
-switch.printer_outlet:
-  friendly_name: 'Printer Outlet'
-  emulated_hue_hidden: False
-  hidden: False
-  icon: mdi:printer
-  assumed_state: true
-
-switch.pihole_temp_disable:
-  friendly_name: 'Pihole Temp Disable'
-  emulated_hue_hidden: True
-  hidden: False
+switch.auto_away:
   homebridge_hidden: true
 
-switch.computer_screens:
-  friendly_name: 'Computer Screens'
-  emulated_hue_hidden: False
-  hidden: False
-  homebridge_hidden: False
-  icon: mdi:monitor-multiple
+switch.auto_home:
+  homebridge_hidden: true
+
+switch.close_garage_door:
+  homebridge_hidden: true
+
+switch.flash_lights_when_alarmin:
+  homebridge_hidden: true
+
+switch.good_morning:
+  homebridge_hidden: true
+
+switch.good_night:
+  homebridge_hidden: true
+
+#switch.kitchen:
+#  icon: mdi:lightbulb-outline
+#switch.lava_lamp:
+#  icon: mdi:led-on
+#switch.wireless_charger:
+#  icon: mdi:battery-charging
+#switch.august_interior:
+#  friendly_name: Interior Bolt
+#  icon: mdi:key
+#  emulated_hue_hidden: true
+#switch.august_keyed:
+#  friendly_name: Keyed Bolt
+#  icon: mdi:key
+#  emulated_hue_hidden: true
+#switch.kitchen_nightlight:
+#  icon: mdi:theme-light-dark
+#switch.alarm_status:
+#  friendly_name: Alarm Status indicator
+#  icon: mdi:security-home
+#switch.balcony_christmas_lights:
+#  friendly_name: Christmas Lights
+#  icon: mdi:led-outline
+#switch.christmas_tree:
+#  friendly_name: Christmas Tree
+#  icon: mdi:pine-tree

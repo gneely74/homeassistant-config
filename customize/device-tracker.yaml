@@ -1,0 +1,17 @@
+device_tracker.gradys_iphone:
+    friendly_name: Grady
+device_tracker.kates_iphone:
+    friendly_name: Kate
+device_tracker.conorsiphone3:
+    friendly_name: Conor
+device_tracker.huntersone6plus:
+    friendly_name: Hunter
+device_tracker.fisiphone:
+    friendly_name: Fiona
+device_tracker.finnegansipad:
+    friendly_name: Finn
+device_tracker.kateneelysipad:
+    friendly_name: Deaglan
+#device_tracker.katesiphone4: []
+device_tracker.pokemonsipad:
+    friendly_name: Finn

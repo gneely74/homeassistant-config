@@ -1,6 +1,6 @@
 Bedroom lights:
   entities:
-    - light.bedroom
+    - light.1b56c3
 
 kitchen lights:
   entities:
@@ -15,11 +15,8 @@ kitchen lights:
 
 Living Room lights:
   entities:
-    - light.m1_back_left
-    - light.m1_back_right
-    - light.m1_front_left
-    - light.m1_front_right
-    - light.m1_slider
+    - light.fireplace_light
+
 
 Living Room Accents:
   entities:
@@ -79,8 +76,8 @@ Outdoor Front Lights:
 Garage lights:
   control: hidden
   entities:
-    - light.garage_attic
-    - switch.garage_outlet
+    - switch.garage_light
+    - switch.freezer_plug
 
 Hallway Lights:
   entities:

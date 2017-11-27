@@ -1,8 +1,9 @@
 doors:
   name: Doors
   entities:
-    - binary_sensor.hallway_linen_opened
-    - binary_sensor.hallway_pantry_opened
-    - binary_sensor.kitchen_door_opened
-    - binary_sensor.MCU2_GPIO12 # Main Slider
-    - binary_sensor.MCU3_Light  # Alarm Door
+    - binary_sensor.back_door
+    - binary_sensor.front_door
+    - binary_sensor.garage_door
+    - binary_sensor.den_door
+    - binary_sensor.office_door
+    - sensor.overflow_pantry_door

@@ -24,14 +24,14 @@ sensor:
       floorplan_time:
         friendly_name: 'Time'
         value_template: >-
-          {{now().strftime("%-I")}}:{{now().strftime("%M")}} {{now().strftime("%p")}}
+          {{now().strftime("%I")}}:{{now().strftime("%M")}} {{now().strftime("%p")}}
 
   - platform: template
     sensors:
       clock_time:
         friendly_name: 'Clock Time'
         value_template: >-
-          {{now().strftime("%-I")}}:{{now().strftime("%M")}}
+          {{now().strftime("%I")}}:{{now().strftime("%M")}}
 
   - platform: template
     scan_interval: 30000

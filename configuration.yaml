@@ -1,10 +1,13 @@
 homeassistant:
-  name: Bear Stone Run
+  name: The Neely House
   latitude: !secret homeassistant_latitude
   longitude: !secret homeassistant_longitude
   elevation: !secret homeassistant_elevation
+  # C for Celcius, F for Fahrenheit
+  temperature_unit: F
+  # metric for Metric, imperial for Imperial
   unit_system: imperial
-  time_zone: America/New_York
+  time_zone: America/Chicago
   customize: !include_dir_merge_named customize
   customize_domain:
     automation:
@@ -21,6 +24,34 @@ homeassistant:
 
   packages: !include_dir_named packages
 
+zone:
+  name: Home
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  radius: 200
+  icon: mdi:home
+
+zone 2:
+ name: Papaw and Nana
+ latitude: !secret latitude_g_parents
+ longitude: !secret longitude_g_parents
+ radius: 1000
+ icon: mdi:home-map-marker
+
+zone 3:
+ name: ADTRAN
+ latitude: !secret latitude_adtran
+ longitude: !secret longitude_adtran
+ radius: 200
+ icon: mdi:city
+
+zone 4:
+ name: The Shaws
+ latitude: !secret latitude_shaws
+ longitude: !secret longitude_shaws
+ radius: 200
+ icon: mdi:home-map-marker
+ 
 # cloud:
 #   mode: development
 #   cognito_client_id: !secret cloud_client_id
@@ -29,16 +60,16 @@ homeassistant:
 #   relayer: !secret cloud_relayer
 
 http:
-  base_url: !secret http_base_url
+#  base_url: !secret http_base_url
   # server_port: !secret http_port
   api_password: !secret http_api_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
-  trusted_networks:
-    - 192.168.10.0/24
-    - !secret external_ip
-  ip_ban_enabled: True
-  login_attempts_threshold: 3
+#  ssl_certificate: !secret ssl_certificate
+#  ssl_key: !secret ssl_key
+#  trusted_networks:
+#    - 192.168.10.0/24
+#    - !secret external_ip
+#  ip_ban_enabled: True
+#  login_attempts_threshold: 3
 
 frontend:
   javascript_version: latest
@@ -65,13 +96,13 @@ notify:
   - name: ios_family
     platform: group
     services:
-      - service: ios_staceys_iphone
-      - service: ios_carlo_6s
+      - service: ios_gradys_iphone
+      - service: ios_kates_iphone
   - name: ios_parents
     platform: group
     services:
-      - service: ios_staceys_iphone
-      - service: ios_carlo_6s
+      - service: ios_gradys_iphone
+      - service: ios_kates_iphone
 
 discovery:
   ignore:
@@ -84,41 +115,41 @@ updater:
 
 sun:
 
-light:
-  - platform: hue
-    host: 192.168.10.75
-    filename: phue.conf
-    allow_unreachable: true
-    allow_in_emulated_hue: false
-    allow_hue_groups: false
-
-light 2:
-  - platform: hue
-    host: 192.168.10.76
-    filename: phue2.conf
-    allow_unreachable: true
-    allow_in_emulated_hue: false
-    allow_hue_groups: false
+#light:
+#  - platform: hue
+#    host: 192.168.10.75
+#    filename: phue.conf
+#    allow_unreachable: true
+#    allow_in_emulated_hue: false
+#    allow_hue_groups: false
+#
+#light 2:
+#  - platform: hue
+#    host: 192.168.10.76
+#    filename: phue2.conf
+#    allow_unreachable: true
+#    allow_in_emulated_hue: false
+#    allow_hue_groups: false
 
 # Reference : https://www.flexfireleds.com/pages/Comparison-between-3528-LEDs-and-5050-LEDs.html
-  - platform: flux_led
-    automatic_add: True
-    devices:
-      192.168.10.148:
-        name: led_garage_snip
-        mode: "rgb"
-      192.168.10.214:
-        name: led_outdoor_den
-        mode: "rgb"
-      192.168.10.213:
-        name: led_garage_large
-        mode: "rgb"
-      192.168.10.212:
-        name: led_garage_small
-        mode: "rgb"
+#  - platform: flux_led
+#    automatic_add: True
+#    devices:
+#      192.168.10.148:
+#        name: led_garage_snip
+#        mode: "rgb"
+#      192.168.10.214:
+#        name: led_outdoor_den
+#        mode: "rgb"
+#      192.168.10.213:
+#        name: led_garage_large
+#        mode: "rgb"
+#      192.168.10.212:
+#        name: led_garage_small
+#        mode: "rgb"
 
 emulated_hue:
-  host_ip: 192.168.10.10
+  host_ip: 192.168.74.14
   listen_port: 8300
   expose_by_default: false
 
@@ -180,17 +211,26 @@ recorder: !include recorder.yaml
 mqtt:
   broker: 127.0.0.1
   port: 1883
-  client_id: home-assistant-Carlo
+  client_id: home-assistant
   username: !secret MQTT_username
   password: !secret MQTT_password
 
-# zwave:
-#  usb_path: /dev/ttyACM0
-#  config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
-
+# insteon_plm supported configuration variables
+insteon_plm:
+  port: /dev/ttyUSB0
+  
+zwave:
+  usb_path: /dev/ttyACM0
+  
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
+
+abode:
+  username: !secret abode_username
+  password: !secret abode_password
+  name: Abode Alarm System
+  polling: False
 
 # neato:
 #   username: !secret neato_username
@@ -210,30 +250,30 @@ media_player:
   #   scan_interval: 180
 
 tts:
-  - platform: amazon_polly
-    aws_access_key_id: !secret aws_access_key_ID
-    aws_secret_access_key: !secret aws_secret_access_key
-    region_name: 'us-east-1'
-    text_type: ssml
-    cache: True
-    cache_dir: /data/tts
+#  - platform: amazon_polly
+#    aws_access_key_id: !secret aws_access_key_ID
+#    aws_secret_access_key: !secret aws_secret_access_key
+#    region_name: 'us-east-1'
+#    text_type: ssml
+#    cache: True
+#    cache_dir: /data/tts
 
-wink:
+#wink:
   # email: !secret wink_username
   # password: !secret wink_password
   # local_control: True
 
-cover:
-  platform: garadget
-  covers:
-      !secret large_garage_id:
-        username: !secret garadget_username
-        password: !secret garadget_password
-        name: Large Garage
-      !secret small_garage_id:
-        username: !secret garadget_username
-        password: !secret garadget_password
-        name: Small Garage
+#cover:
+#  platform: garadget
+#  covers:
+#      !secret large_garage_id:
+#        username: !secret garadget_username
+#        password: !secret garadget_password
+#        name: Large Garage
+#      !secret small_garage_id:
+#        username: !secret garadget_username
+#        password: !secret garadget_password
+#        name: Small Garage
 
 group: !include_dir_merge_named group
 device_tracker: !include_dir_merge_list device_tracker

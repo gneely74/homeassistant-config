@@ -1,7 +1,11 @@
 Family:
   entities:
-    - device_tracker.carlo
-    - device_tracker.stacey
-    - device_tracker.franco
-    - device_tracker.yolanda
-    - device_tracker.joyce_ipad
+    - device_tracker.gradys_iphone
+    - device_tracker.kates_iphone
+    - device_tracker.conorsiphone3
+    - device_tracker.huntersone6plus
+    - device_tracker.fisiphone
+    - device_tracker.finnegansipad
+    - device_tracker.kateneelysipad
+    - device_tracker.katesiphone4
+    - device_tracker.pokemonsipad     

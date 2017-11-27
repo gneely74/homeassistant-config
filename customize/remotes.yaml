@@ -1,0 +1,3 @@
+remote.bedroom:
+  friendly_name: Bedroom Apple TV
+  homebridge_hidden: true
