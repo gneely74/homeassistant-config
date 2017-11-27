@@ -147,6 +147,8 @@ camera:
 #  key: !secret ifttt_key
 
 sun:
+moon:
+
 media_player:
   # - platform: apple_tv
   #   host: 192.168.2.90
@@ -175,6 +177,15 @@ device_tracker:
   #   protocol: telnet
   #   username: !secret asus_username
   #   password: !secret asus_password
+  - platform: nmap_tracker
+    hosts: 192.168.74.0/24
+    track_new_devices: no
+    exclude:
+      - 192.168.74.14
+      - 192.168.74.1
+      - 192.168.74.3      
+  #  scan_options: " --privileged -sP "
+  # consider_home: 1800 - Added to known_devices.yaml instead on a device by device basis.
 
 notify:
 #  - platform: ios
