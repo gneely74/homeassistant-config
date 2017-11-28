@@ -74,8 +74,9 @@ rules:
 
   - name: Camera
     entities:
-      - camera.wu_doppler_weather
-      - camera.usps_mail
+      - camera.entryway
+      - camera.living_room_camera
+      - camera.master_bedroom
     states:
       - state: 'idle'
         class: 'text-home'
@@ -94,14 +95,7 @@ rules:
 
   - name: switches
     entities:
-      - switch.front_landscaping
-      - switch.back_landscaping
-      - switch.printer_outlet
-      - switch.kitchen_accents
-      - switch.master_bathroom_accents
-      - switch.front_door_outlet
-      - switch.foyer_outlet
-      - switch.living_room_amp
+      - switch.garage_light
       - switch.garage_outlet
     states:
       - state: 'on'
@@ -124,39 +118,8 @@ rules:
 
   - name: Lights
     entities:
-      - light.kids_hallway
-      - light.bedroom_hallway
-      - light_upstairs_hallway
-      - light.m1_back_left
-      - light.m1_back_right
-      - light.m1_front_left
-      - light.m1_front_right
-      - light.m1_slider
-      - light.office_lamp
-      - light.den_lamp
-      - light.f2
-      - light.f1
-      - light.s1
-      - light.s2
-      - light.s3
-      - light.s4
-      - light.d1
-      - light.d2
-      - light.k1
-      - light.k2
-      - light.k3
-      - light.k4
-      - light.k5
-      - light.k6
-      - light.sink
-      - light.fridge
-      - light.couch_1
-      - light.tv_light
-      - light.bedroom
-      - light.justin_go
-      - light.paige_go
-      - light.garage_attic
-      - light.upstairs_lamp
+      - light.1b56c3
+      - light.fireplace_light
     states:
       - state: 'on'
         class: 'light-on'
@@ -167,19 +130,10 @@ rules:
 
   - name: Outdoor Lights
     entities:
-      - light.p1_front_left
-      - light.p1_front_right
-      - light.p1_back_left
-      - light.p1_back_right
-      - light.outdoor_bathroom
-      - light.outdoor_foyer
-      - light.outdoor_sconce_1
-      - light.outdoor_sconce_2
-      - light.outdoor_sconce_3
-      - light.led_garage_large
-      - light.led_garage_small
-      - light.led_outdoor_den
-      - light.stone_door
+      - switch.front_garage_light
+      - switch.front_porch_light
+      - switch.outside_den_light
+      - switch.side_of_garage_light
     states:
       - state: 'on'
         class: 'light-on'
@@ -207,25 +161,12 @@ rules:
 
   - name: Entry Points
     entities:
-      - binary_sensor.mcu1_gpio4
-      - binary_sensor.mcu1_gpio5
-      - binary_sensor.mcu1_gpio10
-      - binary_sensor.mcu1_gpio12
-      - binary_sensor.mcu1_gpio13
-      - binary_sensor.mcu1_gpio14
-      - binary_sensor.mcu2_gpio4
+      - binary_sensor.den_door
+      - binary_sensor.back_door
+      - binary_sensor.front_door
+      - binary_sensor.garage_door
       - binary_sensor.office_door
-      - binary_sensor.mcu2_gpio9
-      - binary_sensor.mcu2_gpio10
-      - binary_sensor.mcu2_gpio12
-      - binary_sensor.mcu2_gpio13
-      - binary_sensor.mcu2_gpio14
-      - binary_sensor.mcu3_gpio4
-      - binary_sensor.mcu3_gpio5
-      - binary_sensor.mcu3_gpio10
-      - binary_sensor.mcu3_gpio14
-      - binary_sensor.kitchen_door_opened
-      - binary_sensor.mcu3_light
+      - sensor.overflow_pantry_door
     states:
       - state: 'off'
         class: 'window-closed'
@@ -242,10 +183,9 @@ rules:
       - state: 'off'
         class: 'presence-off'
 
-  - name: Garage Doors
+  - name: Garage Door
     entities:
-      - cover.large_garage
-      - cover.small_garage
+      - cover.garage_door_opener
     states:
       - state: 'closed'
         class: 'window-closed'
@@ -293,8 +233,9 @@ rules:
 
   - name: Camera Images
     entities:
-      - camera.stone_door
-      - camera.wu_doppler_weather
+      - camera.entryway
+      - camera.living_room_camera
+      - camera.master_bedroom
       - entity: camera.usps_mail
         element: camera.usps_mail_image
     image_template: '${entity.attributes.entity_picture}'
