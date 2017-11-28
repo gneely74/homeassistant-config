@@ -60,17 +60,17 @@ rules:
     text_template: '${entity.state ? entity.state : "undefined"}'
     class_template: 'return "static-text-time";'
 
-  - name: Alarm
+  - name: Abode Alarm Panel
     entities:
       - alarm_control_panel.abode_alarm_system
     text_template: '${entity.state ? entity.state : "undefined"}'
     states:
+      - state: 'armed_away'
+        class: 'alarm-armed'
+      - state: 'armed_home'
+        class: 'alarm-armed'
       - state: 'disarmed'
-        class: 'text-home'
-      - state: 'armed-home'
-        class: 'text-home'
-      - state: 'armed-away'
-        class: 'text-away'
+        class: 'alarm-disarmed'        
 
   - name: Camera
     entities:
@@ -83,14 +83,14 @@ rules:
 
   - name: Family
     entities:
-      - device_tracker.gradys_iphone
-      - device_tracker.kates_iphone
+      - binary_sensor.grady_home
+      - binary_sensor.kate_home
     text_template: '${entity.state ? entity.state.replace("not_home", "away") : "undefined"}'
 
     states:
-      - state: 'home'
+      - state: 'on'
         class: 'text-home'
-      - state: 'not_home'
+      - state: 'off'
         class: 'text-away'
 
   - name: switches

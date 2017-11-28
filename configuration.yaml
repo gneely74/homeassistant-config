@@ -179,7 +179,6 @@ camera:
 #  key: !secret ifttt_key
 
 sun:
-moon:
 
 media_player:
   # - platform: apple_tv
