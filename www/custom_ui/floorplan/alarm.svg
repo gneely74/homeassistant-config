@@ -28,25 +28,25 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     pagecolor="#949494"
+     pagecolor="#4a4a4a"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1440"
      inkscape:window-height="856"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="3.7231121"
-     inkscape:cx="500.55529"
-     inkscape:cy="87.105085"
+     inkscape:zoom="1.043761"
+     inkscape:cx="518.81766"
+     inkscape:cy="372.4759"
      inkscape:window-x="40"
      inkscape:window-y="2"
      inkscape:window-maximized="0"
-     inkscape:current-layer="surface188"
+     inkscape:current-layer="svg1599"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -734,6 +734,14 @@
        width="185"
        height="35.599998" />
   </defs>
+  <rect
+     style="fill:#666666;fill-opacity:1"
+     id="rect766"
+     width="1028.0132"
+     height="607.41876"
+     x="3.6626005"
+     y="0.12399275"
+     inkscape:label="background" />
   <g
      id="surface188"
      transform="translate(0,-1591.2121)">
@@ -4145,7 +4153,7 @@
        inkscape:transform-center-x="-6.7525643"
        inkscape:transform-center-y="28.966738" />
     <path
-       id="binary_sensor.office_door"
+       id="path691"
        inkscape:connector-curvature="0"
        inkscape:label="binary_sensor.office_door"
        style="fill:#29d9c2;stroke-width:0.64475405"
@@ -4160,12 +4168,12 @@
        r="5"
        inkscape:label="light.1b56c3" />
     <circle
-       id="light.1b56c3"
+       id="circle694"
        style="fill:#ffffa6"
        cx="645.2879"
        cy="1766.0223"
        r="5"
-       inkscape:label="light.1b56c3" />
+       inkscape:label="light.1b56c3_2" />
     <circle
        id="light.fireplace_light"
        style="fill:#ffffa6"
@@ -4187,11 +4195,11 @@
        d="m 468.62527,2112.2319 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
        inkscape:label="switch.front_porch_light" />
     <path
-       id="switch.front_porch_light"
+       id="path699"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
        d="m 510.53494,2112.0685 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
-       inkscape:label="switch.front_porch_light" />
+       inkscape:label="switch.front_porch_light2" />
     <path
        id="switch.side_of_garage_light"
        inkscape:connector-curvature="0"
@@ -4204,10 +4212,11 @@
        style="fill:#ffffa6;stroke-width:0.70638388"
        d="m 264.14687,2154.264 c -1.39714,0 -2.49489,-2.3 -2.49489,-5 v 0 h 5.03968 c -0.0499,2.7 -1.14765,5 -2.54479,5 z" />
     <path
-       id="switch.front_garage_light"
+       id="path703"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6;stroke-width:0.70638388"
-       d="m 344.08551,2154.2986 c -1.39714,0 -2.49489,-2.3 -2.49489,-5 v 0 h 5.03968 c -0.0499,2.7 -1.14765,5 -2.54479,5 z" />
+       d="m 344.08551,2154.2986 c -1.39714,0 -2.49489,-2.3 -2.49489,-5 v 0 h 5.03968 c -0.0499,2.7 -1.14765,5 -2.54479,5 z"
+       inkscape:label="path703" />
     <path
        id="switch.outside_den_light"
        inkscape:connector-curvature="0"
@@ -4377,19 +4386,19 @@
       <text
          y="238.18503"
          x="38.764221"
-         id="device_tracker.gradys_iphone"
+         id="binary_sensor.grady_home"
          inkscape:label="#text4437"
          style="font-size:26px;font-family:Helvetica;fill:#e7376b;enable-background:new">home</text>
       <text
          y="238.18503"
          x="151.9373"
-         id="device_tracker.kates_iphone"
+         id="binary_sensor.kate_home"
          inkscape:label="#text965"
          style="font-size:26px;font-family:Helvetica;fill:#bdf271;enable-background:new">home</text>
       <text
          y="309.48621"
          x="165.60689"
-         id="input_boolean.alert_mode"
+         id="alarm_control_panel.abode_alarm"
          style="font-size:35.2242012px;font-family:Helvetica;fill:#bdf271"
          inkscape:label="alarm_control_panel.abode_alarm">OFF</text>
       <g
@@ -4432,7 +4441,7 @@
       </g>
       <g
          id="sensor.dark_sky_temperature"
-         transform="translate(-141.56235,307.64794)">
+         transform="matrix(1.2753401,0,0,1.7714818,-204.05824,266.58902)">
         <text
            id="text957"
            transform="translate(188.344,62.0462)"
@@ -4440,7 +4449,7 @@
       </g>
       <g
          id="sensor.dark_sky_humidity"
-         transform="translate(114.91274,-57.722395)">
+         transform="matrix(1.2753401,0,0,1.7714818,108.72872,-382.15773)">
         <text
            id="text960"
            transform="translate(55.1017,427.5831)"
@@ -4464,7 +4473,7 @@
          inkscape:transform-center-x="-7.873455"
          inkscape:transform-center-y="-0.27149958"
          style="fill:#00adee"
-         d="m 195.76835,356.59563 c 0,0 -6.3,6.6 -6.3,10.6 0.2,3.5 3.3,6.1 6.7,5.9 3.1,-0.2 5.6,-2.7 5.9,-5.9 0,-3.9 -6.3,-10.6 -6.3,-10.6 m 2.6,6.7 1.1,1 -6.4,5.9 -1.1,-1 m 1.4,-5.9 c 0.7,0 1.3,0.5 1.3,1.2 v 0 0 c 0,0.7 -0.6,1.2 -1.3,1.2 v 0 0 c -0.7,0 -1.3,-0.5 -1.3,-1.2 v 0 0 c 0.1,-0.7 0.7,-1.2 1.3,-1.2 v 0 0 m 4.8,4.5 c 0.7,0.1 1.1,0.7 1.1,1.3 0,0.6 -0.7,1.1 -1.3,1.1 -0.7,-0.1 -1.1,-0.6 -1.1,-1.2 v 0 c 0,-0.8 0.5,-1.3 1.3,-1.2 z" />
+         d="m 221.76835,358.59563 c 0,0 -6.3,6.6 -6.3,10.6 0.2,3.5 3.3,6.1 6.7,5.9 3.1,-0.2 5.6,-2.7 5.9,-5.9 0,-3.9 -6.3,-10.6 -6.3,-10.6 m 2.6,6.7 1.1,1 -6.4,5.9 -1.1,-1 m 1.4,-5.9 c 0.7,0 1.3,0.5 1.3,1.2 v 0 0 c 0,0.7 -0.6,1.2 -1.3,1.2 v 0 0 c -0.7,0 -1.3,-0.5 -1.3,-1.2 v 0 0 c 0.1,-0.7 0.7,-1.2 1.3,-1.2 v 0 0 m 4.8,4.5 c 0.7,0.1 1.1,0.7 1.1,1.3 0,0.6 -0.7,1.1 -1.3,1.1 -0.7,-0.1 -1.1,-0.6 -1.1,-1.2 v 0 c 0,-0.8 0.5,-1.3 1.3,-1.2 z" />
     </g>
     <path
        style="fill:#616161;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.27527118"
