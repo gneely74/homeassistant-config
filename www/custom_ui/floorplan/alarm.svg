@@ -41,12 +41,12 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="1.043761"
-     inkscape:cx="518.81766"
+     inkscape:cx="400.01652"
      inkscape:cy="372.4759"
      inkscape:window-x="40"
      inkscape:window-y="2"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg1599"
+     inkscape:current-layer="Left_Buttons"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -4113,7 +4113,7 @@
       </g>
     </g>
     <path
-       id="binary_sensor.office_door"
+       id="binary_sensor.back_door"
        inkscape:connector-curvature="0"
        inkscape:label="binary_sensor.back_door"
        style="fill:#29d9c2;stroke-width:0.74364692"
@@ -4153,7 +4153,7 @@
        inkscape:transform-center-x="-6.7525643"
        inkscape:transform-center-y="28.966738" />
     <path
-       id="path691"
+       id="binary_sensor.office_door"
        inkscape:connector-curvature="0"
        inkscape:label="binary_sensor.office_door"
        style="fill:#29d9c2;stroke-width:0.64475405"
@@ -4396,11 +4396,11 @@
          inkscape:label="#text965"
          style="font-size:26px;font-family:Helvetica;fill:#bdf271;enable-background:new">home</text>
       <text
-         y="309.48621"
-         x="165.60689"
+         y="305.6539"
+         x="122.49357"
          id="alarm_control_panel.abode_alarm"
          style="font-size:35.2242012px;font-family:Helvetica;fill:#bdf271"
-         inkscape:label="alarm_control_panel.abode_alarm">OFF</text>
+         inkscape:label="alarm_control_panel.abode_alarm">Standby</text>
       <g
          transform="translate(1.1706468,58.570784)"
          id="Date_and_Time">

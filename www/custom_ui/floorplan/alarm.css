@@ -144,6 +144,16 @@ svg, svg * {
   fill: #00FFFF !important;
 }
 
+/* Alarm Panel */
+
+.alarm-disarmed {
+  fill: #3c763d !important;
+}
+
+.alarm-armed {
+  fill: #8a6d3b !important;
+}
+
 /* Light */
 
 .light-off {
