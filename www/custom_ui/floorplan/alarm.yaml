@@ -172,6 +172,10 @@ rules:
         class: 'window-closed'
       - state: 'on'
         class: 'window-open'
+      - state: 'Closed'
+        class: 'window-closed'
+      - state: 'Open'
+        class: 'window-open'
 
   - name: Presence
     entities:
