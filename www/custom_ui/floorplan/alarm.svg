@@ -40,13 +40,13 @@
      inkscape:window-height="856"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="0.90271216"
+     inkscape:zoom="1.0194422"
      inkscape:cx="517.66919"
      inkscape:cy="296.16663"
      inkscape:window-x="40"
      inkscape:window-y="2"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg1599"
+     inkscape:current-layer="Left_Buttons"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -2371,11 +2371,6 @@
        d="m 256.55477,2074.7962 c 0,-2.8 2.3,-5 5,-5 v 0 10.1 c -2.7,-0.1 -5,-2.3 -5,-5.1 z"
        inkscape:label="switch.side_of_garage_light" />
     <path
-       id="switch.front_garage_light"
-       inkscape:connector-curvature="0"
-       style="fill:#ffffa6;stroke-width:1.07137537"
-       d="m 330.99622,2155.545 c -2.55833,0 -4.56844,-2.8895 -4.56844,-6.2814 v 0 h 9.22826 c -0.0914,3.3919 -2.10149,6.2814 -4.65982,6.2814 z" />
-    <path
        id="switch.outside_den_light"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
@@ -2543,7 +2538,7 @@
          style="font-size:30px;font-family:Helvetica;fill:#ffffa6">Alarm</text>
       <text
          y="238.25488"
-         x="43.000637"
+         x="37.000637"
          id="device_tracker.gradys_iphone"
          inkscape:label="#text4437"
          style="font-size:22.33195305px;font-family:Helvetica;fill:#e7376b;stroke-width:0.85892123;enable-background:new">home</text>
@@ -2603,7 +2598,7 @@
         <text
            id="text957"
            transform="translate(188.344,62.0462)"
-           style="font-size:11.10478722px;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">XX</text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.10478687px;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">XX</text>
       </g>
       <g
          id="sensor.dark_sky_humidity"
@@ -2611,7 +2606,7 @@
         <text
            id="text960"
            transform="translate(55.1017,427.5831)"
-           style="font-size:11.10478722px;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">XX</text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.10478687px;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">XX</text>
       </g>
       <g
          id="g378"
@@ -2622,7 +2617,7 @@
           <text
              id="text864-0"
              transform="matrix(1.5781,0,0,1.5781,172.2095,327.8668)"
-             style="font-size:12.30405262px;font-family:Helvetica;fill:#ffffa6;-inkscape-font-specification:'Helvetica, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">XX</text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.30405235px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffa6">XX</text>
         </g>
       </g>
       <path
@@ -2673,6 +2668,12 @@
          id="tspan809"
          x="548.2699"
          y="1738.4664">Den</tspan></text>
+    <path
+       id="switch.front_garage_light"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffa6"
+       d="m 340.65604,2154.2636 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
+       inkscape:label="switch.front_garage_light" />
   </g>
   <line
      id="edge_camera_bottom"
@@ -2689,7 +2690,7 @@
      x2="979.5741"
      y2="35.092365" />
   <rect
-     id="camera.stone_door"
+     id="camera.entryway"
      x="789.0741"
      y="36.192364"
      inkscape:label="#rect140"
