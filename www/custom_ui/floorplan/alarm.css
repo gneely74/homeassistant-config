@@ -3,7 +3,8 @@
 svg, svg * {
   vector-effect: non-scaling-stroke !important;
   pointer-events: all !important;
-  background-color: var(--primary-background-color);
+/*   background-color: var(--primary-background-color); */
+  background-color: gray;
 }
 
 /*
@@ -166,8 +167,8 @@ svg, svg * {
   stroke-opacity:0.1;
 }
 .light-off:hover {
-  transform-origin: center;
-  transform: scale(2);
+/*   transform-origin: center; */
+/*   transform: scale(2); */
 }
 
 .outdoor-light-off {
@@ -178,8 +179,8 @@ svg, svg * {
   stroke-opacity:0.1;
 }
 .outdoor-light-off:hover {
-  transform-origin: center;
-  transform: scale(2);
+/*   transform-origin: center; */
+/*   transform: scale(2); */
 }
 .light-blue-on {
   fill: blue !important;
@@ -201,6 +202,6 @@ svg, svg * {
   stroke-opacity: 0.25;
 }
 .light-on:hover {
-  transform-origin: center;
-  transform: scale(3);
+/*   transform-origin: center; */
+/*   transform: scale(3); */
 }

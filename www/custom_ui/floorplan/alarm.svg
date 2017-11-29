@@ -8,6 +8,7 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   style="background-color: gray;"
    width="1024"
    height="600"
    viewBox="0 0 1024 600"
@@ -23,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,12 +42,12 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="1.0194422"
-     inkscape:cx="396.03404"
+     inkscape:cx="274.39889"
      inkscape:cy="296.16663"
      inkscape:window-x="40"
      inkscape:window-y="2"
      inkscape:window-maximized="0"
-     inkscape:current-layer="Left_Buttons"
+     inkscape:current-layer="svg1599"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -734,14 +735,6 @@
        width="185"
        height="35.599998" />
   </defs>
-  <rect
-     style="display:inline;fill:#666666;fill-opacity:1"
-     id="rect766"
-     width="1028.0132"
-     height="607.41876"
-     x="3.6626005"
-     y="0.12399275"
-     inkscape:label="background" />
   <g
      id="surface188"
      transform="translate(0,-1591.2121)">

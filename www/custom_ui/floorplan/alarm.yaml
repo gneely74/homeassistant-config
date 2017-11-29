@@ -2,6 +2,9 @@ name: Alarm Panel
 image: /local/custom_ui/floorplan/alarm.svg
 stylesheet: /local/custom_ui/floorplan/alarm.css
 
+warnings:
+hide_app_toolbar:
+
 rules:
   - name: input_booleans
     entities:
