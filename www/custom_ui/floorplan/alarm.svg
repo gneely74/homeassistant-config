@@ -4386,13 +4386,13 @@
       <text
          y="238.18503"
          x="38.764221"
-         id="binary_sensor.grady_home"
+         id="device_tracker.gradys_iphone"
          inkscape:label="#text4437"
          style="font-size:26px;font-family:Helvetica;fill:#e7376b;enable-background:new">home</text>
       <text
          y="238.18503"
          x="151.9373"
-         id="binary_sensor.kate_home"
+         id="device_tracker.kates_iphone"
          inkscape:label="#text965"
          style="font-size:26px;font-family:Helvetica;fill:#bdf271;enable-background:new">home</text>
       <text
