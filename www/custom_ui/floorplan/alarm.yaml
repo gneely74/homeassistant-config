@@ -63,7 +63,7 @@ rules:
   - name: Abode Alarm Panel
     entities:
       - alarm_control_panel.abode_alarm_system
-    text_template: '${entity.state ? entity.state : "undefined"}'
+#    text_template: '${entity.state ? entity.state : "undefined"}'
     states:
       - state: 'armed_away'
         class: 'alarm-armed'
