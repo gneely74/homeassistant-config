@@ -41,12 +41,12 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="1.043761"
-     inkscape:cx="400.01652"
+     inkscape:cx="281.21538"
      inkscape:cy="372.4759"
      inkscape:window-x="40"
      inkscape:window-y="2"
      inkscape:window-maximized="0"
-     inkscape:current-layer="Left_Buttons"
+     inkscape:current-layer="svg1599"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -735,7 +735,7 @@
        height="35.599998" />
   </defs>
   <rect
-     style="fill:#666666;fill-opacity:1"
+     style="display:inline;fill:#666666;fill-opacity:1"
      id="rect766"
      width="1028.0132"
      height="607.41876"
@@ -4079,7 +4079,7 @@
          d="m 722.2,134 c 0.3,2.7 1.6,13.1 1.2,16.1 -1.1,1.8 -5.2,6.5 -9.2,7 -3.8,0.4 -16.9,0.3 -21.1,0 -4.2,-1 -8.1,-4 -9.6,-7.7 0.3,-5.6 1,-12.3 1.3,-15.5 12.8,4.5 24.7,4.8 37.4,0.1 z" />
     </g>
     <path
-       id="cover.large_garage"
+       id="cover.garage_door_opener"
        inkscape:connector-curvature="0"
        style="opacity:0.54237288;fill:#bdf271;stroke-width:0.72832769"
        d="m 325.33229,2145.5307 h -56.23121 c -0.92753,0 -1.62317,-1.1896 -1.62317,-2.5622 v -5.8564 c 0,-1.464 0.75361,-2.5621 1.62317,-2.5621 h 56.23121 c 0.92752,0 1.62317,1.1896 1.62317,2.5621 v 5.8564 c 0,1.4641 -0.75362,2.5622 -1.62317,2.5622 z"

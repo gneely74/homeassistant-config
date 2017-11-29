@@ -83,14 +83,14 @@ rules:
 
   - name: Family
     entities:
-      - binary_sensor.grady_home
-      - binary_sensor.kate_home
+      - device_tracker.gradys_iphone
+      - device_tracker.kates_iphone
     text_template: '${entity.state ? entity.state.replace("not_home", "away") : "undefined"}'
 
     states:
-      - state: 'on'
+      - state: 'home'
         class: 'text-home'
-      - state: 'off'
+      - state: 'away'
         class: 'text-away'
 
   - name: switches
