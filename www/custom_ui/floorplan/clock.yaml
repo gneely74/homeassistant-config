@@ -10,7 +10,7 @@ rules:
       data:
         page_id: clock_config
 
-  - entity: sensor.clock_stacey_alarm_time
+  - entity: sensor.clock_kate_alarm_time
     text_template: '${entity.state.slice(0, 5)}'
 
 
@@ -74,8 +74,8 @@ rules:
 
   # - name: Presence
   #   entities:
-  #     - binary_sensor.sleepnumber_carlo_carlo_is_in_bed
-  #     - binary_sensor.sleepnumber_carlo_stacey_is_in_bed
+  #     - binary_sensor.sleepnumber_grady_grady_is_in_bed
+  #     - binary_sensor.sleepnumber_grady_kate_is_in_bed
   #   states:
   #     - state: 'on'
   #       class: 'presence-on'

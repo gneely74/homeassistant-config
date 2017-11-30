@@ -149,11 +149,10 @@ rules:
     entities:
       - binary_sensor.upstairs_living_room_nest_protect_online
       - binary_sensor.hallway_nest_protect_kids_hallway_online
-      - binary_sensor.justins_room_nest_protect_online
       - binary_sensor.kitchen_nest_protect_online
       - binary_sensor.master_bedroom_nest_protect_online
       - binary_sensor.master_hallway_nest_protect_online
-      - binary_sensor.paiges_room_nest_protect_paiges_room_online
+      - binary_sensor.fionas_room_nest_protect_fionas_room_online
       - binary_sensor.upstairs_bedroom_nest_protect_online
       - binary_sensor.office_nest_protect_online
     states:
@@ -182,8 +181,8 @@ rules:
 
   - name: Presence
     entities:
-      - binary_sensor.sleepnumber_carlo_carlo_is_in_bed
-      - binary_sensor.sleepnumber_carlo_stacey_is_in_bed
+      - binary_sensor.sleepnumber_grady_grady_is_in_bed
+      - binary_sensor.sleepnumber_grady_kate_is_in_bed
     states:
       - state: 'on'
         class: 'presence-on'

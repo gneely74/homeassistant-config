@@ -89,7 +89,7 @@ group:
       - sensor.wii
       - sensor.hue_hub_1
       - sensor.hue_hub_2
-      - binary_sensor.carlowink
+      - binary_sensor.gradywink
       - sensor.tablotv
       - sensor.alexa_echo
       - sensor.amazon_dot
@@ -116,7 +116,7 @@ group:
       - sensor.NodeMCU1
       - sensor.NodeMCU2
       - sensor.NodeMCU3
-      - sensor.carlopihole
+      - sensor.gradypihole
 
 
 #-------------------------------------------------------------------------------------
@@ -157,7 +157,7 @@ automation:
              - sensor.nodemcu1
              - sensor.nodemcu2
              - sensor.nodemcu3
-             - sensor.carlopihole
+             - sensor.gradypihole
            to: 'offline'
            for:
              minutes: 5
@@ -168,7 +168,7 @@ automation:
           value1: 'Device Status:'
           value2: "{{ trigger.to_state.attributes.friendly_name }} is "
           value3: "{{ trigger.to_state.state }}"
-          who: 'carlo'
+          who: 'grady'
 
       - service: script.speech_engine
         data_template:
