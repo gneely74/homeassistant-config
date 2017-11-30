@@ -42,10 +42,10 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="2.0829344"
-     inkscape:cx="154.36347"
-     inkscape:cy="291.89007"
-     inkscape:window-x="40"
-     inkscape:window-y="2"
+     inkscape:cx="824.57181"
+     inkscape:cy="560.74155"
+     inkscape:window-x="41"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg1599"
      units="px"
@@ -2946,14 +2946,6 @@
        x="308.87808"
        y="296.73242">Closet</tspan></text>
   <rect
-     id="camera.entryway"
-     x="789.0741"
-     y="36.192364"
-     inkscape:label="#rect140"
-     style="fill:#333333"
-     width="190"
-     height="105" />
-  <rect
      id="sensor.dark_sky_minutely_summary"
      x="69.921219"
      y="265.31937"
@@ -2961,4 +2953,11 @@
      style="fill:#cccccc"
      width="74"
      height="59.299999" />
+  <rect
+     style="fill:#666666;fill-opacity:1"
+     id="camera.entryway"
+     width="190"
+     height="107"
+     x="789.5741"
+     y="35.092365" />
 </svg>

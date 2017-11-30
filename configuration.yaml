@@ -36,6 +36,12 @@ customizer:
 emulated_hue:
   host_ip: 192.168.74.14
   listen_port: 8300
+#  off_maps_to_on_domains:
+#    - script
+#    - scene
+#  expose_by_default: true
+#  exposed_domains:
+#    - light  
   expose_by_default: false
 
 zone:
@@ -56,7 +62,7 @@ zone 3:
  name: ADTRAN
  latitude: !secret latitude_adtran
  longitude: !secret longitude_adtran
- radius: 200
+ radius: 1000
  icon: mdi:city
 
 zone 4:
@@ -79,6 +85,13 @@ zone 6:
  longitude: !secret longitude_gym
  radius: 200
  icon: mdi:home-map-marker
+ 
+zone 7:
+  name: Karate
+  latitude: !secret latitude_karate
+  longitude: !secret longitude_karate
+  radius: 200
+  icon: mdi:karate
   
 panel_iframe:
   nodered_flows:
@@ -132,10 +145,10 @@ map:
 
 http:
   api_password: !secret http_password
-  ip_ban_enabled: True
-  login_attempts_threshold: 3
-  trusted_networks:
-    - 192.168.74.0/24
+#  ip_ban_enabled: True
+#  login_attempts_threshold: 3
+#  trusted_networks:
+#    - 192.168.74.0/24
 
 # Discover some devices automatically
 discovery:
@@ -153,34 +166,7 @@ camera:
   - platform: generic
     name: worldtime
     still_image_url: https://imgs.xkcd.com/comics/now.png    
-  # - platform: usps
-  #   scan_interval: 30
-  # - platform: generic
-  #   still_image_url: !secret porch_camera_image_url
-  #   name: porch2
-  # - platform: opencv
-  #   camera: camera.motoe
-  #   processor: image_processing.opencv_motoe
-  #   name: OpenCV MotoE
-  # - platform: opencv
-  #   camera: camera.porch
-  #   processor: image_processing.opencv_porch
-  #   name: OpenCV Porch
-  # - platform: opencv
-  #   camera: camera.backyard
-  #   processor: image_processing.opencv_backyard
-  #   name: OpenCV Backyard
-  # - platform: opencv
-  #   camera: camera.driveway
-  #   processor: image_processing.opencv_driveway
-  #   name: OpenCV Driveway
-  # - platform: generic
-  #   still_image_url: 'https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=FFC&brand=wui&num=1&delay=100&type=NTP&frame=0&scale=1&noclutter=0&showstorms=5&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0&rand=24427697&lat=0&lon=0&label=you'
-  #   name: RadarGA
-    # Generate link - http://www.intellicast.com/National/Radar/Current.aspx
-  # - platform: generic
-  #   still_image_url: 'http://images.intellicast.com/WxImages/RadarLoop/prc_None_anim.gif'
-  #   name: IntellicastRadar
+
 
 #ifttt:
 #  key: !secret ifttt_key
