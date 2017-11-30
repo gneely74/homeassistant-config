@@ -287,7 +287,7 @@ vacuum:
   - platform: roomba
     host: 192.168.74.166
     username: 3144460001026600
-    password: YBmFwFrFJ7Qb
+    password: :1:1502753718:HmTNObX3r6oqlVay
     name: Roomba 890
     
 alexa:
