@@ -1,0 +1,7 @@
+media_players:
+  entities:
+    - media_player.boys_room_apple_tv
+    - media_player.living_room_apple_tv
+    - media_player.fionas_apple_tv
+    - media_player.bedroom_apple_tv
+

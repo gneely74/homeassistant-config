@@ -1,0 +1,21 @@
+script.restart_august_daemon:
+  friendly_name: Restart August daemon
+  icon: mdi:autorenew
+script.force_lock_interior:
+  friendly_name: Lock Interior
+  icon: mdi:autorenew
+script.force_unlock_interior:
+  friendly_name: Unlock Interior
+  icon: mdi:autorenew
+script.force_disconnect_interior:
+  friendly_name: Disconnect Interior
+  icon: mdi:close-octagon
+script.force_lock_keyed:
+  friendly_name: Lock Keyed
+  icon: mdi:autorenew
+script.force_unlock_keyed:
+  friendly_name: Unlock Keyed
+  icon: mdi:autorenew
+script.force_disconnect_keyed:
+  friendly_name: Disconnect Keyed
+  icon: mdi:close-octagon

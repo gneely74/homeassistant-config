@@ -1,0 +1,8 @@
+#zwave._:
+#  homebridge_hidden: true
+#alarm_control_panel.abode_alarm_system:
+#  homebridge_hidden: true
+#zwave.aeotec_zw090_zstick_gen5_us:
+#  homebridge_hidden: true
+#zwave.vision_zd2102_eu_doorwindow_sensor:
+#  hidden: true  

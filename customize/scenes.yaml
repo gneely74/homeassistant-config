@@ -1,0 +1,120 @@
+scene.master_bedroom_nightlight:
+  friendly_name: 'Nightlight'
+  icon: mdi:brightness-4
+scene.master_bedroom_dimmed:
+  friendly_name: 'Dimmed'
+  icon: mdi:brightness-7
+scene.master_bedroom_relax:
+  friendly_name: 'Relax'
+  icon: mdi:brightness-6
+scene.master_bedroom_read:
+  friendly_name: 'Read'
+  icon: mdi:brightness-5
+scene.master_bedroom_concentrate:
+  friendly_name: 'Bright'
+  icon: mdi:star-circle
+scene.master_bedroom_off:
+  friendly_name: 'Off'
+  icon: mdi:flashlight-off
+scene.master_bath_nightlight:
+  friendly_name: 'Nightlight'
+  icon: mdi:brightness-4
+scene.master_bath_dimmed:
+  friendly_name: 'Dimmed'
+  icon: mdi:brightness-7
+scene.master_bath_relax:
+  friendly_name: 'Relax'
+  icon: mdi:brightness-6
+scene.master_bath_read:
+  friendly_name: 'Read'
+  icon: mdi:brightness-5
+scene.master_bath_concentrate:
+  friendly_name: 'Bright'
+  icon: mdi:star-circle
+scene.master_bath_off:
+  friendly_name: 'Off'
+  icon: mdi:flashlight-off
+scene.lr_nightlight:
+  friendly_name: 'Nightlight'
+  icon: mdi:brightness-4
+scene.lr_dimmed:
+  friendly_name: 'Dimmed'
+  icon: mdi:brightness-7
+scene.lr_relax:
+  friendly_name: 'Relax'
+  icon: mdi:brightness-6
+scene.lr_read:
+  friendly_name: 'Read'
+  icon: mdi:brightness-5
+scene.lr_concentrate:
+  friendly_name: 'Bright'
+  icon: mdi:star-circle
+scene.lr_off:
+  friendly_name: 'Off'
+  icon: mdi:flashlight-off
+scene.da_nightlight:
+  friendly_name: 'Nightlight'
+  icon: mdi:brightness-4
+scene.da_dimmed:
+  friendly_name: 'Dimmed'
+  icon: mdi:brightness-7
+scene.da_relax:
+  friendly_name: 'Relax'
+  icon: mdi:brightness-6
+scene.da_read:
+  friendly_name: 'Read'
+  icon: mdi:brightness-5
+scene.da_concentrate:
+  friendly_name: 'Bright'
+  icon: mdi:star-circle
+scene.da_off:
+  friendly_name: 'Off'
+  icon: mdi:flashlight-off
+scene.office_nightlight:
+  friendly_name: 'Nightlight'
+  icon: mdi:brightness-4
+scene.office_dimmed:
+  friendly_name: 'Dimmed'
+  icon: mdi:brightness-7
+scene.office_relax:
+  friendly_name: 'Relax'
+  icon: mdi:brightness-6
+scene.office_read:
+  friendly_name: 'Read'
+  icon: mdi:brightness-5
+scene.office_concentrate:
+  friendly_name: 'Bright'
+  icon: mdi:star-circle
+scene.office_off:
+  friendly_name: 'Off'
+  icon: mdi:flashlight-off
+scene.ericks_desk_lamp_nightlight:
+  friendly_name: 'Desk Lamp Dim'
+  icon: mdi:brightness-3
+scene.ericks_desk_lamp_relax:
+  friendly_name: 'Desk Lamp Bright'
+  icon: mdi:brightness-1
+scene.ericks_desk_lamp_off:
+  friendly_name: 'Desk Lamp Off'
+  icon: mdi:flashlight-off
+scene.balcony_nightlight:
+  friendly_name: 'Nightlight'
+  icon: mdi:brightness-4
+scene.balcony_dimmed:
+  friendly_name: 'Dimmed'
+  icon: mdi:brightness-7
+scene.balcony_relax:
+  friendly_name: 'Relax'
+  icon: mdi:brightness-6
+scene.balcony_read:
+  friendly_name: 'Read'
+  icon: mdi:brightness-5
+scene.balcony_concentrate:
+  friendly_name: 'Bright'
+  icon: mdi:star-circle
+scene.balcony_off:
+  friendly_name: 'Off'
+  icon: mdi:flashlight-off
+scene.all_lights_off:
+  friendly_name: Lights Out
+  icon: mdi:power-plug-off

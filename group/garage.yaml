@@ -1,0 +1,5 @@
+garage_doors:
+  name: Garage doors
+  entities:
+    - cover.garage_door_opener
+    - binary_sensor.garage_door

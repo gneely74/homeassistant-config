@@ -1,0 +1,7 @@
+input_number.brightness_da:
+  friendly_name: DA Brightness
+  icon: mdi:brightness-6
+input_number.brightness_lr:
+  icon: mdi:brightness-6
+input_number.brightness_master_bath:
+  icon: mdi:brightness-6

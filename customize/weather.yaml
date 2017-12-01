@@ -1,0 +1,18 @@
+###################################
+##  weather
+###################################
+sensor.dark_sky_cloud_coverage:
+  friendly_name: 'Cloud Coverage'
+sensor.dark_sky_daily_summary:
+  friendly_name: 'Daily Summary'
+sensor.dark_sky_hourly_summary:
+  friendly_name: 'Hourly Summary'
+
+
+  
+###################################
+##  Sun Section
+###################################
+sun.sun:
+  hidden: true
+  

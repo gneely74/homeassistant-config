@@ -1,0 +1,17 @@
+device_tracker.pokemonsipad:
+    friendly_name: Finn
+device_tracker.gradys_iphone:
+  icon: mdi:cellphone-iphone
+  friendly_name: Grady's iPhone
+device_tracker.gradysiphone:
+  icon: mdi:cellphone-iphone
+  friendly_name: Grady's iPhone Mikrotik
+device_tracker.kates_iphone:
+  icon: mdi:cellphone-iphone
+  friendly_name: Kate's iPhone
+device_tracker.katesiphone4:
+  icon: mdi:cellphone-iphone
+  friendly_name: Kate's iPhone Mikrotik
+
+
+    

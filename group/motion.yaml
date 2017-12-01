@@ -1,0 +1,10 @@
+motion:
+  name: Motion Detectors
+  entities:
+    - binary_sensor.entryway_camera_motion_detected
+    - binary_sensor.entryway_camera_zone_1_activity
+    - binary_sensor.entryway_camera_person_detected
+    - binary_sensor.entryway_camera_sound_detected 
+    - binary_sensor.master_bedroom_camera_motion_detected
+    - binary_sensor.master_bedroom_camera_person_detected
+    - binary_sensor.master_bedroom_camera_sound_detected

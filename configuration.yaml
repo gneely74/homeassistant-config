@@ -14,9 +14,19 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Chicago
   # Customization file
-  customize: !include customize.yaml
-  #customize_glob: !include customize_glob.yaml
-  packages: !include_dir_named packages
+  customize: !include_dir_merge_named customize
+  customize_domain:
+    automation:
+      initial_state: 'on'
+  customize_glob:
+    "automation.*watchdog*":
+      icon: mdi:timer
+    "sensor.dark_sky_*":
+      homebridge_hidden: true
+    "scene.month_*_colors":
+      hidden: true
+      emulated_hue_hidden: true
+      homebridge_hidden: true  packages: !include_dir_named packages
 #  whitelist_external_dirs:
 #    - '/home/homeassistant/.homeassistant/downloads'
 
@@ -288,7 +298,7 @@ intent_script: !include intent_script.yaml
 ios: !include ios.yaml
 alert: !include alert.yaml
 automation: !include_dir_merge_list automation
-group: !include groups.yaml
+group: !include_dir_merge_named group
 script: !include_dir_merge_list script
 sensor: !include sensor.yaml
 switch: !include switches.yaml

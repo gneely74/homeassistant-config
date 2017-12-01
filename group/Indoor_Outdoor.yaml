@@ -1,0 +1,24 @@
+Interior_Lights:
+  entities:
+    - group.bedroom_lights
+    - group.living_room_lights
+    - group.living_room_accents
+    - group.dinette_lights
+    - group.dining_room_lights
+    - group.den_lights
+    - group.foyer_lights
+    - group.office_lights
+    - group.hallway_lights
+    - group.kitchen_lights
+    - group.upstairs_lights
+    - group.outdoor_pool_lights
+    - group.garage_lights
+    - group.paiges_room
+    - group.justins_room
+
+Exterior_Lights:
+  entities:
+    - switch.outside_den_light
+    - switch.front_porch_light
+    - switch.front_garage_light
+    - switch.side_of_garage_light
