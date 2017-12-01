@@ -101,20 +101,6 @@
     command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
   - platform: template
     sensors:
-      overflow_pantry_door:
-        friendly_name: "Overflow Pantry Door"
-        value_template: '{% if is_state("sensor.overflow_pantry_door_access_control", "22") %}Open{% else %}Closed{% endif %}'
-        icon_template: '{% if is_state("sensor.overflow_pantry_door_access_control", "22") %}mdi:door-open{% else %}mdi:door{% endif %}'
-      battery_status:
-        friendly_name: "Battery Status"
-        value_template: >-
-          {%- set threshold = 25 -%}
-          {%- set domains = ['light', 'switch', 'sensor', 'zwave', 'binary_sensor'] -%}
-          {%- for domain in domains -%}
-          {%- for item in states[domain] if ((item.attributes.battery_low is defined and item.attributes['battery_low'] == true) or (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold)) -%}
-              {{ item.name }}{%- if not loop.last %}, {% endif -%}
-          {%- endfor -%}
-          {%- endfor -%}
       hassuptime:
         friendly_name: "HASS Uptime"
         value_template: >-
