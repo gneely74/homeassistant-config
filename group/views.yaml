@@ -15,7 +15,7 @@ temperature:
   icon: mdi:weather-cloudy
   entities:
     - group.weather
-     - group.room_sensors
+    - group.room_sensors
     - group.thermostats
     - weather.weather
     - camera.wundergroundradar
