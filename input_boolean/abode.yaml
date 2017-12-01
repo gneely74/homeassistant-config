@@ -2,7 +2,7 @@
 ## Input_boolean
 #################################################################
 
-abodeupdate:
-  name: Abode Updates
-  initial: on
-  icon: mdi:security
+  abodeupdate:
+    name: Abode Updates
+    initial: on
+    icon: mdi:security
