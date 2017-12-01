@@ -29,6 +29,14 @@ rules:
     text_template: '${entity.attributes.current_temperature ? Math.ceil(entity.attributes.current_temperature) + "°": "undefined"}'
     class_template: 'return "static-temp";'
 
+  - name: Roomba 890
+    entities:
+      - vacuum.roomba_890
+     states:
+      - state: 'on'
+        class: 'box-shadow'
+      - state: 'off'         
+
   - name: temp_darksky
     entities:
       - sensor.dark_sky_temperature
