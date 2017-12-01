@@ -1,74 +1,127 @@
-Bear Stone View:
-  name: Bear Stone Run
-  view: yes
-  icon: mdi:home
-  entities:
-    - persistent_notification.update_available
-    - group.home_modes
-    - group.family
-    - group.weather
-    - group.amps
-    - group.Bedroom_lights
-    - group.Kitchen_lights
-    - group.Dinette_lights
-    - group.living_room_lights
-    - group.living_room_accents
-    - group.dining_room_lights
-    - group.foyer_lights
-    - group.upstairs_lights
-    - group.den_lights
-    - group.hallway
-    - group.office_lights
-    - group.garage_lights
-    - group.outdoor_pool_lights
-    - group.outdoor_lights
-    - group.all_switches
-    - group.media_players
+# default_view:
+#   view: yes
+#   icon: mdi:home-assistant
+#   entities:
+#     - binary_sensor.grady_home
+#     - binary_sensor.kate_home
+#     - group.information
+#     - group.all_lights
+#     - group.home_security
+#     - group.switches
 
-Doors:
+temperature:
+  name: Temperature Sensors
   view: yes
-  icon: mdi:security-home
+  icon: mdi:weather-cloudy
   entities:
-    - group.family
-    - group.garage_doors
-        
-    
-Lights:
+    - group.weather
+     - group.room_sensors
+    - group.thermostats
+    - weather.weather
+    - camera.wundergroundradar
+
+cameras:
+  name: Cameras
   view: yes
-  icon: mdi:lightbulb
+  icon: mdi:cctv
   entities:
-    - group.home_modes
-    - group.amps
-    - group.interior_lights
-    - group.outdoor_lights
-    - group.Bedroom_lights
-    - group.Kitchen_lights
-    - group.Dinette_lights
-    - group.living_room_lights
-    - group.living_room_accents
-    - group.dining_room_lights
-    - group.foyer_lights
-    - group.upstairs_lights
-    - group.den_lights
-    - group.office_lights
-    - group.garage_lights
-    - group.outdoor_pool_lights
-    - group.outdoor_front_lights
-    - group.all_switches
-    
-Info:
+    - camera.entryway
+    - camera.living_room_camera
+    - camera.master_bedroom
+    - camera.living_room_camera
+    - camera.worldtime
+
+media:
+  name: Media
+  view: yes
+  icon: mdi:play-circle-outline
+  entities:
+    - group.media_player
+
+settings:
+  name: Settings
   view: yes
   icon: mdi:settings
   entities:
-    - group.family
-    - group.home_modes
-    - group.network
-    - group.sensors
-    - group.garage_doors
-    - sun.sun
-    - group.media_players
-    - group.weather
-    - group.all_lights
-    - group.all_switches
+    - group.household
+    - group.devices
+    - group.hass_details
+    - group.camera_sensors
+    - group.camera_switches
+    - group.network_details
     - group.all_automations
-    - group.all_scripts
+
+# Bear Stone View:
+#   name: Bear Stone Run
+#   view: yes
+#   icon: mdi:home
+#   entities:
+#     - persistent_notification.update_available
+#     - group.home_modes
+#     - group.family
+#     - group.weather
+#     - group.amps
+#     - group.Bedroom_lights
+#     - group.Kitchen_lights
+#     - group.Dinette_lights
+#     - group.living_room_lights
+#     - group.living_room_accents
+#     - group.dining_room_lights
+#     - group.foyer_lights
+#     - group.upstairs_lights
+#     - group.den_lights
+#     - group.hallway
+#     - group.office_lights
+#     - group.garage_lights
+#     - group.outdoor_pool_lights
+#     - group.outdoor_lights
+#     - group.all_switches
+#     - group.media_players
+# 
+# Doors:
+#   view: yes
+#   icon: mdi:security-home
+#   entities:
+#     - group.family
+#     - group.garage_doors
+#         
+#     
+# Lights:
+#   view: yes
+#   icon: mdi:lightbulb
+#   entities:
+#     - group.home_modes
+#     - group.amps
+#     - group.interior_lights
+#     - group.outdoor_lights
+#     - group.Bedroom_lights
+#     - group.Kitchen_lights
+#     - group.Dinette_lights
+#     - group.living_room_lights
+#     - group.living_room_accents
+#     - group.dining_room_lights
+#     - group.foyer_lights
+#     - group.upstairs_lights
+#     - group.den_lights
+#     - group.office_lights
+#     - group.garage_lights
+#     - group.outdoor_pool_lights
+#     - group.outdoor_front_lights
+#     - group.all_switches
+#     
+# Info:
+#   view: yes
+#   icon: mdi:settings
+#   entities:
+#     - group.family
+#     - group.home_modes
+#     - group.network
+#     - group.sensors
+#     - group.garage_doors
+#     - sun.sun
+#     - group.media_players
+#     - group.weather
+#     - group.all_lights
+#     - group.all_switches
+#     - group.all_automations
+#     - group.all_scripts
