@@ -33,7 +33,7 @@
       prob_given_false: 0.01
       platform: 'state'
       to_state: 'home'
-#- platform: 'bayesian'
+#- platform: bayesian
 #  prior: 0.8
 #  name: 'Conor Home'
 #  probability_threshold: 0.92
@@ -43,7 +43,7 @@
 #      prob_given_false: 0.2
 #      platform: 'state'
 #      to_state: 'home'
-#- platform: 'bayesian'
+#- platform: bayesian
 #  prior: 0.8
 #  name: 'Hunter Home'
 #  probability_threshold: 0.92
@@ -53,7 +53,7 @@
 #      prob_given_false: 0.2
 #      platform: 'state'
 #      to_state: 'home'
-#- platform: 'bayesian'
+#- platform: bayesian
 #  prior: 0.8
 #  name: 'Fiona Home'
 #  probability_threshold: 0.92
