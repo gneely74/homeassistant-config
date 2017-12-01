@@ -85,10 +85,10 @@ Hallway Lights:
     - light.bedroom_hallway
     - light.upstairs_hallway
 
-Justins Room:
+Boys Room:
   entities:
-    - light.justin_go
+    - light.boys_go
 
-Paiges Room:
+Fionas Room:
   entities:
-    - light.paige_go
+    - light.fiona_go

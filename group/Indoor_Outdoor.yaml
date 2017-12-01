@@ -13,8 +13,8 @@ Interior_Lights:
     - group.upstairs_lights
     - group.outdoor_pool_lights
     - group.garage_lights
-    - group.paiges_room
-    - group.justins_room
+    - group.fionas_room
+    - group.boys_room
 
 Exterior_Lights:
   entities:

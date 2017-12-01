@@ -120,8 +120,8 @@ binary_sensor.iss:
 
 
 
-binary_sensor.justins_room_nest_protect_online:
-  friendly_name: 'Justins Room Protect'
+binary_sensor.boyss_room_nest_protect_online:
+  friendly_name: 'Boy'ss Room Protect'
   emulated_hue_hidden: True
   hidden: False
   homebridge_hidden: true
@@ -182,8 +182,8 @@ binary_sensor.office_nest_protect_online:
 
 
 
-binary_sensor.paiges_room_nest_protect_paiges_room_online:
-  friendly_name: 'Paiges Room Protect'
+binary_sensor.fionas_room_nest_protect_fionas_room_online:
+  friendly_name: 'Fionas Room Protect'
   emulated_hue_hidden: True
   hidden: False
   homebridge_hidden: true
