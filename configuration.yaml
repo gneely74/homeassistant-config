@@ -39,10 +39,10 @@ emulated_hue:
 #  off_maps_to_on_domains:
 #    - script
 #    - scene
-#  expose_by_default: true
-#  exposed_domains:
-#    - light  
-  expose_by_default: false
+  expose_by_default: true
+  exposed_domains:
+   - light  
+#  expose_by_default: false
 
 zone:
   name: Home
@@ -145,7 +145,6 @@ map:
 
 http:
   api_password: !secret http_password
-  http_password: !secret http_password
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem  
 #  ip_ban_enabled: True
