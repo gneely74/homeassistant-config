@@ -242,7 +242,5 @@ rules:
       - camera.entryway
       - camera.living_room_camera
       - camera.master_bedroom
-      - entity: camera.usps_mail
-        element: camera.usps_mail_image
     image_template: '${entity.attributes.entity_picture}'
     # image_refresh_interval: 20 # in seconds - Future options if needed.

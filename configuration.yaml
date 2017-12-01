@@ -94,11 +94,11 @@ zone 7:
   radius: 200
   icon: mdi:karate
   
-panel_iframe:
-  nodered_flows:
-    title: 'Node-RED Flows'
-    url: 'http://hassio.local:1880'
-    icon: mdi:nodejs
+#panel_iframe:
+#  nodered_flows:
+#    title: 'Node-RED Flows'
+#    url: 'http://hassio.local:1880'
+#    icon: mdi:nodejs
 
 panel_custom:
   - name: floorplan
@@ -148,6 +148,7 @@ http:
   api_password: !secret http_password
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem  
+  base_url: home.theneelyfamily.net
 #  ip_ban_enabled: True
 #  login_attempts_threshold: 3
 #  trusted_networks:
