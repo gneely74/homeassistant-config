@@ -112,7 +112,7 @@ binary_sensor.hallway_pantry_opened:
 
 
 binary_sensor.iss:
-  friendly_name: 'Iss Visibility'
+  friendly_name: 'ISS Visibility'
   emulated_hue_hidden: True
   hidden: False
   homebridge_hidden: True
@@ -121,7 +121,7 @@ binary_sensor.iss:
 
 
 binary_sensor.boyss_room_nest_protect_online:
-  friendly_name: 'Boy'ss Room Protect'
+  friendly_name: 'Boy''s Room Protect'
   emulated_hue_hidden: True
   hidden: False
   homebridge_hidden: true
