@@ -21,23 +21,6 @@
         message: >
           Check battery: {{ states.sensor.battery_status.state }}
 
-- id: update_available_notification
-  alias: "Update Available Notification"
-  initial_state: 'on'
-  trigger:
-    platform: template
-    value_template: "{{states.sensor.pypi_hass_version.state == states.sensor.current_version.state}}"
-  action:
-    - service: notify.pushbullet
-      data:
-        message: "HomeAssistant {{ states('states.sensor.pypi_hass_version.state') }} is now available"
-        title: "Update HASS"
-    - service: persistent_notification.create
-      data:
-        title: "Update Available"
-        message: >
-          Home Assistant {{ states('states.sensor.pypi_hass_version.state') }} is available, please update.
-        notification_id: "update_available"
 
 - id: change_current_theme
   alias: 'Change Current Theme'
