@@ -256,8 +256,8 @@ logger:
     insteonplm.protocol: warn
     homeassistant.components.zwave: warn
     homeassistant.components.http.ban: warn
-    homeassistant.components.ios: debug
-    homeassistant.components.notify: debug
+    homeassistant.components.ios: warn
+    homeassistant.components.notify: warn
 # Text to speech
 tts:
   - platform: google
