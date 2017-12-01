@@ -1,4 +1,4 @@
-- platform: 'bayesian'
+- platform: bayesian
   prior: 0.8
   name: 'Kate Home'
   probability_threshold: 0.92
@@ -13,7 +13,7 @@
       prob_given_false: 0.01
       platform: 'state'
       to_state: 'home'
-- platform: 'bayesian'
+- platform: bayesian
   prior: 0.75
   name: 'Grady Home'
   probability_threshold: 0.92
