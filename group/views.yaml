@@ -9,57 +9,57 @@
 #     - group.home_security
 #     - group.switches
 
-temperature:
-  name: Temperature Sensors
-  view: yes
-  icon: mdi:weather-cloudy
-  entities:
-    - group.weather
-     - group.room_sensors
-    - group.thermostats
-    - weather.weather
-    - camera.wundergroundradar
-
-cameras:
-  name: Cameras
-  view: yes
-  icon: mdi:cctv
-  entities:
-    - camera.entryway
-    - camera.living_room_camera
-    - camera.master_bedroom
-    - camera.living_room_camera
-    - camera.worldtime
-
-media:
-  name: Media
-  view: yes
-  icon: mdi:play-circle-outline
-  entities:
-    - group.media_player
-
-settings:
-  name: Settings
-  view: yes
-  icon: mdi:settings
-  entities:
-    - group.household
-    - group.devices
-    - group.hass_details
-    - group.camera_sensors
-    - group.camera_switches
-    - group.family
-    - group.home_modes
-    - group.network
-    - group.sensors
-    - group.garage_doors
-    - sun.sun
-    - group.media_players
-    - group.weather
-    - group.all_lights
-    - group.all_switches
-    - group.all_automations
-    - group.all_scripts    
+t#emperature:
+#  name: Temperature Sensors
+#  view: yes
+#  icon: mdi:weather-cloudy
+#  entities:
+#    - group.weather
+#     - group.room_sensors
+#    - group.thermostats
+#    - weather.weather
+#    - camera.wundergroundradar
+#
+#cameras:
+#  name: Cameras
+#  view: yes
+#  icon: mdi:cctv
+#  entities:
+#    - camera.entryway
+#    - camera.living_room_camera
+#    - camera.master_bedroom
+#    - camera.living_room_camera
+#    - camera.worldtime
+#
+#media:
+#  name: Media
+#  view: yes
+#  icon: mdi:play-circle-outline
+#  entities:
+#    - group.media_player
+#
+#settings:
+#  name: Settings
+#  view: yes
+#  icon: mdi:settings
+#  entities:
+#    - group.household
+#    - group.devices
+#    - group.hass_details
+#    - group.camera_sensors
+#    - group.camera_switches
+#    - group.family
+#    - group.home_modes
+#    - group.network
+#    - group.sensors
+#    - group.garage_doors
+#    - sun.sun
+#    - group.media_players
+#    - group.weather
+#    - group.all_lights
+#    - group.all_switches
+#    - group.all_automations
+#    - group.all_scripts    
 
 # Bear Stone View:
 #   name: Bear Stone Run
