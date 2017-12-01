@@ -1,0 +1,61 @@
+- platform: darksky
+  api_key: !secret forecast_key
+  monitored_conditions:
+#    - summary
+#    - precip_type
+    - precip_intensity
+    - precip_intensity_max
+    - temperature
+#    - dew_point
+    - wind_speed
+#    - wind_bearing
+    - cloud_cover
+    - humidity
+#    - nearest_storm_distance
+    - minutely_summary
+#    - pressure
+#    - visibility
+#    - ozone
+    - uv_index
+
+- platform: nest
+  monitored_conditions:
+#     - 'temperature'
+#     - 'target'
+     - 'humidity'
+#     - 'operation_mode'
+#     - 'last_connection'
+#     - 'co_status'
+#     - 'smoke_status'
+
+#- platform: moon
+
+- platform: yweather
+  name: Weather
+  woeid: !secret woeid
+  
+- platform: wunderground
+  api_key: !secret wunderground_key
+  pws_id: !secret wunderground_pws
+  monitored_conditions:
+    - weather
+    - temp_f
+    - wind_string
+    - relative_humidity
+
+#  Add in your secrets.yaml file pollen_url: https://www.pollen.com/api/forecast/current/pollen/ZIPCODE
+- platform: rest
+  name: pollen
+  resource: !secret pollen_url
+  value_template: "{{value_json.Location.periods[1].Index}}"
+  scan_interval: 21600
+  headers:
+     Referer: "https://www.pollen.com"
+Add in your secrets.yaml file pollen_url: https://www.pollen.com/api/forecast/current/pollen/ZIPCODE
+- platform: rest
+  name: cold_flu
+  resource: !secret cold_flu_url
+  value_template: "{{value_json.Location.periods[0].Index}}"
+  scan_interval: 21600
+  headers:
+     Referer: "https://www.pollen.com"

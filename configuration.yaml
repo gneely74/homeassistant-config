@@ -198,35 +198,6 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_secret
 
-device_tracker:
-  - platform: owntracks    
-    track_new_devices: yes  
-    max_gps_accuracy: 200
-#  - platform: unifi
-#    host: 192.168.2.163
-#    username: !secret unifi_username
-#    password: !secret unifi_password
-#    verify_ssl: False
-  - platform: mikrotik
-    host: 192.168.74.1
-    username: !secret mikrotik_user
-    password: !secret mikrotik_pass
-  - platform: geofency
-  # - platform: asuswrt
-  #   host: 192.168.2.1
-  #   protocol: telnet
-  #   username: !secret asus_username
-  #   password: !secret asus_password
-  - platform: nmap_tracker
-    hosts: 192.168.74.0/24
-    track_new_devices: no
-    exclude:
-      - 192.168.74.14
-      - 192.168.74.1
-      - 192.168.74.3      
-  #  scan_options: " --privileged -sP "
-  # consider_home: 1800 - Added to known_devices.yaml instead on a device by device basis.
-
 notify:
 #  - platform: ios
   - platform: pushbullet
@@ -300,11 +271,12 @@ intent_script: !include intent_script.yaml
 ios: !include ios.yaml
 alert: !include alert.yaml
 automation: !include_dir_merge_list automation
+device_tracker: !include_dir_merge_list device_tracker
 group: !include_dir_merge_named group
+scene: !include_dir_merge_list scene
+switch: !include_dir_merge_list switch
 script: !include_dir_merge_list script
-sensor: !include sensor.yaml
-switch: !include switches.yaml
-binary_sensor: !include binary_sensor.yaml
+sensor: !include_dir_merge_list sensor
 input_select: !include input_select.yaml
 input_boolean: !include_dir_merge_named input_boolean
 #input_number: !include input_number.yaml
