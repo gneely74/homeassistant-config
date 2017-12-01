@@ -42,10 +42,10 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="2.0829344"
-     inkscape:cx="824.57181"
+     inkscape:cx="784.24409"
      inkscape:cy="560.74155"
-     inkscape:window-x="41"
-     inkscape:window-y="0"
+     inkscape:window-x="37"
+     inkscape:window-y="1"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg1599"
      units="px"
@@ -2355,13 +2355,13 @@
        id="switch.front_porch_light"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
-       d="m 498.62527,2112.2319 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
+       d="m 538.4729,2112.712 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
        inkscape:label="switch.front_porch_light" />
     <path
        id="switch.side_of_garage_light"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
-       d="m 256.55477,2074.7962 c 0,-2.8 2.3,-5 5,-5 v 0 10.1 c -2.7,-0.1 -5,-2.3 -5,-5.1 z"
+       d="m 286.65204,2050.31 c 0,-2.8 2.3,-5 5,-5 v 0 10.1 c -2.7,-0.1 -5,-2.3 -5,-5.1 z"
        inkscape:label="switch.side_of_garage_light" />
     <path
        id="switch.outside_den_light"
@@ -2670,7 +2670,7 @@
        id="switch.front_garage_light"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
-       d="m 370.65604,2154.2636 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
+       d="m 380.73797,2155.2238 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
        inkscape:label="switch.front_garage_light" />
   </g>
   <line
@@ -2954,7 +2954,7 @@
      width="74"
      height="59.299999" />
   <rect
-     style="fill:#666666;fill-opacity:1"
+     style="opacity:0;fill:#666666;fill-opacity:1"
      id="camera.entryway"
      width="190"
      height="107"
