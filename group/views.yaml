@@ -9,7 +9,7 @@
 #     - group.home_security
 #     - group.switches
 
-t#emperature:
+#temperature:
 #  name: Temperature Sensors
 #  view: yes
 #  icon: mdi:weather-cloudy
