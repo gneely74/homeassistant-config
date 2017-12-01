@@ -26,7 +26,9 @@ homeassistant:
     "scene.month_*_colors":
       hidden: true
       emulated_hue_hidden: true
-      homebridge_hidden: true  packages: !include_dir_named packages
+      homebridge_hidden: true  
+
+packages: !include_dir_named packages
 #  whitelist_external_dirs:
 #    - '/home/homeassistant/.homeassistant/downloads'
 
