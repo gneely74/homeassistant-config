@@ -8,7 +8,7 @@ Family:
     - device_tracker.finnegansipad
     - device_tracker.kateneelysipad
     - device_tracker.katesiphone4
-    - device_tracker.pokemonsipad     
+#    - device_tracker.pokemonsipad     
 Parents:
   entities:
     - device_tracker.gradys_iphone

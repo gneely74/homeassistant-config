@@ -62,7 +62,7 @@ Living Room lights:
 #    - light.stone_door
 
 Garage lights:
-  control: hidden
+#  control: hidden
   entities:
     - switch.garage_light
 #    - switch.freezer_plug
