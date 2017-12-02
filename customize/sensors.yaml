@@ -24,12 +24,60 @@ sensor.hoursslept:
   icon: mdi:sleep
    
 sensor.speedtest_ping:
- icon: mdi:radar
+  icon: mdi:radar
 
 sensor.speedtest_download:
- icon: mdi:download
+  icon: mdi:download
 sensor.speedtest_upload:
- icon: mdi:upload
+  icon: mdi:upload
+
+sensor.den_ap:
+  friendly_name: 'Unifi Den AP'
+  icon: mdi:access-point-network
+
+sensor.dining_ap:
+  friendly_name: 'Unifi Dining Room AP'
+  icon: mdi:access-point-network
+
+sensor.master_ap:
+  friendly_name: 'Unifi Master Bedroom AP'
+  icon: mdi:access-point-network
+
+sensor.amazon_fire_7:
+  friendly_name: 'Amazon Fire 7 HD Tablet'
+  icon: mdi:tablet
+
+sensor.amazon_dot_1:
+  friendly_name: 'Master Bedroom Amazon Dot'
+  icon: mdi:amazon
+
+sensor.amazon_dot_2:
+  friendly_name: 'Craft Room Amazon Dot'
+  icon: mdi:amazon
+
+sensor.amazon_dot_3:
+  friendly_name: 'Living Room Amazon Dot'
+  icon: mdi:amazon
+
+sensor.printer:
+  friendly_name: 'Printer'
+
+sensor.circle:
+  friendly_name: 'Disney Circle'
+  icon: mdi:home-circle
+
+sensor.nest_entryway_cam:
+  friendly_name: 'Entryway Nest Cam'
+  icon: mdi:webcam
+
+sensor.nest_master_cam:
+  friendly_name: 'Master Bedroom Nest Cam'
+  icon: mdi:webcam
+
+sensor.roomba:
+  friendly_name: 'Roomba 890'
+  icon: mdi:roomba
+
 
 #sensor.kitchen_fluorescent_consumption:
 #  friendly_name: Kitchen Fluorescent
