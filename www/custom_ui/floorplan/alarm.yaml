@@ -34,7 +34,7 @@ rules:
       - vacuum.roomba_890
     states:
      - state: 'on'
-       class: 'box-shadow'
+       class: 'roomba-on'
      - state: 'off'
 #       class: 'light-off'
 
