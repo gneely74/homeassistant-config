@@ -32,11 +32,11 @@ rules:
   - name: Roomba 890
     entities:
       - vacuum.roomba_890
-     states:
-      - state: 'on'
-        class: 'light-on'
-      - state: 'off'
-        class: 'light-off'
+#     states:
+#      - state: 'on'
+#        class: 'light-on'
+#      - state: 'off'
+#        class: 'light-off'
 
   - name: temp_darksky
     entities:
