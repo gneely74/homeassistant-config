@@ -61,7 +61,6 @@ settings:
   view: yes
   icon: mdi:settings
   entities:
-    - group.household
     - group.devices
     - group.hass_details
     - group.camera_sensors

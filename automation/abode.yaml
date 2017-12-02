@@ -35,7 +35,7 @@
         {%- endif -%}
   trigger:
     - platform: state
-      entity_id: group.household
+      entity_id: group.family
       from: 'off'
       to: 'on'
     - platform: event
@@ -82,7 +82,7 @@
   trigger:
    - platform: state
      entity_id:
-       - group.household
+       - group.family
      from: 'off'
      to: 'on'
   action:
@@ -171,7 +171,7 @@
     condition: and
     conditions:
      - condition: state
-       entity_id: group.household
+       entity_id: group.family
        state: 'on'
      - condition: time
        after: '07:15:00'
@@ -209,7 +209,7 @@
     condition: and
     conditions:
      - condition: state
-       entity_id: group.household
+       entity_id: group.family
        state: 'off'
      - condition: state
        entity_id: input_boolean.abodeupdate
@@ -248,11 +248,11 @@
       value_template: "{{ states.input_select.abodestatus.state != 'armed_away' }}"
   trigger:
     - platform: state
-      entity_id: group.household
+      entity_id: group.family
       from: 'on'
       to: 'off'
     - platform: state
-      entity_id: group.household
+      entity_id: group.family
       from: 'on'
       to: 'off'
       for: '00:10:00'   
@@ -270,7 +270,7 @@
        entity_id: input_boolean.abodeupdate
        state: 'on'
      - condition: state
-       entity_id: group.household
+       entity_id: group.family
        state: 'on'
   trigger:
     - platform: time
@@ -286,7 +286,7 @@
     condition: and
     conditions:
      - condition: state
-       entity_id: group.household
+       entity_id: group.family
        state: 'on'
      - condition: state
        entity_id: input_boolean.abodeupdate

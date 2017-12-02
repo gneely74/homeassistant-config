@@ -154,7 +154,7 @@
 #      seconds: 00      
 #  condition:
 #    - condition: state
-#      entity_id: group.household
+#      entity_id: group.family
 #      state: 'on' 
 #    - condition: state
 #      entity_id: sensor.overflow_pantry_door

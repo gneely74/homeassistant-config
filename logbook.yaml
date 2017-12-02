@@ -82,7 +82,6 @@
 #      - group.weather
 #      - group.devices
 #      - group.all_lights
-#      - group.household
 #      - group.entertainment
 #      - group.switches
 #      - group.camera_switches
