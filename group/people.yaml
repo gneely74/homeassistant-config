@@ -13,3 +13,12 @@ Parents:
   entities:
     - device_tracker.gradys_iphone
     - device_tracker.kates_iphone        
+parents_and_big_kids: 
+  entities:
+    - device_tracker.gradys_iphone
+    - device_tracker.kates_iphone        
+    - device_tracker.conorsiphone3
+    - device_tracker.huntersone6plus
+    - device_tracker.fisiphone
+
+  

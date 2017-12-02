@@ -209,7 +209,7 @@
     condition: and
     conditions:
      - condition: state
-       entity_id: group.family
+       entity_id: group.parents_and_big_kids
        state: 'off'
      - condition: state
        entity_id: input_boolean.abodeupdate
