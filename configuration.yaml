@@ -32,7 +32,7 @@ homeassistant:
 #  whitelist_external_dirs:
 #    - '/home/homeassistant/.homeassistant/downloads'
 
-python_script:
+#python_script:
 
 weather:
   - platform: yweather

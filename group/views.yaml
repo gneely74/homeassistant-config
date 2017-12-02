@@ -1,37 +1,34 @@
-# default_view:
-#   view: yes
-#   icon: mdi:home-assistant
-#   entities:
-#     - binary_sensor.grady_home
-#     - binary_sensor.kate_home
-#     - group.information
-#     - group.all_lights
-#     - group.home_security
-#     - group.switches
-
-#default_view:
-#  name: The Neely Home
-#  view: yes
-#  icon: mdi:home-assistant
-#  entities:
-#    - device_tracker.gradys_iphone
-#    - device_tracker.grady_ot_iphone
-#    - device_tracker.kates_iphone
-#    - persistent_notification.update_available
-#    - group.home_modes
-#    - group.family    
-#    - group.information
-#    - group.interior_lights
-#    - group.outdoor_lights   
-#    - group.home_security
-#    - group.switches
+default_view:
+  name: The Neely Home
+  view: yes
+  icon: mdi:home-assistant
+  entities:
+    - device_tracker.gradys_iphone
+    - device_tracker.grady_ot_iphone
+    - device_tracker.kates_iphone
+    - persistent_notification.update_available
+    - group.home_modes
+    - group.family    
+    - group.information
+    - group.interior_lights
+    - group.exterior_lights   
+    - group.home_security
+    - group.switches
 
 
-temperature:
+weather:
   name: Temperature Sensors
   view: yes
   icon: mdi:weather-cloudy
   entities:
+    - sensor.dark_sky_minutely_summary
+    - sensor.dark_sky_precip_intensity
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_uv_index
+    - sensor.dark_sky_wind_speed
+    - sensor.moon
+    - binary_sensor.iss
+    - sensor.launch_window
     - group.weather
     - group.room_sensors
     - group.thermostats

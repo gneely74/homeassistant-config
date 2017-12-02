@@ -20,6 +20,14 @@ sensor:
           friendly_name: 'Fiona''s 3DS'
           value_template: "{{ 'Online' if is_state('device_tracker.nintendo_3ds_2', 'home') else 'Offline' }}"
 
+        den_ps4:
+          friendly_name: 'Den PS4'
+          value_template: "{{ 'Online' if is_state('device_tracker.0cfe45f974ec', 'home') else 'Offline' }}"
+
+        b4_ps4:
+          friendly_name: 'MBR PS4'
+          value_template: "{{ 'Online' if is_state('device_tracker.nintendo_3ds_2', 'home') else 'Offline' }}"
+
         den_ap:
           friendly_name: 'Unifi Den AP'
           value_template: "{{ 'Online' if is_state('device_tracker.denap', 'home') else 'Offline' }}"
@@ -72,6 +80,54 @@ sensor:
           friendly_name: 'Vizio Master Bedroom TV'
           value_template: "{{ 'Online' if is_state('device_tracker.a48d3b0b8264', 'home') else 'Offline' }}"
 
+        bedroom_atv:
+          friendly_name: 'Master Bedroom Apple TV'
+          value_template: "{{ 'Online' if is_state('device_tracker.bedroom', 'home') else 'Offline' }}"
+
+        den_atv:
+          friendly_name: 'Den Apple TV'
+          value_template: "{{ 'Online' if is_state('device_tracker.livingrmappletv', 'home') else 'Offline' }}"
+
+        fionas_atv:
+          friendly_name: 'Fiona''s Apple TV'
+          value_template: "{{ 'Online' if is_state('device_tracker.fionasappletv', 'home') else 'Offline' }}"
+
+        boys_atv:
+          friendly_name: 'Boy''s Room Apple TV'
+          value_template: "{{ 'Online' if is_state('device_tracker.boysrooappletv2', 'home') else 'Offline' }}"
+
+        conors_iphone:
+          friendly_name: 'Conor''s iPhone'
+          value_template: "{{ 'Online' if is_state('device_tracker.conorsiphone3', 'home') else 'Offline' }}"
+
+        finnegans_ipad:
+          friendly_name: 'Finn''s iPad'
+          value_template: "{{ 'Online' if is_state('device_tracker.pokemonsipad', 'home') else 'Offline' }}"
+
+        fionas_iphone:
+          friendly_name: 'Fiona''s iPhone'
+          value_template: "{{ 'Online' if is_state('device_tracker.fisiphone', 'home') else 'Offline' }}"
+
+        gradys_iphone:
+          friendly_name: 'Grady''s iPhone'
+          value_template: "{{ 'Online' if is_state('device_tracker.gradys_iphone', 'home') else 'Offline' }}"
+
+        hunters_iphone:
+          friendly_name: 'Hunter''s iPhone'
+          value_template: "{{ 'Online' if is_state('device_tracker.huntersone6plus', 'home') else 'Offline' }}"
+
+        deaglans_ipad:
+          friendly_name: 'Deaglan''s iPad'
+          value_template: "{{ 'Online' if is_state('device_tracker.kateneelysipad', 'home') else 'Offline' }}"
+          
+        kates_iphone:
+          friendly_name: 'Kate''s iPhone'
+          value_template: "{{ 'Online' if is_state('device_tracker.kates_iphone', 'home') else 'Offline' }}"
+
+        rb260gsp:
+          friendly_name: 'RB260 GSP'
+          value_template: "{{ 'Online' if is_state('device_tracker.rb260gsp', 'home') else 'Offline' }}"
+        
 
 #-------------------------------------------
 group:
