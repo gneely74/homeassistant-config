@@ -220,3 +220,19 @@ svg, svg * {
     50% { fill: hsl(120, 61%, 50%); }
     100% { fill: hsl(120, 100%, 20%); }
 }
+
+.plug-on {
+  fill: green !important;
+  fill-opacity: 1.0;
+  stroke: #FFFFA6 !important;
+  stroke-width: 10;
+  stroke-opacity: 0.25;
+}
+
+.plug-off {
+  fill: red !important;
+  fill-opacity: 1.0;
+  stroke: #FFFFA6 !important;
+  stroke-width: 10;
+  stroke-opacity: 0.25;
+}

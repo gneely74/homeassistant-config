@@ -105,15 +105,14 @@ rules:
       - state: 'away'
         class: 'text-away'
 
-  - name: switches
+  - name: plugs
     entities:
-      - switch.garage_light
-      - switch.garage_outlet
+      - switch.freezer_plug
     states:
       - state: 'on'
-        class: 'switch-on'
+        class: 'plug-on'
       - state: 'off'
-        class: 'switch-off'
+        class: 'plug-off'
     action:
       service: homeassistant.toggle
 
@@ -132,6 +131,7 @@ rules:
     entities:
       - light.1b56c3
       - light.fireplace_light
+      - switch.garage_light
     states:
       - state: 'on'
         class: 'light-on'
