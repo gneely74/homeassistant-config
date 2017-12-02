@@ -10,7 +10,6 @@ Interior_Lights:
     - group.office_lights
     - group.hallway_lights
     - group.kitchen_lights
-    - group.upstairs_lights
     - group.outdoor_pool_lights
     - group.garage_lights
     - group.fionas_room

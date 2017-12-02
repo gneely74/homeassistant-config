@@ -4,13 +4,11 @@ group.all_automations:
   hidden: True
   homebridge_hidden: true
 
-
 group.all_covers:
   friendly_name: 'All Covers'
   emulated_hue_hidden: True
   hidden: True
   homebridge_hidden: true
-
 
 group.all_devices:
   friendly_name: 'All Devices'
@@ -18,13 +16,10 @@ group.all_devices:
   hidden: True
   homebridge_hidden: true
 
-
 group.all_lights:
   friendly_name: 'All Lights'
   emulated_hue_hidden: False
   hidden: True
-
-
 
 group.all_scripts:
   friendly_name: 'All Scripts'
@@ -42,35 +37,25 @@ group.bedroom_lights:
   emulated_hue_hidden: False
   hidden: False
 
-
-
 group.den_lights:
   friendly_name: 'Den Lights'
   emulated_hue_hidden: False
   hidden: False
-
-
 
 group.dinette_lights:
   friendly_name: 'Dinette Lights'
   emulated_hue_hidden: False
   hidden: False
 
-
-
 group.dining_room_lights:
   friendly_name: 'Dining Room Lights'
   emulated_hue_hidden: False
   hidden: False
 
-
-
 group.exterior_lights:
   friendly_name: 'Exterior Lights'
   emulated_hue_hidden: False
   hidden: False
-
-
 
 group.family:
   friendly_name: 'Family'
@@ -78,13 +63,16 @@ group.family:
   hidden: False
   homebridge_hidden: true
 
+group.parents:
+  friendly_name: 'Parents'
+  emulated_hue_hidden: True
+  hidden: False
+  homebridge_hidden: true
 
 group.foyer_lights:
   friendly_name: 'Foyer Lights'
   emulated_hue_hidden: False
   hidden: False
-
-
 
 group.garage_doors:
   friendly_name: 'Garage Doors'
@@ -92,13 +80,10 @@ group.garage_doors:
   hidden: False
   homebridge_hidden: true
 
-
 group.garage_lights:
   friendly_name: 'Garage Lights'
   emulated_hue_hidden: False
   hidden: False
-
-
 
 group.hallway_lights:
   friendly_name: 'Hallway Lights'
@@ -135,17 +120,17 @@ group.kitchen_lights:
 
 
 
-group.living_room_accents:
-  friendly_name: 'Living Room Accents'
-  emulated_hue_hidden: False
-  hidden: False
-
-
-
-group.living_room_lights:
-  friendly_name: 'Living Room Lights'
-  emulated_hue_hidden: False
-  hidden: False
+#group.living_room_accents:
+#  friendly_name: 'Living Room Accents'
+#  emulated_hue_hidden: False
+#  hidden: False
+#
+#
+#
+#group.living_room_lights:
+#  friendly_name: 'Living Room Lights'
+#  emulated_hue_hidden: False
+#  hidden: False
 
 
 
@@ -203,14 +188,6 @@ group.switches:
   emulated_hue_hidden: True
   hidden: False
   homebridge_hidden: true
-
-
-group.upstairs_lights:
-  friendly_name: 'Upstairs Lights'
-  emulated_hue_hidden: False
-  hidden: False
-
-
 
 group.weather:
   friendly_name: 'Weather'

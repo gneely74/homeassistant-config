@@ -1,2 +1,3 @@
 cover.garage_door_opener:
+  friendly_name: 'Garage Door'
   homebridge_cover_type: garage_door

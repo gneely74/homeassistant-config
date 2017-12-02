@@ -1,3 +1,8 @@
+- platform: version
+- platform: uptime
+  unit_of_measurement: minutes
+- platform: season
+
 - platform: template
   sensors:
     since_last_boot_templated:
@@ -42,11 +47,7 @@
           {%- endif -%}
         {%- endif -%}
 
-- platform: rest
-  scan_interval: 86400
-  resource: http://ip.jsontest.com
-  name: External IP
-  value_template: '{{ value_json.ip }}'
+
 
 #############################################################################################################
 ###  This part of the automation is hidden due to the IP address exposed  ##

@@ -20,7 +20,7 @@ homeassistant:
 
 sensor:
   - platform: pi_hole
-    host: 192.168.2.3
+    host: 192.168.74.14
     monitored_conditions:
       - ads_percentage_today
       - unique_domains

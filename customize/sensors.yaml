@@ -23,12 +23,14 @@ sensor.hassuptime:
 sensor.hoursslept:
   icon: mdi:sleep
    
-#sensor.speedtest_ping:
-#  icon: mdi:radar
-#sensor.speedtest_download:
-#  icon: mdi:download
-#sensor.speedtest_upload:
-#  icon: mdi:upload
+sensor.speedtest_ping:
+ icon: mdi:radar
+
+sensor.speedtest_download:
+ icon: mdi:download
+sensor.speedtest_upload:
+ icon: mdi:upload
+
 #sensor.kitchen_fluorescent_consumption:
 #  friendly_name: Kitchen Fluorescent
 #  icon: mdi:lightbulb-outline

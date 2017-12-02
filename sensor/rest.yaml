@@ -1,3 +1,9 @@
+- platform: rest
+  scan_interval: 86400
+  resource: http://ip.jsontest.com
+  name: External IP
+  value_template: '{{ value_json.ip }}'
+
 # Add in your secrets.yaml file pollen_url: https://www.pollen.com/api/forecast/current/pollen/ZIPCODE
 - platform: rest
   name: pollen

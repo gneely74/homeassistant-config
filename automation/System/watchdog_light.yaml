@@ -6,17 +6,13 @@
   trigger:
     - platform: state
       entity_id:
-        - light.hallway
-        - group.hallway_lights
         - group.foyer_lights
-        - switch.printer_outlet
       to: 'on'
       for: '00:20:00'
 
     - platform: state
       entity_id:
-        - group.upstairs
-        - switch.garage_outlet
+        - switch.garage_light
       to: 'on'
       for: '02:00:00'
 

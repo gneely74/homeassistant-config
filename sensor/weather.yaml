@@ -28,7 +28,7 @@
     - 'co_status'
     - 'smoke_status'
 
-#- platform: moon
+- platform: moon
 
 - platform: yweather
   name: Weather

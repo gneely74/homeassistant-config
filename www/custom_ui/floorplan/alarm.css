@@ -208,14 +208,15 @@ svg, svg * {
 
 .roomba-on {
     animation-name: glow;
-    animation-duration: 6s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    animation-direction: alternate;
+/*     animation-direction: alternate; */
+    fill-opacity: 0.25;
 }
  
 @keyframes glow {
-    0% { fill: hsl(6, 93%, 16%); }
-    50% { fill: hsl(6, 93%, 56%); }
-    100% { fill: hsl(6, 93%, 56%); }
+    0% { fill: hsl(90, 100%, 50%); }
+    50% { fill: hsl(120, 61%, 50%); }
+    100% { fill: hsl(120, 100%, 20%); }
 }

@@ -12,40 +12,47 @@ sensor:
 #          friendly_name: 'Wii'
 #          value_template: "{{ 'Online' if is_state('device_tracker.wii', 'home') else 'Offline' }}"
 
-        conor_3ds:
+        nintendo_3ds:
           friendly_name: 'Conor''s 3DS'
           value_template: "{{ 'Online' if is_state('device_tracker.nintendo_3ds', 'home') else 'Offline' }}"
 
-        fi_3ds:
+        nintendo_3ds_2:
           friendly_name: 'Fiona''s 3DS'
           value_template: "{{ 'Online' if is_state('device_tracker.nintendo_3ds_2', 'home') else 'Offline' }}"
 
         den_ap:
           friendly_name: 'Unifi Den AP'
+          icon: mdi:access-point-network
           value_template: "{{ 'Online' if is_state('device_tracker.denap', 'home') else 'Offline' }}"
 
         dining_ap:
           friendly_name: 'Unifi Dining Room AP'
+          icon: mdi:access-point-network
           value_template: "{{ 'Online' if is_state('device_tracker.diningroom', 'home') else 'Offline' }}"
 
         master_ap:
           friendly_name: 'Unifi Master Bedroom AP'
+          icon: mdi:access-point-network
           value_template: "{{ 'Online' if is_state('device_tracker.masterbedroom', 'home') else 'Offline' }}"
 
         amazon_fire_7:
           friendly_name: 'Amazon Fire 7 HD Tablet'
+          icon: mdi:tablet
           value_template: "{{ 'Online' if is_state('device_tracker.amazon9445cb18d', 'home') else 'Offline' }}"
 
         amazon_dot_1:
-          friendly_name: 'Amazon Dot'
+          friendly_name: 'Master Bedroom Amazon Dot'
+          icon: mdi:amazon
           value_template: "{{ 'Online' if is_state('device_tracker.amazon_dot', 'home') else 'Offline' }}"
 
         amazon_dot_2:
-          friendly_name: 'Amazon Dot'
+          friendly_name: 'Craft Room Amazon Dot'
+          icon: mdi:amazon
           value_template: "{{ 'Online' if is_state('device_tracker.amazon_dot', 'home') else 'Offline' }}"
 
         amazon_dot_3:
-          friendly_name: 'Amazon Dot'
+          friendly_name: 'Living Room Amazon Dot'
+          icon: mdi:amazon
           value_template: "{{ 'Online' if is_state('device_tracker.amazon_dot', 'home') else 'Offline' }}"
 
         printer:
@@ -54,18 +61,22 @@ sensor:
 
         circle:
           friendly_name: 'Disney Circle'
+          icon: mdi:home-circle
           value_template: "{{ 'Online' if is_state('device_tracker.circle', 'home') else 'Offline' }}"
 
         nest_entryway_cam:
           friendly_name: 'Entryway Nest Cam'
+          icon: mdi:webcam
           value_template: "{{ 'Online' if is_state('device_tracker.nest_downstairs', 'home') else 'Offline' }}"
 
         nest_master_cam:
           friendly_name: 'Master Bedroom Nest Cam'
+          icon: mdi:webcam
           value_template: "{{ 'Online' if is_state('device_tracker.nest_upstairs', 'home') else 'Offline' }}"
 
         roomba:
           friendly_name: 'Roomba 890'
+          icon: mdi:roomba
           value_template: "{{ 'Online' if is_state('device_tracker.roomba3144460001026600', 'home') else 'Offline' }}"
 
         vizio_tv:
