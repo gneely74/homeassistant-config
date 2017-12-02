@@ -33,3 +33,8 @@ binary_sensor.iss:
   hidden: False
   homebridge_hidden: True
   icon: mdi:satellite-variant
+
+binary_sensor.floorplan:
+  custom_ui_state_card: state-card-floorplan
+  config:
+    config: /local/custom_ui/floorplan/floorplan.yaml

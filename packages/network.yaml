@@ -130,50 +130,41 @@ sensor:
         
 
 #-------------------------------------------
-group:
-  network:
-    entities:
-      - sensor.ha_installed_version
-      - sensor.ha_uptime
-      - sensor.since_last_boot_templated
-      - sensor.disk_used_
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-      - sensor.study_ap
-      - sensor.actiontechap
-      - sensor.unifi_ap
-      - sensor.wii
-      - sensor.hue_hub_1
-      - sensor.hue_hub_2
-      - binary_sensor.gradywink
-      - sensor.tablotv
-      - sensor.alexa_echo
-      - sensor.amazon_dot
-      - sensor.circle
-      - sensor.rachio
-      - sensor.skybell
-      - sensor.samsungtv
-      - sensor.chromecast_audio_1
-      - sensor.chromecast_audio_2
-      - sensor.amazon_fire_stick
-      - sensor.nest_upstairs
-      - sensor.nest_downstairs
-      - sensor.large_garage
-      - sensor.small_garage
-      - sensor.rgb_led_garage_large
-      - sensor.rgb_led_garage_small
-      - sensor.rgb_led_outdoor_den
-      - sensor.withings_scale
-      - sensor.smart_water_meter
-      - sensor.sleep_number_bed
-      - sensor.printer
-      - sensor.bedroom_alarm_panel
-      - sensor.entry_alarm_panel
-      - sensor.NodeMCU1
-      - sensor.NodeMCU2
-      - sensor.NodeMCU3
-      - sensor.gradypihole
 
+group:
+  games:
+    name: Games
+    entities:
+      - sensor.nintendo_3ds
+      - sensor.nintendo_3ds_2
+      - sensor.den_ps4
+  ios:
+    name: iOS Devices
+    entities:
+      - sensor.conors_iphone
+      - sensor.finnegans_ipad
+      - sensor.fionas_iphone
+      - sensor.gradys_iphone
+      - sensor.hunters_iphone
+      - sensor.deaglans_ipad
+      - sensor.kates_iphone
+  networking:
+    name: Network Stuff
+    entities:
+      - sensor.den_ap    
+      - sensor.dining_ap    
+      - sensor.master_ap
+      - sensor.printer
+      - sensor.rb260gsp
+  home:
+    name: Home Stuff
+    entities:
+      - sensor.circle    
+      - sensor.amazon_fire_7
+      - sensor.amazon_dot_1
+      - sensor.amazon_dot_2
+      - sensor.amazon_dot_3
+      - sensor.printer
 
 #-------------------------------------------------------------------------------------
 automation:

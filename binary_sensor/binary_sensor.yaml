@@ -66,7 +66,17 @@
 - platform: ping
   host: 192.168.74.1
   name: PiHole
+
 - platform: mqtt
-  state_topic: floorplan/kiosk/hall
-  name: Hall Kiosk
+  state_topic: dummy/binary_sensor
+  name: Floorplan
+
+- platform: mqtt
+  state_topic: floorplan/kiosk/hall/motion
+  name: Hall Kiosk Motion
+  retain: true
+
+- platform: mqtt
+  state_topic: floorplan/kiosk/hall/plugged
+  name: Hall Kiosk Plugged
   retain: true
