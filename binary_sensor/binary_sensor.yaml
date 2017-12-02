@@ -66,3 +66,7 @@
 - platform: ping
   host: 192.168.74.1
   name: PiHole
+- platform: mqtt
+  state_topic: floorplan/kiosk/hall
+  name: Hall Kiosk
+  retain: true

@@ -5,3 +5,11 @@ jarvis_greeting:
       data:
 #      entity_id: media_player.office
         message: Hello from Home Assistant
+
+jarvis_polly_greeting:
+  alias: Jarvis Polly Greeting
+  sequence:
+    - service: tts.polly_say
+      data:
+#      entity_id: media_player.office
+        message: Hello from Home Assistant        
