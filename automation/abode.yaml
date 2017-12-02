@@ -35,7 +35,7 @@
         {%- endif -%}
   trigger:
     - platform: state
-      entity_id: group.family
+      entity_id: group.parents_and_big_kids
       from: 'off'
       to: 'on'
     - platform: event
@@ -45,29 +45,6 @@
   action:
      service: homeassistant.turn_on
      entity_id: script.abodestandby
-
-#- id: close_garage_door_notification
-#  alias: 'Close Garage Door Notification'
-#  initial_state: 'on'
-#  condition:
-#    condition: state
-#    entity_id: cover.garage_door_opener
-#    state: 'open'
-#  trigger:
-#    - platform: state
-#      entity_id: input_select.abodestatus
-#      to: 'armed_home'
-#  action:
-#    - service: notify.pushbullet
-#      data:
-#        message: "Garage Door Open"
-#        title: "Garage Door Open"
-#    - service: notify.pushbullet
-#      data:
-#        message: "Garage Door Open"
-#        title: "Garage Door Open"
-#    - service: homeassistant.turn_on
-#      entity_id: script.notificationgaragedoor
 
 - id: disarm_abode_at_night
   alias: 'Disarm Abode at night'
@@ -82,7 +59,7 @@
   trigger:
    - platform: state
      entity_id:
-       - group.family
+       - group.parents_and_big_kids
      from: 'off'
      to: 'on'
   action:
@@ -248,55 +225,17 @@
       value_template: "{{ states.input_select.abodestatus.state != 'armed_away' }}"
   trigger:
     - platform: state
-      entity_id: group.family
+      entity_id: group.parents_and_big_kids
       from: 'on'
       to: 'off'
     - platform: state
-      entity_id: group.family
+      entity_id: group.parents_and_big_kids
       from: 'on'
       to: 'off'
       for: '00:10:00'   
   action:
      service: homeassistant.turn_on
      entity_id: script.abodeaway
-
-- id: abode_home_at_night
-  alias: 'Abode Home at night'
-  initial_state: 'on'
-  condition:
-    condition: and
-    conditions:
-     - condition: state
-       entity_id: input_boolean.abodeupdate
-       state: 'on'
-     - condition: state
-       entity_id: group.family
-       state: 'on'
-  trigger:
-    - platform: time
-      at: '22:00:00'
-  action:
-     service: homeassistant.turn_on
-     entity_id: script.abodehome
-
-- id: abode_disarm_morning
-  alias: 'Disarm Abode in the morning'
-  initial_state: 'on'
-  condition:
-    condition: and
-    conditions:
-     - condition: state
-       entity_id: group.family
-       state: 'on'
-     - condition: state
-       entity_id: input_boolean.abodeupdate
-       state: 'on'
-  trigger:
-    - platform: time
-      at: '07:00:00'
-  action:
-     service: homeassistant.turn_on
-     entity_id: script.abodestandby
 
 - id: abode_was_disarmed
   alias: 'Trigger when Abode was disarmed'
@@ -368,51 +307,3 @@
           {%- for state in states if state.entity_id == trigger.entity_id -%}
             {{ state.attributes.friendly_name }} activated at {{ as_timestamp(now()) | timestamp_custom('%I:%M:%S %p', true) }}.
           {%- endfor -%}
-#    - service: logbook.log
-#      data_template:
-#        name: "Motion detected: "
-#        message: >-
-#          {%- if trigger.entity_id == "binary_sensor.backyard_field_detection" or trigger.entity_id == "binary_sensor.backyard_line_crossing" -%}
-#            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.backyard_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
-#          {%- elif trigger.entity_id == "binary_sensor.driveway_field_detection" or trigger.entity_id == "binary_sensor.driveway_line_crossing" -%}
-#            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.driveway_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
-#          {%- elif trigger.entity_id == "binary_sensor.patio_field_detection" or trigger.entity_id == "binary_sensor.patio_line_crossing" -%}
-#            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.patio_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
-#          {%- elif trigger.entity_id == "binary_sensor.porch_field_detection" or trigger.entity_id == "binary_sensor.porch_line_crossing" -%}
-#            {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.porch_motion.attributes.last_tripped_time))|round(2)}} seconds ago.
-#          {%- endif -%}
-
-#- id: ring_camera_notification
-#  alias: 'Notify Ring camera'
-#  initial_state: 'on'
-#  condition:
-#    - condition: state
-#      entity_id: input_select.abodestatus
-#      state: 'armed_away'
-#  trigger:
-#   - platform: state
-#     entity_id: sensor.ringvideourl
-#  action:
-#    - service: notify.ios
-#      data_template:
-#        message: "Check Ring camera."
-#        data:
-#          push:
-#            category: camera
-#          entity_id: camera.front_door
-#          attachment:
-#            url: "{{ states.camera.front_door.attributes.video_url }}"
-#
-#- id: ring_download_video
-#  alias: 'Ring download video'
-#  initial_state: 'on'
-#  trigger:
-#   - platform: state
-#     entity_id: sensor.ringvideourl
-#  action:
-#    - service: downloader.download_file
-#      data_template:
-#        url: "{{ states.camera.front_door.attributes.video_url }}"
-#        subdir: "{{'ring_' + states.camera.front_door.attributes.friendly_name.lower().replace(' ', '_')}}"
-#        overwrite: True
-#        filename: "{{states.camera.front_door.attributes.friendly_name.lower().replace(' ', '_')}}"

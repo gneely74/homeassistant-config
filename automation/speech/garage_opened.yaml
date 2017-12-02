@@ -6,8 +6,7 @@
   trigger:
     - platform: state
       entity_id:
-        - cover.large_garage
-        - cover.small_garage
+        - cover.garage_door_opener
       from: 'closed'
       to: 'open'
       for: '00:02:30'

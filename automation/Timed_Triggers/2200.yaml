@@ -1,0 +1,24 @@
+######################################################################
+##  Stuff that needs to happen at 10pm.
+######################################################################
+
+- id: abode_home_at_night
+  alias: 'Abode Home at night'
+  initial_state: 'on'
+  condition:
+    condition: and
+    conditions:
+     - condition: state
+       entity_id: input_boolean.abodeupdate
+       state: 'on'
+     - condition: state
+       entity_id: group.parents_and_big_kids
+       state: 'on'
+  trigger:
+    - platform: time
+      at: '22:00:00'
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodehome
+
+
