@@ -34,9 +34,9 @@ rules:
       - vacuum.roomba_890
     states:
      - state: 'on'
-       class: 'light-on'
+       class: 'box-shadow'
      - state: 'off'
-       class: 'light-off'
+#       class: 'light-off'
 
   - name: temp_darksky
     entities:
