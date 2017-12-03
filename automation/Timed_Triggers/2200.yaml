@@ -24,11 +24,10 @@
 - id: exterior_lights_off
   alias: 'Turn off exterior Lights'
   initial_state: 'on'
-  condition:
-    condition: 
-     - condition: state
-       entity_id: group.exterior_lights
-       state: 'on'
+  condition: 
+    - condition: state
+      entity_id: group.exterior_lights
+      state: 'on'
   trigger:
     - platform: time
       at: '22:00:00'
