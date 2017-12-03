@@ -21,4 +21,18 @@
      service: homeassistant.turn_on
      entity_id: script.abodehome
 
+- id: exterior_lights_off
+  alias: 'Turn off exterior Lights'
+  initial_state: 'on'
+  condition:
+    condition: 
+     - condition: state
+       entity_id: group.exterior_lights
+       state: 'on'
+  trigger:
+    - platform: time
+      at: '22:00:00'
+  action:
+     service: switch.turn_on
+     entity_id: group.exterior_lights
 
