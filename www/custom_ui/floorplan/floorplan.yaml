@@ -5,10 +5,13 @@ fully_kiosk:
 
   - name: Hall Kiosk
     address: 38:F7:3D:C6:83:A3
-    entities:
-      - binary_sensor.hall_kiosk_motion
-      - binary_sensor.hall_kiosk_plugged
-      - media_player.hall_kiosk
-
+#    entities:
+#      - binary_sensor.hall_kiosk_motion
+#      - binary_sensor.hall_kiosk_plugged
+#      - media_player.hall_kiosk
+    motion_sensor: binary_sensor.hall_kiosk_motion
+    plugged_sensor: binary_sensor.hall_kiosk_plugged
+    screensaver_light: light.hall_kiosk_screensaver
+    media_player: media_player.hall_kiosk
 pages:
   -  /local/custom_ui/floorplan/alarm.yaml

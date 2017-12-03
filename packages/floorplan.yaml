@@ -1,0 +1,39 @@
+homeassistant:
+  customize_glob:
+    "sensor.*_hall_kiosk_*":
+      emulated_hue_hidden: True
+      hidden: False
+    "binary_sensor.*_hall_kiosk_*":
+      emulated_hue_hidden: True
+      hidden: False
+
+media_player:
+  - platform: floorplan_speaker
+    name: Hall Kiosk
+
+#---Sensors for Fire Tablet-----------------------------
+
+light:
+
+  - platform: mqtt_json
+    name: Hall Screensaver
+    state_topic: floorplan/hall_kiosk_screensaver
+    command_topic: floorplan/hall_kiosk_screensaver/set
+    brightness: true
+
+binary_sensor:
+
+  - platform: mqtt
+    state_topic: floorplan/hall_kiosk_motion
+    name: Hall Kiosk Motion
+    device_class: motion
+    retain: true
+    emulated_hue_hidden: True
+    hidden: False
+
+  - platform: mqtt
+    state_topic: floorplan/hall_kiosk_plugged
+    name: Hall Kiosk Plugged
+    retain: true
+    emulated_hue_hidden: True
+    hidden: False    
