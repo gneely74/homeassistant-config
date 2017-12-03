@@ -41,9 +41,9 @@
      inkscape:window-height="855"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="1.0046978"
-     inkscape:cx="511.62356"
-     inkscape:cy="295.83"
+     inkscape:zoom="2.0093956"
+     inkscape:cx="374.63851"
+     inkscape:cy="116.11317"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
@@ -2252,7 +2252,7 @@
     <path
        id="cover.garage_door_opener"
        inkscape:connector-curvature="0"
-       style="opacity:0.54237288;fill:#bdf271;stroke-width:0.88275135"
+       style="opacity:0.54237288;fill:#29d9c2;stroke-width:0.88275135;fill-opacity:1"
        d="m 381.93593,2145.5307 h -82.6039 c -1.36255,0 -2.38445,-1.1896 -2.38445,-2.5622 v -5.8564 c 0,-1.464 1.10706,-2.5621 2.38445,-2.5621 h 82.6039 c 1.36253,0 2.38444,1.1896 2.38444,2.5621 v 5.8564 c 0,1.4641 -1.10707,2.5622 -2.38444,2.5622 z"
        inkscape:label="cover.garage_door_opener" />
     <g
