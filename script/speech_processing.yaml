@@ -65,7 +65,7 @@ speech_processing:
       entity_id:
         - media_player.livingroomCC
         - media_player.entry_alarm_panel
-        - media_player.bedroom_alarm_panel
+        - media_player.hall_kiosk
       data_template:
         message: >
           <speak>
