@@ -193,7 +193,7 @@ media_player:
   # - platform: apple_tv
   #   host: 192.168.2.90
   #   login_id: !secret apple_hsgid
-  - platform: tts_floorplan_speaker
+  - platform: floorplan_speaker
     name: Hall Kiosk
 nest:
   client_id: !secret nest_client_id

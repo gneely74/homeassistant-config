@@ -1,11 +1,5 @@
 binary_sensor.close_garage_when_leaving:
   hidden: true
-binary_sensor.bedroom_alarm_panel:
-  friendly_name: 'Bedroom Alarm Panel'
-  emulated_hue_hidden: True
-  hidden: False
-  homebridge_hidden: true
-
 binary_sensor.entryway_camera__zone_1_activity: {}
 binary_sensor.entryway_camera_online: {}
 binary_sensor.master_bedroom_camera_online: {}
@@ -19,13 +13,6 @@ binary_sensor.turn_on_outside_lights:
   hidden: true
 binary_sensor.office_door: {}
 binary_sensor.back_door: {} 
-
-
-binary_sensor.entry_alarm_panel:
-  friendly_name: 'Entry Alarm Panel'
-  emulated_hue_hidden: True
-  hidden: False
-  homebridge_hidden: true
 
 binary_sensor.iss:
   friendly_name: 'ISS Visibility'
