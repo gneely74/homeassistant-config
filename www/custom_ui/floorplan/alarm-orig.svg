@@ -432,9 +432,9 @@
 		<path id="rect326_1_" inkscape:connector-curvature="0" style="fill:#3D3B3F;" d="M265.4,329.8H38.1c-6.8,0-12.3-5.5-12.3-12.3
 			v-45.7c0-6.8,5.5-12.3,12.3-12.3h227.2c6.8,0,12.3,5.5,12.3,12.3v45.7C277.6,324.3,272.1,329.8,265.4,329.8L265.4,329.8z"/>
 		
-			<text id="text823" transform="matrix(1 0 0 1 34.2526 211.4987)" style="fill:#FFFFA6; font-family:'Helvetica'; font-size:30px;">Grady</text>
+			<text id="text823" transform="matrix(1 0 0 1 34.2526 211.4987)" style="fill:#FFFFA6; font-family:'Helvetica'; font-size:30px;">Carlo</text>
 		
-			<text id="text825" transform="matrix(1 0 0 1 151.8232 211.4987)" style="fill:#FFFFA6; font-family:'Helvetica'; font-size:30px;">Kate</text>
+			<text id="text825" transform="matrix(1 0 0 1 151.8232 211.4987)" style="fill:#FFFFA6; font-family:'Helvetica'; font-size:30px;">Stacey</text>
 		
 			<text id="text828" transform="matrix(1 0 0 1 32.4714 304.6942)" style="fill:#FFFFA6; font-family:'Helvetica'; font-size:30px;">Alarm</text>
 		<path id="rect339" inkscape:connector-curvature="0" style="fill:#3D3B3F;" d="M31.7,120.3h109.6c3.7,0,6.7,3.9,6.7,8.8v31.7
@@ -576,7 +576,7 @@
 </g>
 <g id="Automation">
 	
-		<text id="alarm_control_panel.abode_alarm" transform="matrix(1 0 0 1 206.4198 305.1656)" style="fill:#BDF271; font-family:'Helvetica'; font-size:35.2242px;">OFF</text>
+		<text id="input_boolean.alert_mode" transform="matrix(1 0 0 1 206.4198 305.1656)" style="fill:#BDF271; font-family:'Helvetica'; font-size:35.2242px;">OFF</text>
 	<g id="binary_sensors">
 		<path id="binary_sensor.justins_room_nest_protect_online" inkscape:connector-curvature="0" style="fill:#BDF271;" d="
 			M720.9,359.6h-6.7c-0.8,0-1.5-0.7-1.5-1.5v-7.5c0-0.8,0.7-1.5,1.5-1.5h6.7c0.8,0,1.5,0.7,1.5,1.5v7.5
@@ -598,10 +598,10 @@
 		<path id="binary_sensor.master_bedroom_nest_protect_online" inkscape:connector-curvature="0" style="fill:#BDF271;" d="
 			M442.2,404.9h-6.7c-0.8,0-1.5-0.7-1.5-1.5v-7.5c0-0.8,0.7-1.5,1.5-1.5h6.7c0.8,0,1.5,0.7,1.5,1.5v7.5
 			C443.7,404.2,443,404.9,442.2,404.9z"/>
-		<path id="binary_sensor.sleepnumber_Grady_Kate_is_in_bed" inkscape:connector-curvature="0" style="fill:#BDF271;" d="
+		<path id="binary_sensor.sleepnumber_carlo_stacey_is_in_bed" inkscape:connector-curvature="0" style="fill:#BDF271;" d="
 			M359.3,433.8h-27.9c-2.9-0.1-5.3-2.5-5.3-5.4l0,0v-8.2c0-2.9,2.3-5.4,5.3-5.4h27.9c2.9,0.1,5.3,2.5,5.3,5.4l0,0v8.2
 			C364.6,431.3,362.2,433.7,359.3,433.8z"/>
-		<path id="binary_sensor.sleepnumber_Grady_Grady_is_in_bed" inkscape:connector-curvature="0" style="fill:#E7376B;" d="
+		<path id="binary_sensor.sleepnumber_carlo_carlo_is_in_bed" inkscape:connector-curvature="0" style="fill:#E7376B;" d="
 			M358.8,413h-26.4c-3.4-0.1-6.1-2.8-6-6.2v-6.2c0-3.4,2.7-6.2,6-6.2h26.4c3.4,0.1,6.1,2.8,6,6.2v6.2
 			C364.9,410.2,362.2,413,358.8,413z"/>
 	</g>
@@ -731,7 +731,7 @@
 			M647.8,182.7V181c0-1.1,0.8-2,1.8-2H665c1,0,1.8,0.9,1.8,2v1.7c0,1.1-0.8,2-1.8,2h-15.4C648.6,184.8,647.8,183.9,647.8,182.7z"/>
 		<path id="binary_sensor.mcu1_gpio5" inkscape:connector-curvature="0" inkscape:label="#rect449" style="fill:#29D9C2;" d="
 			M417.9,84v-1.7c0-1.1,2.1-2,4.7-2h40.8c2.6,0,4.8,0.9,4.8,2V84c0,1.1-2.1,2-4.7,2h-40.8C420,86,417.9,85.1,417.9,84z"/>
-		<path id="binary_sensor.office_door" inkscape:connector-curvature="0" inkscape:label="#rect453" style="fill:#29D9C2;" d="
+		<path id="binary_sensor.mcu2_gpio5" inkscape:connector-curvature="0" inkscape:label="#rect453" style="fill:#29D9C2;" d="
 			M730.9,487.1h-18c-1.2,0-2.1-0.9-2.1-2v-1.7c0-1.1,0.9-2,2.1-2h18c1.2,0,2.1,0.9,2.1,2v1.7C733,486.2,732.1,487.1,730.9,487.1z"/>
 		<path id="binary_sensor.mcu3_light" inkscape:connector-curvature="0" inkscape:label="#rect451" style="fill:#29D9C2;" d="
 			M327.1,237.2l-0.1-2.5c-0.1-1.7,0.3-3,0.9-3l17.3,0.3c0.6,0,1.1,1.4,1.2,3l0.1,2.5c0.1,1.7-0.3,3-0.9,3l-17.3-0.3
@@ -758,9 +758,9 @@
 		<text id="text960" transform="matrix(1 0 0 1 55.1017 427.5831)" style="font-family:'ArialMT'; font-size:12px;">XX</text>
 	</g>
 	
-		<text id="device_tracker.gradys_iphone" inkscape:label="#text4437" transform="matrix(1 0 0 1 36.2953 243.6862)" style="fill:#E7376B;enable-background:new    ; font-family:'Helvetica'; font-size:26px;">home</text>
+		<text id="device_tracker.carlo" inkscape:label="#text4437" transform="matrix(1 0 0 1 36.2953 243.6862)" style="fill:#E7376B;enable-background:new    ; font-family:'Helvetica'; font-size:26px;">away</text>
 	
-		<text id="device_tracker.kates_iphone" inkscape:label="#text965" transform="matrix(1 0 0 1 161.0093 243.6862)" style="fill:#BDF271;enable-background:new    ; font-family:'Helvetica'; font-size:26px;">home</text>
+		<text id="device_tracker.stacey" inkscape:label="#text965" transform="matrix(1 0 0 1 161.0093 243.6862)" style="fill:#BDF271;enable-background:new    ; font-family:'Helvetica'; font-size:26px;">home</text>
 	<path id="light.led_outdoor_den" inkscape:connector-curvature="0" d="M389.5,54h-67.1c-1.3,0-2.3-0.7-2.3-1.6v-0.8
 		c0-0.9,1-1.6,2.3-1.6h67.1c1.3,0,2.3,0.7,2.3,1.6v0.8C391.8,53.3,390.8,54,389.5,54z"/>
 	<g id="g378" transform="matrix(1.1743602,0,0,1,-84.987569,-32.010868)">
