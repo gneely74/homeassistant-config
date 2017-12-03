@@ -1,18 +1,18 @@
-default_view:
- name: The Neely Home
- view: yes
- icon: mdi:home-assistant
- entities:
-   - device_tracker.gradys_iphone
-   - device_tracker.kates_iphone
-   - persistent_notification.update_available
-   - group.home_modes
-   - group.family    
-   - group.information
-   - group.interior_lights
-   - group.exterior_lights   
-   - group.home_security
-   - group.switches
+#default_view:
+# name: The Neely Home
+# view: yes
+# icon: mdi:home-assistant
+# entities:
+#   - device_tracker.gradys_iphone
+#   - device_tracker.kates_iphone
+#   - persistent_notification.update_available
+#   - group.home_modes
+#   - group.family    
+#   - group.information
+#   - group.interior_lights
+#   - group.exterior_lights   
+#   - group.home_security
+#   - group.switches
 
 
 weather:
