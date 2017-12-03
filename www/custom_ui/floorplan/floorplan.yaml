@@ -7,7 +7,7 @@ fully_kiosk:
 devices:
   - name: Hall Alarm Panel
     address: 38:F7:3D:C6:83:A3
-    entites:
+    entities:
       - binary_sensor.hall_kiosk
       - media_player.hall_kiosk
 
