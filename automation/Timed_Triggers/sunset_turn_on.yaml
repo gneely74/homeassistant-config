@@ -8,8 +8,8 @@
   trigger:
     - platform: state
       entity_id: sun.sun
-      to: 'below_horizon'
       from: 'above_horizon'
+      to: 'below_horizon'
 
   action:
     - service: light.turn_on
@@ -29,12 +29,7 @@
        {{ states.group.family.state == 'home' }}
     - service: switch.turn_on
       entity_id:
-       - switch.master_bathroom_accents
-       - switch.back_landscaping
-       - switch.front_door_outlet
-       - switch.living_room_outlet
-       - switch.den_outlet
-       - switch.foyer_outlet
+        - group.exterior_lights
     - service: light.turn_on
       entity_id:
        - group.living_room_accents
