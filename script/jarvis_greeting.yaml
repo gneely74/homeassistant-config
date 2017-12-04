@@ -9,7 +9,7 @@ jarvis_greeting:
 jarvis_polly_greeting:
   alias: Jarvis Polly Greeting
   sequence:
-    - service: tts.polly_say
+    - service: tts.amazon_polly_say
       data:
         entity_id: media_player.hall_kiosk
         message: Hello from Home Assistant        
