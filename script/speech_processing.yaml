@@ -61,7 +61,7 @@ speech_processing:
           0.3
           {% endif %}
 
-    - service: tts.polly
+    - service: tts.polly_say
       entity_id:
         - media_player.hall_kiosk
       data_template:
@@ -71,7 +71,7 @@ speech_processing:
           </speak>
         cache: true
         
-    - service: tts.google
+    - service: tts.google_say
       entity_id:
         - media_player.hall_kiosk
       data_template:
