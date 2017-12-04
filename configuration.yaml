@@ -172,7 +172,7 @@ notify:
     api_key: !secret pushbullet_key
     name: pushbullet
   - platform: group
-    name: iOS
+    name: ios_parents
     services:
       - service: ios_gradys_iphone
       - service: ios_kates_iphone
@@ -186,6 +186,13 @@ notify:
             push:
               badge: 0
               category: "abode_updates"
+  - platform: ios
+  - name: ios_family
+    platform: group
+    services:
+      - service: ios_gradys_iphone
+      - service: ios_kates_iphone
+
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 logger:
   default: info
