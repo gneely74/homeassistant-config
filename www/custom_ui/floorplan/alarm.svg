@@ -2655,7 +2655,7 @@
          id="text823-0"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffa6">Roomba 890</text>
       <g
-         id="sensor.dark_sky_temperature_min"
+         id="sensor.dark_sky_daily_low_temperature"
          transform="matrix(1.2753401,0,0,1.6277716,-159.01902,296.53241)">
         <text
            id="text957-9"
@@ -2664,7 +2664,7 @@
            y="62.0462">XX</text>
       </g>
       <g
-         id="sensor.dark_sky_temperature_max"
+         id="sensor.dark_sky_daily_high_temperature"
          transform="matrix(1.2753401,0,0,1.6277716,-150.52136,256.14696)">
         <text
            id="text957-8"
