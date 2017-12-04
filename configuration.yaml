@@ -64,26 +64,7 @@ zone:
   radius: 200
   icon: mdi:home
 
-zone 2:
- name: Papaw and Nana
- latitude: !secret latitude_g_parents
- longitude: !secret longitude_g_parents
- radius: 1000
- icon: mdi:home-map-marker
 
-zone 3:
- name: ADTRAN
- latitude: !secret latitude_adtran
- longitude: !secret longitude_adtran
- radius: 1000
- icon: mdi:city
-
-zone 4:
- name: The Shaws
- latitude: !secret latitude_shaws
- longitude: !secret longitude_shaws
- radius: 400
- icon: mdi:home-map-marker
 
 zone 5:
  name: Mimi and Papaw
@@ -273,6 +254,7 @@ alert: !include alert.yaml
 automation: !include_dir_merge_list automation
 device_tracker: !include_dir_merge_list device_tracker
 group: !include_dir_merge_named group
+zone: !include_dir_merge_list zones
 scene: !include_dir_merge_list scene
 switch: !include_dir_merge_list switch
 script: !include_dir_merge_named script

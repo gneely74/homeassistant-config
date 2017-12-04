@@ -1,0 +1,5 @@
+- name: Papaw and Mimi
+  latitude: !secret latitude_papaw_mimi
+  longitude: !secret longitude_papaw_mimi
+  radius: 200
+  icon: mdi:home-map-marker

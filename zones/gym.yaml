@@ -1,0 +1,5 @@
+- name: Gym
+  latitude: !secret latitude_gym
+  longitude: !secret longitude_gym
+  radius: 200
+  icon: mdi:home-map-marker

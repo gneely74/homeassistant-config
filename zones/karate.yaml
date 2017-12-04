@@ -1,0 +1,5 @@
+- name: Karate
+  latitude: !secret latitude_karate
+  longitude: !secret longitude_karate
+  radius: 200
+  icon: mdi:karate

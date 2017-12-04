@@ -1,0 +1,5 @@
+- name: ADTRAN
+  latitude: !secret latitude_adtran
+  longitude: !secret longitude_adtran
+  radius: 1000
+  icon: mdi:city
