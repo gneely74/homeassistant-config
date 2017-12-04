@@ -1,0 +1,5 @@
+- name: Huntsville Pediatric Associates
+  latitude: !secret latitude_hpa
+  longitude: !secret longitude_hpa
+  radius: 200
+  icon: mdi:medical-bag

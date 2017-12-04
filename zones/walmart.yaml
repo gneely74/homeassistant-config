@@ -1,0 +1,5 @@
+- name: Walmart
+  latitude: !secret latitude_walmart
+  longitude: !secret longitude_walmart
+  radius: 500
+  icon: mdi:cart
