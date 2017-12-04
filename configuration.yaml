@@ -280,7 +280,7 @@ sensor: !include_dir_merge_list sensor
 binary_sensor: !include_dir_merge_list binary_sensor
 input_select: !include input_select.yaml
 input_boolean: !include_dir_merge_named input_boolean
-#input_number: !include input_number.yaml
+input_number: !include input_number.yaml
 frontend: !include frontend.yaml
 recorder: !include recorder.yaml
 logbook: !include logbook.yaml
