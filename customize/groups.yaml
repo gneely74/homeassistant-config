@@ -1,7 +1,7 @@
 group.all_automations:
   friendly_name: 'All Automations'
   emulated_hue_hidden: True
-  hidden: True
+  hidden: False
   homebridge_hidden: true
 
 group.all_covers:
@@ -19,18 +19,18 @@ group.all_devices:
 group.all_lights:
   friendly_name: 'All Lights'
   emulated_hue_hidden: False
-  hidden: True
+  hidden: False
 
 group.all_scripts:
   friendly_name: 'All Scripts'
   emulated_hue_hidden: True
-  hidden: True
+  hidden: False
   homebridge_hidden: true
 
 group.all_switches:
   friendly_name: 'All Switches'
   emulated_hue_hidden: False
-  hidden: True
+  hidden: False
 
 group.bedroom_lights:
   friendly_name: 'Bedroom Lights'

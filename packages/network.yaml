@@ -148,7 +148,7 @@ group:
       - sensor.hunters_iphone
       - sensor.deaglans_ipad
       - sensor.kates_iphone
-  networking:
+  network:
     name: Network Stuff
     entities:
       - sensor.den_ap    

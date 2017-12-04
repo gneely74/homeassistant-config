@@ -1,6 +1,7 @@
 Bedroom lights:
   entities:
     - light.1b56c3
+    - input_number.master_bright
 
 #kitchen lights:
 #  entities:

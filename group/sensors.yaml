@@ -1,6 +1,5 @@
 Sensors:
   entities:
-    - binary_sensor.aeotec_dsb04100_doorwindow_sensor_sensor_3_0
     - binary_sensor.grady_home
     - binary_sensor.kate_home
     - binary_sensor.hunter_hom
