@@ -57,36 +57,6 @@ emulated_hue:
 #   - switch 
 #  expose_by_default: false
 
-zone:
-  name: Home
-  latitude: !secret latitude_home
-  longitude: !secret longitude_home
-  radius: 200
-  icon: mdi:home
-
-
-
-zone 5:
- name: Mimi and Papaw
- latitude: !secret latitude_papaw_mimi
- longitude: !secret longitude_papaw_mimi
- radius: 200
- icon: mdi:home-map-marker
- 
-zone 6:
- name: Gym
- latitude: !secret latitude_gym
- longitude: !secret longitude_gym
- radius: 200
- icon: mdi:home-map-marker
- 
-zone 7:
-  name: Karate
-  latitude: !secret latitude_karate
-  longitude: !secret longitude_karate
-  radius: 200
-  icon: mdi:karate
-  
 #panel_iframe:
 #  nodered_flows:
 #    title: 'Node-RED Flows'
