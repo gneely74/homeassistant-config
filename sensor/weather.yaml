@@ -13,6 +13,7 @@
     - humidity
     - nearest_storm_distance
     - minutely_summary
+    - daily_summary
     - pressure
     - visibility
     - ozone

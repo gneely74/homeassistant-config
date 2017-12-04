@@ -15,7 +15,8 @@
    version="1.1"
    id="svg1599"
    sodipodi:docname="alarm.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   enable-background="new">
   <metadata
      id="metadata1603">
     <rdf:RDF>
@@ -41,13 +42,13 @@
      inkscape:window-height="855"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="2.0093956"
-     inkscape:cx="374.63851"
-     inkscape:cy="116.11317"
+     inkscape:zoom="1.1252686"
+     inkscape:cx="348.99572"
+     inkscape:cy="295.83"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
-     inkscape:current-layer="surface188"
+     inkscape:current-layer="Left_Buttons"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -734,6 +735,27 @@
        y="548.70001"
        width="185"
        height="35.599998" />
+    <linearGradient
+       id="linearGradient3183-2">
+      <stop
+         id="stop3185-6"
+         offset="0"
+         style="stop-color:#1c88ed;stop-opacity:1;" />
+      <stop
+         id="stop3187-0"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       y2="2.9760098"
+       x2="11.20835"
+       y1="14.877447"
+       x1="21.909702"
+       gradientTransform="matrix(0,-0.43388758,-0.50746045,0,116.23843,402.6511)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3968-2-9"
+       xlink:href="#linearGradient3183-2"
+       inkscape:collect="always" />
   </defs>
   <g
      id="surface188"
@@ -2252,7 +2274,7 @@
     <path
        id="cover.garage_door_opener"
        inkscape:connector-curvature="0"
-       style="opacity:0.54237288;fill:#29d9c2;stroke-width:0.88275135;fill-opacity:1"
+       style="opacity:0.54237288;fill:#29d9c2;fill-opacity:1;stroke-width:0.88275135"
        d="m 381.93593,2145.5307 h -82.6039 c -1.36255,0 -2.38445,-1.1896 -2.38445,-2.5622 v -5.8564 c 0,-1.464 1.10706,-2.5621 2.38445,-2.5621 h 82.6039 c 1.36253,0 2.38444,1.1896 2.38444,2.5621 v 5.8564 c 0,1.4641 -1.10707,2.5622 -2.38444,2.5622 z"
        inkscape:label="cover.garage_door_opener" />
     <g
@@ -2511,21 +2533,22 @@
       <path
          id="rect320_2_"
          inkscape:connector-curvature="0"
-         style="fill:#3d3b3f"
-         d="M 264.5,250.9 H 37.2 c -6.8,0 -12.3,-5.5 -12.3,-12.3 V 193 c 0,-6.8 5.5,-12.3 12.3,-12.3 h 227.2 c 6.8,0 12.3,5.5 12.3,12.3 v 45.7 c 0.1,6.8 -5.4,12.2 -12.2,12.2 z" />
+         style="fill:#3d3b3f;stroke-width:1.39113569"
+         d="M 488.58791,250.9 H 48.703678 C 35.543921,250.9 24.9,245.4 24.9,238.6 V 193 c 0,-6.8 10.643921,-12.3 23.803678,-12.3 H 488.39439 c 13.15975,0 23.80367,5.5 23.80367,12.3 v 45.7 c 0.19353,6.8 -10.45039,12.2 -23.61015,12.2 z" />
       <path
          id="rect326_1_"
          inkscape:connector-curvature="0"
-         style="fill:#3d3b3f"
-         d="M 265.4,329.8 H 38.1 c -6.8,0 -12.3,-5.5 -12.3,-12.3 v -45.7 c 0,-6.8 5.5,-12.3 12.3,-12.3 h 227.2 c 6.8,0 12.3,5.5 12.3,12.3 v 45.7 c 0,6.8 -5.5,12.3 -12.2,12.3 z" />
+         style="fill:#3d3b3f;stroke-width:1.13240612"
+         d="M 333.04954,329.8 H 41.572827 C 32.85289,329.8 25.8,324.3 25.8,317.5 v -45.7 c 0,-6.8 7.05289,-12.3 15.772827,-12.3 H 332.92131 c 8.71993,0 15.77282,5.5 15.77282,12.3 v 45.7 c 0,6.8 -7.05289,12.3 -15.64459,12.3 z" />
       <text
          id="text823"
          transform="translate(34.2526,211.4987)"
          style="font-size:30px;font-family:Helvetica;fill:#ffffa6">Grady</text>
       <text
          id="text825"
-         transform="translate(151.8232,211.4987)"
-         style="font-size:30px;font-family:Helvetica;fill:#ffffa6">Kate</text>
+         style="font-size:30px;font-family:Helvetica;fill:#ffffa6"
+         x="251.8232"
+         y="211.4987">Kate</text>
       <text
          id="text828"
          transform="translate(32.4714,304.6942)"
@@ -2535,13 +2558,13 @@
          x="37.000637"
          id="device_tracker.gradys_iphone"
          inkscape:label="#text4437"
-         style="font-size:22.33195305px;font-family:Helvetica;fill:#e7376b;stroke-width:0.85892123;enable-background:new">home</text>
+         style="font-size:16px;font-family:Helvetica;fill:#e7376b;stroke-width:0.85892123;enable-background:new;-inkscape-font-specification:'Helvetica, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">home</text>
       <text
          y="238.25488"
-         x="152.77171"
+         x="252.77171"
          id="device_tracker.kates_iphone"
          inkscape:label="#text965"
-         style="font-size:22.33195305px;font-family:Helvetica;fill:#bdf271;stroke-width:0.85892123;enable-background:new">home</text>
+         style="font-size:16px;font-family:Helvetica;fill:#bdf271;stroke-width:0.85892123;enable-background:new;-inkscape-font-specification:'Helvetica, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">home</text>
       <text
          y="302.35693"
          x="137.10278"
@@ -2601,7 +2624,7 @@
       </g>
       <g
          id="sensor.dark_sky_humidity"
-         transform="matrix(1.2753401,0,0,1.6277716,108.72872,-318.61194)">
+         transform="matrix(1.2753401,0,0,1.6277716,148.72872,-318.61194)">
         <text
            id="text960"
            transform="translate(55.1017,427.5831)"
@@ -2625,12 +2648,41 @@
          inkscape:transform-center-x="-7.873455"
          inkscape:transform-center-y="-0.27149958"
          style="fill:#00adee"
-         d="m 217.76835,362.59563 c 0,0 -6.3,6.6 -6.3,10.6 0.2,3.5 3.3,6.1 6.7,5.9 3.1,-0.2 5.6,-2.7 5.9,-5.9 0,-3.9 -6.3,-10.6 -6.3,-10.6 m 2.6,6.7 1.1,1 -6.4,5.9 -1.1,-1 m 1.4,-5.9 c 0.7,0 1.3,0.5 1.3,1.2 v 0 0 c 0,0.7 -0.6,1.2 -1.3,1.2 v 0 0 c -0.7,0 -1.3,-0.5 -1.3,-1.2 v 0 0 c 0.1,-0.7 0.7,-1.2 1.3,-1.2 v 0 0 m 4.8,4.5 c 0.7,0.1 1.1,0.7 1.1,1.3 0,0.6 -0.7,1.1 -1.3,1.1 -0.7,-0.1 -1.1,-0.6 -1.1,-1.2 v 0 c 0,-0.8 0.5,-1.3 1.3,-1.2 z" />
+         d="m 257.76835,362.59563 c 0,0 -6.3,6.6 -6.3,10.6 0.2,3.5 3.3,6.1 6.7,5.9 3.1,-0.2 5.6,-2.7 5.9,-5.9 0,-3.9 -6.3,-10.6 -6.3,-10.6 m 2.6,6.7 1.1,1 -6.4,5.9 -1.1,-1 m 1.4,-5.9 c 0.7,0 1.3,0.5 1.3,1.2 v 0 0 c 0,0.7 -0.6,1.2 -1.3,1.2 v 0 0 c -0.7,0 -1.3,-0.5 -1.3,-1.2 v 0 0 c 0.1,-0.7 0.7,-1.2 1.3,-1.2 v 0 0 m 4.8,4.5 c 0.7,0.1 1.1,0.7 1.1,1.3 0,0.6 -0.7,1.1 -1.3,1.1 -0.7,-0.1 -1.1,-0.6 -1.1,-1.2 v 0 c 0,-0.8 0.5,-1.3 1.3,-1.2 z" />
       <text
          y="609.4541"
          x="32.792145"
          id="text823-0"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffa6">Roomba 890</text>
+      <g
+         id="sensor.dark_sky_daily_temperatureLow"
+         transform="matrix(1.2753401,0,0,1.6277716,-167.01902,296.53241)">
+        <text
+           id="text957-9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.10478687px;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           x="194.61684"
+           y="62.0462">XX</text>
+      </g>
+      <g
+         id="sensor.dark_sky_daily_temperatureHigh"
+         transform="matrix(1.2753401,0,0,1.6277716,-158.52136,256.14696)">
+        <text
+           id="text957-8"
+           transform="translate(188.344,62.0462)"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.10478687px;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">XX</text>
+      </g>
+      <path
+         style="fill:#aa0000;fill-opacity:1;stroke:#000000;stroke-width:0.56999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 110.86127,341.59119 -5.33415,5.96031 h 3.19664 v 9.31362 h 4.27501 v -9.34655 h 3.15813 z"
+         id="path3179-3"
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:url(#linearGradient3968-2-9);fill-opacity:1;stroke:#000000;stroke-width:0.5698002;stroke-opacity:1"
+         d="m 110.76277,399.10312 -5.33415,-5.96031 h 3.19664 v -9.31362 h 4.27501 v 9.34655 h 3.15813 z"
+         id="path3179-3-2"
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0" />
     </g>
     <path
        style="fill:#616161;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.27527118"
@@ -2959,7 +3011,7 @@
        y="296.73242">Closet</tspan></text>
   <rect
      id="sensor.dark_sky_minutely_summary"
-     x="79.921219"
+     x="119.92122"
      y="265.31937"
      inkscape:label="#rect395"
      style="fill:#cccccc"

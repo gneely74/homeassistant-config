@@ -41,6 +41,8 @@ rules:
   - name: temp_darksky
     entities:
       - sensor.dark_sky_temperature
+      - sensor.dark_sky_daily_temperatureHigh
+      - sensor.dark_sky_daily_temperatureLow    
     text_template: '${entity.state ? Math.ceil(entity.state) + "°": "undefined"}'
     class_template: 'return "static-temp";'
 
