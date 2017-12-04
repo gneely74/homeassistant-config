@@ -3,3 +3,9 @@
   longitude: !secret longitude_g_parents
   radius: 1000
   icon: mdi:home-map-marker
+
+- name: Papaw and Nana New House
+  latitude: !secret latitude_g_parents2
+  longitude: !secret longitude_g_parents2
+  radius: 1000
+  icon: mdi:home-map-marker
