@@ -1,0 +1,10 @@
+- id: change_master_brightness
+  alias: Change Master Bedroom Brightness
+  trigger:
+    - platform: state
+      entity_id: input_slider.master_bright
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.1b56c3
+        brightness: '{{ states.input_slider.master_bright.state | int }}'
