@@ -4,6 +4,10 @@
 
 - id: abode_disarm_morning
   alias: 'Disarm Abode in the morning'
+  trigger:
+    - platform: time
+      at: '07:00:00'
+      
   initial_state: 'on'
   condition:
     condition: and
@@ -14,9 +18,6 @@
      - condition: state
        entity_id: input_boolean.abodeupdate
        state: 'on'
-  trigger:
-    - platform: time
-      at: '07:00:00'
   action:
      service: homeassistant.turn_on
      entity_id: script.abodestandby

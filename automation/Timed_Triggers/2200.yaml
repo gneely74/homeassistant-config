@@ -4,6 +4,10 @@
 
 - id: abode_home_at_night
   alias: 'Abode Home at night'
+  trigger:
+    - platform: time
+      at: '22:00:00'
+        
   initial_state: 'on'
   condition:
     condition: and
@@ -14,24 +18,23 @@
      - condition: state
        entity_id: group.parents_and_big_kids
        state: 'on'
-  trigger:
-    - platform: time
-      at: '22:00:00'
   action:
      service: homeassistant.turn_on
      entity_id: script.abodehome
 
 - id: exterior_lights_off
   alias: 'Turn off exterior Lights'
+  trigger:
+    - platform: time
+      at: '22:00:00'
+      
   initial_state: 'on'
   condition: 
     - condition: state
       entity_id: group.exterior_lights
       state: 'on'
-  trigger:
-    - platform: time
-      at: '22:00:00'
+
   action:
-     service: switch.turn_on
+     service: switch.turn_off
      entity_id: group.exterior_lights
 
