@@ -61,6 +61,16 @@ speech_processing:
           0.3
           {% endif %}
 
+    - service: tts.polly
+      entity_id:
+        - media_player.hall_kiosk
+      data_template:
+        message: >
+          <speak>
+          {{speech_message}}
+          </speak>
+        cache: true
+        
     - service: tts.google
       entity_id:
         - media_player.hall_kiosk

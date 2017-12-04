@@ -227,13 +227,13 @@ tts:
 #    cache_dir: /home/homeassistant/.homeassistant/tts
     time_memory: 300
 
-  - platform: amazon_polly
+  - platform: polly
     aws_access_key_id: !secret aws_access_key_ID
     aws_secret_access_key: !secret aws_secret_access_key
     region_name: 'us-east-1'
     text_type: ssml
-    cache: True
-    cache_dir: /data/tts
+#    cache: True
+#    cache_dir: /data/tts
 mqtt:
   broker: 127.0.0.1
   port: 1883
