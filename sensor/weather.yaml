@@ -6,6 +6,8 @@
     - precip_intensity
     - precip_intensity_max
     - temperature
+    - daily_summary_temperatureHigh
+    - daily_summary_temperatureLow    
     - dew_point
     - wind_speed
     - wind_bearing
