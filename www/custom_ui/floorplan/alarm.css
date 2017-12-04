@@ -10,6 +10,17 @@ svg, svg * {
 /*
 /* Hover over */
 
+.text {
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
 /* Interior Garage */
 #binary_sensor\.mcu1_gpio12.window-opened {
   transform: rotate(270deg);
@@ -50,6 +61,14 @@ svg, svg * {
   font-family : Helvetica !important;
   font-weight : bold !important;
   font-size : 15px !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
 }
 
 .static-text-date
@@ -58,6 +77,15 @@ svg, svg * {
   font-weight : bold !important;
   font-size : 16px !important;
   fill : #FFFFA6 !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
+  
 }
 
 .static-text-time
@@ -66,6 +94,14 @@ svg, svg * {
   font-weight : bold !important;
   font-size : 35px !important;
   fill: #FFFFA6 !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
 }
 
 .static-temp
@@ -73,12 +109,28 @@ svg, svg * {
   font-family: Helvetica !important;
   font-size: 22px !important;
   fill: #FFFFA6 !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
 }
 .static-temp-hilo
 {
   font-family: Helvetica !important;
   font-size: 12px !important;
   fill: #FFFFA6 !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
 }
 
 /* Last motion entity */
@@ -102,10 +154,27 @@ svg, svg * {
 
 .text-home {
   fill: #BDF271 !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
+  
 }
 
 .text-away {
   fill: #E7376B !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
 }
 
 /* switches */
@@ -158,10 +227,26 @@ svg, svg * {
 
 .alarm-disarmed {
   fill: #3c763d !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
 }
 
 .alarm-armed {
   fill: #8a6d3b !important;
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;  
 }
 
 /* Light */

@@ -135,8 +135,8 @@ camera:
     still_image_url: https://imgs.xkcd.com/comics/now.png    
 
 
-#ifttt:
-#  key: !secret ifttt_key
+ifttt:
+  key: !secret ifttt_key
 
 sun:
 
@@ -144,6 +144,23 @@ media_player:
   # - platform: apple_tv
   #   host: 192.168.2.90
   #   login_id: !secret apple_hsgid
+  - host: 192.168.74.23
+    login_id: 00000000-4356-1ee4-b790-28fd4d974dda
+    name: Bedroom Apple TV
+    start_off: true
+    credentials: C7CBFA5A22B4145B:4C83B51284E4C1965C96F0E2592C87E4DB1FB673C758D9639EE33B580FC86F95
+  - host: 192.168.74.38
+    login_id: 00000000-075e-a453-ffa9-28d44d414e34
+    name: Boys Room Apple TV
+    start_off: true
+  - host: 192.168.74.81
+    login_id: 00000000-075e-a453-ffa9-28d44d414e34
+    name: Living Room Apple TV
+    start_off: true
+  - host: 192.168.74.119
+    login_id: 00000000-075e-a453-ffa9-28d44d414e34
+    name: Fiona's Apple TV
+    start_off: true
 
 nest:
   client_id: !secret nest_client_id
@@ -200,6 +217,13 @@ tts:
 #    cache_dir: /home/homeassistant/.homeassistant/tts
     time_memory: 300
 
+  - platform: amazon_polly
+    aws_access_key_id: !secret aws_access_key_ID
+    aws_secret_access_key: !secret aws_secret_access_key
+    region_name: 'us-east-1'
+    text_type: ssml
+    cache: True
+    cache_dir: /data/tts
 mqtt:
   broker: 127.0.0.1
   port: 1883
