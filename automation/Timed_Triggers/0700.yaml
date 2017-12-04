@@ -14,7 +14,7 @@
     conditions:
      - condition: state
        entity_id: group.parents_and_big_kids
-       state: 'on'
+       state: 'home'
      - condition: state
        entity_id: input_boolean.abodeupdate
        state: 'on'

@@ -36,8 +36,7 @@
   trigger:
     - platform: state
       entity_id: group.parents_and_big_kids
-      from: 'off'
-      to: 'on'
+      to: 'home'
     - platform: event
       event_type: ios.notification_action_fired
       event_data:
@@ -60,8 +59,7 @@
    - platform: state
      entity_id:
        - group.parents_and_big_kids
-     from: 'off'
-     to: 'on'
+     to: 'home'
   action:
     service: homeassistant.turn_on
     entity_id: script.abodestandby
@@ -149,7 +147,7 @@
     conditions:
      - condition: state
        entity_id: group.parents_and_big_kids
-       state: 'on'
+       state: 'home'
      - condition: time
        after: '07:15:00'
        before: '22:45:00'
@@ -187,7 +185,7 @@
     conditions:
      - condition: state
        entity_id: group.parents_and_big_kids
-       state: 'off'
+       state: 'away'
      - condition: state
        entity_id: input_boolean.abodeupdate
        state: 'on'
@@ -226,8 +224,7 @@
   trigger:
     - platform: state
       entity_id: group.parents_and_big_kids
-      from: 'on'
-      to: 'off'
+      to: 'home'
     - platform: state
       entity_id: group.parents_and_big_kids
       from: 'on'

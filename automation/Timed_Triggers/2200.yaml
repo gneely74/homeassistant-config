@@ -17,7 +17,7 @@
        state: 'on'
      - condition: state
        entity_id: group.parents_and_big_kids
-       state: 'on'
+       state: 'home'
   action:
      service: homeassistant.turn_on
      entity_id: script.abodehome
