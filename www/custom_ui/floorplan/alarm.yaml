@@ -45,6 +45,13 @@ rules:
       - sensor.dark_sky_daily_low_temperature
     text_template: '${entity.state ? Math.ceil(entity.state) + "°": "undefined"}'
     class_template: 'return "static-temp";'
+    
+  - name: temp_darksky_hilo
+    entities:
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_low_temperature
+    text_template: '${entity.state ? Math.ceil(entity.state) + "°": "undefined"}'
+    class_template: 'return "static-temp-hilo";'    
 
   - name: temp_round
     entities:
@@ -57,8 +64,6 @@ rules:
   - name: text_states
     entities:
       - sensor.last_message
-      - sensor.usps_mail
-      - sensor.usps_packages
     text_template: '${entity.state ? entity.state.replace(/\s{3,}/g,"") : "undefined"}'
     class_template: 'return "static-text";'
 

@@ -74,6 +74,13 @@ svg, svg * {
   font-size: 22px !important;
   fill: #FFFFA6 !important;
 }
+.static-temp-hilo
+{
+  font-family: Helvetica !important;
+  font-size: 12px !important;
+  fill: #FFFFA6 !important;
+}
+
 /* Last motion entity */
 
 .last-motion {
