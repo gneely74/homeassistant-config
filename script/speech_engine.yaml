@@ -175,6 +175,7 @@ speech_engine:
             {{ value1 }}
             {{([iss, pihole, moon]| random)()}} {# call a Random fact about the house #}
             {{holiday()}}
+
     - service: input_boolean.turn_off
       entity_id:
         - input_boolean.home_stats

@@ -32,10 +32,8 @@ automation:
         to: 'on'
 
     action:
-      - service: tts.amazon_polly_say
+      - service: tts.google_say
         entity_id:
-          - media_player.livingroomCC
-          - media_player.entry_alarm_panel
           - media_player.hall_kiosk
         data_template:
           message: >
