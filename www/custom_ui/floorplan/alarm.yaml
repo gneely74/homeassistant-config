@@ -98,7 +98,7 @@ rules:
       - camera.master_bedroom
     states:
       - state: 'idle'
-        class: 'text-home'
+#        class: 'home'
 
   - name: Family
     entities:
@@ -108,9 +108,9 @@ rules:
 
     states:
       - state: 'home'
-        class: 'text-home'
+        class: 'home'
       - state: 'away'
-        class: 'text-away'
+        class: 'away'
 
   - name: plugs
     entities:
@@ -139,6 +139,8 @@ rules:
       - light.1b56c3
       - light.fireplace_light
       - switch.garage_light
+      - group.exterior_lights
+      - group.interior_lights
     states:
       - state: 'on'
         class: 'light-on'

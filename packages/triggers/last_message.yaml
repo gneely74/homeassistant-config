@@ -17,7 +17,7 @@ input_boolean:
 #-------------------------------------------
 sensor:
   - platform: mqtt
-    state_topic: "polly/lastmsg"
+    state_topic: "tts/lastmsg"
     name: "Last Message"
 ##############################################################################
 ###  Automations -
