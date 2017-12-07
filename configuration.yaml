@@ -224,7 +224,7 @@ logger:
 tts:
   - platform: google
     cache: true
-    cache_dir: /data/tts
+    cache_dir: /tmp
     time_memory: 300
 
   - platform: amazon_polly
@@ -233,7 +233,7 @@ tts:
     region_name: 'us-east-1'
     text_type: ssml
     cache: True
-    cache_dir: /data/tts
+    cache_dir: /tmp
 mqtt:
   broker: 127.0.0.1
   port: 1883
