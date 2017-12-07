@@ -222,8 +222,8 @@ logger:
     homeassistant.components.notify: warn
 google_domains:
   domain: home.theneelyfamily.net
-  username: !secret google_dns_username 
-  password: !secret google_dns_password
+  username: !secret google_domains_username 
+  password: !secret google_domains_password
 # Text to speech
 tts:
   - platform: google
