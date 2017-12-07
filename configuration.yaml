@@ -220,6 +220,10 @@ logger:
     homeassistant.components.http.ban: warn
     homeassistant.components.ios: warn
     homeassistant.components.notify: warn
+google_domains:
+  domain: home.theneelyfamily.net
+  username: !secret google_dns_username 
+  password: !secret google_dns_password
 # Text to speech
 tts:
   - platform: google

@@ -1,0 +1,11 @@
+- name: APDA in HSV
+  latitude: !secret latitude_apda_hsv
+  longitude: !secret longitude_apda_hsv
+  radius: 1000
+  icon: mdi:medical-bag
+
+- name: APDA in Madison
+  latitude: !secret latitude_apda_mad
+  longitude: !secret longitude_apda_mad
+  radius: 1000
+  icon: mdi:medical-bag  

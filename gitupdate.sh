@@ -7,6 +7,7 @@ if [[ `git status --porcelain` ]]; then
     read CHANGE_MSG
     git commit -m "${CHANGE_MSG}"
     git push origin master
+    scp secrets.yaml root@home.theneelyfamily.net:/config/
     ssh -p 9922 -o StrictHostKeyChecking=no root@home.theneelyfamily.net /config/git_pull.sh  
 else
   echo ""
