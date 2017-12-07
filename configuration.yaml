@@ -234,6 +234,7 @@ tts:
     text_type: ssml
     cache: True
     cache_dir: /tmp
+    time_memory: 300
 mqtt:
   broker: 127.0.0.1
   port: 1883
