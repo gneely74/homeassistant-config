@@ -1,0 +1,17 @@
+device_tracker:
+  - platform: unifi_direct
+    host: !secret den_ap_ip
+    username: !secret unifi_username
+    password: !secret unifi_password
+  - platform: unifi_direct
+    host: !secret diningroom_ap_ip
+    username: !secret unifi_username
+    password: !secret unifi_password
+  - platform: unifi_direct
+    host: !secret fionasroom_ap_ip
+    username: !secret unifi_username
+    password: !secret unifi_password
+  - platform: unifi_direct
+    host: !secret masterbedroom_ap_ip
+    username: !secret unifi_username
+    password: !secret unifi_password            
