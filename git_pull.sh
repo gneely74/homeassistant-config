@@ -8,6 +8,8 @@ log()
         echo "$(date) ${1:-missing}" >> $msglog
 }
 
+git config --global user.email "grady.neely@icloud.com"
+
 if [ -f $lock ]; then
         log "Already run, exiting..."
 else
