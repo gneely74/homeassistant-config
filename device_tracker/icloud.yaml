@@ -1,5 +1,5 @@
 - platform: icloud
-  username: !secret grady_icloud_usernmae
+  username: !secret grady_icloud_username
   password: !secret grady_icloud_password
 - platform: icloud 
   username: !secret kate_icloud_username
