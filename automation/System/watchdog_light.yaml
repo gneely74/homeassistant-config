@@ -14,7 +14,7 @@
       entity_id:
         - switch.garage_light
       to: 'on'
-      for: '02:00:00'
+      for: '00:30:00'
 
 #Turn it off!
   action:

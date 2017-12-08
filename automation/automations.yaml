@@ -220,23 +220,6 @@
      service: switch.turn_on
      entity_id: switch.garage_light
      
-- id: kitchen_light_brightness
-  alias: 'Kitchen light brightness'
-  initial_state: 'on'
-  trigger:
-   - platform: state
-     entity_id: light.kitchen_lights
-     from: 'off'
-     to: 'on'
-  condition:
-    - condition: template
-      value_template: '{{ trigger.from_state.state == "off" }}'
-  action:
-     service: light.turn_on
-     data:
-       entity_id: light.kitchen_lights
-       brightness: 200
-
 - id: frontyard_lights
   alias: 'Turn on frontyard lights'
   initial_state: 'on'
@@ -260,7 +243,7 @@
         - switch.front_porch_light        
 
 - id: turn_off_front_lights_after_10min
-  alias: Turn off kitchen light 10 minutes after last movement
+  alias: Turn off front lights 10 minutes after last movement
   initial_state: 'on'
   condition:
     - condition: state
@@ -281,35 +264,6 @@
     entity_id: 
       - switch.front_garage_light
       - switch.front_porch_light      
-
-#- id: frontyard_lights_off_after_ring
-#  alias: 'Turn off frontyard lights after Ring'
-#  initial_state: 'on'
-#  condition:
-#    - condition: template
-#      value_template: >
-#        {%- if states.binary_sensor.ring_front_door_motion.last_changed -%}
-#          {{(as_timestamp(now()) - as_timestamp(states.binary_sensor.ring_front_door_motion.last_changed)) > 200}}
-#        {%- else -%}
-#          false
-#        {%- endif -%}
-#    - condition: or
-#      conditions:
-#        - condition: state
-#          entity_id: switch.driveway
-#          state: 'on'
-#        - condition: state
-#          entity_id: switch.wemoporch
-#          state: 'on'
-#  trigger:
-#   - platform: time
-#     minutes: '/5'
-#  action:
-#    - service: switch.turn_off
-#      entity_id:
-#        - switch.front_garage_light
-#        - switch.front_porch_light
-
 
 - id: outdoor_light_at_night
   alias: Outdoor lights at night
@@ -355,49 +309,6 @@
         - switch.front_porch_light
         - switch.outside_den_light
         - switch.side_of_garage_light
-
-#- id: open_garage_door_when_someone_home
-#  alias: 'Open Garage door when someone home'
-#  initial_state: 'on'
-#  condition:
-#    - condition: state
-#      entity_id: binary_sensor.garagedoor
-#      state: 'off'
-#      for: '00:02:00'
-#    - condition: state
-#      entity_id: input_boolean.abodeupdate
-#      state: 'on'
-#    - condition: template
-#      value_template: >
-#        {%- if states.automation.open_garage_door_when_someone_home.attributes.last_triggered -%}
-#          {{ (as_timestamp(now()) - as_timestamp(states.automation.open_garage_door_when_someone_home.attributes.last_triggered)) > 150 }}
-#        {%- else -%}
-#          true
-#        {%- endif -%}
-#    - condition: template
-#      value_template: >
-#        {%- if states.automation.update_ha_after_startup.attributes.last_triggered -%}
-#          {{ (as_timestamp(now()) - as_timestamp(states.automation.update_ha_after_startup.attributes.last_triggered)) > 120 }}
-#        {%- else -%}
-#          true
-#        {%- endif -%}
-#    - condition: template
-#      value_template: >
-#        {%- if states.automation.arm_abode.attributes.last_triggered -%}
-#          {{ (as_timestamp(now()) - as_timestamp(states.automation.arm_abode.attributes.last_triggered)) > 240 }}
-#        {%- else -%}
-#          true
-#        {%- endif -%}
-#  trigger:
-#    - platform: state
-#      entity_id:
-#        - device_tracker.meta_kate
-#        - device_tracker.meta_grady
-#      from: 'not_home'
-#      to: 'home'
-#  action:
-#    - service: switch.turn_on
-#      entity_id: switch.garage_relay_switch
 
 - id: close_garage_door_when_abode_is_home_or_away
   alias: 'Close garage door when Abode is Home or Away'
