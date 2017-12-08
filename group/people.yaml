@@ -21,26 +21,26 @@ parents_and_big_kids:
     - device_tracker.fisiphone
 person_grady:
   name: Grady
-  icon: mdi:person
+  icon: mdi:account
   entities:
     - device_tracker.gradys_iphone
     - device_tracker.gradysione8plus    
 person_kate:
   name: Kate
-  icon: mdi:person
+  icon: mdi:account
   entities:
     - device_tracker.kates_iphone
     - device_tracker.katesiphone
     - device_tracker.katesiphone4
 person_conor:
   name: Conor
-  icon: mdi:person
+  icon: mdi:account
   entities:
     - device_tracker.conorsiphone3
     - device_tracker.conorsiphone
 person_hunter:
   name: Hunter
-  icon: mdi:person
+  icon: mdi:account
   entities:
     - device_tracker.huntersiphone6plus
     - device_tracker.huntersone6plus
