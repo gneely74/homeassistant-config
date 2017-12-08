@@ -1,5 +1,5 @@
 ######################################################################
-##  Stuff that needs to happen at 10pm.
+##  Stuff that needs to happen at 11pm.
 ######################################################################
 
 - id: abode_home_arm
@@ -23,13 +23,13 @@
          {%- else -%}
            true
          {%- endif -%}
-   trigger:
-    - platform: time
-      minutes: '/10'
-      seconds: 00 
-   action:
-      service: homeassistant.turn_on
-      entity_id: script.abodehome
+  trigger:
+   - platform: time
+     minutes: '/10'
+     seconds: 00 
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodehome
       
 - id: exterior_lights_off
   alias: 'Turn off exterior Lights'
