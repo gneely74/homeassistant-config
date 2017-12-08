@@ -3,8 +3,8 @@ default_view:
   view: yes
   icon: mdi:home-assistant
   entities:
-    - device_tracker.gradys_iphone
-    - device_tracker.kates_iphone
+    - group.person_grady
+    - group.person_kate
     - persistent_notification.update_available
     - group.home_modes
     - group.family    

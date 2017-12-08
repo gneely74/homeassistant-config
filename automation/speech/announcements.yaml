@@ -7,8 +7,8 @@
   trigger:
     - platform: state
       entity_id:
-        - device_tracker.gradys_iphone
-        - device_tracker.kates_iphone
+        - group.person_grady
+        - group.person_kate
       from: 'not_home'
       to: 'home'
       for: '00:02:00'

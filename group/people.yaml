@@ -1,7 +1,8 @@
 Family:
   entities:
-    - device_tracker.gradys_iphone
-    - device_tracker.kates_iphone
+    - group.person_grady
+    - group.person_kate
+    - group.person_conor
     - device_tracker.huntersone6plus
     - device_tracker.fisiphone
     - device_tracker.finnegansipad
@@ -10,13 +11,13 @@ Family:
 #    - device_tracker.pokemonsipad     
 Parents:
   entities:
-    - device_tracker.gradys_iphone
-    - device_tracker.kates_iphone        
+    - group.person_grady
+    - group.person_kate
 parents_and_big_kids: 
   entities:
-    - device_tracker.gradys_iphone
-    - device_tracker.kates_iphone        
-    - device_tracker.conorsiphone3
+    - group.person_grady
+    - group.person_kate
+    - group.person_conor
     - device_tracker.huntersone6plus
     - device_tracker.fisiphone
 person_grady:

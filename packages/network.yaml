@@ -110,7 +110,7 @@ sensor:
 
         gradys_iphone:
           friendly_name: 'Grady''s iPhone'
-          value_template: "{{ 'Online' if is_state('device_tracker.gradys_iphone', 'home') else 'Offline' }}"
+          value_template: "{{ 'Online' if is_state('group.person_grady', 'home') else 'Offline' }}"
 
         hunters_iphone:
           friendly_name: 'Hunter''s iPhone'
@@ -122,7 +122,7 @@ sensor:
           
         kates_iphone:
           friendly_name: 'Kate''s iPhone'
-          value_template: "{{ 'Online' if is_state('device_tracker.kates_iphone', 'home') else 'Offline' }}"
+          value_template: "{{ 'Online' if is_state('group.person_kate', 'home') else 'Offline' }}"
 
         rb260gsp:
           friendly_name: 'RB260 GSP'
