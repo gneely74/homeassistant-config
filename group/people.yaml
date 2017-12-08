@@ -3,11 +3,10 @@ Family:
     - group.person_grady
     - group.person_kate
     - group.person_conor
-    - device_tracker.huntersone6plus
+    - group.person_hunter
     - device_tracker.fisiphone
     - device_tracker.finnegansipad
     - device_tracker.kateneelysipad
-    - device_tracker.katesiphone4
 #    - device_tracker.pokemonsipad     
 Parents:
   entities:
@@ -21,15 +20,27 @@ parents_and_big_kids:
     - device_tracker.huntersone6plus
     - device_tracker.fisiphone
 person_grady:
+  name: Grady
+  icon: mdi:person
   entities:
     - device_tracker.gradys_iphone
     - device_tracker.gradysione8plus    
 person_kate:
+  name: Kate
+  icon: mdi:person
   entities:
     - device_tracker.kates_iphone
     - device_tracker.katesiphone
     - device_tracker.katesiphone4
 person_conor:
+  name: Conor
+  icon: mdi:person
   entities:
     - device_tracker.conorsiphone3
     - device_tracker.conorsiphone
+person_hunter:
+  name: Hunter
+  icon: mdi:person
+  entities:
+    - device_tracker.huntersiphone6plus
+    - device_tracker.huntersone6plus
