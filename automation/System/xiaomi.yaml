@@ -1,0 +1,35 @@
+- id: turn_off_xiaomi
+  alias: 'Turn off Xiaomi Gateway light'
+  initial_state: 'on'
+  trigger:
+   - platform: numeric_state
+     entity_id: sensor.illumination_34ce00fa5b62
+     above: 600
+  condition:
+    - condition: state
+      entity_id: light.gateway_light_34ce00fa5b62
+      state: 'on'
+  action:
+    - service: light.turn_off
+      entity_id: light.gateway_light_34ce00fa5b62
+
+- id: change_xiaomi_color
+  alias: 'Change Xiaomi color'
+  initial_state: 'on'
+  condition:
+    - condition: time
+      after: '19:15:00'
+      before: '07:45:00'
+#    - condition: state
+#      entity_id: binary_sensor.living_room_occupancy
+#      state: 'on'
+  trigger:
+   - platform: time
+     minutes: '/15'
+     seconds: 00
+  action:
+     service: light.turn_on
+     entity_id: light.gateway_light_34ce00fa5b62
+     data_template:
+       brightness: 255
+       rgb_color: ['{{ (range(0, 255)|random) }}','{{ (range(0, 255)|random) }}','{{ (range(0, 255)|random) }}']
