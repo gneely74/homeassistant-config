@@ -256,6 +256,11 @@ vacuum:
 alexa:
 dialogflow:
 
+xiaomi_aqara:
+  gateways:
+    - mac: 34:CE:00:FA:5B:62
+      key: 9B936E734A634CAC
+
 # Includes 
 intent_script: !include intent_script.yaml
 ios: !include ios.yaml
