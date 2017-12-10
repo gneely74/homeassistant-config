@@ -102,8 +102,10 @@ rules:
 
   - name: Family
     entities:
-      - group.person_grady
-      - group.person_kate
+      - device_tracker.gradys_iphone
+      - device_tracker.gradysione8plus
+      - device_tracker.katesiphone
+      - device_tracker.kates_iphone
     text_template: '${entity.state ? entity.state.replace("not_home", "away") : "undefined"}'
 
     states:
