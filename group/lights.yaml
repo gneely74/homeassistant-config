@@ -16,7 +16,7 @@ Bedroom lights:
 
 Living Room lights:
   entities:
-    - light.fireplace_light
+    - light.fireplace_light_level_level
 
 
 #Living Room Accents:
@@ -65,8 +65,8 @@ Living Room lights:
 Garage lights:
 #  control: hidden
   entities:
-    - switch.garage_light
-#    - switch.freezer_plug
+    - switch.garage_light_switch
+#    - switch.freezer_plug_switch
 
 #Hallway Lights:
 #  entities:

@@ -182,7 +182,7 @@
   action:
      service: switch.turn_on
      data:
-       entity_id: switch.garage_light
+       entity_id: switch.garage_light_switch
 
 - id: garage_lights_off
   alias: 'Turn off garage lights'
@@ -194,11 +194,11 @@
       for: '00:05:00'
   condition:
     - condition: state
-      entity_id: switch.garage_light
+      entity_id: switch.garage_light_switch
       state: 'on'
   action:
      service: switch.turn_off
-     entity_id: switch.garage_light
+     entity_id: switch.garage_light_switch
 
 - id: garage_lights_on_upon_entry
   alias: 'Turn on garage lights when entering garage'
@@ -214,11 +214,11 @@
         entity_id: sun.sun
         state: 'below_horizon'
       - condition: state
-        entity_id: switch.garage_light
+        entity_id: switch.garage_light_switch
         state: 'off'
   action:
      service: switch.turn_on
-     entity_id: switch.garage_light
+     entity_id: switch.garage_light_switch
      
 - id: frontyard_lights
   alias: 'Turn on frontyard lights'
@@ -239,8 +239,8 @@
   action:
     - service: switch.turn_on
       entity_id:
-        - switch.front_garage_light
-        - switch.front_porch_light        
+        - switch.front_garage_light_switch
+        - switch.front_porch_light_switch        
 
 - id: turn_off_front_lights_after_10min
   alias: Turn off front lights 10 minutes after last movement
@@ -262,8 +262,8 @@
   action:
     service: switch.turn_off
     entity_id: 
-      - switch.front_garage_light
-      - switch.front_porch_light      
+      - switch.front_garage_light_switch
+      - switch.front_porch_light_switch      
 
 - id: outdoor_light_at_night
   alias: Outdoor lights at night
@@ -275,10 +275,10 @@
   action:
     - service: switch.turn_on
       entity_id:
-        - switch.front_garage_light
-        - switch.front_porch_light
-        - switch.outside_den_light
-        - switch.side_of_garage_light
+        - switch.front_garage_light_switch
+        - switch.front_porch_light_switch
+        - switch.outside_den_light_switch
+        - switch.side_of_garage_light_switch
         
 - id: outdoor_light_off
   alias: Outdoor light Off
@@ -290,10 +290,10 @@
   action:
     - service: switch.turn_off
       entity_id:
-        - switch.front_garage_light
-        - switch.front_porch_light
-        - switch.outside_den_light
-        - switch.side_of_garage_light
+        - switch.front_garage_light_switch
+        - switch.front_porch_light_switch
+        - switch.outside_den_light_switch
+        - switch.side_of_garage_light_switch
 
 - id: outsides_light_off_during_the_day
   alias: Outside lights Off during the day
@@ -305,10 +305,10 @@
   action:
     - service: switch.turn_off
       entity_id:
-        - switch.front_garage_light
-        - switch.front_porch_light
-        - switch.outside_den_light
-        - switch.side_of_garage_light
+        - switch.front_garage_light_switch
+        - switch.front_porch_light_switch
+        - switch.outside_den_light_switch
+        - switch.side_of_garage_light_switch
 
 - id: close_garage_door_when_abode_is_home_or_away
   alias: 'Close garage door when Abode is Home or Away'

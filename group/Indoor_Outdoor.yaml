@@ -17,7 +17,7 @@ Interior_Lights:
 
 Exterior_Lights:
   entities:
-    - switch.outside_den_light
-    - switch.front_porch_light
-    - switch.front_garage_light
-    - switch.side_of_garage_light
+    - switch.outside_den_light_switch
+    - switch.front_porch_light_switch
+    - switch.front_garage_light_switch
+    - switch.side_of_garage_light_switch

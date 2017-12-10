@@ -146,10 +146,10 @@
     name: Outside Lights
     control: hidden
     entities:
-      - switch.outside_den_light
-      - switch.front_porch_light
-      - switch.front_garage_light
-      - switch.side_of_garage_light
+      - switch.outside_den_light_switch
+      - switch.front_porch_light_switch
+      - switch.front_garage_light_switch
+      - switch.side_of_garage_light_switch
       
   Camera Sensors:
     control: hidden
@@ -170,16 +170,16 @@
 
   living_room_lights:
     entities:
-      - light.fireplace_light
+      - light.fireplace_light_level_level
 
   Switches:
     entities:    
-#      - switch.freezer_plug
-      - switch.front_garage_light
-      - switch.front_porch_light
-      - switch.garage_light
-      - switch.outside_den_light
-      - switch.side_of_garage_light
+#      - switch.freezer_plug_switch
+      - switch.front_garage_light_switch
+      - switch.front_porch_light_switch
+      - switch.garage_light_switch
+      - switch.outside_den_light_switch
+      - switch.side_of_garage_light_switch
 
   household:
     entities:  

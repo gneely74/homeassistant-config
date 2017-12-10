@@ -12,7 +12,7 @@
 
     - platform: state
       entity_id:
-        - switch.garage_light
+        - switch.garage_light_switch
       to: 'on'
       for: '00:30:00'
 

@@ -114,7 +114,7 @@ rules:
 
   - name: plugs
     entities:
-      - switch.freezer_plug
+      - switch.freezer_plug_switch
     states:
       - state: 'on'
         class: 'plug-on'
@@ -137,8 +137,8 @@ rules:
   - name: Lights
     entities:
       - light.1b56c3
-      - light.fireplace_light
-      - switch.garage_light
+      - light.fireplace_light_level_level
+      - switch.garage_light_switch
       - group.exterior_lights
       - group.interior_lights
     states:
@@ -151,10 +151,10 @@ rules:
 
   - name: Outdoor Lights
     entities:
-      - switch.front_garage_light
-      - switch.front_porch_light
-      - switch.outside_den_light
-      - switch.side_of_garage_light
+      - switch.front_garage_light_switch
+      - switch.front_porch_light_switch
+      - switch.outside_den_light_switch
+      - switch.side_of_garage_light_switch
     states:
       - state: 'on'
         class: 'light-on'

@@ -2361,37 +2361,37 @@
        r="5"
        inkscape:label="light.1b56c3" />
     <circle
-       id="light.fireplace_light"
+       id="light.fireplace_light_level_level"
        style="fill:#ffffa6"
        cx="533.79614"
        cy="2005.4149"
        r="5"
-       inkscape:label="light.fireplace_light" />
+       inkscape:label="light.fireplace_light_level_level" />
     <circle
-       id="switch.garage_light"
+       id="switch.garage_light_switch"
        style="fill:#ffffa6"
        cx="338.70914"
        cy="2028.2822"
        r="5"
-       inkscape:label="switch.garage_light" />
+       inkscape:label="switch.garage_light_switch" />
     <path
-       id="switch.front_porch_light"
+       id="switch.front_porch_light_switch"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
        d="m 538.4729,2112.712 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
-       inkscape:label="switch.front_porch_light" />
+       inkscape:label="switch.front_porch_light_switch" />
     <path
-       id="switch.side_of_garage_light"
+       id="switch.side_of_garage_light_switch"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
        d="m 286.65204,2038.31 c 0,-2.8 2.3,-5 5,-5 v 0 10.1 c -2.7,-0.1 -5,-2.3 -5,-5.1 z"
-       inkscape:label="switch.side_of_garage_light" />
+       inkscape:label="switch.side_of_garage_light_switch" />
     <path
-       id="switch.outside_den_light"
+       id="switch.outside_den_light_switch"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
        d="m 545.93955,1748.0125 c 0,-2.8 2.3,-5 5,-5 v 0 10.1 c -2.7,-0.1 -5,-2.3 -5,-5.1 z"
-       inkscape:label="switch.outside_den_light" />
+       inkscape:label="switch.outside_den_light_switch" />
     <g
        transform="translate(15.459911,1596.3473)"
        id="poweredby">
@@ -2754,17 +2754,17 @@
          x="578.2699"
          y="1738.4664">Den</tspan></text>
     <path
-       id="switch.front_garage_light"
+       id="switch.front_garage_light_switch"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
        d="m 392.75879,2154.8702 c -2.8,0 -5,-2.3 -5,-5 v 0 h 10.1 c -0.1,2.7 -2.3,5 -5.1,5 z"
-       inkscape:label="switch.front_garage_light" />
+       inkscape:label="switch.front_garage_light_switch" />
     <path
        inkscape:connector-curvature="0"
        d="m 394.97113,2087.3349 v -1.9965 h -0.99826 v 1.9965 h -1.99653 v -1.9965 h -0.99827 v 1.9965 0 c -0.49913,0 -0.99826,0.4992 -0.99826,0.9983 v 2.7452 l 1.74696,1.747 v 1.4974 h 2.49567 v -1.4974 l 1.74696,-1.747 v -2.7452 c 0,-0.4991 -0.49913,-0.9983 -0.99827,-0.9983 z"
-       id="switch.freezer_plug"
+       id="switch.freezer_plug_switch"
        style="stroke-width:0.49913269"
-       inkscape:label="switch.freezer_plug" />
+       inkscape:label="switch.freezer_plug_switch" />
   </g>
   <line
      id="edge_camera_bottom"
