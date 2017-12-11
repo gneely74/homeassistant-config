@@ -8,3 +8,4 @@
       data_template:
         entity_id: light.1b56c3
         brightness: '{{ states.input_number.master_bright.state | int }}'
+
