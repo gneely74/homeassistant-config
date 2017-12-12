@@ -228,6 +228,8 @@ logger:
     homeassistant.components.notify: warn
     homeassistant.core: warn
     custom_components.media_player.floorplan_speaker: warn
+    homeassistant.components.http: warn
+    homeassistant.components.device_tracker.nmap_tracker: warn
 google_domains:
   domain: home.theneelyfamily.net
   username: !secret google_domains_username 
