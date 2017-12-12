@@ -201,7 +201,7 @@ notify:
 
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 logger:
-  default: info
+  default: warn
   logs:
     homeassistant.components.image_processing: critical
     homeassistant.components.python_script: warn
@@ -209,7 +209,7 @@ logger:
     homeassistant.components.camera.generic: critical
     homeassistant.components.sensor.wunderground: critical
     homeassistant.components.sensor.pi_hole: critical
-    homeassistant.components.media_player.plex: critical
+    homeassistant.components.media_player: info
     homeassistant.components.telegram_bot: critical
     homeassistant.components.sensor.darksky: critical
     pychromecast.socket_client: critical
