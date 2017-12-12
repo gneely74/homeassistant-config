@@ -141,9 +141,6 @@ ifttt:
 sun:
 
 media_player:
-  # - platform: apple_tv
-  #   host: 192.168.2.90
-  #   login_id: !secret apple_hsgid
   - platform: apple_tv
     host: 192.168.74.23
     login_id: 00000000-4356-1ee4-b790-28fd4d974dda
@@ -207,7 +204,7 @@ notify:
 
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 logger:
-  default: warn
+  default: info
   logs:
     homeassistant.components.image_processing: critical
     homeassistant.components.python_script: warn
