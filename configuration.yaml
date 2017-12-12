@@ -210,6 +210,7 @@ logger:
     homeassistant.components.media_player: info
     homeassistant.components.python_script: warn
     homeassistant.components.insteon_plm: warn
+    roomba: warn
     insteonplm.protocol: warn
     homeassistant.components.zwave: warn
     homeassistant.components.http.ban: warn
@@ -231,10 +232,11 @@ logger:
     aiohttp.server: critical
     haffmpeg.core: critical
     homeassistant.helpers.entity: critical
-google_domains:
-  domain: home.theneelyfamily.net
-  username: !secret google_domains_username 
-  password: !secret google_domains_password
+    
+#google_domains:
+#  domain: home.theneelyfamily.net
+#  username: !secret google_domains_username 
+#  password: !secret google_domains_password
 # Text to speech
 tts:
   - platform: google
