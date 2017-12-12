@@ -10,12 +10,9 @@
       above: 20
 
   condition:
-    - condition: or
-      conditions:
+    - conditions:
         - condition: template
           value_template: "{{ states('cover.garage_door_opener') == 'open' }}"
-        - condition: template
-          value_template: "{{ states('cover.small_garage') == 'open'}}"
 
   action:
     - service: script.notify_engine

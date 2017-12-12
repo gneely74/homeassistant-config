@@ -57,10 +57,10 @@ speech_engine:
               ] | random }}
           {%- endmacro -%}
           {%- macro responsibilities() -%}
-              {%if now().strftime("%a") == 'Wed' or now().strftime("%a") == 'Sun'%}
+              {%if now().strftime("%a") == 'Tue' or now().strftime("%a") == 'Fri'%}
                 Today is {{now().strftime("%A")}} and {{now().strftime("%A")}} is garbage day.
               {%endif%}
-              {%if now().strftime("%a") == 'Wed'%}
+              {%if now().strftime("%a") == 'Tue'%}
                 Both Recycling and regular Garbage goes out. Please take out all of the garbage cans tonight.
               {%endif%}
               {% if now().strftime("%j")|int % 2 != 0 %}
