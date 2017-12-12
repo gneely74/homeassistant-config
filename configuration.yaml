@@ -204,22 +204,11 @@ notify:
 
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical 
 logger:
-  default: info
+  default: warn
   logs:
-    homeassistant.components.image_processing: critical
-    homeassistant.components.python_script: warn
-    homeassistant.components.camera.synology: critical
-    homeassistant.components.camera.generic: critical
-    homeassistant.components.sensor.wunderground: critical
-    homeassistant.components.sensor.pi_hole: critical
+    homeassistant.components.automation: info  
     homeassistant.components.media_player: info
-    homeassistant.components.telegram_bot: critical
-    homeassistant.components.sensor.darksky: critical
-    pychromecast.socket_client: critical
-    aiohttp.access: critical
-    aiohttp.server: critical
-    haffmpeg.core: critical
-    homeassistant.helpers.entity: critical
+    homeassistant.components.python_script: warn
     homeassistant.components.insteon_plm: warn
     insteonplm.protocol: warn
     homeassistant.components.zwave: warn
@@ -230,7 +219,18 @@ logger:
     custom_components.media_player.floorplan_speaker: warn
     homeassistant.components.http: warn
     homeassistant.components.device_tracker: warn
-    homeassistant.components.automation: info
+    homeassistant.components.image_processing: critical
+    homeassistant.components.camera.synology: critical
+    homeassistant.components.camera.generic: critical
+    homeassistant.components.sensor.wunderground: critical
+    homeassistant.components.sensor.pi_hole: critical
+    homeassistant.components.telegram_bot: critical
+    homeassistant.components.sensor.darksky: critical
+    pychromecast.socket_client: critical
+    aiohttp.access: critical
+    aiohttp.server: critical
+    haffmpeg.core: critical
+    homeassistant.helpers.entity: critical
 google_domains:
   domain: home.theneelyfamily.net
   username: !secret google_domains_username 
