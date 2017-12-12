@@ -39,12 +39,13 @@
       data_template:
         entity_id:
           - media_player.living_room_speaker
+          - media_player.master_bedroom_speaker
           - media_player.alarm_clock
           - media_player.hall_kiosk
         media_content_id: >
           {% if now().strftime("%M")|int == 30 %}
-          https://raw.githubusercontent.com/gneely/Home-AssistantConfig/master/sounds/cuckoo-clock-01.wav
+          https://raw.githubusercontent.com/CCOSTAN/Home-AssistantConfig/master/sounds/cuckoo-clock-01.wav
           {% else %}
-          https://raw.githubusercontent.com/gneely/Home-AssistantConfig/master/sounds/cuckoo-clock-{{now().strftime("%I")}}.wav
+          https://raw.githubusercontent.com/CCOSTAN/Home-AssistantConfig/master/sounds/cuckoo-clock-{{now().strftime("%I")}}.wav
           {% endif %}
         media_content_type: audio/mp4
