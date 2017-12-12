@@ -261,6 +261,17 @@ xiaomi_aqara:
     - mac: 34:CE:00:FA:5B:62
       key: 9B936E734A634CAC
 
+google_assistant:
+  project_id: my-project-1509310722013
+  client_id: 732718099413-uermcc7avuma28qnotr9fh6g4p6gio62.apps.googleusercontent.com
+  access_token: PRmu1QQYLzmVpT2NlSo10yNGnrNO4rkrD7KUxVuHbKk51cHAlg3NukS8IKlRvozIkcdbS5h2C4Wr1UE0
+  agent_user_id: grady.neely@icloud.com
+  api_key: AIzaSyD-q33BZUOzm3PY4LRKq8qg0iEK8HM_k-k
+  exposed_domains:
+    - switch
+    - light
+    - group      
+
 # Includes 
 intent_script: !include intent_script.yaml
 ios: !include ios.yaml
