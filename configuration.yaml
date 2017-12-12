@@ -165,6 +165,9 @@ media_player:
     login_id: 00000000-075e-a453-ffa9-28d44d414e34
     name: Fiona's Apple TV
     start_off: true
+  - platform: cast
+    host: 192.168.74.32
+    name: Master Bedroom Google Home Mini
 
 nest:
   client_id: !secret nest_client_id
