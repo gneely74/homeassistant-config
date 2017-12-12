@@ -11,7 +11,7 @@
 
   condition:
     - condition: template
-        value_template: "{{ states('cover.garage_door_opener') == 'open' }}"
+      value_template: "{{ states('cover.garage_door_opener') == 'open' }}"
 
   action:
     - service: script.notify_engine
