@@ -47,7 +47,7 @@ customizer:
 
 emulated_hue:
   host_ip: 192.168.74.14
-  listen_port: 8300
+  listen_port: 80
 #  off_maps_to_on_domains:
 #    - script
 #    - scene
@@ -229,7 +229,7 @@ logger:
     homeassistant.core: warn
     custom_components.media_player.floorplan_speaker: warn
     homeassistant.components.http: warn
-    homeassistant.components.device_tracker.nmap_tracker: warn
+    homeassistant.components.device_tracker: warn
 google_domains:
   domain: home.theneelyfamily.net
   username: !secret google_domains_username 
