@@ -168,7 +168,12 @@ media_player:
   - platform: cast
     host: 192.168.74.32
     name: Master Bedroom Google Home Mini
-
+  - platform: cast
+    host: 192.168.74.34
+    name: Craftroom Google Home Mini
+  - platform: cast
+    host: 192.168.74.41
+    name: Living room Google Home Mini
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_secret
