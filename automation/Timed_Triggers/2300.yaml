@@ -28,8 +28,11 @@
      minutes: '/10'
      seconds: 00 
   action:
-     service: homeassistant.turn_on
-     entity_id: script.abodehome
+     - service: homeassistant.turn_on
+       entity_id: script.abodehome
+     - service: script.speech_engine
+       data:
+         arm_alarm: 1
       
 - id: exterior_lights_off
   alias: 'Turn off exterior Lights'
@@ -44,6 +47,6 @@
       state: 'on'
 
   action:
-     service: switch.turn_off
-     entity_id: group.exterior_lights
+     - service: switch.turn_off
+       entity_id: group.exterior_lights       
 

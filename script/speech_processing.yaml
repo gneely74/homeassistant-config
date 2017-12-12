@@ -46,14 +46,16 @@ speech_processing:
       entity_id:
         - media_player.hall_kiosk
         - media_player.master_bedroom_speaker
+        - media_player.craft_room_speaker
+        - media_player.den_speaker        
       data_template:
         volume_level: >
           {% if now().strftime("%H")|int < 12 and now().strftime("%H")|int > 6%}
           0.3
           {% elif now().strftime("%H")|int > 12 and now().strftime("%H")|int < 20%}
-          0.5
+          0.6
           {% else %}
-          0.3
+          0.4
           {% endif %}
 
 #    - service: tts.amazon_polly_say
@@ -69,6 +71,9 @@ speech_processing:
     - service: tts.google_say
       entity_id:
         - media_player.hall_kiosk
+        - media_player.master_bedroom_speaker
+        - media_player.craft_room_speaker
+        - media_player.den_speaker        
       data_template:
         message: >
           <speak>

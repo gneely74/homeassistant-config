@@ -37,6 +37,13 @@ speech_engine:
               "Time to turn on the front lights. I will take care of it."
               ] | random }}
           {%- endmacro -%}
+          {%- macro arm_alarm() -%}
+              {{ [
+              "Good night everyone.  I am arming our alarm now",
+              "It is bedtime, I am arming Abode.",
+              "Sweet dreams, I am turning on the alarm.",
+              ] | random }}
+          {%- endmacro -%}
           {%- macro responsibilities() -%}
               {%if now().strftime("%a") == 'Wed' or now().strftime("%a") == 'Sun'%}
                 Today is {{now().strftime("%A")}} and {{now().strftime("%A")}} is garbage day.
