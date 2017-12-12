@@ -276,7 +276,8 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-    - group      
+    - group  
+    - cover    
 
 # Includes 
 intent_script: !include intent_script.yaml
