@@ -202,7 +202,7 @@ notify:
       - service: ios_gradys_iphone
       - service: ios_kates_iphone
 
-# Log Severities: notset, debug, info, warn, warning, error, fatal, critical
+# Log Severities: notset, debug, info, warn, warning, error, fatal, critical 
 logger:
   default: info
   logs:
