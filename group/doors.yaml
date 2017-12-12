@@ -7,3 +7,13 @@ doors:
     - binary_sensor.den_door
     - binary_sensor.office_door
     - sensor.overflow_pantry_door
+
+entry_points:
+  name: Doors and Windows
+  entities:
+    - binary_sensor.back_door
+    - binary_sensor.front_door
+    - binary_sensor.garage_door
+    - binary_sensor.den_door
+    - binary_sensor.office_door
+    - sensor.overflow_pantry_door
