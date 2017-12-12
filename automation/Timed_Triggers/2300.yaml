@@ -32,7 +32,7 @@
        entity_id: script.abodehome
      - service: script.speech_engine
        data:
-         arm_alarm: 1
+         goodnight: 1
       
 - id: exterior_lights_off
   alias: 'Turn off exterior Lights'

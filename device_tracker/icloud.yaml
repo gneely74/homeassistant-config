@@ -1,20 +1,20 @@
 - platform: icloud
   username: !secret grady_icloud_username
   password: !secret grady_icloud_password
-- platform: icloud 
-  username: !secret kate_icloud_username
-  password: !secret kate_icloud_password
-- platform: icloud 
-  username: !secret conor_icloud_username
-  password: !secret conor_icloud_password
-- platform: icloud 
-  username: !secret hunter_icloud_username
-  password: !secret hunter_icloud_password
-- platform: icloud
-  username: !secret fiona_icloud_username
-  password: !secret fiona_icloud_password
-- platform: icloud
-  username: !secret finn_icloud_username
-  password: !secret finn_icloud_password
+#- platform: icloud 
+#  username: !secret kate_icloud_username
+#  password: !secret kate_icloud_password
+#- platform: icloud 
+#  username: !secret conor_icloud_username
+#  password: !secret conor_icloud_password
+#- platform: icloud 
+#  username: !secret hunter_icloud_username
+#  password: !secret hunter_icloud_password
+#- platform: icloud
+#  username: !secret fiona_icloud_username
+#  password: !secret fiona_icloud_password
+#- platform: icloud
+#  username: !secret finn_icloud_username
+#  password: !secret finn_icloud_password
 
 

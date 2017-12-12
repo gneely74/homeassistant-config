@@ -13,16 +13,15 @@
     - condition: or
       conditions:
         - condition: template
-          value_template: "{{ states('cover.large_garage') == 'opened' }}"
+          value_template: "{{ states('cover.garage_door_opener') == 'open' }}"
         - condition: template
-          value_template: "{{ states('cover.small_garage') == 'opened'}}"
+          value_template: "{{ states('cover.small_garage') == 'open'}}"
 
   action:
     - service: script.notify_engine
       data_template:
         value1: 'Check Garage Doors:'
-        value2: "Small: {{ states('cover.small_garage')}}"
-        value3: "Large: {{ states('cover.large_garage')}}"
+        value2: "Small: {{ states('cover.garage_door_opener')}}"
 
     - service: input_boolean.turn_on
       entity_id: input_boolean.alert_mode
@@ -31,10 +30,6 @@
       data_template:
         value1: >
           "The winds are picking up outside.  The wind speed is {{ states('sensor.dark_sky_wind_speed')|round}} miles per hour.  For safety, please close the garage doors.
-          {% if is_state('cover.large_garage', 'open') -%}
-            The Large Garage Door is open
+          {% if is_state('cover.garage_door_opener', 'open') -%}
+            The Garage Door is open
           {% endif -%}
-          {% if is_state('cover.small_garage', 'open') -%}
-            {% if is_state('cover.large_garage', 'open') -%}and
-            {%- endif %} The small Garage Door is open.
-          {% endif %}"

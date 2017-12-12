@@ -37,11 +37,23 @@ speech_engine:
               "Time to turn on the front lights. I will take care of it."
               ] | random }}
           {%- endmacro -%}
-          {%- macro arm_alarm() -%}
+          {%- macro goodnight() -%}
               {{ [
-              "Good night everyone.  I am arming our alarm now",
+              "Good night everyone.  I am arming the alarm now.",
               "It is bedtime, I am arming Abode.",
               "Sweet dreams, I am turning on the alarm.",
+              ] | random }}
+          {%- endmacro -%}
+          {%- macro arm_alarm_home() -%}
+              {{ [
+              "The alarm was just armed for home.",
+              "Alarm is armed foe home.",
+              ] | random }}
+          {%- endmacro -%}
+          {%- macro alarm_standby() -%}
+              {{ [
+              "The alarm is now disarmed.",
+              "Standby... as the alarm is placed in standby.",
               ] | random }}
           {%- endmacro -%}
           {%- macro responsibilities() -%}

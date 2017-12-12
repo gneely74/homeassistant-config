@@ -16,4 +16,3 @@ entry_points:
     - binary_sensor.garage_door
     - binary_sensor.den_door
     - binary_sensor.office_door
-    - sensor.overflow_pantry_door
