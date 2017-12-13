@@ -207,6 +207,18 @@ speech_engine:
             {{ inside_weather() }}
           {% endif %}
 
+          {% if arm_alarm_home == 1 %}
+            {{ arm_alarm_home() }}
+          {% endif %}
+
+          {% if alarm_standby == 1 %}
+            {{ alarm_standby() }}
+          {% endif %}
+
+          {% if goodnight == 1 %}
+            {{ goodnight() }}
+          {% endif %}
+
           {% if call_outside_weather == 1 and is_state('sun.sun', 'above_horizon') %}
             {{ outside_weather() }}
           {% endif %}
