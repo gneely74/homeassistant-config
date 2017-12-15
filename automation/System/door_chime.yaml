@@ -48,3 +48,14 @@
           https://home.theneelyfamily.net:8123/local/sounds/two-tone-chime.mp3
           {% endif %}
         media_content_type: audio/mp4
+
+    - service: xiaomi_aqara.play_ringtone
+      data_template:
+        gw_mac: 34:CE:00:FA:5B:62
+        ringtone_id: >
+          {% if trigger.to_state.state == 'on' %}
+          10002
+          {% else %}
+          10003
+          {% endif %}
+        ringtone_vol: 75        

@@ -55,25 +55,25 @@ speech_engine:
           {%- endmacro -%}
 
           {%- macro goodnight() -%}
-              {{ [
+            {{ [
               'Good night everyone.  I am arming the alarm now.',
               'It is bedtime, I am arming Abode.',
               'Sweet dreams, I am turning on the alarm.',
-              ] | random }}
+            ]| random }}
           {%- endmacro -%}
 
           {%- macro arm_alarm_home() -%}
-              {{ [
+            {{ [
               'The alarm was just armed for home.',
               'Alarm is armed foe home.',
-              ] | random }}
+            ]| random }}
           {%- endmacro -%}
 
           {%- macro alarm_standby() -%}
-              {{ [
+            {{ [
               'The alarm is now disarmed.',
               'Standby... as the alarm is placed in standby.',
-              ] | random }}
+            ]| random }}
           {%- endmacro -%}
 
 
