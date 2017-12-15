@@ -209,15 +209,15 @@ speech_engine:
             {{ inside_weather() }}
           {% endif %}
 
-          {% if arm_alarm_home == 1 %}
+          {% if call_arm_alarm_home == 1 %}
             {{ arm_alarm_home() }}
           {% endif %}
 
-          {% if alarm_standby == 1 %}
+          {% if call_alarm_standby == 1 %}
             {{ alarm_standby() }}
           {% endif %}
 
-          {% if goodnight == 1 %}
+          {% if call_goodnight == 1 %}
             {{ goodnight() }}
           {% endif %}
 

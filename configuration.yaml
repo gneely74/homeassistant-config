@@ -94,10 +94,10 @@ updater:
 abode:
   username: !secret abode_username
   password: !secret abode_password
+  
 # usps:
 #   username: !secret usps_username
 #   password: !secret usps_password
-#Adds Alexa and Google Home support
 
 # Enables configuration UI
 config:

@@ -35,7 +35,7 @@ abodehome:
     #   data: {"event":"AbodeHome", "value1":"Abode Home"}
     - service: script.speech_engine
       data:
-        arm_alarm_home: 1    
+        call_arm_alarm_home: 1    
 
 abodestandby:
   alias: 'Abode Standby'
@@ -53,7 +53,7 @@ abodestandby:
     #   entity_id: input_boolean.startrecording
     - service: script.speech_engine
       data:
-        alarm_standby: 1    
+        call_alarm_standby: 1    
 
 arm_security:
   alias: 'Arm Security'
