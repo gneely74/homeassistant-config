@@ -36,6 +36,9 @@ sensor:
         {% set today = now().month  ~ '/' ~ now().day ~ '/' ~ now().year %}
         {% set holiday =  value_json.MAJOR_US.dynamic[ today ] %}
       {% endif %}
+      {% if holiday | trim == "" %}
+        {% set holiday = "just a regular day." %}
+      {% endif %}
       {{ holiday }}
 
   - platform: rest
