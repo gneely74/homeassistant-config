@@ -58,4 +58,4 @@
           {% else %}
           10003
           {% endif %}
-        ringtone_vol: 75        
+        ringtone_vol: 50        

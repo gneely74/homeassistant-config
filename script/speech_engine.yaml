@@ -51,7 +51,7 @@ speech_engine:
               'It is a little past Sunset. Time to turn on the outside lights. I am on it.',
               'I will switch on the outside lights. It is getting dark outside.',
               'Time to turn on the front lights. I will take care of it.'
-            ]|random }}
+            ]| random }}
           {%- endmacro -%}
 
           {%- macro goodnight() -%}
@@ -76,18 +76,20 @@ speech_engine:
             ]| random }}
           {%- endmacro -%}
 
-
           {%- macro responsibilities() -%}
-            {% if now().strftime('%a') == 'Wed' or now().strftime('%a') == 'Sun' %}
+            {% if now().strftime('%a') == 'Mon' or now().strftime('%a') == 'Thu' %}
               Today is {{ now().strftime('%A') }} and {{ now().strftime('%A') }} is garbage day.
             {% endif %}
-            {% if now().strftime('%a') == 'Wed' %}
-              Both Recycling and regular Garbage goes out. Please take out all of the garbage cans tonight.
+            {% if now().strftime('%a') == 'Thu' %}
+             Recycling goes out. Please take out all of the recycling bins tonight.
+            {% endif %}
+            {% if now().strftime('%a') == 'Mon' %}
+             Garbage goes out. Please take out all of the garbage cans tonight.
             {% endif %}
             {% if now().strftime('%j')|int % 2 != 0 %}
-              Today is Justin's day to do the chores.
+              Today is Fiona and Deaglan's day to load the dishwasher.
             {% else %}
-              Today is Paige's day to do the chores.
+              Today is Hunter and Finn's day to load the dishwasher.
             {% endif %}
           {%- endmacro -%}
 
@@ -154,7 +156,7 @@ speech_engine:
 
           {%- macro medicine() -%}
             {% if is_state('input_boolean.medicine', 'off') -%}
-              It looks like Carlo has not taken his medicine yet. Please make sure Carlo takes his medicine now.
+              It looks like Grady has not taken his medicine yet. Please make sure Grady takes his medicine now.
             {% endif -%}
           {%- endmacro -%}
 

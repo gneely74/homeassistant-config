@@ -4,7 +4,7 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_34ce00fa5b62
-     above: 600
+     above: 500
   condition:
     - condition: state
       entity_id: light.gateway_light_34ce00fa5b62
