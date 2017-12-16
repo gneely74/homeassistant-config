@@ -11,7 +11,7 @@ fully_kiosk:
 #      - media_player.hall_kiosk
     motion_sensor: binary_sensor.hall_kiosk_motion
     plugged_sensor: binary_sensor.hall_kiosk_plugged
-#    screensaver_light: light.hall_kiosk_screensaver
+    screensaver_light: light.hall_kiosk_screensaver
     media_player: media_player.hall_kiosk
 pages:
   -  /local/custom_ui/floorplan/alarm.yaml

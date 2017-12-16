@@ -4,6 +4,8 @@ light.1b56c3:
 light.fireplace_light_level: 
   friendly_name: Fireplace Light
 
+light.ge_unknown_type5044_id3031_level:
+  friendly_name: Grady's Lamp
 
 light.gateway_light_34ce00fa5b62:
   friendly_name: Xiaomi Den Light
