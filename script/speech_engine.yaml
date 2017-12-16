@@ -86,9 +86,9 @@ speech_engine:
              Garbage goes out. Please take out all of the garbage cans tonight.
             {% endif %}
             {% if now().strftime('%j')|int % 2 != 0 %}
-              Today is Fiona and Deaglan's day to load the dishwasher.
-            {% else %}
               Today is Hunter and Finn's day to load the dishwasher.
+            {% else %}
+              Today is Fiona and Deaglan's day to load the dishwasher.
             {% endif %}
           {%- endmacro -%}
 
@@ -179,7 +179,8 @@ speech_engine:
           {%- endmacro -%}
 
           {%- macro holiday() -%}
-            {% if states.sensor.holiday.state != 'unavailable' %}
+            {% if states.sensor.holiday.state != 'unavailable
+            ' %}
               Today is {{ states.sensor.holiday.state }}.
             {% endif %}
           {%- endmacro -%}
