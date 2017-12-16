@@ -4,6 +4,8 @@ switch.outside_den_light_switch: {}
 switch.side_of_garage_light_switch: {}
 switch.freezer_plug_switch: {}
 switch.front_garage_light_switch: {}
+light.fireplace_light_level: 
+  friendly_name: Fireplace Light
 
 switch.auto_away:
   homebridge_hidden: true
@@ -22,29 +24,3 @@ switch.good_morning:
 
 switch.good_night:
   homebridge_hidden: true
-
-#switch.kitchen:
-#  icon: mdi:lightbulb-outline
-#switch.lava_lamp:
-#  icon: mdi:led-on
-#switch.wireless_charger:
-#  icon: mdi:battery-charging
-#switch.august_interior:
-#  friendly_name: Interior Bolt
-#  icon: mdi:key
-#  emulated_hue_hidden: true
-#switch.august_keyed:
-#  friendly_name: Keyed Bolt
-#  icon: mdi:key
-#  emulated_hue_hidden: true
-#switch.kitchen_nightlight:
-#  icon: mdi:theme-light-dark
-#switch.alarm_status:
-#  friendly_name: Alarm Status indicator
-#  icon: mdi:security-home
-#switch.balcony_christmas_lights:
-#  friendly_name: Christmas Lights
-#  icon: mdi:led-outline
-#switch.christmas_tree:
-#  friendly_name: Christmas Tree
-#  icon: mdi:pine-tree
