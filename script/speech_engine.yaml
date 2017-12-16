@@ -88,7 +88,7 @@ speech_engine:
             {% if now().strftime('%j')|int % 2 != 0 %}
               Today is Hunter and Finn's day to load the dishwasher.
             {% else %}
-              Today is Fiona and Deaglan's day to load the dishwasher.
+              Today is Fiona and Declan's day to load the dishwasher.
             {% endif %}
           {%- endmacro -%}
 
