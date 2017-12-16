@@ -60,9 +60,7 @@ speech_processing:
         entity_id: >
           {{ media_player }}
         message: >-
-          <speak>
             {{ speech_message }}
-          </speak>
         cache: true
 
     - service: input_boolean.turn_off
