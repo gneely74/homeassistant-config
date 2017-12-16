@@ -34,7 +34,7 @@ abodehome:
     # - service: ifttt.trigger
     #   data: {"event":"AbodeHome", "value1":"Abode Home"}
     - service: script.speech_engine
-      data_template:
+      data:
         call_arm_alarm_home: 1    
 
 abodestandby:
@@ -52,7 +52,7 @@ abodestandby:
     # - service: homeassistant.turn_off
     #   entity_id: input_boolean.startrecording
     - service: script.speech_engine
-      data_template:
+      data:
         call_alarm_standby: 1    
 
 arm_security:
