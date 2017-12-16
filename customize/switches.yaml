@@ -1,11 +1,11 @@
-switch.front_porch_light_switch: {}
+switch.front_porch_light_switch:   
+  homebridge_hidden: false
 switch.garage_light_switch: {}
-switch.outside_den_light_switch: {}
+switch.outside_den_light_switch:
+  homebridge_hidden: false
 switch.side_of_garage_light_switch: {}
 switch.freezer_plug_switch: {}
 switch.front_garage_light_switch: {}
-light.fireplace_light_level: 
-  friendly_name: Fireplace Light
 
 switch.auto_away:
   homebridge_hidden: true
