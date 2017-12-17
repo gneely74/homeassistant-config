@@ -98,6 +98,8 @@ speech_engine:
 
           {%- macro outside_weather() -%}
             Outside, it is going to be {{ states('sensor.dark_sky_minutely_summary') }}
+            {{ states('sensor.dark_sky_daily_summary') }}
+            The current temperature is {{ states('sensor.dark_sky_temperature') }}
           {%- endmacro -%}
 
           {%- macro light_check() -%}
