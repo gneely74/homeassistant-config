@@ -1,4 +1,6 @@
-switch.freezer_plug_switch: {}
+switch.freezer_plug_switch:
+  friendly_name: Garage Freezer Plug
+  homebridge_hidden: true
 
 switch.auto_away:
   homebridge_hidden: true
