@@ -1,46 +1,20 @@
 Family:
   entities:
-    - group.person_grady
-    - group.person_kate
-    - group.person_conor
-    - group.person_hunter
-    - device_tracker.fisiphone
-    - device_tracker.finnegansipad
-    - device_tracker.kateneelysipad
-#    - device_tracker.pokemonsipad     
+    - binary_sensor.conor
+    - binary_sensor.hunter
+    - binary_sensor.finn
+    - binary_sensor.grady
+    - binary_sensor.kate
+    - binary_sensor.deaglan
+    - binary_sensor.fiona
 Parents:
   entities:
-    - group.person_grady
-    - group.person_kate
+    - binary_sensor.grady
+    - binary_sensor.kate
 parents_and_big_kids: 
   entities:
-    - group.person_grady
-    - group.person_kate
-    - group.person_conor
-    - device_tracker.huntersone6plus
-    - device_tracker.fisiphone
-person_grady:
-  name: Grady
-  icon: mdi:account
-  entities:
-    - device_tracker.gradys_iphone
-    - device_tracker.gradysione8plus    
-person_kate:
-  name: Kate
-  icon: mdi:account
-  entities:
-    - device_tracker.kates_iphone
-    - device_tracker.katesiphone
-    - device_tracker.katesiphone4
-person_conor:
-  name: Conor
-  icon: mdi:account
-  entities:
-    - device_tracker.conorsiphone3
-    - device_tracker.conorsiphone
-person_hunter:
-  name: Hunter
-  icon: mdi:account
-  entities:
-    - device_tracker.huntersiphone6plus
-    - device_tracker.huntersone6plus
+    - binary_sensor.grady
+    - binary_sensor.kate
+    - binary_sensor.conor
+    - binary_sensor.hunter
+    - binary_sensor.fiona

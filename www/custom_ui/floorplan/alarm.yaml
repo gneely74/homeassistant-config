@@ -102,10 +102,8 @@ rules:
 
   - name: Family
     entities:
-      - device_tracker.gradys_iphone
-      - device_tracker.gradysione8plus
-      - device_tracker.katesiphone
-      - device_tracker.kates_iphone
+      - binary_sensor.grady
+      - binary_sensor.kate
     text_template: '${entity.state ? entity.state.replace("not_home", "away") : "undefined"}'
 
     states:

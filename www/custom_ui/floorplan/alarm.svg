@@ -2559,14 +2559,14 @@
       <text
          y="238.25488"
          x="37.000637"
-         id="device_tracker.gradys_iphone"
-         inkscape:label="device_tracker.gradys_iphone"
+         id="binary_sensor.grady"
+         inkscape:label="binary_sensor.grady"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e7376b;stroke-width:0.85892123;enable-background:new">home1</text>
       <text
          y="238.25488"
          x="252.77171"
-         id="device_tracker.kates_iphone"
-         inkscape:label="device_tracker.kates_iphone"
+         id="binary_sensor.grady"
+         inkscape:label="binary_sensor.grady"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#bdf271;stroke-width:0.85892123;enable-background:new">home2</text>
       <text
          y="302.35693"

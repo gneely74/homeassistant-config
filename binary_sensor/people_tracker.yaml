@@ -1,6 +1,6 @@
 - platform: bayesian
   prior: 0.8
-  name: 'Kate Home'
+  name: 'Kate'
   probability_threshold: 0.92
   observations:
     - entity_id: 'device_tracker.katesiphone4'
@@ -8,17 +8,17 @@
       prob_given_false: 0.2
       platform: 'state'
       to_state: 'home'
-    - entity_id: 'device_tracker.kates_iphone'
+    - entity_id: 'device_tracker.katesiphone'
       prob_given_true: 0.99
       prob_given_false: 0.01
       platform: 'state'
       to_state: 'home'
 - platform: bayesian
   prior: 0.75
-  name: 'Grady Home'
+  name: 'Grady'
   probability_threshold: 0.92
   observations:
-    - entity_id: 'device_tracker.grady_ot_iphone'
+    - entity_id: 'device_tracker.gradys_iphone'
       prob_given_true: 0.8
       prob_given_false: 0.2
       platform: 'state'
@@ -30,7 +30,7 @@
       to_state: 'home'
 - platform: bayesian
   prior: 0.8
-  name: 'Conor Home'
+  name: 'Conor'
   probability_threshold: 0.92
   observations:
     - entity_id: 'device_tracker.conorsiphone3'
@@ -45,17 +45,22 @@
       to_state: 'home'
 - platform: bayesian
   prior: 0.8
-  name: 'Hunter Home'
+  name: 'Hunter'
   probability_threshold: 0.92
   observations:
     - entity_id: 'device_tracker.huntersone6plus'
       prob_given_true: 0.8
       prob_given_false: 0.2
       platform: 'state'
+      to_state: 'home'  
+    - entity_id: 'device_tracker.huntersone6plus'
+      prob_given_true: 0.99
+      prob_given_false: 0.01
+      platform: 'state'
       to_state: 'home'
 - platform: bayesian
   prior: 0.8
-  name: 'Fiona Home'
+  name: 'Fiona'
   probability_threshold: 0.92
   observations:
     - entity_id: 'device_tracker.fisiphone'
@@ -63,3 +68,28 @@
       prob_given_false: 0.01
       platform: 'state'
       to_state: 'home'
+- platform: bayesian
+  prior: 0.8
+  name: 'Deaglan'
+  probability_threshold: 0.92
+  observations:
+    - entity_id: 'device_tracker.kateneelysipad'
+      prob_given_true: 0.99
+      prob_given_false: 0.01
+      platform: 'state'
+      to_state: 'home'      
+- platform: bayesian
+  prior: 0.8
+  name: 'Finn'
+  probability_threshold: 0.92
+  observations:
+    - entity_id: 'device_tracker.finnegansipad_2'
+      prob_given_true: 0.8
+      prob_given_false: 0.2
+      platform: 'state'
+      to_state: 'home'  
+    - entity_id: 'device_tracker.finnegansipad'
+      prob_given_true: 0.99
+      prob_given_false: 0.01
+      platform: 'state'
+      to_state: 'home'            
