@@ -255,16 +255,16 @@ tts:
     
 mqtt:
   broker: 127.0.0.1
-  port: 1883
+  port: !secret mqtt_port
   client_id: home-assistant-1
 #  username: !secret mqtt_username
 #  password: !secret mqtt_password
 
 vacuum:
   - platform: roomba
-    host: 192.168.74.166
-    username: 3144460001026600
-    password: :1:1502753718:HmTNObX3r6oqlVay
+    host: !secret roomba_host
+    username: !secret roomba_username
+    password: !secret roomba_password
     name: Roomba 890
     
 alexa:
@@ -272,15 +272,15 @@ dialogflow:
 
 xiaomi_aqara:
   gateways:
-    - mac: 34:CE:00:FA:5B:62
-      key: 9B936E734A634CAC
+    - mac: !secret xiaomi_1_mac
+      key: !secret xiaomi_1_key
 
 google_assistant:
-  project_id: my-project-1509310722013
-  client_id: 732718099413-uermcc7avuma28qnotr9fh6g4p6gio62.apps.googleusercontent.com
-  access_token: PRmu1QQYLzmVpT2NlSo10yNGnrNO4rkrD7KUxVuHbKk51cHAlg3NukS8IKlRvozIkcdbS5h2C4Wr1UE0
-  agent_user_id: grady.neely@icloud.com
-  api_key: AIzaSyD-q33BZUOzm3PY4LRKq8qg0iEK8HM_k-k
+  project_id: !secret google_assistant_project_id
+  client_id: !secret google_assistant_client_id
+  access_token: !secret google_assistant_access_token
+  agent_user_id: !secret google_assistant_agent_user_id
+  api_key: !secret google_assistant_api_key
   exposed_domains:
     - switch
     - light

@@ -23,12 +23,7 @@
       prob_given_false: 0.2
       platform: 'state'
       to_state: 'home'
-    - entity_id: 'device_tracker.gradysiphone'
-      prob_given_true: 0.99
-      prob_given_false: 0.01
-      platform: 'state'
-      to_state: 'home'
-    - entity_id: 'device_tracker.gradys_iphone'
+    - entity_id: 'device_tracker.gradysione8plus'
       prob_given_true: 0.99
       prob_given_false: 0.01
       platform: 'state'
