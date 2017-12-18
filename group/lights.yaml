@@ -16,7 +16,7 @@ Bedroom lights:
 
 Living Room lights:
   entities:
-    - light.fireplace_light_level_level
+    - light.fireplace_light_level
 
 
 #Living Room Accents:

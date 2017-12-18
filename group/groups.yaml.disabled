@@ -170,7 +170,7 @@
 
   living_room_lights:
     entities:
-      - light.fireplace_light_level_level
+      - light.fireplace_light_level
 
   Switches:
     entities:    

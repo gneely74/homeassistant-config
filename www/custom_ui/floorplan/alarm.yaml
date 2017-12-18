@@ -139,7 +139,7 @@ rules:
   - name: Lights
     entities:
       - light.1b56c3
-      - light.fireplace_light_level_level
+      - light.fireplace_light_level
       - switch.garage_light_switch
       - group.exterior_lights
       - group.interior_lights

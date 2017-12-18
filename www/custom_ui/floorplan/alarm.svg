@@ -2361,12 +2361,12 @@
        r="5"
        inkscape:label="light.1b56c3" />
     <circle
-       id="light.fireplace_light_level_level"
+       id="light.fireplace_light_level"
        style="fill:#ffffa6"
        cx="533.79614"
        cy="2005.4149"
        r="5"
-       inkscape:label="light.fireplace_light_level_level" />
+       inkscape:label="light.fireplace_light_level" />
     <circle
        id="switch.garage_light_switch"
        style="fill:#ffffa6"
