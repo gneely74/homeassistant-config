@@ -102,8 +102,8 @@ rules:
 
   - name: Family
     entities:
-      - binary_sensor.grady
-      - binary_sensor.kate
+      - sensor.grady
+      - sensor.kate
     text_template: '${entity.state ? entity.state.replace("on", "home") : "away"}'
 
     states:
