@@ -104,7 +104,7 @@ rules:
     entities:
       - binary_sensor.grady
       - binary_sensor.kate
-    text_template: '${entity.state ? entity.state.replace("not_home", "away") : "undefined"}'
+    text_template: '${entity.state ? entity.state.replace("on", "home") : "away"}'
 
     states:
       - state: 'home'
