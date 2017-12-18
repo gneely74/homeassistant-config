@@ -1,20 +1,20 @@
 Family:
   entities:
-    - binary_sensor.conor
-    - binary_sensor.hunter
-    - binary_sensor.finn
-    - binary_sensor.grady
-    - binary_sensor.kate
-    - binary_sensor.deaglan
-    - binary_sensor.fiona
+    - sensor.conor
+    - sensor.hunter
+    - sensor.finn
+    - sensor.grady
+    - sensor.kate
+    - sensor.deaglan
+    - sensor.fiona
 Parents:
   entities:
-    - binary_sensor.grady
-    - binary_sensor.kate
+    - sensor.grady
+    - sensor.kate
 parents_and_big_kids: 
   entities:
-    - binary_sensor.grady
-    - binary_sensor.kate
-    - binary_sensor.conor
-    - binary_sensor.hunter
-    - binary_sensor.fiona
+    - sensor.grady
+    - sensor.kate
+    - sensor.conor
+    - sensor.hunter
+    - sensor.fiona
