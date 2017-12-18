@@ -1,3 +1,24 @@
+sensor.conor:
+  icon: mdi:account
+
+sensor.finn:
+  icon: mdi:account
+
+sensor.fiona:
+  icon: mdi:account
+
+sensor.grady:
+  icon: mdi:account
+
+sensor.hunter:
+  icon: mdi:account
+
+sensor.deaglan:
+  icon: mdi:account
+  
+sensor.kate:
+  icon: mdi:account
+
 sensor.dark_sky_icon: {}  
 sensor.grady_to_home:
   friendly_name: 'Commute to Home'
