@@ -1,0 +1,31 @@
+sensor:
+  - platform: template
+    sensors:
+
+        conor:
+          friendly_name: 'Conor''s iPhone'
+          value_template: "{{ 'Home' if is_state('binary_sensor.conor', 'off') else states('device_tracker.conorsiphone') }}"
+
+        finn:
+          friendly_name: 'Finn''s iPad'
+          value_template: "{{ 'Home' if is_state('binary_sensor.finn', 'off') else states('device_tracker.finnegansipad') }}"
+
+        fiona:
+          friendly_name: 'Fiona''s iPhone'
+          value_template: "{{ 'Home' if is_state('binary_sensor.fiona', 'off') else states('device_tracker.fisiphone') }}"
+
+        grady:
+          friendly_name: 'Grady''s iPhone'
+          value_template: "{{ 'Home' if is_state('binary_sensor.grady', 'off') else states('device_tracker.gradys_iphone') }}"
+
+        hunter:
+          friendly_name: 'Hunter''s iPhone'
+          value_template: "{{ 'Home' if is_state('binary_sensor.hunter', 'off') else states('device_tracker.huntersiphone6plus') }}"
+
+        deaglan:
+          friendly_name: 'Deaglan''s iPad'
+          value_template: "{{ 'Home' if is_state('binary_sensor.deaglan', 'off') else states('device_tracker.kateneelysipad') }}"
+          
+        kate:
+          friendly_name: 'Kate''s iPhone'
+          value_template: "{{ 'Home' if is_state('binary_sensor.kate', 'off') else states('device_tracker.katesiphone') }}"

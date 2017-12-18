@@ -96,34 +96,6 @@ sensor:
           friendly_name: 'Boy''s Room Apple TV'
           value_template: "{{ 'Online' if is_state('device_tracker.boysrooappletv2', 'home') else 'Offline' }}"
 
-        conors_iphone:
-          friendly_name: 'Conor''s iPhone'
-          value_template: "{{ 'Online' if is_state('device_tracker.conorsiphone3', 'home') else 'Offline' }}"
-
-        finnegans_ipad:
-          friendly_name: 'Finn''s iPad'
-          value_template: "{{ 'Online' if is_state('device_tracker.pokemonsipad', 'home') else 'Offline' }}"
-
-        fionas_iphone:
-          friendly_name: 'Fiona''s iPhone'
-          value_template: "{{ 'Online' if is_state('device_tracker.fisiphone', 'home') else 'Offline' }}"
-
-        gradys_iphone:
-          friendly_name: 'Grady''s iPhone'
-          value_template: "{{ 'Online' if is_state('group.person_grady', 'home') else 'Offline' }}"
-
-        hunters_iphone:
-          friendly_name: 'Hunter''s iPhone'
-          value_template: "{{ 'Online' if is_state('device_tracker.huntersone6plus', 'home') else 'Offline' }}"
-
-        deaglans_ipad:
-          friendly_name: 'Deaglan''s iPad'
-          value_template: "{{ 'Online' if is_state('device_tracker.kateneelysipad', 'home') else 'Offline' }}"
-          
-        kates_iphone:
-          friendly_name: 'Kate''s iPhone'
-          value_template: "{{ 'Online' if is_state('group.person_kate', 'home') else 'Offline' }}"
-
         rb260gsp:
           friendly_name: 'RB260 GSP'
           value_template: "{{ 'Online' if is_state('device_tracker.rb260gsp', 'home') else 'Offline' }}"
