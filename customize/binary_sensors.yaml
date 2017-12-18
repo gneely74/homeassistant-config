@@ -25,3 +25,19 @@ binary_sensor.iss:
 #  custom_ui_state_card: state-card-floorplan
 #  config:
 #    config: /local/custom_ui/floorplan/floorplan.yaml
+
+binary_sensor.grady:
+  hidden: true
+binary_sensor.kate:
+  hidden: true
+binary_sensor.conor:
+  hidden: true
+binary_sensor.hunter:
+  hidden: true
+binary_sensor.fiona:
+  hidden: true
+binary_sensor.finn:
+  hidden: true
+binary_sensor.deaglan:
+  hidden: true
+    
