@@ -21,7 +21,7 @@
     - condition: template
       value_template: "{{ trigger.event.data.entity_id.split('.')[0] == 'light' }}"
     - condition: template
-      value_template: "{{ trigger.event.data.entity_id.split('_')[0] != 'light.hall_kiosk_screensaver' }}"
+      value_template: "{{ trigger.event.data.entity_id.split('_')[0] != 'light.hall' }}"
     - condition: template
       value_template: "{{ trigger.event.data.entity_id.split('_')[0] != 'light.couch' }}"
     - condition: template
