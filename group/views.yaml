@@ -3,8 +3,8 @@ default_view:
   view: yes
   icon: mdi:home-assistant
   entities:
-#    - group.person_grady
-#    - group.person_kate
+#    - sensor.grady
+#    - sensor.kate
     - persistent_notification.update_available
     - group.home_modes
     - group.family    

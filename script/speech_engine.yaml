@@ -127,7 +127,7 @@ speech_engine:
           {%- macro window_check() -%}
             {% if states.group.entry_points.state != 'off' -%}
               {% set comma = joiner(', ') %}
-              The
+              The 
               {% for state in states.binary_sensor if state.state == 'on' and state.attributes.device_class == 'opening' -%}
               {%- endfor %}
               {% for group in states.binary_sensor|groupby('state') -%}
@@ -136,13 +136,13 @@ speech_engine:
                   {{ entity.attributes.friendly_name }}
                 {%- endfor -%}
               {% endfor %}
-               need to be closed.
+                need to be closed.
             {%- endif -%}
           {%- endmacro -%}
 
           {%- macro garage_check() -%}
             {% if states.group.garage_doors.state !='closed' -%}
-              The
+              The 
               {%- for state in states.cover -%}
               {%- endfor %}
               {% for group in states.cover|groupby('state') -%}
@@ -151,7 +151,7 @@ speech_engine:
                   {{ entity.attributes.friendly_name }}
                 {%- endfor -%}
               {%- endfor %}
-              need to be closed.
+               need to be closed.
             {%- endif -%}
           {%- endmacro -%}
 

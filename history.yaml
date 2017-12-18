@@ -1,8 +1,8 @@
   include:
     entities:
       - binary_sensor.garage_door
-      - group.person_grady
-      - group.person_kate
+      - sensor.grady
+      - sensor.kate
       - device_tracker.conorsiphone3
       - device_tracker.huntersone6plus
       - device_tracker.fisiphone

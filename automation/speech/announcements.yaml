@@ -7,8 +7,8 @@
   trigger:
     - platform: state
       entity_id:
-        - group.person_grady
-        - group.person_kate
+        - sensor.grady
+        - sensor.kate
       from: 'not_home'
       to: 'home'
       for: '00:02:00'
