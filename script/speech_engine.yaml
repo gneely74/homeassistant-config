@@ -77,13 +77,13 @@ speech_engine:
 
           {%- macro responsibilities() -%}
             {% if now().strftime('%a') == 'Mon' or now().strftime('%a') == 'Thu' %}
-              Today is {{ now().strftime('%A') }} and {{ now().strftime('%A') }} is garbage day.
+              Today is {{ now().strftime('%A') }} and {{ now().strftime('%A') }} is one of the garbage days.
             {% endif %}
             {% if now().strftime('%a') == 'Thu' %}
-             Recycling goes out. Please take out all of the recycling bins tonight.
+              Recycling goes out. Please take out all of the recycling bins tonight.
             {% endif %}
             {% if now().strftime('%a') == 'Mon' %}
-             Garbage goes out. Please take out all of the garbage cans tonight.
+              Please take out all of the garbage cans tonight.
             {% endif %}
             {% if now().strftime('%j')|int % 2 != 0 %}
               Today is Hunter and Finn's day to load the dishwasher.
