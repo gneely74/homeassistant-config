@@ -20,7 +20,8 @@ switch.good_morning:
 switch.good_night:
   homebridge_hidden: true
 
-
+switch.garage_light_switch:
+  friendly_name: Garage Light
 switch.outside_den_light_switch:
   friendly_name: Outside Den Light
 switch.front_porch_light_switch:
