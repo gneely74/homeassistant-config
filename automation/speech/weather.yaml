@@ -31,6 +31,15 @@
 
 - alias: 'Turn outside lights on when cloudy'
   hide_entity: true
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+      - condition: state
+        entity_id: group.exterior_lights
+        state: 'off'  
   trigger:
     - platform: numeric_state
       entity_id: sensor.dark_sky_cloud_coverage
@@ -53,3 +62,35 @@
       entity_id:
         - group.exterior_lights
       
+- alias: 'Turn outside lights off when clearing'
+  hide_entity: true
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+      - condition: state
+        entity_id: group.exterior_lights
+        state: 'on'  
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.dark_sky_cloud_coverage
+      below: 70
+
+  action:
+    - service: script.notify_engine
+      data_template:
+        value1: 'The sky seems to be clearing up.  I will turn off the outside lighting now.'
+        value2: ' '
+        value3: ' '
+
+    - service: script.speech_engine
+      data_template:
+        value1: 'The sky seems to be clearing up.  I will turn off the outside lighting now.'
+        value2: ' '
+        value3: ' '
+
+    - service: switch.turn_on
+      entity_id:
+        - group.exterior_lights      

@@ -244,51 +244,51 @@
     entity_id: 
       - switch.front_garage_light_switch
       - switch.front_porch_light_switch      
-
-- id: outdoor_light_at_night
-  alias: Outdoor lights at night
-  initial_state: 'on'
-  trigger:
-    platform: sun
-    event: sunset
-    offset: "00:05:00"
-  action:
-    - service: switch.turn_on
-      entity_id:
-        - switch.front_garage_light_switch
-        - switch.front_porch_light_switch
-        - switch.outside_den_light_switch
-        - switch.side_of_garage_light_switch
-        
-- id: outdoor_light_off
-  alias: Outdoor light Off
-  initial_state: 'on'
-  trigger:
-    platform: sun
-    event: sunset
-    offset: "03:30:00"
-  action:
-    - service: switch.turn_off
-      entity_id:
-        - switch.front_garage_light_switch
-        - switch.front_porch_light_switch
-        - switch.outside_den_light_switch
-        - switch.side_of_garage_light_switch
-
-- id: outsides_light_off_during_the_day
-  alias: Outside lights Off during the day
-  initial_state: 'on'
-  trigger:
-    platform: state
-    entity_id: sun.sun
-    to: 'above_horizon'
-  action:
-    - service: switch.turn_off
-      entity_id:
-        - switch.front_garage_light_switch
-        - switch.front_porch_light_switch
-        - switch.outside_den_light_switch
-        - switch.side_of_garage_light_switch
+#
+#- id: outdoor_light_at_night
+#  alias: Outdoor lights at night
+#  initial_state: 'on'
+#  trigger:
+#    platform: sun
+#    event: sunset
+#    offset: "00:05:00"
+#  action:
+#    - service: switch.turn_on
+#      entity_id:
+#        - switch.front_garage_light_switch
+#        - switch.front_porch_light_switch
+#        - switch.outside_den_light_switch
+#        - switch.side_of_garage_light_switch
+#        
+#- id: outdoor_light_off
+#  alias: Outdoor light Off
+#  initial_state: 'on'
+#  trigger:
+#    platform: sun
+#    event: sunset
+#    offset: "03:30:00"
+#  action:
+#    - service: switch.turn_off
+#      entity_id:
+#        - switch.front_garage_light_switch
+#        - switch.front_porch_light_switch
+#        - switch.outside_den_light_switch
+#        - switch.side_of_garage_light_switch
+#
+#- id: outsides_light_off_during_the_day
+#  alias: Outside lights Off during the day
+#  initial_state: 'on'
+#  trigger:
+#    platform: state
+#    entity_id: sun.sun
+#    to: 'above_horizon'
+#  action:
+#    - service: switch.turn_off
+#      entity_id:
+#        - switch.front_garage_light_switch
+#        - switch.front_porch_light_switch
+#        - switch.outside_den_light_switch
+#        - switch.side_of_garage_light_switch
 
 - id: close_garage_door_when_abode_is_home_or_away
   alias: 'Close garage door when Abode is Home or Away'
