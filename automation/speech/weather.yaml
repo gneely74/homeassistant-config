@@ -30,7 +30,7 @@
 
 
 - alias: 'Turn outside lights on when cloudy'
-  hide_entity: true
+  hide_entity: false
   condition:
     condition: and
     conditions:
@@ -63,7 +63,7 @@
         - group.exterior_lights
       
 - alias: 'Turn outside lights off when clearing'
-  hide_entity: true
+  hide_entity: false
   condition:
     condition: and
     conditions:
