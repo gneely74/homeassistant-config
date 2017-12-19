@@ -52,7 +52,7 @@ speech_processing:
           {% elif now().strftime('%H')|int > 12 and now().strftime('%H')|int < 20 %}
             0.75
           {% else %}
-            0.3
+            0.5
           {% endif %}
 
     - service: tts.google_say
