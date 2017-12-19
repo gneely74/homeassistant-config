@@ -102,31 +102,31 @@ sensor:
 
         conor:
           friendly_name: 'Conor'
-          value_template: "{{ 'Home' if is_state('binary_sensor.conor', 'off') else states('device_tracker.conorsiphone') }}"
+          value_template: "{{ 'Home' if is_state('binary_sensor.conor', 'off') else states('device_tracker.conorsiphone')|replace('_', ' ') }}"
 
         finn:
           friendly_name: 'Finn'
-          value_template: "{{ 'Home' if is_state('binary_sensor.finn', 'off') else states('device_tracker.finnegansipad') }}"
+          value_template: "{{ 'Home' if is_state('binary_sensor.finn', 'off') else states('device_tracker.finnegansipad')|replace('_', ' ') }}"
 
         fiona:
           friendly_name: 'Fiona'
-          value_template: "{{ 'Home' if is_state('binary_sensor.fiona', 'off') else states('device_tracker.fisiphone') }}"
+          value_template: "{{ 'Home' if is_state('binary_sensor.fiona', 'off') else states('device_tracker.fisiphone')|replace('_', ' ') }}"
 
         grady:
           friendly_name: 'Grady'
-          value_template: "{{ 'Home' if is_state('binary_sensor.grady', 'off') else states('device_tracker.gradys_iphone') }}"
+          value_template: "{{ 'Home' if is_state('binary_sensor.grady', 'off') else states('device_tracker.gradys_iphone')|replace('_', ' ') }}"
 
         hunter:
           friendly_name: 'Hunter'
-          value_template: "{{ 'Home' if is_state('binary_sensor.hunter', 'off') else states('device_tracker.huntersiphone6plus') }}"
+          value_template: "{{ 'Home' if is_state('binary_sensor.hunter', 'off') else states('device_tracker.huntersiphone6plus')|replace('_', ' ') }}"
 
         deaglan:
           friendly_name: 'Deaglan'
-          value_template: "{{ 'Home' if is_state('binary_sensor.deaglan', 'off') else states('device_tracker.kateneelysipad') }}"
+          value_template: "{{ 'Home' if is_state('binary_sensor.deaglan', 'off') else states('device_tracker.kateneelysipad')|replace('_', ' ') }}"
           
         kate:
           friendly_name: 'Kate'
-          value_template: "{{ 'Home' if is_state('binary_sensor.kate', 'off') else states('device_tracker.katesiphone') }}"        
+          value_template: "{{ 'Home' if is_state('binary_sensor.kate', 'off') else states('device_tracker.katesiphone')|replace('_', ' ') }}"        
 
 #-------------------------------------------
 
