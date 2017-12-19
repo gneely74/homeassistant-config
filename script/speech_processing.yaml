@@ -57,12 +57,22 @@ speech_processing:
             0.45
           {% endif %}
 
-    - service: tts.google_say
+#    - service: tts.google_say
+#      data_template:
+#        entity_id: >
+#          {{ media_player }}
+#        message: >-
+#            {{ speech_message }}
+#        cache: true
+
+    - service: tts.amazon_polly_say
       data_template:
         entity_id: >
           {{ media_player }}
         message: >-
+            <speak>
             {{ speech_message }}
+            </speak>
         cache: true
 
     - service: input_boolean.turn_off
