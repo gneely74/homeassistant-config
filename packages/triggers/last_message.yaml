@@ -32,7 +32,7 @@ automation:
         to: 'on'
 
     action:
-      - service: tts.google_say
+      - service: tts.amazon_polly_say
         entity_id:
           - media_player.hall_kiosk
         data_template:

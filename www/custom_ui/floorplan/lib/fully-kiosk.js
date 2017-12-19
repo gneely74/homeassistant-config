@@ -396,7 +396,7 @@ if (typeof window.FullyKiosk !== 'function') {
         }
 
         /*
-        if ((event.data.domain === 'tts') && (event.data.service === 'google_say')) {
+        if ((event.data.domain === 'tts') && (event.data.service === 'amazon_polly_say')) {
           if (this.fullyInfo.mediaPlayerEntityId === event.data.service_data.entity_id) {
             this.logDebug('FULLY_KIOSK', 'Playing TTS using Fully Kiosk');
             this.playTextToSpeech(event.data.service_data.message);
