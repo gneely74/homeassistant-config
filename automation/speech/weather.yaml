@@ -27,3 +27,25 @@
         call_garage_check: 1
 
     - service: script.emergency
+
+
+- alias: 'Turn outside lights on when cloud'
+  hide_entity: true
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.dark_sky_cloud_coverage
+      above: 85
+
+  action:
+    - service: script.notify_engine
+      data_template:
+        value1: 'Its getting very cloudy outside.  I will turn on the outside lighting.'
+        value2: ' '
+        value3: ' '
+
+    - service: script.speech_engine
+      data_template:
+        value1: 'Its getting very cloudy outside.  I will turn on the outside lighting.'
+        value2: ' '
+        value3: ' '
+      
