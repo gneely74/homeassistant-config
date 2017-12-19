@@ -1,4 +1,4 @@
-- name: Gentle Touch
+- name: Gentle Touch Hair Salon
   latitude: !secret latitude_gentle_touch
   longitude: !secret longitude_gentle_touch
   radius: 200

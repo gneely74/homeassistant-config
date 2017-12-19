@@ -104,7 +104,7 @@ rules:
     entities:
       - sensor.grady
       - sensor.kate
-    text_template: '${entity.state ? entity.state.replace("on", "home") : "away"}'
+    text_template: '${entity.state}'
 
     states:
       - state: 'home'
