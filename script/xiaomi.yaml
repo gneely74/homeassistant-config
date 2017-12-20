@@ -5,7 +5,13 @@ xiaomi_play_sel_sound:
       entity_id: input_boolean.mute_gateway_sounds
       state: 'off'
     - service: xiaomi_aqara.play_ringtone
-      data_template:
+      data_template: >
+        gw_mac: !secret 
+         {%- if states.input_select.xiaomi_gateway -%}
+           "{{ states.input_select.xiaomi_gateway.state.split('-')[0] }}"
+         {%- else -%}
+           xiaomi_1_mac
+         {%- endif -%}
         gw_mac: !secret "{{ states.input_select.xiaomi_gateway.state.split('-')[0] }}"
         ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
         ringtone_vol: "{{ states.input_number.gateway_volume.state|int }}"
@@ -28,8 +34,13 @@ xiaomi_play_sel_sound_single:
       entity_id: input_boolean.mute_gateway_sounds
       state: 'off'
     - service: xiaomi_aqara.play_ringtone
-      data_template:
-        gw_mac: !secret "{{ states.input_select.xiaomi_gateway.state.split('-')[0] }}"
+      data_template: >
+        gw_mac: !secret 
+         {%- if states.input_select.xiaomi_gateway -%}
+           "{{ states.input_select.xiaomi_gateway.state.split('-')[0] }}"
+         {%- else -%}
+           xiaomi_1_mac
+         {%- endif -%}
         ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
         ringtone_vol: "{{ states.input_number.gateway_volume.state|int }}"
 

@@ -64,3 +64,5 @@
     name: Xiaomi Aqara Gateway  
     options:
       - "xiaomi_1_mac - Den Xiaomi Gateway"
+      - "xiaomi_2_mac - Boy's Room Xiaomi Gateway"
+      - "xiaomi_3_mac - Fiona's Room Xiaomi Gateway"            
