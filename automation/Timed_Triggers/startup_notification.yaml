@@ -11,7 +11,7 @@
     - service: script.notify_engine
       data_template:
         value1: 'Startup: Home Assistant is Up and Running!'
-        who: 'carlo'
+        who: 'grady'
 
     - service: light.turn_off
       entity_id: group.hallway_lights

@@ -23,6 +23,8 @@ notify_engine:
             notify.ios_gradys_iphone
           {% elif who == 'parents' %}
             notify.ios_parents
+          {% elif who == 'family' %}
+            notify.ios_family
           {% else %}
             notify.ios_family
           {% endif %}
