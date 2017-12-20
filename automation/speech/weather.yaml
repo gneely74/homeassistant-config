@@ -11,8 +11,8 @@
 
   action:
     - service: script.notify_engine
+      who: 'family'    
       data_template:
-        who: 'family'    
         value1: 'VERY HIGH WINDS:'
         value2: "{{ states('sensor.dark_sky_wind_speed')}}"
         value3: ' '
@@ -48,8 +48,8 @@
 
   action:
     - service: script.notify_engine
+      who: 'parents'    
       data_template:
-        who: 'parents'    
         value1: 'Its getting very cloudy outside.  I will turn on the outside lighting.'
         value2: ' '
         value3: ' '
@@ -82,8 +82,8 @@
 
   action:
     - service: script.notify_engine
+      who: 'parents'
       data_template:
-        who: 'parents'
         value1: 'The sky seems to be clearing up.  I will turn off the outside lighting now.'
         value2: ' '
         value3: ' '
