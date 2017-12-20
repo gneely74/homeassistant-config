@@ -2,7 +2,7 @@ Sensors:
   entities:
     - binary_sensor.grady_home
     - binary_sensor.kate_home
-    - binary_sensor.hunter_hom
+    - binary_sensor.hunter_home
     - binary_sensor.fiona_home
     - binary_sensor.conor_home
     

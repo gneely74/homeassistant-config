@@ -143,10 +143,12 @@
        - binary_sensor.master_bedroom_camera_sound_detected
      from: 'off'
      to: 'on'
+
   action:
-    - service: notify.ios
+    - service: script.notify_engine
+      who: parents
       data_template:
-        message: "Check {{ trigger.entity_id.split('.')[1].split('_')[0] }} camera."
+        value1: "Check {{ trigger.entity_id.split('.')[1].split('_')[0] }} camera."
         data:
           push:
             category: camera
