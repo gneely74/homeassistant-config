@@ -40,11 +40,11 @@
     - service: script.speech_engine
       data_template:
         value1: >
-         {%- if states.sensor.dark_sky_precip == 'rain' -%}
+         {%- if states('sensor.dark_sky_precip') == 'rain' -%}
            It is now raining. There will be states.sensor.dark_sky_minutely_summary    
-         {%- elif states.sensor.dark_sky_precip == 'snow'-%}
+         {%- elif states('sensor.dark_sky_precip') == 'snow' -%}
            It is now snowing. There will be states.sensor.dark_sky_minutely_summary
-         {%- elif states.sensor.dark_sky_precip == 'sleet'-%}
+         {%- elif states('sensor.dark_sky_precip') == 'sleet' -%}
            It is now sleeting. There will be states.sensor.dark_sky_minutely_summary
          {%- else -%}
            The precipitation has ended.
