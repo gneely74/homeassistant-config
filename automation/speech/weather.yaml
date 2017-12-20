@@ -30,16 +30,25 @@
 
 #############
 
-- alias: "Minutely Summary Change"
+- alias: "Precipitation"
   hide_entity: false
   trigger:
     - platform: state
       entity_id:
-        - sensor.dark_sky_minutely_summary
+        - sensor.dark_sky_precip
   action:
     - service: script.speech_engine
       data_template:
-        value1: "{{ states('sensor.dark_sky_minutely_summary')}}"
+        value1: >
+         {%- if states.sensor.dark_sky_precip == 'rain' -%}
+           It is now raining. There will be states.sensor.dark_sky_minutely_summary    
+         {%- elif states.sensor.dark_sky_precip == 'snow'-%}
+           It is now snowing. There will be states.sensor.dark_sky_minutely_summary
+         {%- elif states.sensor.dark_sky_precip == 'sleet'-%}
+           It is now sleeting. There will be states.sensor.dark_sky_minutely_summary
+         {%- else -%}
+           The precipitation has ended.
+         {%- endif -%}    
         value2: ' '
         value3: ' '
         
