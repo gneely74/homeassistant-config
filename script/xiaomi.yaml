@@ -4,7 +4,7 @@ xiaomi_play_sel_sound:
     - condition: state
       entity_id: input_boolean.mute_gateway_sounds
       state: 'off'
-    - service: xiaomi.play_ringtone
+    - service: xiaomi_aqara.play_ringtone
       data_template:
         gw_mac: !secret xiaomi_1_mac
         ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
@@ -27,7 +27,7 @@ xiaomi_play_sel_sound_single:
     - condition: state
       entity_id: input_boolean.mute_gateway_sounds
       state: 'off'
-    - service: xiaomi.play_ringtone
+    - service: xiaomi_aqara.play_ringtone
       data_template:
         gw_mac: !secret xiaomi_1_mac
         ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
