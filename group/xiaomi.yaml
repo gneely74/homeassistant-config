@@ -1,0 +1,9 @@
+xiaomi:
+  entities:
+    - input_boolean.mute_gateway_sounds
+    - input_number.gateway_volume
+    - input_number.loop_delay
+    - input_select.gateway_sound
+    - light.gateway_light_34ce00fa5b62
+
+    
