@@ -28,6 +28,21 @@
 
     - service: script.emergency
 
+#############
+
+- alias: "Minutely Summary Change"
+  hide_entity: false
+  trigger:
+    - platform: state
+      entity_id:
+        - sensor.dark_sky_minutely_summary
+  action:
+    - service: script.speech_engine
+      data_template:
+        value1: "{{ states('sensor.dark_sky_wind_speed')}}"
+        value2: ' '
+        value3: ' '
+        
 
 - alias: 'Turn outside lights on when cloudy'
   hide_entity: false
