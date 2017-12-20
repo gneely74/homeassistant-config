@@ -342,7 +342,7 @@
     - service: light.turn_on
       data:
         entity_id: group.all_lights
-    - service: notify.ios
+    - service: notify.ios_parents
       data_template:
         title: "Alarm!"
         message: "The {{ trigger.to_state.name }} was changed to {{ trigger.to_state.state }} while no one is home - {{ as_timestamp(now()) | timestamp_custom('%I:%M:%S %p %d-%b-%Y', true) }}"

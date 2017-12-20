@@ -8,7 +8,7 @@
     - platform: event
       event_type: abode_alarm
   action:
-    - service: notify.ios
+    - service: notify.ios_parents
       data:
         message: 'Abode alarm triggered!'
         data:
@@ -145,10 +145,9 @@
      to: 'on'
 
   action:
-    - service: script.notify_engine
-      who: parents
+    - service: notify.ios_parents
       data_template:
-        value1: "Check {{ trigger.entity_id.split('.')[1].split('_')[0] }} camera."
+        message: "Check {{ trigger.entity_id.split('.')[1].split('_')[0] }} camera."
         data:
           push:
             category: camera
