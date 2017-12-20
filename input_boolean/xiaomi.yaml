@@ -1,0 +1,5 @@
+### Input boolean to mute gateway sound ###
+input_boolean:
+  mute_gateway_sounds:
+    name: Mute
+    icon: mdi:volume-off

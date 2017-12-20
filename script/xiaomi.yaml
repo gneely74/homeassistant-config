@@ -1,0 +1,35 @@
+xiaomi_play_sel_sound:
+  alias: "Loop Play Sound"
+  sequence:
+    - condition: state
+      entity_id: input_boolean.mute_gateway_sounds
+      state: 'off'
+    - service: xiaomi.play_ringtone
+      data_template:
+        gw_mac: !secret xiaomi_1_mac
+        ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
+        ringtone_vol: "{{ states.input_slider.gateway_volume.state|int }}"
+    - delay: '00:00:{{ states.input_slider.loop_delay.state | int }}'
+    - service: script.play_sel_sound_loop
+
+xiaomi_play_sel_sound_loop:
+  alias: "Play selected sound in Loop"
+  sequence:
+    - condition: state
+      entity_id: input_boolean.mute_gateway_sounds
+      state: 'off'
+    - delay: '00:00:{{ states.input_slider.loop_delay.state | int }}'
+    - service: script.play_sel_sound
+
+xiaomi_play_sel_sound_single:
+  alias: "Single Play Sound"
+  sequence:
+    - condition: state
+      entity_id: input_boolean.mute_gateway_sounds
+      state: 'off'
+    - service: xiaomi.play_ringtone
+      data_template:
+        gw_mac: !secret xiaomi_1_mac
+        ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
+        ringtone_vol: "{{ states.input_slider.gateway_volume.state|int }}"
+

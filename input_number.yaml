@@ -7,3 +7,22 @@ master_bright:
   min: 0
   max: 255
   step: 10
+
+### Input slider to control gateway volume ###
+input_slider:
+  gateway_volume:
+    name: Volume
+    initial: 10
+    min: 0
+    max: 100
+    step: 2
+    icon: mdi:volume-high
+
+### Input slider to control loop delay ###
+  loop_delay:
+    name: "Loop Delay"
+    initial: 1
+    min: 0
+    max: 15
+    step: 1
+    icon: mdi:loop
