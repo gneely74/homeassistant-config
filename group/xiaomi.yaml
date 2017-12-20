@@ -1,4 +1,6 @@
 xiaomi:
+  name: Xiaomi Aqara
+  control: hidden
   entities:
     - input_boolean.mute_gateway_sounds
     - input_number.gateway_volume

@@ -52,10 +52,15 @@
       - "27 - MusicBox"
       - "28 - Orange"
       - "29 - Thinker"
-      - "10001 - Alarm Sound 3"
-      - "10002 - Beep 2x"
-      - "10003 - Time beep 3x"
-      - "10004 - Alarm Sound 1"
-      - "10005 - Alarm Sound 2"
-      - "10006 - Time beeps long"      
+      - "10001 - "
+      - "10002 - One tone chime"
+      - "10003 - Two tone chime"
+      - "10004 - "
+      - "10005 - "
+      - "10006 - "      
     icon: mdi:music-note
+    
+  xiaomi_gateway:
+    name: Xiaomi Aqara Gateway  
+    options:
+      - "xiaomi_1_mac - Den Xiaomi Gateway"

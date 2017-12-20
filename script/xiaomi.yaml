@@ -6,7 +6,7 @@ xiaomi_play_sel_sound:
       state: 'off'
     - service: xiaomi_aqara.play_ringtone
       data_template:
-        gw_mac: !secret xiaomi_1_mac
+        gw_mac: !secret "{{ states.input_select.xiaomi_gateway.state.split('-')[0] }}"
         ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
         ringtone_vol: "{{ states.input_number.gateway_volume.state|int }}"
     - delay: '00:00:{{ states.input_number.loop_delay.state | int }}'
@@ -29,7 +29,7 @@ xiaomi_play_sel_sound_single:
       state: 'off'
     - service: xiaomi_aqara.play_ringtone
       data_template:
-        gw_mac: !secret xiaomi_1_mac
+        gw_mac: !secret "{{ states.input_select.xiaomi_gateway.state.split('-')[0] }}"
         ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
         ringtone_vol: "{{ states.input_number.gateway_volume.state|int }}"
 
