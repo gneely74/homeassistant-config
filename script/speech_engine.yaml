@@ -71,7 +71,7 @@ speech_engine:
           {%- macro alarm_standby() -%}
             {{ [
               'The alarm is now disarmed.',
-              'Standby... as the alarm is placed in standby.',
+              'I am now disarming the alarm.',
             ]| random }}
           {%- endmacro -%}
 
