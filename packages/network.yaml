@@ -205,7 +205,6 @@ automation:
           value1: 'Device Status:'
           value2: "{{ trigger.to_state.attributes.friendly_name }} is "
           value3: "{{ trigger.to_state.state }}"
-        who: 'grady'
 
       - service: script.speech_engine
         data_template:
