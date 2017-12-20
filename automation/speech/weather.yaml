@@ -39,7 +39,7 @@
   action:
     - service: script.speech_engine
       data_template:
-        value1: "{{ states('sensor.dark_sky_wind_speed')}}"
+        value1: "{{ states('sensor.dark_sky_minutely_summary')}}"
         value2: ' '
         value3: ' '
         
