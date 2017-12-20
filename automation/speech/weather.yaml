@@ -11,11 +11,11 @@
 
   action:
     - service: script.notify_engine
-      who: 'family'    
       data_template:
         value1: 'VERY HIGH WINDS:'
         value2: "{{ states('sensor.dark_sky_wind_speed')}}"
         value3: ' '
+      who: 'family'    
 
     - service: input_boolean.turn_on
       entity_id: input_boolean.alert_mode
@@ -48,11 +48,11 @@
 
   action:
     - service: script.notify_engine
-      who: 'parents'    
       data_template:
         value1: 'Its getting very cloudy outside.  I will turn on the outside lighting.'
         value2: ' '
         value3: ' '
+      who: 'parents'    
 
     - service: script.speech_engine
       data_template:
@@ -82,11 +82,11 @@
 
   action:
     - service: script.notify_engine
-      who: 'parents'
       data_template:
         value1: 'The sky seems to be clearing up.  I will turn off the outside lighting now.'
         value2: ' '
         value3: ' '
+      who: 'parents'
 
     - service: script.speech_engine
       data_template:
