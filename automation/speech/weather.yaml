@@ -106,6 +106,6 @@
         value2: ' '
         value3: ' '
 
-    - service: switch.turn_on
+    - service: switch.turn_off
       entity_id:
         - group.exterior_lights      
