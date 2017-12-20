@@ -19,10 +19,10 @@ input_slider:
     icon: mdi:volume-high
 
 ### Input slider to control loop delay ###
-  loop_delay:
-    name: "Loop Delay"
-    initial: 1
-    min: 0
-    max: 15
-    step: 1
-    icon: mdi:loop
+loop_delay:
+  name: "Loop Delay"
+  initial: 1
+  min: 0
+  max: 15
+  step: 1
+  icon: mdi:loop
