@@ -216,7 +216,7 @@ logger:
     homeassistant.components.insteon_plm: warn
     roomba: warn
     insteonplm.protocol: warn
-    homeassistant.components.zwave: debug
+    homeassistant.components.zwave: warn
     homeassistant.components.http.ban: warn
     homeassistant.components.ios: warn
     homeassistant.components.notify: warn

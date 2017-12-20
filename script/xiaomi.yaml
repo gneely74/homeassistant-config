@@ -12,7 +12,6 @@ xiaomi_play_sel_sound:
          {%- else -%}
            xiaomi_1_mac
          {%- endif -%}
-        gw_mac: !secret "{{ states.input_select.xiaomi_gateway.state.split('-')[0] }}"
         ringtone_id: "{{ states.input_select.gateway_sound.state.split('-')[0] }}"
         ringtone_vol: "{{ states.input_number.gateway_volume.state|int }}"
     - delay: '00:00:{{ states.input_number.loop_delay.state | int }}'
