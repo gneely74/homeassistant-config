@@ -1,15 +1,27 @@
 ##################################
 
-- alias: "A Camera Detected a face"
+- alias: "The Entryway Camera Detected a face"
   hide_entity: false
   trigger:
     - platform: state
-      entity_id: binary_sensor.entryway_camera_person_detected, binary_sensor.master_bedroom_camera_person_detected
+      entity_id: binary_sensor.master_bedroom_camera_person_detected
       to: 'on'
   action:
     - service: script.speech_engine
       data_template: 
-        value1: > 
-         'It looks like someone has walked by my {{ trigger.event.data.entity_id|replace('_camera_person_detected', '')|replace('_', ' ') }} camera.'
+        value1: 'It looks like someone has walked by my entryway camera.'
         value2: ' '
         value3: ' '
+        
+- alias: "The Master bedroom Camera Detected a face"
+  hide_entity: false
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.master_bedroom_camera_person_detected
+      to: 'on'
+  action:
+    - service: script.speech_engine
+      data_template: 
+        value1: 'It looks like someone has walked by my master bedroom camera.'
+        value2: ' '
+        value3: ' '        
