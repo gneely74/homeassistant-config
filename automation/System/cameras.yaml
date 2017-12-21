@@ -4,7 +4,7 @@
   hide_entity: false
   trigger:
     - platform: state
-      entity_id: binary_sensor.master_bedroom_camera_person_detected
+      entity_id: binary_sensor.entryway_camera_person_detected
       to: 'on'
   action:
     - service: script.speech_engine
