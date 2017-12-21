@@ -26,6 +26,16 @@ weather:
     - sensor.dark_sky_cloud_coverage
     - sensor.dark_sky_uv_index
     - sensor.dark_sky_wind_speed
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.dark_sky_daily_max_precip_intensity
+    - sensor.dark_sky_daily_temperatureHigh
+    - sensor.dark_sky_daily_temperatureLow
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_temperature_max
+    - sensor.dark_sky_temperature_min    
+    - sensor.dark_sky_apparent_temperature_min
+    - sensor.dark_sky_apparent_temperature_max        
     - sensor.moon
     - binary_sensor.iss
     - sensor.launch_window
@@ -33,6 +43,7 @@ weather:
     - group.thermostats
     - weather.weather
     - camera.wundergroundradar
+    - camera.wu_doppler_weather    
 
 cameras:
   name: Cameras
