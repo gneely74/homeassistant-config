@@ -1,0 +1,17 @@
+##################################
+
+- alias: "Entryway Detected a face"
+  hide_entity: false
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.entryway_camera_person_detected
+        - binary_sensor.master_bedroom_camera_person_detected
+        to: 'off'
+  action:
+    - service: script.speech_engine
+      data_template: 
+        value1: > 
+         'It looks like someone has walked by my {{ trigger.event.data.entity_id|replace('_camera_person_detected', '')|replace('_', ' ') }} camera.'
+        value2: ' '
+        value3: ' '
