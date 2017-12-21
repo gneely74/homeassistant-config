@@ -38,7 +38,7 @@ weather:
     - sensor.dark_sky_apparent_temperature_max        
     - sensor.moon
     - binary_sensor.iss
-    - sensor.launch_window
+#    - sensor.launch_window
     - group.room_sensors
     - group.thermostats
     - weather.weather

@@ -175,7 +175,7 @@ speech_engine:
           {%- endmacro -%}
 
           {%- macro holiday() -%}
-            {% if states.sensor.holiday.state != 'unavailable' %}
+            {% if states.sensor.holiday.state != 'unavailable' and states.sensor.holiday.state != '' %}
               Today is {{ states.sensor.holiday.state }}.
             {% endif %}
           {%- endmacro -%}
