@@ -1,11 +1,11 @@
 ##################################
 
-- alias: "Entryway Detected a face"
+- alias: "A Camera Detected a face"
   hide_entity: false
   trigger:
     - platform: state
       entity_id: binary_sensor.entryway_camera_person_detected, binary_sensor.master_bedroom_camera_person_detected
-      to: 'off'
+      to: 'on'
   action:
     - service: script.speech_engine
       data_template: 
