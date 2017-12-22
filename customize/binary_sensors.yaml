@@ -13,7 +13,11 @@ binary_sensor.turn_on_outside_lights:
   hidden: true
 binary_sensor.office_door: {}
 binary_sensor.back_door: {} 
-
+binary_sensor.motion_sensor_158d0001a40761:
+  friendly_name: Master Bedroom Motion
+binary_sensor.motion_sensor_158d0001643f5f:
+  friendly_name: Living Room Motion
+  
 binary_sensor.iss:
   friendly_name: 'ISS Visibility'
   emulated_hue_hidden: True
