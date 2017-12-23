@@ -265,10 +265,6 @@ svg, svg * {
   stroke-width: 10;
   stroke-opacity: 0.25;
 }
-.light-blue-on:hover {
-  transform-origin: center;
-  transform: scale(3);
-}
 
 .light-on {
   fill: yellow !important;
