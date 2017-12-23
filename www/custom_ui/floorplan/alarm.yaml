@@ -202,6 +202,8 @@ rules:
       - binary_sensor.motion_sensor_158d0001a40761
       - binary_sensor.motion_sensor_158d0001643f5f
       - binary_sensor.hall_kiosk_motion
+      - binary_sensor.entryway_camera_person_detected
+      - binary_sensor.master_bedroom_camera_motion_detected
     states:
       - state: 'on'
         class: 'presence-on'

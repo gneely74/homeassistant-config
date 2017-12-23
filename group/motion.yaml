@@ -8,3 +8,6 @@ motion:
     - binary_sensor.master_bedroom_camera_motion_detected
     - binary_sensor.master_bedroom_camera_person_detected
     - binary_sensor.master_bedroom_camera_sound_detected
+    - binary_sensor.motion_sensor_158d0001a40761
+    - binary_sensor.motion_sensor_158d0001643f5f
+    - binary_sensor.hall_kiosk_motion

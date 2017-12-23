@@ -42,13 +42,13 @@
      inkscape:window-height="855"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="4.5010744"
-     inkscape:cx="542.65831"
-     inkscape:cy="163.37256"
+     inkscape:zoom="1.0046978"
+     inkscape:cx="511.62356"
+     inkscape:cy="295.83"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
-     inkscape:current-layer="surface188"
+     inkscape:current-layer="Left_Buttons"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -2722,6 +2722,17 @@
          d="m 506.19434,522.93815 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,5 h 3 a 2,2 0 0 1 2,2 v 5.5 h -1.5 v 7.5 h -4 v -7.5 h -1.5 v -5.5 a 2,2 0 0 1 2,-2 m 10.5,-5 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,20 v -6 h -3 l 2.59,-7.59 c 0.25,-0.82 1.01,-1.41 1.91,-1.41 0.9,0 1.66,0.59 1.91,1.41 l 2.59,7.59 h -3 v 6 z"
          id="binary_sensor.motion_sensor_158d0001643f5f"
          inkscape:label="binary_sensor.motion_sensor_158d0001643f5f" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 452.12064,644.66419 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,5 h 3 a 2,2 0 0 1 2,2 v 5.5 h -1.5 v 7.5 h -4 v -7.5 h -1.5 v -5.5 a 2,2 0 0 1 2,-2 m 10.5,-5 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,20 v -6 h -3 l 2.59,-7.59 c 0.25,-0.82 1.01,-1.41 1.91,-1.41 0.9,0 1.66,0.59 1.91,1.41 l 2.59,7.59 h -3 v 6 z"
+         id="binary_sensor.entryway_camera_person_detected"
+         inkscape:label="binary_sensor.entryway_camera_person_detected" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 647.04016,294.15221 a 1.0063994,0.8739193 0 0 1 1.0064,0.87392 1.0063994,0.8739193 0 0 1 -1.0064,0.87392 1.0063994,0.8739193 0 0 1 -1.0064,-0.87392 1.0063994,0.8739193 0 0 1 1.0064,-0.87392 m -0.7548,2.1848 h 1.5096 a 1.0063994,0.8739193 0 0 1 1.0064,0.87391 v 2.40328 h -0.7548 v 3.2772 h -2.0128 v -3.2772 h -0.7548 v -2.40328 a 1.0063994,0.8739193 0 0 1 1.0064,-0.87391 m 5.2836,-2.1848 a 1.0063994,0.8739193 0 0 1 1.0064,0.87392 1.0063994,0.8739193 0 0 1 -1.0064,0.87392 1.0063994,0.8739193 0 0 1 -1.0064,-0.87392 1.0063994,0.8739193 0 0 1 1.0064,-0.87392 m -0.7548,8.73919 v -2.62176 h -1.5096 l 1.30328,-3.31652 c 0.1258,-0.35831 0.50824,-0.61611 0.96112,-0.61611 0.45288,0 0.83531,0.2578 0.96111,0.61611 l 1.30328,3.31652 h -1.50959 v 2.62176 z"
+         id="- binary_sensor.master_bedroom_camera_motion_detected"
+         inkscape:label="binary_sensor.master_bedroom_camera_motion_detected"
+         style="stroke-width:0.46891147" />
     </g>
     <path
        style="fill:#616161;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.27527118"
@@ -2843,13 +2854,13 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-     x="623.86224"
-     y="217.50502"
+     x="624.56604"
+     y="212.05057"
      id="text763-73"><tspan
        sodipodi:role="line"
        id="tspan861"
-       x="623.86224"
-       y="217.50502">Closet</tspan></text>
+       x="624.56604"
+       y="212.05057">Closet</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"

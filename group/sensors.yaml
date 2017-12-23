@@ -5,4 +5,10 @@ Sensors:
     - binary_sensor.hunter_home
     - binary_sensor.fiona_home
     - binary_sensor.conor_home
+
+Light Level Sensors:
+  entities:
+    - sensor.illumination_158d0001643f5f
+    - sensor.illumination_158d0001a40761
+
     
