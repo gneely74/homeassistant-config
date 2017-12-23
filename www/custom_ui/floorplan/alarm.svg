@@ -42,9 +42,9 @@
      inkscape:window-height="855"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="1.1252686"
-     inkscape:cx="328.38347"
-     inkscape:cy="230.33897"
+     inkscape:zoom="4.5010744"
+     inkscape:cx="494.4476"
+     inkscape:cy="156.26315"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
@@ -2356,8 +2356,8 @@
     <circle
        id="light.1b56c3"
        style="fill:#ffffa6"
-       cx="675.58649"
-       cy="1735.4733"
+       cx="673.58649"
+       cy="1733.4733"
        r="5"
        inkscape:label="light.1b56c3" />
     <circle
@@ -2712,6 +2712,16 @@
            x="70.169815"
            y="486.6864">All Interior Lights</tspan>
       </text>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 684.59571,235.00118 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,5 h 3 a 2,2 0 0 1 2,2 v 5.5 h -1.5 v 7.5 h -4 v -7.5 h -1.5 v -5.5 a 2,2 0 0 1 2,-2 m 10.5,-5 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,20 v -6 h -3 l 2.59,-7.59 c 0.25,-0.82 1.01,-1.41 1.91,-1.41 0.9,0 1.66,0.59 1.91,1.41 l 2.59,7.59 h -3 v 6 z"
+         id="path2-7"
+         inkscape:label="binary_sensor.motion_sensor_158d0001a40761" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 506.19434,522.93815 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,5 h 3 a 2,2 0 0 1 2,2 v 5.5 h -1.5 v 7.5 h -4 v -7.5 h -1.5 v -5.5 a 2,2 0 0 1 2,-2 m 10.5,-5 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,20 v -6 h -3 l 2.59,-7.59 c 0.25,-0.82 1.01,-1.41 1.91,-1.41 0.9,0 1.66,0.59 1.91,1.41 l 2.59,7.59 h -3 v 6 z"
+         id="path2-9"
+         inkscape:label="binary_sensor.motion_sensor_158d0001643f5f" />
     </g>
     <path
        style="fill:#616161;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.27527118"
@@ -2783,13 +2793,13 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-     x="652.52057"
-     y="158.75119"
+     x="648.52057"
+     y="156.75119"
      id="text763-7"><tspan
        sodipodi:role="line"
        id="tspan819"
-       x="652.52057"
-       y="158.75119">Master Bedroom</tspan></text>
+       x="648.52057"
+       y="156.75119">Master Bedroom</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -2928,12 +2938,12 @@
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      x="477.39417"
-     y="461.46732"
+     y="441.46732"
      id="text763-8-4-2"><tspan
        sodipodi:role="line"
        id="tspan1031"
        x="477.39417"
-       y="461.46732">Living Room</tspan></text>
+       y="441.46732">Living Room</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.33333349px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"

@@ -199,8 +199,8 @@ rules:
 
   - name: Presence
     entities:
-      - binary_sensor.sleepnumber_grady_grady_is_in_bed
-      - binary_sensor.sleepnumber_grady_kate_is_in_bed
+      - binary_sensor.motion_sensor_158d0001a40761
+      - binary_sensor.motion_sensor_158d0001643f5f
     states:
       - state: 'on'
         class: 'presence-on'
