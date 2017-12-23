@@ -201,6 +201,7 @@ rules:
     entities:
       - binary_sensor.motion_sensor_158d0001a40761
       - binary_sensor.motion_sensor_158d0001643f5f
+      - binary_sensor.hall_kiosk_motion
     states:
       - state: 'on'
         class: 'presence-on'

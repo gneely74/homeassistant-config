@@ -31,6 +31,10 @@ sensor.evening_commute:
   icon: mdi:car
 alarm_control_panel.abode_alarm:
   entity_picture: /local/Abode.jpg
+sensor.illumination_158d0001643f5f:
+  friendly_name: Living Room Light Sensor
+sensor.illumination_158d0001a40761:
+  friendly_name: Master Bedroom Light Sensor    
 
 sensor.dark_sky_cloud_coverage:
   friendly_name: 'Cloud Coverage'

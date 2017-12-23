@@ -43,12 +43,12 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="4.5010744"
-     inkscape:cx="494.4476"
-     inkscape:cy="156.26315"
+     inkscape:cx="542.65831"
+     inkscape:cy="163.37256"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Left_Buttons"
+     inkscape:current-layer="surface188"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -2775,6 +2775,12 @@
        id="switch.freezer_plug_switch"
        style="stroke-width:0.49913269"
        inkscape:label="switch.freezer_plug_switch" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 564.33466,2013.6964 a 1.1897359,1.0224556 0 0 1 1.18973,1.0225 1.1897359,1.0224556 0 0 1 -1.18973,1.0225 1.1897359,1.0224556 0 0 1 -1.18974,-1.0225 1.1897359,1.0224556 0 0 1 1.18974,-1.0225 m -0.8923,2.5562 h 1.7846 a 1.1897359,1.0224556 0 0 1 1.18974,1.0224 v 2.8118 h -0.89231 v 3.8342 h -2.37947 v -3.8342 h -0.8923 v -2.8118 a 1.1897359,1.0224556 0 0 1 1.18974,-1.0224 m 6.24611,-2.5562 a 1.1897359,1.0224556 0 0 1 1.18974,1.0225 1.1897359,1.0224556 0 0 1 -1.18974,1.0225 1.1897359,1.0224556 0 0 1 -1.18974,-1.0225 1.1897359,1.0224556 0 0 1 1.18974,-1.0225 m -0.8923,10.2246 v -3.0674 h -1.78461 l 1.54071,-3.8802 c 0.14872,-0.4192 0.60082,-0.7208 1.1362,-0.7208 0.53538,0 0.98748,0.3016 1.1362,0.7208 l 1.54071,3.8802 h -1.78461 v 3.0674 z"
+       id="binary_sensor.hall_kiosk_motion"
+       inkscape:label="binary_sensor.hall_kiosk_motion"
+       style="stroke-width:0.55146444" />
   </g>
   <line
      id="edge_camera_bottom"
