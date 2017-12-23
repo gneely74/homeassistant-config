@@ -213,7 +213,7 @@ logger:
     homeassistant.components.automation: info  
     homeassistant.components.media_player: info
     homeassistant.components.python_script: warn
-    homeassistant.components.insteon_plm: warn
+    homeassistant.components.insteon_plm: debug
     roomba: warn
     insteonplm.protocol: warn
     homeassistant.components.zwave: warn
