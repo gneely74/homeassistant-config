@@ -43,8 +43,8 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="4.0187912"
-     inkscape:cx="548.9021"
-     inkscape:cy="361.41748"
+     inkscape:cx="518.04705"
+     inkscape:cy="331.55776"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
@@ -2795,7 +2795,7 @@
     <path
        id="light.gateway_light_34ce00fa5b62"
        inkscape:connector-curvature="0"
-       style="fill:#ff6600;stroke-width:0.45202792"
+       style="fill:#999999;stroke-width:0.45202792"
        d="m 557.39322,1808.7842 c 0,1.4203 -0.92646,2.5363 -2.01403,2.5363 v 0 -5.1234 c 1.08757,0.051 2.01403,1.1667 2.01403,2.5871 z"
        inkscape:label="light.gateway_light_34ce00fa5b62" />
   </g>
