@@ -9,7 +9,7 @@
   action:
     - service: script.speech_engine
       data_template: 
-        value1: 'It looks like someone has walked by my entryway camera.'
+        value1: 'It looks like someone is coming to visit.'
         value2: ' '
         value3: ' '
         

@@ -13,6 +13,21 @@
     - service: light.turn_off
       entity_id: light.gateway_light_34ce00fa5b62
 
+- id: turn_on_xiaomi
+  alias: 'Turn on Xiaomi Gateway light'
+  initial_state: 'on'
+  trigger:
+   - platform: numeric_state
+     entity_id: sensor.illumination_34ce00fa5b62
+     below: 480
+  condition:
+    - condition: state
+      entity_id: light.gateway_light_34ce00fa5b62
+      state: 'off'
+  action:
+    - service: light.turn_on
+      entity_id: light.gateway_light_34ce00fa5b62
+
 - id: change_xiaomi_color
   alias: 'Change Xiaomi color'
   initial_state: 'on'
