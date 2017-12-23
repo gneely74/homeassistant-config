@@ -125,7 +125,7 @@ rules:
 
   - name: custom_switches
     entities:
-      - switch.pool_deck
+      - light.gateway_light_34ce00fa5b62
     states:
       - state: 'on'
         class: 'light-blue-on'

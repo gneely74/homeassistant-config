@@ -42,13 +42,13 @@
      inkscape:window-height="855"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="1.0046978"
-     inkscape:cx="264.78316"
-     inkscape:cy="295.83"
+     inkscape:zoom="4.0187912"
+     inkscape:cx="548.9021"
+     inkscape:cy="361.41748"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Left_Buttons"
+     inkscape:current-layer="surface188"
      units="px"
      inkscape:measure-start="0,0"
      inkscape:measure-end="0,0"
@@ -2390,7 +2390,7 @@
        id="switch.outside_den_light_switch"
        inkscape:connector-curvature="0"
        style="fill:#ffffa6"
-       d="m 545.93955,1748.0125 c 0,-2.8 2.3,-5 5,-5 v 0 10.1 c -2.7,-0.1 -5,-2.3 -5,-5.1 z"
+       d="m 545.93955,1748.1125 c 0,2.8 2.3,5 5,5 v 0 -10.1 c -2.7,0.1 -5,2.3 -5,5.1 z"
        inkscape:label="switch.outside_den_light_switch" />
     <g
        transform="translate(15.459911,1596.3473)"
@@ -2792,6 +2792,12 @@
        id="binary_sensor.hall_kiosk_motion"
        inkscape:label="binary_sensor.hall_kiosk_motion"
        style="stroke-width:0.55146444" />
+    <path
+       id="light.gateway_light_34ce00fa5b62"
+       inkscape:connector-curvature="0"
+       style="fill:#ff6600;stroke-width:0.45202792"
+       d="m 557.39322,1808.7842 c 0,1.4203 -0.92646,2.5363 -2.01403,2.5363 v 0 -5.1234 c 1.08757,0.051 2.01403,1.1667 2.01403,2.5871 z"
+       inkscape:label="light.gateway_light_34ce00fa5b62" />
   </g>
   <line
      id="edge_camera_bottom"
