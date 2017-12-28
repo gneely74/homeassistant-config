@@ -43,9 +43,9 @@ Living Room lights:
 #  entities:
 #    - light.office_lamp
 
-#Dining Room lights:
-#  entities:
-#    - light.s1
+Dining Room lights:
+  entities:
+    - light.level
 #    - light.s2
 #    - light.s3
 #    - light.s4
