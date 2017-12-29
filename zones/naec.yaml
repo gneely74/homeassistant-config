@@ -1,0 +1,5 @@
+- name: NAEC
+  latitude: !secret latitude_naec
+  longitude: !secret longitude_naec
+  radius: 200
+  icon: mdi:city
