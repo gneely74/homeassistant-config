@@ -42,9 +42,9 @@
      inkscape:window-height="855"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="4.0187912"
-     inkscape:cx="487.192"
-     inkscape:cy="331.55776"
+     inkscape:zoom="2.0093956"
+     inkscape:cx="421.80891"
+     inkscape:cy="133.28559"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
@@ -2798,6 +2798,13 @@
        style="fill:#999999;stroke-width:0.77312338"
        d="m 558.88621,1810.5433 c 0,2.386 -1.61324,4.2608 -3.50702,4.2608 v 0 -8.607 c 1.89378,0.086 3.50702,1.96 3.50702,4.3462 z"
        inkscape:label="light.gateway_light_34ce00fa5b62" />
+    <circle
+       id="light.dining_room_light_level"
+       style="fill:#ffffa6"
+       cx="441.92392"
+       cy="2126.5442"
+       r="5"
+       inkscape:label="light.dining_room_light_level" />
   </g>
   <line
      id="edge_camera_bottom"

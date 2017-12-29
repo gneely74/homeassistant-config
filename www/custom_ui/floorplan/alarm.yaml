@@ -141,6 +141,7 @@ rules:
       - switch.garage_light_switch
       - group.exterior_lights
       - group.interior_lights
+      - light.dining_room_light_level
     states:
       - state: 'on'
         class: 'light-on'
