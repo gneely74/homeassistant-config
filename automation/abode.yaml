@@ -16,8 +16,19 @@
             badge: 0
             category: "abode_alarm"
 
-- id: disarm_abode_from_away
-  alias: 'Disarm Abode from Away'
+- id: arm_abode_when_we_leave
+  alias: 'Arm Abode When We Leave'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: group.parents_and_big_kids
+      to: 'away'
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodeaway
+
+- id: disarm_abode_when_we_come_home
+  alias: 'Disarm Abode when we come home'
   initial_state: 'on'
   trigger:
     - platform: state
@@ -30,19 +41,6 @@
   action:
      service: homeassistant.turn_on
      entity_id: script.abodestandby
-
-- id: disarm_abode_when_we_come_home
-  alias: 'Disarm Abode at night'
-  initial_state: 'on'
-  trigger:
-   - platform: state
-     entity_id:
-       - group.parents_and_big_kids
-     to: 'home'
-  action:
-    service: homeassistant.turn_on
-    entity_id: script.abodestandby
-
 
 - id: abode_was_disarmed
   alias: 'Trigger when Abode was disarmed'
