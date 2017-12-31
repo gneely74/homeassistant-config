@@ -276,11 +276,14 @@ dialogflow:
 
 xiaomi_aqara:
   gateways:
-    - mac: !secret xiaomi_1_mac
+    - host: !secret xiaomi_1_ip
+      mac: !secret xiaomi_1_mac
       key: !secret xiaomi_1_key
-    - mac: !secret xiaomi_2_mac
+    - host: !secret xiaomi_2_ip
+      mac: !secret xiaomi_2_mac
       key: !secret xiaomi_2_key
-    - mac: !secret xiaomi_3_mac
+    - host: !secret xiaomi_3_ip
+      mac: !secret xiaomi_3_mac
       key: !secret xiaomi_3_key
 
 google_assistant:
