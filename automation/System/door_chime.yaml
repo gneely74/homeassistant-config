@@ -61,7 +61,29 @@
 
     - service: xiaomi_aqara.play_ringtone
       data_template:
-        gw_mac: 34:CE:00:FA:5B:62
+        gw_mac: !secret xiaomi_1_mac
+        ringtone_id: >
+          {% if trigger.to_state.state == 'on' %}
+          10002
+          {% else %}
+          10003
+          {% endif %}
+        ringtone_vol: 50        
+
+    - service: xiaomi_aqara.play_ringtone
+      data_template:
+        gw_mac: !secret xiaomi_2_mac
+        ringtone_id: >
+          {% if trigger.to_state.state == 'on' %}
+          10002
+          {% else %}
+          10003
+          {% endif %}
+        ringtone_vol: 50        
+
+    - service: xiaomi_aqara.play_ringtone
+      data_template:
+        gw_mac: !secret xiaomi_3_mac
         ringtone_id: >
           {% if trigger.to_state.state == 'on' %}
           10002
