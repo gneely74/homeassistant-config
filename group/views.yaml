@@ -21,6 +21,7 @@ weather:
   view: yes
   icon: mdi:weather-cloudy
   entities:
+    - sensor.temperature_158d0001c2c8d9
     - sensor.dark_sky_minutely_summary
     - sensor.dark_sky_precip_intensity
     - sensor.dark_sky_cloud_coverage

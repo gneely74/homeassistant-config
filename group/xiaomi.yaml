@@ -7,6 +7,11 @@ xiaomi:
     - input_number.loop_delay
     - input_select.gateway_sound
     - light.gateway_light_34ce00fa5b62
+    - sensor.illumination_34ce00fa5b62
+    - light.gateway_light_7811dcb2413b
+    - sensor.illumination_7811dcb2413b
+    - light.gateway_light_34ce0091e54f
+    - sensor.illumination_34ce0091e54f
     - script.xiaomi_play_sel_sound
     - script.xiaomi_play_sel_sound_loop
     - script.xiaomi_play_sel_sound_single
