@@ -10,5 +10,11 @@ light.ge_unknown_type5044_id3031_level:
 light.gateway_light_34ce00fa5b62:
   friendly_name: Xiaomi Den Light
   
+light.gateway_light_7811dcb2413b:
+  friendly_name: Xiaomi Fiona's Room Light
+
+light.gateway_light_34ce0091e54f:
+  friendly_name: Xiaomi Boy's Room Light
+
 light.dining_room_light_level:
   friendly_name: Dining Room Light
