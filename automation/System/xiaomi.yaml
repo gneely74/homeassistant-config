@@ -25,13 +25,13 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_34ce00fa5b62
-     above: 450
+     below: 450
    - platform: numeric_state
      entity_id: sensor.illumination_34ce0091e54f
-     above: 450
+     below: 450
    - platform: numeric_state
      entity_id: sensor.illumination_7811dcb2413b
-     above: 450
+     below: 450
   condition:
     - condition: template
       value_template: "{{ states('trigger.event.data.entity_id') == 'off' }}"
