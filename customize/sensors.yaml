@@ -31,10 +31,30 @@ sensor.evening_commute:
   icon: mdi:car
 alarm_control_panel.abode_alarm:
   entity_picture: /local/Abode.jpg
+
 sensor.illumination_158d0001643f5f:
   friendly_name: Living Room Light Sensor
+
 sensor.illumination_158d0001a40761:
-  friendly_name: Master Bedroom Light Sensor    
+  friendly_name: Master Bedroom Light Sensor
+  
+sensor.illumination_34ce0091e54f:
+  friendly_name: Boy's Bedroom Light Sensor
+
+sensor.illumination_7811dcb2413b:
+  friendly_name: Fiona's Bedroom Light Sensor
+
+sensor.illumination_34ce00fa5b62:
+  friendly_name: Master Bedroom Light Sensor
+
+sensor.humidity_158d0001c2c8d9:
+  friendly_name: Master Bedroom Humidity
+      
+sensor.temperature_158d0001c2c8d9:
+  friendly_name: Master Bedroom Humidity
+  
+sensor.temperature_158d0001c2c8d9:
+  friendly_name: Master Bedroom Temperature
 
 sensor.dark_sky_cloud_coverage:
   friendly_name: 'Cloud Coverage'
