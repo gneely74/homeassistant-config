@@ -34,9 +34,9 @@ homeassistant:
 
 #python_script:
 
-calendar:
-  - platform: caldav
-    url: !secret kates_cal
+#calendar:
+#  - platform: caldav
+#    url: !secret kates_cal
     
 weather:
   - platform: yweather
