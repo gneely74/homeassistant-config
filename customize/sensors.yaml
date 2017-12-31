@@ -45,7 +45,7 @@ sensor.illumination_7811dcb2413b:
   friendly_name: Fiona's Bedroom Light Sensor
 
 sensor.illumination_34ce00fa5b62:
-  friendly_name: Master Bedroom Light Sensor
+  friendly_name: Den Light Sensor
 
 sensor.humidity_158d0001c2c8d9:
   friendly_name: Master Bedroom Humidity

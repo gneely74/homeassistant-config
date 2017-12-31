@@ -4,7 +4,7 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_34ce00fa5b62
-     above: 500
+     above: 450
   condition:
     - condition: state
       entity_id: light.gateway_light_34ce00fa5b62
@@ -19,7 +19,7 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_34ce00fa5b62
-     below: 450
+     below: 500
   condition:
     - condition: state
       entity_id: light.gateway_light_34ce00fa5b62
@@ -34,7 +34,7 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_7811dcb2413b
-     above: 500
+     above: 450
   condition:
     - condition: state
       entity_id: light.gateway_light_7811dcb2413b
@@ -49,7 +49,7 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_7811dcb2413b
-     below: 450
+     below: 500
   condition:
     - condition: state
       entity_id: light.gateway_light_7811dcb2413b
@@ -65,7 +65,7 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_34ce0091e54f
-     above: 500
+     above: 450
   condition:
     - condition: state
       entity_id: light.gateway_light_34ce0091e54f
@@ -80,7 +80,7 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_34ce0091e54f
-     below: 450
+     below: 500
   condition:
     - condition: state
       entity_id: light.gateway_light_34ce0091e54f
