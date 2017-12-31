@@ -278,6 +278,10 @@ xiaomi_aqara:
   gateways:
     - mac: !secret xiaomi_1_mac
       key: !secret xiaomi_1_key
+    - mac: !secret xiaomi_2_mac
+      key: !secret xiaomi_2_key
+    - mac: !secret xiaomi_3_mac
+      key: !secret xiaomi_3_key
 
 google_assistant:
   project_id: !secret google_assistant_project_id
