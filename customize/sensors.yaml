@@ -51,9 +51,6 @@ sensor.humidity_158d0001c2c8d9:
   friendly_name: Master Bedroom Humidity
       
 sensor.temperature_158d0001c2c8d9:
-  friendly_name: Master Bedroom Humidity
-  
-sensor.temperature_158d0001c2c8d9:
   friendly_name: Master Bedroom Temperature
 
 sensor.dark_sky_cloud_coverage:
