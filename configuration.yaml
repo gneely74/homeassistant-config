@@ -275,16 +275,17 @@ alexa:
 dialogflow:
 
 xiaomi_aqara:
-  gateways:
-    - host: !secret xiaomi_1_ip
-      mac: !secret xiaomi_1_mac
-      key: !secret xiaomi_1_key
-    - host: !secret xiaomi_2_ip
-      mac: !secret xiaomi_2_mac
-      key: !secret xiaomi_2_key
-    - host: !secret xiaomi_3_ip
-      mac: !secret xiaomi_3_mac
-      key: !secret xiaomi_3_key
+  discovery_retry: 10
+#  gateways:
+#    - host: !secret xiaomi_1_ip
+#      mac: !secret xiaomi_1_mac
+#      key: !secret xiaomi_1_key
+#    - host: !secret xiaomi_2_ip
+#      mac: !secret xiaomi_2_mac
+#      key: !secret xiaomi_2_key
+#    - host: !secret xiaomi_3_ip
+#      mac: !secret xiaomi_3_mac
+#      key: !secret xiaomi_3_key
 
 google_assistant:
   project_id: !secret google_assistant_project_id
