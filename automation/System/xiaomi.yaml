@@ -5,14 +5,19 @@
    - platform: numeric_state
      entity_id: sensor.illumination_34ce00fa5b62
      above: 500
+   - platform: numeric_state
+     entity_id: sensor.illumination_34ce0091e54f
+     above: 500
+   - platform: numeric_state
+     entity_id: sensor.illumination_7811dcb2413b
+     above: 500
   condition:
-    - condition: state
-      entity_id: light.gateway_light_34ce00fa5b62
-      state: 'on'
+    - condition: template
+      value_template: "{{ states('trigger.event.data.entity_id') == 'on' }}"
   action:
     - service: light.turn_off
       data_template:
-        entity_id: "{{ trigger.event.data.entity_id }}"
+        entity_id: light.gateway.{{ "trigger.event.data.entity_id".split('_')[1] }}
 
 - id: turn_on_xiaomi
   alias: 'Turn on Xiaomi Gateway light'
@@ -20,15 +25,20 @@
   trigger:
    - platform: numeric_state
      entity_id: sensor.illumination_34ce00fa5b62
-     below: 450
+     above: 450
+   - platform: numeric_state
+     entity_id: sensor.illumination_34ce0091e54f
+     above: 450
+   - platform: numeric_state
+     entity_id: sensor.illumination_7811dcb2413b
+     above: 450
   condition:
-    - condition: state
-      entity_id: light.gateway_light_34ce00fa5b62
-      state: 'off'
+    - condition: template
+      value_template: "{{ states('trigger.event.data.entity_id') == 'off' }}"
   action:
     - service: light.turn_on
       data_template:
-        entity_id: "{{ trigger.event.data.entity_id }}"
+        entity_id: light.gateway.{{ "trigger.event.data.entity_id".split('_')[1] }}
 
 - id: change_xiaomi_color
   alias: 'Change Xiaomi color'
