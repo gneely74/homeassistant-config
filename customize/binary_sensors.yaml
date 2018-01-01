@@ -45,3 +45,7 @@ binary_sensor.finn:
 binary_sensor.deaglan:
   hidden: true
     
+binary_sensor.door_window_sensor_158d0001c1e9ac:
+  friendly_name: Fiona's Left Window
+binary_sensor.door_window_sensor_158d0001c2e5dd:
+  friendly_name: Fiona's Right Window
