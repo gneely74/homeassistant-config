@@ -20,6 +20,8 @@ house:
   view: yes
   icon: mdi:home
   entities:
+    - group.doors
+    - group.entry_points
     - group.motion  
     - group.room_sensors  
 
