@@ -24,6 +24,7 @@ house:
     - group.entry_points
     - group.motion  
     - group.room_sensors  
+    - group.battery_alert
 
 weather:
   name: Weather Info
