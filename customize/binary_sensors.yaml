@@ -1,10 +1,19 @@
 binary_sensor.close_garage_when_leaving:
   hidden: true
-binary_sensor.entryway_camera__zone_1_activity: {}
 binary_sensor.entryway_camera_online: {}
+binary_sensor.entryway_camera__zone_1_activity:
+  device_class: motion
+binary_sensor.entryway_camera_motion_detected:
+  device_class: motion
+binary_sensor.entryway_camera_person_detected: 
+  device_class: motion
 binary_sensor.master_bedroom_camera_online: {}
-binary_sensor.master_bedroom_camera_person_detected: {}
-binary_sensor.master_bedroom_camera_sound_detected: {}
+binary_sensor.master_bedroom_camera_person_detected: 
+  device_class: motion
+binary_sensor.master_bedroom_camera_sound_detected:
+  device_class: motion
+binary_sensor.master_bedroom_camera_motion_detected:
+  device_class: motion
 binary_sensor.remote:
   hidden: true
 binary_sensor.smile:
