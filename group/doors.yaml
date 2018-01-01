@@ -16,3 +16,5 @@ entry_points:
     - binary_sensor.garage_door
     - binary_sensor.den_door
     - binary_sensor.office_door
+    - binary_sensor.door_window_sensor_158d0001c1e9ac
+    - binary_sensor.door_window_sensor_158d0001c2e5dd

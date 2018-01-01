@@ -18,9 +18,10 @@ default_view:
 house:
   name: Household Status
   view: yes
-  icon: mdi:Home
+  icon: mdi:home
   entities:
-    - group.motion    
+    - group.motion  
+    - group.room_sensors  
 
 weather:
   name: Weather Info
@@ -30,7 +31,6 @@ weather:
     - sensor.temperature_158d0001c2c8d9        
     - sensor.moon
     - binary_sensor.iss
-    - group.room_sensors
     - group.thermostats
     - group.weather
     - weather.weather
