@@ -1,0 +1,93 @@
+#################################################################
+## Groups
+#################################################################
+
+
+HASS Details:
+  entities:  
+    - sensor.time__date
+    - sensor.hassuptime
+    - sensor.ssl_certificate_expiry
+    - input_select.current_theme
+
+Thermostats:
+  entities:  
+    - climate.downstairs
+    - sensor.downstairsthermoper
+    - sensor.downstairs_humidity
+    - sensor.living_room_temperature
+    - input_select.hvacmode
+
+Information:
+  entities:
+    - sensor.morning_commute
+    - sensor.grady_to_home
+    - sensor.cold_flu_risk
+    - sensor.pollen_level
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_apparent_temperature_min
+    - sensor.dark_sky_apparent_temperature_max      
+
+Network Details:
+  entities:  
+    - binary_sensor.pihole
+    - sensor.speedtest_download
+
+household:
+  entities:  
+    - binary_sensor.grady_home
+    - binary_sensor.kate_home
+    - binary_sensor.hunter_home
+    - binary_sensor.fiona_home
+    - binary_sensor.conor_home
+    
+###################
+## Devices
+###################
+
+Devices:
+  entities:
+   - device_tracker.gradys_iphone
+   - device_tracker.kates_iphone
+   - device_tracker.conorsiphone3
+   - device_tracker.huntersone6plus
+   - device_tracker.fisiphone
+   - device_tracker.finnegansipad
+   - device_tracker.kateneelysipad
+   - device_tracker.katesiphone4
+   - device_tracker.pokemonsipad     
+     
+games:
+  name: Games
+  entities:
+    - sensor.nintendo_3ds
+    - sensor.nintendo_3ds_2
+    - sensor.den_ps4
+ios:
+  name: iOS Devices
+  entities:
+    - sensor.conors_iphone
+    - sensor.finnegans_ipad
+    - sensor.fionas_iphone
+    - sensor.gradys_iphone
+    - sensor.hunters_iphone
+    - sensor.deaglans_ipad
+    - sensor.kates_iphone
+networking:
+  name: Network Stuff
+  entities:
+    - sensor.den_ap    
+    - sensor.dining_ap    
+    - sensor.master_ap
+    - sensor.printer
+    - sensor.rb260gsp
+home:
+  name: Home Stuff
+  entities:
+    - sensor.amazon_fire_7
+    - sensor.amazon_dot_1
+    - sensor.amazon_dot_2
+    - sensor.amazon_dot_3
+    - sensor.printer     
