@@ -104,7 +104,7 @@ automation:
           {% endfor %}
           {%- endfor %}
           {% endmacro %}
-          {{ battery_level() |trim != "" }}
+          {{ battery_level() }}
 
 - alias: battery_alert_clear
   trigger:
