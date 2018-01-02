@@ -42,9 +42,9 @@
      inkscape:window-height="855"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="2.0093956"
-     inkscape:cx="421.80891"
-     inkscape:cy="133.28559"
+     inkscape:zoom="5.683429"
+     inkscape:cx="546.23224"
+     inkscape:cy="102.44019"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
@@ -1654,8 +1654,9 @@
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000cff;stroke-width:0.35968259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 574.09515,2104.3795 c -3.4346,-0.01 -6.86918,-0.01 -10.30376,-0.012"
-       id="path514"
-       inkscape:connector-curvature="0" />
+       id="binary_sensor.motion_sensor_158d0001a40761"
+       inkscape:connector-curvature="0"
+       inkscape:label="binary_sensor.motion_sensor_158d0001643f5f" />
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.17984129;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 563.7364,2103.4037 c -0.11295,0 -0.22441,0 -0.33587,0 -2e-5,0.2146 3e-5,0.4292 10e-6,0.6422 0.11147,0 0.22292,0 0.33588,0 1e-5,-0.213 3e-5,-0.4276 -2e-5,-0.6422 z"
@@ -1689,8 +1690,9 @@
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000cff;stroke-width:0.35968259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 621.28466,2104.4 c -3.43459,0 -6.86916,-0.01 -10.30375,-0.012"
-       id="path528"
-       inkscape:connector-curvature="0" />
+       id="binary_sensor.motion_sensor_158d0001a40761"
+       inkscape:connector-curvature="0"
+       inkscape:label="binary_sensor.motion_sensor_158d0001a40761" />
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.17984129;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 610.92444,2103.4241 c -0.11146,0 -0.22442,0 -0.33589,0 0,0.2146 -2e-5,0.4275 2e-5,0.642 0.11146,0 0.22441,0 0.33589,0 0,-0.2127 1e-5,-0.4274 -2e-5,-0.642 z"

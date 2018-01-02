@@ -15,8 +15,9 @@ binary_sensor.master_bedroom_camera_sound_detected:
 binary_sensor.master_bedroom_camera_motion_detected:
   device_class: motion
 binary_sensor.hall_kiosk_motion:
-  friendly_name: Hall Kiosk Motion
-  device_class: motion  
+  friendly_name: 'Hall Kiosk Motion'
+  device_class: motion 
+  icon: mdi:walk 
 binary_sensor.remote:
   hidden: true
 binary_sensor.smile:
