@@ -92,7 +92,7 @@ automation:
         message: >
           {% macro battery_level() %}
           {%- set threshold = 40 -%}
-          {% set domains = ['light', 'switch', 'binary_sensor', 'sensor', 'zwave', 'lock'] %}
+          {% set domains = ['device_tracker', 'light', 'switch', 'binary_sensor', 'sensor', 'zwave', 'lock'] %}
           {% for domain in domains -%}
           {% for item in states[domain] if ((item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or (item.attributes.battery_low is defined and item.attributes['battery_low'] == true) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown"))) -%}
           {{ item.attributes.battery_level }}
@@ -103,7 +103,7 @@ automation:
           {% if "battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown") -%}
           {{ item.name }} ({{ item.state }}){% if not loop.last %}, {%- endif %} {% endif -%}
           {% endfor %}
-          {%- endfor %}
+          {% endfor %}
           {% endmacro %}
           {{ battery_level() }}
 
