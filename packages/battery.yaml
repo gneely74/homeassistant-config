@@ -59,6 +59,7 @@ group:
 
 automation:
 - alias: battery_alert
+  initial_state: 'on'
   trigger:
     - platform: time
       at: '10:00:00'
@@ -107,6 +108,7 @@ automation:
           {{ battery_level() }}
 
 - alias: battery_alert_clear
+  initial_state: 'on'
   trigger:
     - platform: time
       minutes: '/30'
