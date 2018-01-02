@@ -188,8 +188,8 @@ rules:
       - binary_sensor.garage_door
       - binary_sensor.office_door
       - sensor.overflow_pantry_door
-      - binary_sensor.motion_sensor_158d0001a40761
-      - binary_sensor.motion_sensor_158d0001643f5f
+      - binary_sensor.door_window_sensor_158d0001c1e9ac
+      - binary_sensor.door_window_sensor_158d0001c2e5dd
     states:
       - state: 'off'
         class: 'window-closed'

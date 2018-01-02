@@ -43,7 +43,7 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="5.683429"
-     inkscape:cx="546.23224"
+     inkscape:cx="580.71846"
      inkscape:cy="102.44019"
      inkscape:window-x="37"
      inkscape:window-y="1"
@@ -1654,9 +1654,9 @@
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000cff;stroke-width:0.35968259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 574.09515,2104.3795 c -3.4346,-0.01 -6.86918,-0.01 -10.30376,-0.012"
-       id="binary_sensor.motion_sensor_158d0001a40761"
+       id="binary_sensor.door_window_sensor_158d0001c2e5dd"
        inkscape:connector-curvature="0"
-       inkscape:label="binary_sensor.motion_sensor_158d0001643f5f" />
+       inkscape:label="binary_sensor.door_window_sensor_158d0001c2e5dd" />
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.17984129;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 563.7364,2103.4037 c -0.11295,0 -0.22441,0 -0.33587,0 -2e-5,0.2146 3e-5,0.4292 10e-6,0.6422 0.11147,0 0.22292,0 0.33588,0 1e-5,-0.213 3e-5,-0.4276 -2e-5,-0.6422 z"
@@ -1675,8 +1675,9 @@
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000cff;stroke-width:0.35968259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 621.28466,2103.758 c -3.43459,-0.01 -6.86916,-0.01 -10.30375,-0.013"
-       id="path522"
-       inkscape:connector-curvature="0" />
+       id="binary_sensor.door_window_sensor_158d0001c1e9ac"
+       inkscape:connector-curvature="0"
+       inkscape:label="binary_sensor.door_window_sensor_158d0001c1e9ac" />
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.17984129;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 621.67702,2103.4292 c -0.11295,0 -0.22442,0 -0.33588,0 0,0.2351 0,0.4701 -0.002,0.7051 0.11297,0 0.22442,0 0.33737,0 0,-0.2367 0,-0.4717 0,-0.7067 z"
@@ -1690,9 +1691,9 @@
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000cff;stroke-width:0.35968259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 621.28466,2104.4 c -3.43459,0 -6.86916,-0.01 -10.30375,-0.012"
-       id="binary_sensor.motion_sensor_158d0001a40761"
+       id="path327"
        inkscape:connector-curvature="0"
-       inkscape:label="binary_sensor.motion_sensor_158d0001a40761" />
+       inkscape:label="binary_sensor.door_window_sensor_158d0001c2e5dd" />
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.17984129;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 610.92444,2103.4241 c -0.11146,0 -0.22442,0 -0.33589,0 0,0.2146 -2e-5,0.4275 2e-5,0.642 0.11146,0 0.22441,0 0.33589,0 0,-0.2127 1e-5,-0.4274 -2e-5,-0.642 z"
@@ -2717,7 +2718,7 @@
       <path
          inkscape:connector-curvature="0"
          d="m 684.59571,235.00118 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,5 h 3 a 2,2 0 0 1 2,2 v 5.5 h -1.5 v 7.5 h -4 v -7.5 h -1.5 v -5.5 a 2,2 0 0 1 2,-2 m 10.5,-5 a 2,2 0 0 1 2,2 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 m -1.5,20 v -6 h -3 l 2.59,-7.59 c 0.25,-0.82 1.01,-1.41 1.91,-1.41 0.9,0 1.66,0.59 1.91,1.41 l 2.59,7.59 h -3 v 6 z"
-         id="binary_sensor.motion_sensor_158d0001a40761"
+         id="path527"
          inkscape:label="binary_sensor.motion_sensor_158d0001a40761" />
       <path
          inkscape:connector-curvature="0"
