@@ -132,7 +132,7 @@ sensor:
 
 group:
   games:
-    name: Games
+    name: Gaming Devices
     entities:
       - sensor.nintendo_3ds
       - sensor.nintendo_3ds_2
