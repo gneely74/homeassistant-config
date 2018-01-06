@@ -139,15 +139,6 @@ group:
       - sensor.master_ap
       - sensor.printer
       - sensor.rb260gsp
-  home:
-    name: Home Stuff
-    entities:
-      - sensor.circle    
-      - sensor.amazon_fire_7
-      - sensor.amazon_dot_1
-      - sensor.amazon_dot_2
-      - sensor.amazon_dot_3
-      - sensor.printer
 
 #-------------------------------------------------------------------------------------
 automation:
