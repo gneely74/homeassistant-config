@@ -131,13 +131,6 @@ sensor:
 #-------------------------------------------
 
 group:
-  games:
-    name: Gaming Devices
-    entities:
-      - sensor.nintendo_3ds
-      - sensor.nintendo_3ds_2
-      - sensor.den_ps4
-
   network:
     name: Network Stuff
     entities:
