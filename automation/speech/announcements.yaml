@@ -7,10 +7,10 @@
   trigger:
     - platform: state
       entity_id:
-        - sensor.grady
-        - sensor.kate
-      from: 'not_home'
-      to: 'home'
+        - binary_sensor.grady
+        - binary_sensor.kate
+      from: 'off'
+      to: 'on'
       for: '00:02:00'
 
   action:
