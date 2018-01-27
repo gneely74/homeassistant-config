@@ -1,3 +1,5 @@
+binary_sensor.water_leak_sensor_158d0001bbab3a:
+  friendly_name: 'Craft Room Water Sensor'
 binary_sensor.close_garage_when_leaving:
   hidden: true
 binary_sensor.entryway_camera_online: {}
