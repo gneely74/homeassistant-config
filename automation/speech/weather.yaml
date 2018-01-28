@@ -100,7 +100,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.dark_sky_cloud_coverage
-      below: 80
+      below: 50
 
   action:
     - service: script.notify_engine
