@@ -49,8 +49,10 @@ speech_processing:
         volume_level: >-
           {% if now().strftime('%H')|int < 12 and now().strftime('%H')|int > 8 %}
             0.65
-          {% elif now().strftime('%H')|int > 12 and now().strftime('%H')|int < 20 %}
-            0.75
+          {% elif now().strftime('%H')|int > 12 and now().strftime('%H')|int < 16 %}
+            0.45
+          {% elif now().strftime('%H')|int > 16 and now().strftime('%H')|int < 20 %}
+            0.65
           {% elif now().strftime('%H')|int > 20 and now().strftime('%H')|int < 0 %}
             0.4
           {% else %}
