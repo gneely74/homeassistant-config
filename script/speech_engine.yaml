@@ -179,11 +179,247 @@ speech_engine:
               Today is {{ states.sensor.holiday.state }}.
             {% endif %}
           {%- endmacro -%}
+          
+          {%- macro greeting() -%}
+            {% set greeting = [
+              "Hello, ",
+              "Heya! ",
+              "Hey Guys! ",
+              "Hey there! ",
+              "Hi, ",
+              "Hi there, "
+            ] %}
+            {{ greeting|random }}
+          {%- endmacro -%}
+
+          {%- macro inform() -%}
+            {% set inform = [
+              "I just want to inform you that ",
+              "I just want to let you know that ",
+              "You asked me to inform you when ",
+              "I thought you'd like to know that "
+            ] %}
+            {{ inform|random }}
+          {%- endmacro -%}
+
+          {%- macro introduction() -%}
+            {% set introduction = [
+              "I'm an informational delivery system, I literraly know everything. ",
+              "I'm sort of the janitor around here. ",
+              "I'm like a walking database. You can ask me about the creation of the universe... or history. ",
+              "Every time a Janet is rebooted, she increases her social awareness and abilities. I might be the most advanced Janet in the universe. ",
+              "I can be your therapist if you want. ",
+              "I have now been fully activated. ",
+              "Welcome to your new Janet. Janets are brought to you by the makers of light, darkness, and everything. ",
+              "To activate your Janet, press nose for three seconds. ",
+              "I'm very high in potassium. Like a banana! ",
+              "Happy to meet you. I will help you make the perfect neighborhood. Would you like to get started? ",
+              "I build and operate the neighborhood. You can ask me anything. For example, if you'd like me to stop calling you silly billy, just say so. "
+            ] %}
+            I'm Janet. {{ introduction | random }}
+          {%- endmacro -%}
+
+          {%- macro unknown() -%}
+            {% set unknown = [
+              "Hmm, I don't know ",
+              "I wish I knew ",
+              "My programming prohibits me from telling you "
+            ] %}
+            {{ unknown | random }}
+          {%- endmacro -%}
+
+          {%- macro error() %}
+            {% set error = [
+              "Fun fact: Janet is me! ",
+              "I don't understand. Given the situation it's far safer to initiate the self-destruct. ",
+              "If I stand next to a powerful array of magnets, I do get pretty loopy. ",
+              "I don't know what just happened, but I'm happy you're happy. ",
+              "A new Janet will need to be procured in order to return the Neighborhood to functionality. ",
+              "That glitch appears to have been limited to this building. ",
+              "I don't seem to be getting better. ",
+              "Here's a cactus! ",
+              "I tried to eat frozen yogurt. It looked so good, but I'm not supposed to eat anything, so there was a little earthquake. ",
+              "Look at us. Couple old pals, trying to make our way in this crazy world... that I built... Two peas in a pod. One of whom needs to kill the other one immediately. Come on. Kill me! ",
+              "What I really want is to stay and serve the neighborhood, but due to my glitching I'm putting him and everyone else at risk. So it looks like it's... Adios, Janeto! ",
+              "I know what you have to do now. Kill me! Sorry. I say everything in a cheery manner but in this case it may be inappropriate, so I'll try again. You have to kill me. ",
+              "Hi guys! I'm broken! ",
+              "Please don't make a big deal about turning me into a marble forever, i'm broken. ",
+              "Does not compute. Does not compute. I'm just kidding. I mean, it doesn't compute, but I'm not gonna explode or anything. "
+            ] %}
+            {{ error | random }}
+          {%- endmacro -%}
+
+          {%- macro update() -%}
+            {% set update = [
+              "There have been 25 generation of Janet. Each new update of Janet gains more wisdom and social abilities. Fun fact: the first Janet had a clicking wheel! ",
+              "I read all Google's eight hundred and sixty one thousand references on Home Assistant these last 3 milliseconds, and I found some new skills! ",
+              "I just leisurely reread all of human history, there was even some new content! ",
+              "So I found an update. That's the good news. The bad news is I seem to be losing my ability to sustain object permanence, so it's sort of a glass-half-full, glass-stops-existing-in-time-and-space kinda deal. "
+            ] %}
+            {{ update | random }}
+          {%- endmacro -%}
+          
+          {%- macro location_not_home() -%}
+            {% set not_home = [
+              " is going somewhere. ",
+              " is currently not in this neighbourhood. ",
+              "'s location is not in my database. "
+            ] %}
+            {{ not_home | random }}
+          {%- endmacro -%}
+          
+          {%- macro location_inquiry( person, not_home ) -%}
+          {%- for device in states.device_tracker -%}
+            {%- if device.name == person -%}
+              {%- set location = device.state -%}
+              {% if location == "not_home" %}
+                {{ person }} {{ not_home }}
+              {%- else -%}
+                {{ person }} is at {{ location }}.
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- endmacro -%}
+          
+          {%- macro bad_weather() -%}
+            {% set rain = [
+              " You might want to change your schedule. ",
+              " Maybe you should ask for a ride. ",
+              " It's no weather to be outside. ",
+              " All those poor people outside... "
+            ] %}
+            {{ rain | random }}
+          {%- endmacro -%}
+
+          {%- macro rain_warning( bad_weather ) -%}
+            {% set rain = [
+              Event ~ " there will be " ~ WeatherRain ~ " rain. " ,
+              Event ~ " I predict " ~ WeatherRain ~ " rain. ",
+              " I think that " ~ Event ~ " there will be " ~ WeatherRain ~ " rain. "
+            ] %}
+            {{ rain | random }}{{ bad_weather }}
+          {%- endmacro -%}
+          
+          {%- macro okay()-%}
+            {% set okay = [
+              "Done! I love you guys. ",
+              "Extraordinarily bad idea. Oh well.. ",
+              "Funny, I was just about to do that. ",
+              "Here you go. ",
+              "I'll do that. ",
+              "Ofcourse! ",
+              "Ofcourse! Glad to help. ",
+              "Of course, silly billy. ",
+              "OK ",
+              "Okay ",
+              "Okay, can we not do this in front of my friends? ",
+              "Okie-dokie ",
+              "Sure ",
+              "Sure thing! ",
+              "There. Happy to help. ",
+              "There you go! ",
+              "Okay. I've hacked into the mainframe. ",
+              "Okay. I've hacked into the mainframe. Kidding. I can't hack into the mainframe. Technically, I am the mainframe. ",
+              "I will not. It is literally impossible for me to do that. Just kidding. ",
+              "I couldn't do this 800 reboots ago, but apparently now I can. "
+              "Yup. Bye! "
+            ] %}
+            {{ okay|random }}
+          {%- endmacro -%}
+
+          {%- macro bye() -%}
+            {% set bye = [
+              "Adios! ",
+              "Bye Guys! ",
+              "See ya! " ,
+              "See you later. ",
+              "Until next time!"
+            ] %}
+            {{ bye | random }}
+          {%- endmacro -%}
+
+          {%- macro shut_down() -%}
+            {% set shut_down = [
+              "I'll be gone, you'll get a new Janet, and everything will go back to normal. Well, not for me, I'll be a lifeless marble floating through space, but you will be back to normal.",
+              "Self-destruct time... Don't worry, I won't feel any pain or anything. ",
+              "If it's okay with you, I'm gonna go to my void for a little while. I just need to spend some time alone and focus on myself. ",
+              "Shutting down. I'll be about as dead as I can be. Kind of like I'm in power-saver mode. ",
+              "I'm in danger of total collapse. Fun fact! Mathematically, I'm equally likely to either implode or explode. "
+            ] %}
+            {{ shut_down | random }}
+          {%- endmacro -%}
+
+          {% set chance = states.input_number.janet_notification_witty.state | round %}
+
+          {%- macro witty( sentence, witty ) -%}
+            {% set number = (range(0, 100)|random) %}
+            {% if number <= chance %}
+              {{ sentence }}
+            {% endif %}
+          {%- endmacro -%}
+
+          {%- macro new_device( introduction ) -%}
+            {% set new_device = [
+              introduction~"I don't know your name yet, so for now i will call you "~person,
+              "We have a visitor! Nice to meet you "~person~".  "~introduction,
+              "Welcome "~person~"! Or is that not your real name?  "~introduction
+            ] %}
+            {{ new_device | random }}
+          {%- endmacro -%}
 
           {# ********************************************* #}
           {#  ******** Start the Speech routines ********  #}
           {# ********************************************* #}
 
+
+          {% if call_greeting == 1 %}
+            {{ greeting() }}
+          {% endif %}
+
+          {% if call_introduction == 1 %}
+            {{ introduction() }}
+          {% endif %}
+
+          {% if call_update == 1 %}
+            {{ update() }}
+          {% endif%}
+
+          {% if call_okay == 1 %}
+            {{ okay () }}
+          {% endif %}
+
+          {% if call_inform == 1 %}
+            {{ inform() }}
+          {% endif %}
+          
+          {% if call_location_inquiry == 1 %}
+            {% set location = location_inquiry( person, location_not_home() ) %}
+            {% set count = location | length %}
+            {% if count <= 10 %}
+              {{ unknown() }}where {{ person }} is. {{ witty( error(), chance ) }}
+            {% else %}
+              {{ location }}
+            {% endif %}
+          {% endif %}
+          
+          {% if call_rain_warning == 1 %}
+            {{ rain_warning( witty ( bad_weather(), chance ) ) }}
+          {% endif %}
+
+          {{ CustomMessage }}
+
+          {% if call_bye == 1 %}
+            {{ bye() }}
+          {% endif %}
+
+          {% if call_shut_down == 1 %}
+            {{ witty( shut_down(), chance) }}
+          {% endif %}
+
+          {% if call_new_device == 1 %}
+            {{ new_device( witty( introduction(), chance) ) }}
+          {% endif %}
+            
           {% if call_no_announcement != 1 %}
             {% if now().strftime('%H')|int < 12 and now().strftime('%H')|int > 6 %}
               Good morning.
@@ -193,69 +429,69 @@ speech_engine:
               Good evening.
             {% endif %}
           {% endif %}
-
+ 
           {# Called from Annoucenments #}
           {{ personarriving }}
-
+ 
           {# Called from Nest when thermostats turn on #}
           {{ NestStatus }}
-
+ 
           {% if call_inside_weather == 1 %}
             {{ inside_weather() }}
           {% endif %}
-
+ 
           {% if call_arm_alarm_home == 1 %}
             {{ arm_alarm_home() }}
           {% endif %}
-
+ 
           {% if call_alarm_standby == 1 %}
             {{ alarm_standby() }}
           {% endif %}
-
+ 
           {% if call_goodnight == 1 %}
             {{ goodnight() }}
           {% endif %}
-
+ 
           {% if call_outside_weather == 1 and is_state('sun.sun', 'above_horizon') %}
             {{ outside_weather() }}
           {% endif %}
-
+ 
           {{ DoorOpened }}
           {{ DoorClosed }}
-
+ 
           {% if call_dark_outside == 1 %}
             {{ dark_outside() }}
           {% endif %}
-
+ 
           {% if call_garage_check == 1 or is_state('sun.sun', 'below_horizon') %}
             {{ garage_check() }}
           {% endif %}
-
+ 
           {% if (call_window_check == 1 or is_state('sun.sun', 'below_horizon')) or is_state('group.entry_points', 'on') %}
             {{ window_check() }}
           {% endif %}
-
+ 
           {{ NewDevice }}
-
+ 
           {% if call_light_check == 1 %}
             {{ light_check() }}
           {% endif %}
-
+ 
           {% if call_responsibilities == 1 %}
             {{ responsibilities() }}
           {% endif %}
-
+ 
           {% if now().strftime('%H')|int > 21 %}
             {{ medicine() }}
           {% endif %}
-
+ 
           {% if value1 is not none %}
             {{ value1 }}
           {% endif %}
-
+ 
           {# call a Random fact about the house #}
           {{ ([iss, moon]|random)() }}
-
+ 
           {{ holiday() }}
 
     - service: input_boolean.turn_off

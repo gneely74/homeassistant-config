@@ -24,7 +24,7 @@ group:
   janet_notification_settings:
     name: Settings
     entities:
-      - input_select.janet_notification_media_player
+#      - input_select.janet_notification_media_player
       - input_number.janet_notification_volume
       - input_number.janet_notification_witty
   janet_notification_skills:
