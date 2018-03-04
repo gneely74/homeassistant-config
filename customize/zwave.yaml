@@ -9,14 +9,14 @@
 
 climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2:
   friendly_name: Front Thermostat Cooling
-  homebridge_hidden: False
+  homebridge_hidden: false
 climate.2gig_technologies_ct100_thermostat_usa_heating_1_2:
   friendly_name: Front Thermostat Heating
-  homebridge_hidden: False
+  homebridge_hidden: false
 
 climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3:
   friendly_name: Back Thermostat Cooling
-  homebridge_hidden: False
+  homebridge_hidden: false
 climate.2gig_technologies_ct100_thermostat_usa_heating_1_3:
   friendly_name: Back Thermostat Heating
-  homebridge_hidden: False
+  homebridge_hidden: false

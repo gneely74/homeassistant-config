@@ -5,7 +5,7 @@
       unit_of_measurement: '°F'
       value_template: >-
         {% if is_state('input_select.hvac_operation_mode_downstairs', 'Heat') %}
-            {{ states.2gig_technologies_ct100_thermostat_usa_heating_1_2.attributes.temperature }}
+            {{ states.climate.2gig_technologies_ct100_thermostat_usa_heating_1_2.attributes.temperature }}
         {% elif is_state('input_select.hvac_operation_mode_downstairs', 'Cool') %}
             {{ states.climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2.attributes.temperature }}
         {% else %}
