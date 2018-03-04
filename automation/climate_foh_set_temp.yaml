@@ -1,10 +1,10 @@
 #####
-### Sets the foh thermostat temperature when the hvac_target_temp input_slider is changed
+### Sets the foh thermostat temperature when the hvac_target_temp input_number is changed
 #####
-- alias: 'Set front of the house thermostat temperature based on input_slider'
+- alias: 'Set front of the house thermostat temperature based on input_number'
   trigger:
     - platform: state
-      entity_id: input_slider.hvac_target_temp_foh
+      entity_id: input_number.hvac_target_temp_foh
   action:
     - service: climate.set_temperature
       data_template:
@@ -14,12 +14,12 @@
           {% elif is_state('input_select.hvac_operation_mode_foh', 'Cool') %}
               climate.foh_cooling_1
           {% endif %}
-        temperature: "{{ states('input_slider.hvac_target_temp_foh') }}"
+        temperature: "{{ states('input_number.hvac_target_temp_foh') }}"
 
 #####
-### Sets the hvac_target_temp input_slider when the foh thermostat temperature is manually changed
+### Sets the hvac_target_temp input_number when the foh thermostat temperature is manually changed
 #####
-#- alias: 'Set input_slider based on foh thermostat temperature'
+#- alias: 'Set input_number based on foh thermostat temperature'
 #  trigger:
 #    platform: state
 #    entity_id: climate.thermostat_foh_cooling_1_31_2
@@ -27,8 +27,8 @@
 #    condition: template
 #    value_template: '{{ trigger.to_state.attributes.temperature != trigger.from_state.attributes.temperature }}'
 #  action:
-#    service: input_slider.select_value
-#    entity_id: input_slider.hvac_target_temp_foh
+#    service: input_number.select_value
+#    entity_id: input_number.hvac_target_temp_foh
 #    value_template:
 #      entity_id: >-
 #        {% if is_state('input_select.hvac_operation_mode_foh', 'Heat') %}
