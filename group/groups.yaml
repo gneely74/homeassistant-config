@@ -12,8 +12,8 @@ HASS Details:
 
 Thermostats:
   entities:  
-    - climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2
-    - climate.2gig_technologies_ct100_thermostat_usa_heating_1_2
+    - climate.foh_cooling_1
+    - climate.foh_heating_1
     - sensor.downstairs_humidity
     - sensor.living_room_temperature
     - input_select.hvacmode

@@ -5,9 +5,9 @@
       unit_of_measurement: '°F'
       value_template: >-
         {% if is_state('input_select.hvac_operation_mode_downstairs', 'Heat') %}
-            {{ states.climate.2gig_technologies_ct100_thermostat_usa_heating_1_2.attributes.temperature }}
+            {{ states.climate.foh_heating_1.attributes.temperature }}
         {% elif is_state('input_select.hvac_operation_mode_downstairs', 'Cool') %}
-            {{ states.climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2.attributes.temperature }}
+            {{ states.climate.foh_cooling_1.attributes.temperature }}
         {% else %}
             OFF
         {% endif %}
@@ -17,9 +17,9 @@
       unit_of_measurement: '°F'
       value_template: >-
         {% if is_state('input_select.hvac_operation_mode_upstairs', 'Heat') %}
-            {{ states.climate.2gig_technologies_ct100_thermostat_usa_heating_1_3.attributes.temperature }}
+            {{ states.climate.boh_heating_1.attributes.temperature }}
         {% elif is_state('input_select.hvac_operation_mode_upstairs', 'Cool') %}
-            {{ states.climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3.attributes.temperature }}
+            {{ states.climate.boh_cooling_1.attributes.temperature }}
         {% else %}
             OFF
         {% endif %}   

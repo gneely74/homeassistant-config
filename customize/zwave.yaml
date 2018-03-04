@@ -7,16 +7,16 @@
 #zwave.vision_zd2102_eu_doorwindow_sensor:
 #  hidden: true  
 
-climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2:
+climate.foh_cooling_1:
   friendly_name: Front Thermostat Cooling
   homebridge_hidden: false
-climate.2gig_technologies_ct100_thermostat_usa_heating_1_2:
+climate.foh_heating_1:
   friendly_name: Front Thermostat Heating
   homebridge_hidden: false
 
-climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3:
+climate.boh_cooling_1:
   friendly_name: Back Thermostat Cooling
   homebridge_hidden: false
-climate.2gig_technologies_ct100_thermostat_usa_heating_1_3:
+climate.boh_heating_1:
   friendly_name: Back Thermostat Heating
   homebridge_hidden: false

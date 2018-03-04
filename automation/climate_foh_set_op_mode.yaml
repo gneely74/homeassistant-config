@@ -17,7 +17,7 @@
 - alias: 'Set input_select based on foh thermostat operation_mode'
   trigger:
     platform: state
-    entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2
+    entity_id: climate.foh_cooling_1
   condition:
     condition: template
     value_template: '{{ trigger.to_state.attributes.operation_mode != trigger.from_state.attributes.operation_mode }}'
@@ -25,4 +25,4 @@
     service: input_select.select_option
     entity_id: input_select.hvac_operation_mode_foh
     data_template:
-      option: '{{ states.climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2.attributes.operation_mode }}'
+      option: '{{ states.climate.foh_cooling_1.attributes.operation_mode }}'
