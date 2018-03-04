@@ -1,4 +1,4 @@
- - platform: template
+- platform: template
   sensors:
     climate_foh_temperature:
       friendly_name: 'Target Temperature'
@@ -11,7 +11,7 @@
         {% else %}
             OFF
         {% endif %}
-
+ 
     climate_boh_temperature:
       friendly_name: 'Target Temperature'
       unit_of_measurement: '°F'
