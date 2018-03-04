@@ -2,27 +2,27 @@ hvac:
   name: HVAC
   view: yes
   entities:
-    - group.hvac_downstairs
-    - group.hvac_upstairs
+    - group.hvac_boh
+    - group.hvac_foh
 
-hvac_downstairs:
-  name: 'Downstairs'
+hvac_boh:
+  name: 'Back of the House'
   control: hidden
   entities:
-    - input_select.hvac_operation_mode_downstairs
-    - input_select.hvac_fan_mode_downstairs
-    - input_slider.hvac_target_temp_downstairs
-    - sensor.climate_downstairs_temperature
-    - sensor.thermostat_downstairs_temperature_2_1
-    - sensor.thermostat_downstairs_relative_humidity_2_5_3
+    - input_select.hvac_operation_mode_boh
+    - input_select.hvac_fan_mode_boh
+    - input_slider.hvac_target_temp_boh
+    - sensor.climate_boh_temperature
+    - sensor.thermostat_boh_temperature_2_1
+    - sensor.thermostat_boh_relative_humidity_2_5_3
 
-hvac_upstairs:
-  name: 'Upstairs'
+hvac_foh:
+  name: 'Front of the House'
   control: hidden
   entities:
-    - input_select.hvac_operation_mode_upstairs
-    - input_select.hvac_fan_mode_upstairs
-    - input_slider.hvac_target_temp_upstairs
-    - sensor.climate_upstairs_temperature
-    - sensor.thermostat_upstairs_temperature_31_1
-    - sensor.thermostat_upstairs_relative_humidity_31_5_3
+    - input_select.hvac_operation_mode_foh
+    - input_select.hvac_fan_mode_foh
+    - input_slider.hvac_target_temp_foh
+    - sensor.climate_foh_temperature
+    - sensor.thermostat_foh_temperature_31_1
+    - sensor.thermostat_foh_relative_humidity_31_5_3
