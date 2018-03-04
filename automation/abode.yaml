@@ -22,7 +22,7 @@
   trigger:
     - platform: state
       entity_id: group.parents_and_big_kids
-      to: 'away'
+      to: 'not_home'
   action:
      service: homeassistant.turn_on
      entity_id: script.abodeaway
