@@ -14,6 +14,8 @@ Thermostats:
   entities:  
     - climate.foh_cooling_1
     - climate.foh_heating_1
+    - climate.boh_cooling_1
+    - climate.boh_heating_1
     - sensor.downstairs_humidity
     - sensor.living_room_temperature
     - input_select.hvacmode
