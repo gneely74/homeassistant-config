@@ -12,8 +12,6 @@ hvac_boh:
     - input_select.hvac_operation_mode_boh
     - input_select.hvac_fan_mode_boh
     - input_number.hvac_target_temp_boh
-    - climate.boh_cooling_1
-    - climate.boh_heating_1
     - sensor.boh_temperature
     - sensor.boh_relative_humidity
 
@@ -24,7 +22,5 @@ hvac_foh:
     - input_select.hvac_operation_mode_foh
     - input_select.hvac_fan_mode_foh
     - input_number.hvac_target_temp_foh
-    - climate.foh_cooling_1
-    - climate.foh_heating_1
     - sensor.foh_temperature
     - sensor.foh_relative_humidity
