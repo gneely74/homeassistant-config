@@ -25,3 +25,17 @@ loop_delay:
   max: 15
   step: 1
   icon: mdi:loop
+
+hvac_target_temp_boh:
+  name: 'Set Target Temp'
+  min: 60
+  max: 80
+  step: 1
+#  initial: 70
+
+hvac_target_temp_foh:
+  name: 'Set Target Temp'
+  min: 60
+  max: 80
+  step: 1
+#  initial: 70

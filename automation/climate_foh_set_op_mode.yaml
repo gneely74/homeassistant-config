@@ -1,0 +1,28 @@
+#####
+### Sets the foh thermostat operation_mode when the hvac_operation_mode input_select is changed
+#####
+- alias: 'Set foh thermostat operation_mode based on input_select'
+  trigger:
+    platform: state
+    entity_id: input_select.hvac_operation_mode_foh
+  action:
+    service: climate.set_operation_mode
+    entity_id: climate.t2gig_technologies_ct100_thermostat_usa_cooling_1_2
+    data_template:
+      operation_mode: "{{ states('input_select.hvac_operation_mode_foh') }}"
+
+#####
+### Sets the hvac_operation_mode input_select when the fohthermostat operation_mode is manually changed
+#####
+- alias: 'Set input_select based on foh thermostat operation_mode'
+  trigger:
+    platform: state
+    entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2
+  condition:
+    condition: template
+    value_template: '{{ trigger.to_state.attributes.operation_mode != trigger.from_state.attributes.operation_mode }}'
+  action:
+    service: input_select.select_option
+    entity_id: input_select.hvac_operation_mode_foh
+    data_template:
+      option: '{{ states.climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2.attributes.operation_mode }}'

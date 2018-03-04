@@ -1,0 +1,38 @@
+#####
+### Sets the boh thermostat temperature when the hvac_target_temp input_slider is changed
+#####
+- alias: 'Set boh thermostat temperature based on input_slider'
+  trigger:
+    - platform: state
+      entity_id: input_slider.hvac_target_temp_boh
+  action:
+    - service: climate.set_temperature
+      data_template:
+        entity_id: >-
+          {% if is_state('input_select.hvac_operation_mode_boh', 'Heat') %}
+              climate.2gig_technologies_ct100_thermostat_usa_heating_1_3
+          {% elif is_state('input_select.hvac_operation_mode_boh', 'Cool') %}
+              climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
+          {% endif %}
+        temperature: "{{ states('input_slider.hvac_target_temp_boh') }}"
+
+#####
+### Sets the hvac_target_temp input_slider when the boh thermostat temperature is manually changed
+#####
+#- alias: 'Set input_slider based on bohthermostat temperature'
+#  trigger:
+#    platform: state
+#    entity_id: climate.thermostat_boh_cooling_1_2_2
+#  condition:
+#    condition: template
+#    value_template: '{{ trigger.to_state.attributes.temperature != trigger.from_state.attributes.temperature }}'
+#  action:
+#    service: input_slider.select_value
+#    entity_id: input_slider.hvac_target_temp_boh
+#    value_template:
+#      entity_id: >-
+#        {% if is_state('input_select.hvac_operation_mode_boh', 'Heat') %}
+#            '{{ states.climate.thermostat_upstairs_heating_1_2_1.attributes.temperature }}'
+#        {% elif is_state('input_select.hvac_operation_mode_boh', 'Cool') %}
+#            '{{ states.climate.thermostat_boh_cooling_1_2_2.attributes.temperature }}'
+#        {% endif %}
