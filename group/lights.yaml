@@ -39,9 +39,9 @@ Living Room lights:
 #    - light.f1
 #    - light.f2
 
-#Office lights:
-#  entities:
-#    - light.office_lamp
+Office lights:
+ entities:
+   - light.ge_unknown_type5044_id3031_level:
 
 Dining Room lights:
   entities:
