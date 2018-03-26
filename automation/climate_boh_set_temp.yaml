@@ -13,6 +13,8 @@
               climate.2gig_technologies_ct100_thermostat_usa_heating_1_3
           {% elif is_state('input_select.hvac_operation_mode_boh', 'Cool') %}
               climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
+          {% elif is_state('input_select.hvac_operation_mode_boh', 'Auto') %}
+              climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
           {% endif %}
         temperature: "{{ states('input_number.hvac_target_temp_boh') }}"
 
