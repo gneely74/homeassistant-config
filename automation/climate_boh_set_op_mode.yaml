@@ -7,17 +7,17 @@
     entity_id: input_select.hvac_operation_mode_boh
   action:
     service: climate.set_operation_mode
-    entity_id: climate.boh_cooling_1
+    entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
     data_template:
-      operation_mode: "{{ states('input_select.hvac_operation_mode_boh') }}"
+      operation_mode: '{{ states.input_select.hvac_operation_mode_boh) }}'
 
 #####
-### Sets the hvac_operation_mode input_select when the bohthermostat operation_mode is manually changed
+### Sets the hvac_operation_mode input_select when the boh thermostat operation_mode is manually changed
 #####
 - alias: 'Set input_select based on boh thermostat operation_mode'
   trigger:
     platform: state
-    entity_id: climate.boh_cooling_1
+    entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
   condition:
     condition: template
     value_template: '{{ trigger.to_state.attributes.operation_mode != trigger.from_state.attributes.operation_mode }}'
@@ -25,4 +25,4 @@
     service: input_select.select_option
     entity_id: input_select.hvac_operation_mode_boh
     data_template:
-      option: '{{ states.climate.boh_cooling_1.attributes.operation_mode }}'
+      option: '{{ states.climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3.attributes.operation_mode }}'
