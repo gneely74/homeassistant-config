@@ -9,7 +9,7 @@
     service: climate.set_operation_mode
     entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
     data_template:
-      operation_mode: '{{ states.input_select.hvac_operation_mode_boh }}'
+      operation_mode: "{{ states('input_select.hvac_operation_mode_boh') }}"
 
 #####
 ### Sets the hvac_operation_mode input_select when the boh thermostat operation_mode is manually changed
