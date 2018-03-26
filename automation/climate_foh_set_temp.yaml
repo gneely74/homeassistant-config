@@ -10,9 +10,11 @@
       data_template:
         entity_id: >-
           {% if is_state('input_select.hvac_operation_mode_foh', 'Heat') %}
-              climate.foh_heating_1
+              climate.t2gig_technologies_ct100_thermostat_usa_heating_1_2
           {% elif is_state('input_select.hvac_operation_mode_foh', 'Cool') %}
-              climate.foh_cooling_1
+              climate.t2gig_technologies_ct100_thermostat_usa_cooling_1_2
+          {% elif is_state('input_select.hvac_operation_mode_boh', 'Auto') %}
+              climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
           {% endif %}
         temperature: "{{ states('input_number.hvac_target_temp_foh') }}"
 
