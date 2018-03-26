@@ -9,7 +9,12 @@
     service: climate.set_fan_mode
     entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
     data_template:
-      fan_mode: "{{ states('input_select.hvac_fan_mode_boh') }}"
+      fan_mode: >-
+          {%- if is_state('input_select.hvac_fan_mode_boh', 'Auto') -%}
+              Auto Low
+          {%- elif is_state('input_select.hvac_fan_mode_boh', 'On') -%}
+              On Low
+          {%- endif -%}
 
 #####
 ### Sets the hvac_fan_mode input_select when the boh thermostat fan_mode is manually changed
