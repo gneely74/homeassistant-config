@@ -18,7 +18,7 @@ homeassistant:
       homebridge_hidden: true
 
     climate:
-      homebridge_hidden: true
+      homebridge_hidden: false
 
     cover:
       homebridge_hidden: false
@@ -56,5 +56,5 @@ homeassistant:
     sensor:
       homebridge_hidden: true
 
-#    switch:
-#      homebridge_hidden: false
+    switch:
+      homebridge_hidden: false
