@@ -2,14 +2,14 @@
 ### Sets the boh thermostat operation_mode when the hvac_operation_mode input_select is changed
 #####
 - alias: 'Set boh thermostat operation_mode based on input_select'
- trigger:
-   platform: state
-   entity_id: input_select.hvac_operation_mode_boh
- action:
-   service: climate.set_operation_mode
-   entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
-   data_template:
-     operation_mode: "{{ states('input_select.hvac_operation_mode_boh') }}"
+  trigger:
+    platform: state
+    entity_id: input_select.hvac_operation_mode_boh
+  action:
+    service: climate.set_operation_mode
+    entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
+    data_template:
+      operation_mode: "{{ states('input_select.hvac_operation_mode_boh') }}"
 
 #####
 ### Sets the hvac_operation_mode input_select when the boh thermostat operation_mode is manually changed

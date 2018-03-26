@@ -7,7 +7,7 @@
     entity_id: input_select.hvac_operation_mode_foh
   action:
     service: climate.set_operation_mode
-    entity_id: climate.t2gig_technologies_ct100_thermostat_usa_cooling_1_2
+    entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_2
     data_template:
       operation_mode: "{{ states('input_select.hvac_operation_mode_foh') }}"
 
