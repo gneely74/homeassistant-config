@@ -1,22 +1,22 @@
 #####
 ### Sets the boh thermostat temperature when the hvac_target_temp input_number is changed
 #####
-- alias: 'Set boh thermostat temperature based on input_number'
-  trigger:
-    - platform: state
-      entity_id: input_number.hvac_target_temp_boh
-  action:
-    - service: climate.set_temperature
-      data_template:
-        entity_id: >-
-          {% if is_state('input_select.hvac_operation_mode_boh', 'Heat') %}
-              climate.2gig_technologies_ct100_thermostat_usa_heating_1_3
-          {% elif is_state('input_select.hvac_operation_mode_boh', 'Cool') %}
-              climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
-          {% elif is_state('input_select.hvac_operation_mode_boh', 'Auto') %}
-              climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
-          {% endif %}
-        temperature: "{{ states('input_number.hvac_target_temp_boh') }}"
+#- alias: 'Set boh thermostat temperature based on input_number'
+#  trigger:
+#    - platform: state
+#      entity_id: input_number.hvac_target_temp_boh
+#  action:
+#    - service: climate.set_temperature
+#      data_template:
+#        entity_id: >-
+#          {% if is_state('input_select.hvac_operation_mode_boh', 'Heat') %}
+#              climate.2gig_technologies_ct100_thermostat_usa_heating_1_3
+#          {% elif is_state('input_select.hvac_operation_mode_boh', 'Cool') %}
+#              climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
+#          {% elif is_state('input_select.hvac_operation_mode_boh', 'Auto') %}
+#              climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
+#          {% endif %}
+#        temperature: "{{ states('input_number.hvac_target_temp_boh') }}"
 
 #####
 ### Sets the hvac_target_temp input_number when the boh thermostat temperature is manually changed
