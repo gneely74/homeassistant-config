@@ -29,8 +29,7 @@
         - group.exterior_lights
     - service: light.turn_on
       entity_id:
-       - group.living_room_accents
-       - light.bedroom
+       - light.ge_unknown_type5044_id3031_level
     - wait_template: >-
        {{ is_state('group.garage_doors', 'closed') }}
     - delay:
