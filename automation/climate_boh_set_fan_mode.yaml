@@ -7,14 +7,10 @@
     entity_id: input_select.hvac_fan_mode_boh
   action:
     service: climate.set_fan_mode
-    entity_id: climate.boh_cooling_1
+    entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
     data_template:
       fan_mode: >-
-          {%- if is_state('input_select.hvac_fan_mode_boh', 'Auto') -%}
-              Auto Low
-          {%- elif is_state('input_select.hvac_fan_mode_boh', 'On') -%}
-              On Low
-          {%- endif -%}
+          "{{ states('input_select.hvac_fan_mode_boh') }}"
 
 #####
 ### Sets the hvac_fan_mode input_select when the boh thermostat fan_mode is manually changed
@@ -22,7 +18,7 @@
 - alias: 'Set input_select based on boh thermostat fan_mode'
   trigger:
     platform: state
-    entity_id: climate.boh_cooling_1
+    entity_id: climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3
   condition:
     condition: template
     value_template: '{{ trigger.to_state.attributes.fan_mode != trigger.from_state.attributes.fan_mode }}'
@@ -31,8 +27,8 @@
     entity_id: input_select.hvac_fan_mode_boh
     data_template:
       option: >-
-          {%- if is_state_attr('climate.boh_cooling_1', 'fan_mode', 'Auto Low') -%}
+          {%- if is_state_attr('climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3', 'fan_mode', 'Auto Low') -%}
               Auto
-          {%- elif is_state_attr('climate.boh_cooling_1', 'fan_mode', 'On Low') -%}
+          {%- elif is_state_attr('climate.2gig_technologies_ct100_thermostat_usa_cooling_1_3', 'fan_mode', 'On Low') -%}
               On
           {%- endif -%}
