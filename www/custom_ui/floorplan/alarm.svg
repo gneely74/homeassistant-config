@@ -43,7 +43,7 @@
      id="namedview1601"
      showgrid="false"
      inkscape:zoom="1.4208573"
-     inkscape:cx="532.93843"
+     inkscape:cx="445.66717"
      inkscape:cy="221.51365"
      inkscape:window-x="37"
      inkscape:window-y="1"
@@ -2831,6 +2831,18 @@
        cy="2018.1886"
        inkscape:label="group.living_room_lights"
        r="5" />
+    <path
+       id="light.gateway_light_34ce00fa5b62-7"
+       inkscape:connector-curvature="0"
+       style="fill:#999999;stroke-width:0.77312338"
+       d="m 558.50574,2076.4804 c 0,2.386 -1.61324,4.2608 -3.50702,4.2608 v 0 -8.607 c 1.89378,0.086 3.50702,1.96 3.50702,4.3462 z"
+       inkscape:label="light.gateway_light_fi" />
+    <path
+       id="light.gateway_light_7811dcb2413b"
+       inkscape:connector-curvature="0"
+       style="fill:#999999;stroke-width:0.77312338"
+       d="m 346.46675,1934.6814 c 0,2.386 -1.61324,4.2608 -3.50702,4.2608 v 0 -8.607 c 1.89378,0.086 3.50702,1.96 3.50702,4.3462 z"
+       inkscape:label="light.gateway_light_7811dcb2413b" />
   </g>
   <line
      id="edge_camera_bottom"
