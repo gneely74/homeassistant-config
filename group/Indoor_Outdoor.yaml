@@ -5,7 +5,8 @@ Interior_Lights:
     - group.living_room_accents
     - group.dinette_lights
     - group.dining_room_lights
-    - group.den_lights
+    - group.back_den_lights
+    - group.front_den_lights
     - group.foyer_lights
     - group.office_lights
     - group.hallway_lights
