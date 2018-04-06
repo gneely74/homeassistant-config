@@ -142,6 +142,9 @@ rules:
       - group.exterior_lights
       - group.interior_lights
       - light.dining_room_light_level
+      - group.back_den_lights
+      - group.front_den_lights
+      - group.living_room_lights
     states:
       - state: 'on'
         class: 'light-on'

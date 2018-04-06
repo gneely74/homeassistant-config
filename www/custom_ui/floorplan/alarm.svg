@@ -42,9 +42,9 @@
      inkscape:window-height="855"
      id="namedview1601"
      showgrid="false"
-     inkscape:zoom="22.733716"
-     inkscape:cx="572.57984"
-     inkscape:cy="90.809896"
+     inkscape:zoom="1.4208573"
+     inkscape:cx="532.93843"
+     inkscape:cy="221.51365"
      inkscape:window-x="37"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
@@ -2363,8 +2363,8 @@
        style="fill:#ffffa6"
        cx="673.58649"
        cy="1733.4733"
-       r="5"
-       inkscape:label="light.1b56c3" />
+       inkscape:label="light.1b56c3"
+       r="5" />
     <circle
        id="light.fireplace_light_level"
        style="fill:#ffffa6"
@@ -2810,6 +2810,27 @@
        cy="2126.5442"
        r="5"
        inkscape:label="light.dining_room_light_level" />
+    <circle
+       id="group.back_den_lights"
+       style="fill:#ffffa6"
+       cx="585.56201"
+       cy="1711.2202"
+       inkscape:label="group.back_den_lights"
+       r="5" />
+    <circle
+       id="group.front_den_lights"
+       style="fill:#ffffa6"
+       cx="585.56195"
+       cy="1755.5597"
+       inkscape:label="group.front_den_lights"
+       r="5" />
+    <circle
+       id="group.living_room_lights"
+       style="fill:#ffffa6"
+       cx="498.99454"
+       cy="2018.1886"
+       inkscape:label="group.living_room_lights"
+       r="5" />
   </g>
   <line
      id="edge_camera_bottom"
