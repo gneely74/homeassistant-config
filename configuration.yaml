@@ -94,8 +94,6 @@ insteon_plm:
 zwave:
   usb_path: /dev/ttyACM0
 
-light:
-
 updater:
   include_used_components: true
 
@@ -219,7 +217,7 @@ logger:
     homeassistant.components.media_player: info
     homeassistant.components.python_script: warn
     homeassistant.components.insteon_plm: info
-    homeassistant.components.light: debug
+    homeassistant.components.light: warn
     roomba: warn
     insteonplm.protocol: warn
     homeassistant.components.zwave: warn
@@ -324,4 +322,6 @@ input_number: !include input_number.yaml
 frontend: !include frontend.yaml
 recorder: !include recorder.yaml
 logbook: !include logbook.yaml
+light: !include lights.yaml
+
 #history: !include history.yaml

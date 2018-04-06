@@ -50,6 +50,22 @@
      - service: switch.turn_off
        entity_id: group.exterior_lights       
 
+- id: exterior_lights_off
+  alias: 'Turn off exterior Lights'
+  trigger:
+    - platform: time
+      at: '23:00:00'
+      
+  initial_state: 'on'
+  condition: 
+    - condition: state
+      entity_id: group.exterior_lights
+      state: 'on'
+
+  action:
+     - service: switch.turn_off
+       entity_id: group.exterior_lights
+       
 - id: office_lamp_turn_off
   alias: 'Turn off Office Lamp'
   trigger:
