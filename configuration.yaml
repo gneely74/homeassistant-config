@@ -86,6 +86,12 @@ panel_custom:
     config:
       hide_app_toolbar:
       config: /local/custom_ui/floorplan/floorclock.yaml
+      
+panel_iframe:
+  nodered_flows:
+    title: 'Node-RED Flows'
+    url: 'http://192.168.74.14:1880'
+    icon: mdi:nodejs
 
 # insteon_plm supported configuration variables    
 insteon_plm:
