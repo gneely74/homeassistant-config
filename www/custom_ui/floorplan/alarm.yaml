@@ -37,7 +37,9 @@ rules:
        class: 'roomba-on'
      - state: 'off'
 #       class: 'light-off'
-
+    action:
+      service: homeassistant.toggle
+      
   - name: temp_darksky
     entities:
       - sensor.dark_sky_temperature
