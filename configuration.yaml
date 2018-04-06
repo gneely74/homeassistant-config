@@ -93,6 +93,7 @@ insteon_plm:
   
 zwave:
   usb_path: /dev/ttyACM0
+
 light:
 
 updater:
@@ -102,10 +103,11 @@ abode:
   username: !secret abode_username
   password: !secret abode_password
   
-usps:
-  username: !secret usps_username
-  password: !secret usps_password
-
+#usps:
+#  username: !secret usps_username
+#  password: !secret usps_password
+#  name: USPS
+  
 # Enables configuration UI
 config:
 
@@ -211,12 +213,13 @@ notify:
 
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical 
 logger:
-  default: info
+  default: warn
   logs:
     homeassistant.components.automation: info  
     homeassistant.components.media_player: info
     homeassistant.components.python_script: warn
-    homeassistant.components.insteon_plm: debug
+    homeassistant.components.insteon_plm: info
+    homeassistant.components.light: debug
     roomba: warn
     insteonplm.protocol: warn
     homeassistant.components.zwave: warn
