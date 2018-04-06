@@ -16,7 +16,9 @@ Bedroom lights:
 
 Living Room lights:
   entities:
-    - light.fireplace_light_level
+    - light.yeelight_rgb_7811dca20956
+    - light.yeelight_rgb_7811dca1f0e7
+    - light.yeelight_rgb_7811dca20c2b
 
 
 #Living Room Accents:
@@ -30,9 +32,18 @@ Living Room lights:
 #    - light.d1
 #    - light.d2
 
-#Den lights:
-#  entities:
-#    - light.den_lamp
+Back Den lights:
+ entities:
+   - light.yeelight_rgb_7811dca1fe13
+   - light.yeelight_rgb_7811dca20508
+   - light.yeelight_rgb_7811dca1f0d2
+
+Front Den lights:
+ entities:
+   - light.yeelight_rgb_7811dca1ffb2
+   - light.yeelight_rgb_7811dca1e9df
+   - light.yeelight_rgb_7811dca1fe24
+
 
 #Foyer lights:
 #  entities:

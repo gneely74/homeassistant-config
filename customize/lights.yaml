@@ -18,3 +18,30 @@ light.gateway_light_34ce0091e54f:
 
 light.dining_room_light_level:
   friendly_name: Dining Room Light
+  
+light.yeelight_rgb_7811dca1fe13:
+  friendly_name: Den Bulb 1
+  
+light.yeelight_rgb_7811dca20508:
+  friendly_name: Den Bulb 2
+  
+light.yeelight_rgb_7811dca1f0d2:
+  friendly_name: Den Bulb 4
+
+light.yeelight_rgb_7811dca1ffb2:
+  friendly_name: Den Bulb 3
+  
+light.yeelight_rgb_7811dca1e9df:
+  friendly_name: Den Bulb 5
+  
+light.yeelight_rgb_7811dca1fe24:
+  friendly_name: Den Bulb 6
+  
+light.yeelight_rgb_7811dca20956:
+  friendly_name: LR Bulb 1
+  
+light.yeelight_rgb_7811dca1f0e7:
+  friendly_name: LR Bulb 2
+  
+light.yeelight_rgb_7811dca20c2b:
+  friendly_name: LR Bulb 3
