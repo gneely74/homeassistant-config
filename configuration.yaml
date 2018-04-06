@@ -45,12 +45,12 @@ weather:
   - platform: yweather
     name: Weather
     woeid: !secret woeid
-
-customizer:
-  custom_ui: hosted
-  hide_attributes:
-    - node_id
-    - value_index
+#
+#customizer:
+#  custom_ui: hosted
+#  hide_attributes:
+#    - node_id
+#    - value_index
 
 emulated_hue:
   host_ip: 192.168.74.14
