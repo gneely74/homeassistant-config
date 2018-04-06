@@ -1,11 +1,10 @@
-- sensor.temperature_158d0001c2c8d9
-- sensor.2gig_technologies_ct100_thermostat_usa_temperature_3
-- sensor.2gig_technologies_ct100_thermostat_usa_temperature_5
-
 hvac:
   name: HVAC
   view: yes
   entities:
+    - sensor.temperature_158d0001c2c8d9
+    - sensor.2gig_technologies_ct100_thermostat_usa_temperature_3
+    - sensor.2gig_technologies_ct100_thermostat_usa_temperature_5
     - group.hvac_boh
     - group.hvac_foh
 

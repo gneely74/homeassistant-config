@@ -31,7 +31,6 @@ weather:
   view: yes
   icon: mdi:weather-cloudy
   entities:
-    - sensor.temperature_158d0001c2c8d9        
     - sensor.moon
     - binary_sensor.iss
     - group.thermostats
