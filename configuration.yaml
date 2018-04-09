@@ -90,7 +90,7 @@ panel_custom:
 panel_iframe:
   nodered_flows:
     title: 'Node-RED Flows'
-    url: 'http://home.theneelyfamily.net:1880'
+    url: 'http://hassio.local:1880'
     icon: mdi:nodejs
 
 # insteon_plm supported configuration variables    
