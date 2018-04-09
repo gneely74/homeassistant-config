@@ -13,6 +13,20 @@
       data_template:
         name: '{{states.input_select.current_theme.state}}'
 
+
+- alias: Start node red at reboot
+  trigger:
+    platform: homeassistant
+    # Event can also be 'shutdown'
+    event: start        
+  action:
+    - delay:
+        seconds: 120
+    - service: hassio.addon_start
+      data:
+        addon: 27e642c6_nodered
+
+
 #################################################################
 ## Commute Times
 #################################################################
