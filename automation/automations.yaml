@@ -200,50 +200,50 @@
      service: switch.turn_on
      entity_id: switch.garage_light_switch
      
-- id: frontyard_lights
-  alias: 'Turn on frontyard lights'
-  initial_state: 'on'
-  condition:
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon'
-    - condition: time
-      after: '19:00:00'
-      before: '05:00:00'
-  trigger:
-   - platform: state
-     entity_id:
-       - binary_sensor.entryway_camera_motion_detected
-     from: 'off'
-     to: 'on'
-  action:
-    - service: switch.turn_on
-      entity_id:
-        - switch.front_garage_light_switch
-        - switch.front_porch_light_switch        
-
-- id: turn_off_front_lights_after_10min
-  alias: Turn off front lights 10 minutes after last movement
-  initial_state: 'on'
-  condition:
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon'
-    - condition: time
-      after: '19:00:00'
-      before: '06:00:00'
-  trigger:
-    platform: state
-    entity_id: 
-      - binary_sensor.entryway_camera_motion_detected
-    to: 'off'
-    for:
-      minutes: 10
-  action:
-    service: switch.turn_off
-    entity_id: 
-      - switch.front_garage_light_switch
-      - switch.front_porch_light_switch      
+#- id: frontyard_lights
+#  alias: 'Turn on frontyard lights'
+#  initial_state: 'on'
+#  condition:
+#    - condition: state
+#      entity_id: sun.sun
+#      state: 'below_horizon'
+#    - condition: time
+#      after: '19:00:00'
+#      before: '05:00:00'
+#  trigger:
+#   - platform: state
+#     entity_id:
+#       - binary_sensor.entryway_camera_motion_detected
+#     from: 'off'
+#     to: 'on'
+#  action:
+#    - service: switch.turn_on
+#      entity_id:
+#        - switch.front_garage_light_switch
+#        - switch.front_porch_light_switch        
+#
+#- id: turn_off_front_lights_after_10min
+#  alias: Turn off front lights 10 minutes after last movement
+#  initial_state: 'on'
+#  condition:
+#    - condition: state
+#      entity_id: sun.sun
+#      state: 'below_horizon'
+#    - condition: time
+#      after: '19:00:00'
+#      before: '06:00:00'
+#  trigger:
+#    platform: state
+#    entity_id: 
+#      - binary_sensor.entryway_camera_motion_detected
+#    to: 'off'
+#    for:
+#      minutes: 10
+#  action:
+#    service: switch.turn_off
+#    entity_id: 
+#      - switch.front_garage_light_switch
+#      - switch.front_porch_light_switch      
 #
 #- id: outdoor_light_at_night
 #  alias: Outdoor lights at night
