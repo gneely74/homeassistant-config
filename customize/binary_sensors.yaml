@@ -28,11 +28,23 @@ binary_sensor.turn_on_outside_lights:
   hidden: true
 binary_sensor.office_door: {}
 binary_sensor.back_door: {} 
+
 binary_sensor.motion_sensor_158d0001a40761:
   friendly_name: Master Bedroom Motion
 binary_sensor.motion_sensor_158d0001643f5f:
   friendly_name: Living Room Motion
+binary_sensor.motion_sensor_158d0001e541f3:
+  friendly_name: Fiona's Bedroom Motion
+binary_sensor.motion_sensor_158d0001e54201:
+  friendly_name: Den Room Motion
+binary_sensor.motion_sensor_158d00022366d9:
+  friendly_name: Craft Room Motion
+binary_sensor.motion_sensor_158d0002236980:
+  friendly_name: Dining Room Motion
+binary_sensor.motion_sensor_158d000224f87d:
+  friendly_name: Boy's Room Motion
   
+      
 binary_sensor.iss:
   friendly_name: 'ISS Visibility'
   emulated_hue_hidden: True
