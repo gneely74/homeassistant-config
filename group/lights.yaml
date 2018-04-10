@@ -1,7 +1,8 @@
-Bedroom lights:
+Master Bedroom lights:
   entities:
     - light.1b56c3
     - input_number.master_bright
+    - light.yeelight_rgb_7811dca2090d    
 
 #kitchen lights:
 #  entities:
@@ -19,7 +20,7 @@ Living Room lights:
     - light.yeelight_rgb_7811dca20956
     - light.yeelight_rgb_7811dca1f0e7
     - light.yeelight_rgb_7811dca20c2b
-
+    - light.yeelight_rgb_7811dca20c1f
 
 #Living Room Accents:
 #  entities:
@@ -53,7 +54,8 @@ Front Den lights:
 Office lights:
  entities:
    - light.ge_unknown_type5044_id3031_level
-
+   - light.yeelight_rgb_7811dca20c7b
+   
 Dining Room lights:
   entities:
     - light.dining_room_light_level

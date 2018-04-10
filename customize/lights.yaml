@@ -45,3 +45,12 @@ light.yeelight_rgb_7811dca1f0e7:
   
 light.yeelight_rgb_7811dca20c2b:
   friendly_name: LR Bulb 3
+
+light.yeelight_rgb_7811dca2090d:  
+  friendly_name: Kate's Lamp
+  
+light.yeelight_rgb_7811dca20c1f:
+  friendly_name: LR Bulb 4
+  
+light.yeelight_rgb_7811dca20c7b:
+  friendly_name: Grady's Office Lamp  

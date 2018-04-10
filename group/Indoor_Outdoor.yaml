@@ -1,6 +1,6 @@
 Interior_Lights:
   entities:
-    - group.bedroom_lights
+    - group.master_bedroom_lights
     - group.living_room_lights
     - group.living_room_accents
     - group.dinette_lights
