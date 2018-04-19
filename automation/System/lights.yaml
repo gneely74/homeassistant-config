@@ -90,7 +90,7 @@
     data:
         brightness: 50
         
-- id: Den-Motion-Night
+- id: Den-Motion-Day
   alias: Den Light On Day With Motion
   trigger:
     platform: state
