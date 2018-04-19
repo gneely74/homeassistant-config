@@ -120,7 +120,7 @@
     entity_id: binary_sensor.motion_sensor_158d0001e54201
     to: 'off'
     for:
-      seconds: 5
+      minutes: 5
   condition:
     condition: state
     entity_id: light.front_den_lights
@@ -180,7 +180,7 @@
     entity_id: binary_sensor.motion_sensor_158d0001a40761
     to: 'off'
     for:
-      seconds: 5
+      minutes: 5
   condition:
     condition: state
     entity_id: light.1b56c3
