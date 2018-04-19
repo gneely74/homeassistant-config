@@ -1,0 +1,21 @@
+- platform: group
+  name: Living Room Lights
+  entities:
+    - light.yeelight_rgb_7811dca20956
+    - light.yeelight_rgb_7811dca1f0e7
+    - light.yeelight_rgb_7811dca20c2b
+    - light.yeelight_rgb_7811dca20c1f
+    
+- platform: group
+  name: Front Den Lights
+  entities:
+    - light.yeelight_rgb_7811dca1ffb2
+    - light.yeelight_rgb_7811dca1e9df
+    - light.yeelight_rgb_7811dca1fe24
+
+- platform: group
+  name: Back Den Lights
+  entities:
+    - light.yeelight_rgb_7811dca1fe13
+    - light.yeelight_rgb_7811dca20508
+    - light.yeelight_rgb_7811dca1f0d2

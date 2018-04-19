@@ -2,37 +2,37 @@
 ##  Stuff that needs to happen at 11pm.
 ######################################################################
 
-#- id: abode_home_arm
-#  initial_state: 'on'
-#  condition:
-#    condition: and
-#    conditions:
-#     - condition: state
-#       entity_id: input_select.abodestatus
-#       state: 'disarmed'
-#     - condition: time
-#       after: '23:00:00'
-#       before: '07:00:00'
-#     - condition: state
-#       entity_id: input_boolean.abodeupdate
-#       state: 'on'
-#     - condition: template
-#       value_template: >
-#         {%- if states.input_select.abodestatus.last_changed -%}
-#           {{ (as_timestamp(now()) - as_timestamp(states.input_select.abodestatus.last_changed)) > 300 }}
-#         {%- else -%}
-#           true
-#         {%- endif -%}
-#  trigger:
-#   - platform: time
-#     minutes: '/10'
-#     seconds: 00 
-#  action:
-#     - service: homeassistant.turn_on
-#       entity_id: script.abodehome
-#     - service: script.speech_engine
-#       data:
-#         call_goodnight: 1
+- id: abode_home_arm
+  initial_state: 'on'
+  condition:
+    condition: and
+    conditions:
+     - condition: state
+       entity_id: input_select.abodestatus
+       state: 'disarmed'
+     - condition: time
+       after: '23:00:00'
+       before: '07:00:00'
+     - condition: state
+       entity_id: input_boolean.abodeupdate
+       state: 'on'
+     - condition: template
+       value_template: >
+         {%- if states.input_select.abodestatus.last_changed -%}
+           {{ (as_timestamp(now()) - as_timestamp(states.input_select.abodestatus.last_changed)) > 300 }}
+         {%- else -%}
+           true
+         {%- endif -%}
+  trigger:
+   - platform: time
+     minutes: '/10'
+     seconds: 00 
+  action:
+     - service: homeassistant.turn_on
+       entity_id: script.abodehome
+     - service: script.speech_engine
+       data:
+         call_goodnight: 1
       
 - id: exterior_lights_off
   alias: 'Turn off exterior Lights'
@@ -75,10 +75,10 @@
   initial_state: 'on'
   condition: 
     - condition: state
-      entity_id: light.ge_unknown_type5044_id3031_level
+      entity_id: light.yeelight_rgb_7811dca20c7b
       state: 'on'
 
   action:
      - service: light.turn_off
        entity_id:
-        - light.ge_unknown_type5044_id3031_level
+        - light.yeelight_rgb_7811dca20c7b
