@@ -187,4 +187,62 @@
     state: 'on'
   action:
     service: homeassistant.turn_off
-    entity_id: light.1b56c3   
+    entity_id: light.1b56c3  
+    
+- id: DR-Motion-Night
+  alias: Dining Room Light On At Night With Motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_158d0002236980
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      after: '21:00:01'
+      before: '06:00:00'
+    - condition: state
+      entity_id: light.dining_room_light_level
+      state: 'off'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.dining_room_light_level
+    data:
+        brightness: 50
+        
+- id: DR-Motion-Night
+  alias: Dining Room Light On Day With Motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_158d0002236980
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      after: '06:00:01'
+      before: '21:00:00'
+    - condition: state
+      entity_id: light.dining_room_light_level
+      state: 'off'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.dining_room_light_level
+    data:
+        brightness: 255        
+
+- id: DRLightOffNoMotion
+  alias: Dining Room Light Off after No Motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_158d0002236980
+    to: 'off'
+    for:
+      seconds: 5
+  condition:
+    condition: state
+    entity_id: light.dining_room_light_level
+    state: 'on'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.dining_room_light_level         
