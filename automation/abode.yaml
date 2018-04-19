@@ -38,9 +38,9 @@
       event_type: ios.notification_action_fired
       event_data:
         actionName: DISARM_ABODE
- action:
-    service: homeassistant.turn_on
-    entity_id: script.abodestandby
+  action:
+     service: homeassistant.turn_on
+     entity_id: script.abodestandby
 
 - id: abode_was_disarmed
   alias: 'Trigger when Abode was disarmed'
