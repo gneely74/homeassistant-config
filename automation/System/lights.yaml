@@ -141,8 +141,8 @@
     condition: and
     conditions:
     - condition: time
-      after: '21:00:01'
-      before: '06:00:00'
+      after: '20:00:01'
+      before: '22:00:00'
     - condition: state
       entity_id: light.1b56c3
       state: 'off'
