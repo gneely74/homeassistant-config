@@ -9,6 +9,7 @@ light.ge_unknown_type5044_id3031_level:
 
 light.gateway_light_34ce00fa5b62:
   friendly_name: Den Xiaomi Light
+  hidden: true
   
 light.gateway_light_7811dcb2413b:
   friendly_name: Fiona's Room Xiaomi Light

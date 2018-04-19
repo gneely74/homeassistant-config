@@ -80,7 +80,7 @@
       after: '21:00:01'
       before: '06:00:00'
     - condition: state
-      entity_id: light.living_room_lights
+      entity_id: light.front_den_lights
       state: 'off'
   action:
     service: homeassistant.turn_on
