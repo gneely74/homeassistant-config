@@ -58,7 +58,7 @@
     entity_id: binary_sensor.motion_sensor_158d0001643f5f
     to: 'off'
     for:
-      seconds: 5
+      minutes: 5
   condition:
     condition: state
     entity_id: light.living_room_lights
@@ -238,7 +238,7 @@
     entity_id: binary_sensor.motion_sensor_158d0002236980
     to: 'off'
     for:
-      seconds: 5
+      minutes: 5
   condition:
     condition: state
     entity_id: light.dining_room_light_level
