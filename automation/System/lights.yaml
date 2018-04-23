@@ -210,7 +210,7 @@
     data:
         brightness: 50
         
-- id: DR-Motion-Night
+- id: DR-Motion-Day
   alias: Dining Room Light On Day With Motion
   trigger:
     platform: state
@@ -248,7 +248,7 @@
     entity_id: light.dining_room_light_level      
     
 - id: Office-Motion-Night
-  alias: Office  Light On Night With Motion
+  alias: Office Light On Night With Motion
   trigger:
     platform: state
     entity_id: binary_sensor.motion_sensor_158d000223693c
@@ -257,7 +257,7 @@
     condition: and
     conditions:
     - condition: time
-      after: '06:00:01'
+      after: '19:00:01'
       before: '05:59:00'
     - condition: state
       entity_id: light.yeelight_rgb_7811dca20c7b
