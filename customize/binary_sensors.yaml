@@ -43,7 +43,8 @@ binary_sensor.motion_sensor_158d0002236980:
   friendly_name: Dining Room Motion
 binary_sensor.motion_sensor_158d000224f87d:
   friendly_name: Boy's Room Motion
-  
+binary_sensor.motion_sensor_158d000223693c"
+  friendly_name: Office Motion Sensor  
       
 binary_sensor.iss:
   friendly_name: 'ISS Visibility'
